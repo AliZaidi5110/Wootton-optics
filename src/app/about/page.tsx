@@ -51,7 +51,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-heading text-3xl font-bold mb-6">Our Story</h2>
+              <h2 className="font-heading text-3xl font-bold text-navy mb-6">Our Story</h2>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                 Wootton Hearing Care was founded in 2003 by Margaret Wootton, a
                 passionate audiologist who saw a need for personal, community-focused
@@ -77,7 +77,7 @@ export default function AboutPage() {
               <div className="w-32 h-32 bg-primary/20 rounded-full mx-auto mb-6 flex items-center justify-center">
                 <Users className="w-16 h-16 text-primary" />
               </div>
-              <p className="font-heading text-2xl font-bold mb-2">Mother & Son</p>
+              <p className="font-heading text-2xl font-bold text-navy mb-2">Mother & Son</p>
               <p className="text-neutral-600 dark:text-neutral-400">
                 Margaret & Daniel Wootton
               </p>
@@ -91,7 +91,7 @@ export default function AboutPage() {
 
       <section className="py-20 bg-neutral-50 dark:bg-neutral-900">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-center mb-12">
+          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-12">
             Meet Our Team
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -104,7 +104,7 @@ export default function AboutPage() {
                   <Users className="w-16 h-16 text-primary/40" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading font-bold text-xl">{member.name}</h3>
+                  <h3 className="font-heading font-bold text-xl text-navy">{member.name}</h3>
                   <p className="text-primary text-sm font-medium mb-3">{member.role}</p>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 leading-relaxed">
                     {member.bio}
@@ -125,7 +125,7 @@ export default function AboutPage() {
 
       <section className="py-20">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-center mb-4">
+          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-4">
             Our Values & Mission
           </h2>
           <p className="text-center text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-12">
@@ -141,7 +141,7 @@ export default function AboutPage() {
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="font-heading font-bold mb-2">{value.title}</h3>
+                <h3 className="font-heading font-bold text-navy mb-2">{value.title}</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400">
                   {value.desc}
                 </p>
@@ -153,7 +153,7 @@ export default function AboutPage() {
 
       <section className="py-20 bg-neutral-50 dark:bg-neutral-900">
         <div className="container text-center">
-          <h2 className="font-heading text-3xl font-bold mb-4">Community Involvement</h2>
+          <h2 className="font-heading text-3xl font-bold text-navy mb-4">Community Involvement</h2>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed">
             We actively participate in local health fairs, provide free hearing
             screenings at community events, support the Ilford Business Improvement

@@ -49,7 +49,7 @@ export default function ServicesPage() {
 
       <section className="py-20">
         <div className="container">
-          <h2 className="font-heading text-2xl font-bold mb-8 flex items-center gap-3">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-8 flex items-center gap-3">
             <Ear className="w-7 h-7 text-primary" /> Hearing Care Services
           </h2>
           <div className="grid md:grid-cols-3 gap-6 mb-16">
@@ -61,7 +61,7 @@ export default function ServicesPage() {
                   className="bg-white dark:bg-neutral-800 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-700"
                 >
                   <Icon className="w-8 h-8 text-primary mb-4" />
-                  <h3 className="font-heading font-bold text-lg mb-2">{service.title}</h3>
+                  <h3 className="font-heading font-bold text-lg text-navy mb-2">{service.title}</h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
                     {service.description}
                   </p>
@@ -80,7 +80,7 @@ export default function ServicesPage() {
             })}
           </div>
 
-          <h2 className="font-heading text-2xl font-bold mb-8 flex items-center gap-3">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-8 flex items-center gap-3">
             <Eye className="w-7 h-7 text-accent" /> Optical Services
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -92,7 +92,7 @@ export default function ServicesPage() {
                   className="bg-white dark:bg-neutral-800 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-700"
                 >
                   <Icon className="w-8 h-8 text-accent mb-4" />
-                  <h3 className="font-heading font-bold text-lg mb-2">{service.title}</h3>
+                  <h3 className="font-heading font-bold text-lg text-navy mb-2">{service.title}</h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
                     {service.description}
                   </p>
@@ -115,7 +115,7 @@ export default function ServicesPage() {
 
       <section className="py-20 bg-neutral-50 dark:bg-neutral-900">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-center mb-12">
+          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-12">
             How Our Process Works
           </h2>
           <div className="grid md:grid-cols-5 gap-6">
@@ -124,7 +124,7 @@ export default function ServicesPage() {
                 <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4 text-lg">
                   {step.step}
                 </div>
-                <h3 className="font-heading font-bold text-sm mb-2">{step.title}</h3>
+                <h3 className="font-heading font-bold text-sm text-navy mb-2">{step.title}</h3>
                 <p className="text-xs text-neutral-600 dark:text-neutral-400">
                   {step.description}
                 </p>
@@ -136,7 +136,7 @@ export default function ServicesPage() {
 
       <section className="py-20">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-center mb-8">
+          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-8">
             Service Comparison
           </h2>
           <div className="overflow-x-auto">

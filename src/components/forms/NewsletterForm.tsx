@@ -42,10 +42,10 @@ export function NewsletterForm() {
         {status === "loading" ? "Subscribing..." : "Subscribe"}
       </Button>
       {status === "success" && (
-        <p className="text-mint text-sm" role="status">Thank you for subscribing!</p>
+        <p className="text-sky text-sm" role="status">Thank you for subscribing!</p>
       )}
       {status === "error" && (
-        <p className="text-coral text-sm" role="alert">Something went wrong. Please try again.</p>
+        <p className="text-accent text-sm" role="alert">Something went wrong. Please try again.</p>
       )}
     </form>
   );

@@ -56,17 +56,17 @@ export default function DashboardPage() {
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="bg-white dark:bg-neutral-800 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-700">
               <User className="w-8 h-8 text-primary mb-3" />
-              <h3 className="font-heading font-bold">Profile</h3>
+              <h3 className="font-heading font-bold text-navy">Profile</h3>
               <p className="text-sm text-neutral-500 mt-1">{user.email}</p>
             </div>
             <div className="bg-white dark:bg-neutral-800 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-700">
               <Calendar className="w-8 h-8 text-accent mb-3" />
-              <h3 className="font-heading font-bold">Appointments</h3>
+              <h3 className="font-heading font-bold text-navy">Appointments</h3>
               <p className="text-sm text-neutral-500 mt-1">{appointments.length} booked</p>
             </div>
             <div className="bg-white dark:bg-neutral-800 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-700 flex flex-col justify-between">
               <div>
-                <h3 className="font-heading font-bold">Quick Actions</h3>
+                <h3 className="font-heading font-bold text-navy">Quick Actions</h3>
               </div>
               <Button href="/appointments" size="sm" className="mt-4">
                 Book New Appointment
@@ -76,7 +76,7 @@ export default function DashboardPage() {
 
           <div className="bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-700">
             <div className="flex justify-between items-center mb-6">
-              <h2 className="font-heading text-xl font-bold">Appointment History</h2>
+              <h2 className="font-heading text-xl font-bold text-navy">Appointment History</h2>
               <button
                 onClick={logout}
                 className="flex items-center gap-2 text-sm text-neutral-500 hover:text-red-500 transition-colors"

@@ -28,7 +28,7 @@ export default function ContactPage() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="font-heading text-2xl font-bold mb-8">Get In Touch</h2>
+              <h2 className="font-heading text-2xl font-bold text-navy mb-8">Get In Touch</h2>
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
@@ -99,7 +99,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <h2 className="font-heading text-2xl font-bold mb-8">Send a Message</h2>
+              <h2 className="font-heading text-2xl font-bold text-navy mb-8">Send a Message</h2>
               <ContactForm />
             </div>
           </div>

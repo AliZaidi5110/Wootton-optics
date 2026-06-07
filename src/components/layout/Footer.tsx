@@ -16,7 +16,7 @@ export function Footer() {
               <div className="w-9 h-9 bg-accent rounded-lg flex items-center justify-center -ml-3">
                 <Glasses className="w-4 h-4 text-white" />
               </div>
-              <span className="font-heading font-bold text-lg ml-1">Wootton</span>
+              <span className="font-heading font-bold text-lg text-white ml-1">Wootton</span>
             </div>
             <p className="text-sm leading-relaxed text-neutral-300 mb-6">
               Family-run hearing care and optical services in Ilford, Essex.

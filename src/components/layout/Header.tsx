@@ -32,12 +32,12 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-md border-b border-neutral-200 shadow-sm">
       <div className="bg-sky text-navy text-sm py-2">
         <div className="container flex justify-between items-center gap-4">
-          <div className="hidden md:flex items-center gap-4 text-muted">
+          <div className="hidden md:flex items-center gap-4 text-charcoal">
             <span className="flex items-center gap-1">
               <Clock className="w-3.5 h-3.5 text-primary" />
               {SITE.hours.weekdays}
             </span>
-            <span className="hidden lg:inline text-neutral-300">|</span>
+            <span className="hidden lg:inline text-charcoal/40">|</span>
             <span className="hidden lg:inline">{SITE.address.full}</span>
           </div>
           <a
@@ -65,7 +65,7 @@ export function Header() {
               <p className="font-heading font-bold text-lg text-navy leading-tight">
                 Wootton
               </p>
-              <p className="text-xs text-muted flex items-center gap-1">
+              <p className="text-xs text-charcoal flex items-center gap-1">
                 Hearing & Optics
                 <span className="w-2 h-2 bg-sunny rounded-full inline-block" aria-hidden="true" />
               </p>

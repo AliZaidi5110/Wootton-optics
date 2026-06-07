@@ -38,7 +38,7 @@ export default function OpticsPage() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="font-heading text-3xl font-bold mb-6">
+              <h2 className="font-heading text-3xl font-bold text-navy mb-6">
                 Eye Care Services Overview
               </h2>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
@@ -75,7 +75,7 @@ export default function OpticsPage() {
                   className="bg-neutral-50 dark:bg-neutral-900 rounded-2xl p-6 text-center"
                 >
                   <item.icon className="w-8 h-8 text-accent mx-auto mb-3" />
-                  <p className="font-heading font-bold">{item.label}</p>
+                  <p className="font-heading font-bold text-navy">{item.label}</p>
                   <p className="text-sm text-neutral-500">{item.value}</p>
                 </div>
               ))}
@@ -86,7 +86,7 @@ export default function OpticsPage() {
 
       <section id="eye-test" className="py-20 bg-neutral-50 dark:bg-neutral-900">
         <div className="container max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold text-center mb-8">
+          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-8">
             Book Your Eye Test
           </h2>
           <div className="bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-700">
@@ -97,7 +97,7 @@ export default function OpticsPage() {
 
       <section id="collections" className="py-20">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-center mb-4">
+          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-4">
             Eyewear Collections
           </h2>
           <p className="text-center text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-12">
@@ -115,7 +115,7 @@ export default function OpticsPage() {
                 </div>
                 <div className="p-4">
                   <p className="text-xs text-neutral-500">{frame.brand}</p>
-                  <h3 className="font-heading font-bold text-sm">{frame.name}</h3>
+                  <h3 className="font-heading font-bold text-sm text-navy">{frame.name}</h3>
                   <div className="flex justify-between items-center mt-2">
                     <span className="text-xs text-neutral-500">{frame.style}</span>
                     <span className="font-semibold text-primary text-sm">{frame.price}</span>
@@ -129,7 +129,7 @@ export default function OpticsPage() {
 
       <section className="py-20 bg-neutral-50 dark:bg-neutral-900">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-center mb-4">
+          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-4">
             Lens Technology
           </h2>
           <p className="text-center text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-12">
@@ -141,7 +141,7 @@ export default function OpticsPage() {
                 key={lens.name}
                 className="bg-white dark:bg-neutral-800 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-700"
               >
-                <h3 className="font-heading font-bold text-lg mb-2">{lens.name}</h3>
+                <h3 className="font-heading font-bold text-lg text-navy mb-2">{lens.name}</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
                   {lens.description}
                 </p>
@@ -163,7 +163,7 @@ export default function OpticsPage() {
           <div className="bg-gradient-to-r from-secondary/10 to-primary/10 rounded-2xl p-8 lg:p-12">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="font-heading text-2xl font-bold mb-4 flex items-center gap-3">
+                <h2 className="font-heading text-2xl font-bold text-navy mb-4 flex items-center gap-3">
                   <Sun className="w-8 h-8 text-accent" />
                   UV Protection Information
                 </h2>

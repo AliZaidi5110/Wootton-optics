@@ -28,14 +28,14 @@ export default function AdminPage() {
                 key={item.title}
                 className="bg-white dark:bg-neutral-800 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-700"
               >
-                <h3 className="font-heading font-bold text-lg">{item.title}</h3>
+                <h3 className="font-heading font-bold text-lg text-navy">{item.title}</h3>
                 <p className="text-3xl font-bold text-primary my-2">{item.count}</p>
                 <p className="text-sm text-neutral-500">{item.action}</p>
               </div>
             ))}
           </div>
           <div className="mt-8 p-6 bg-neutral-50 dark:bg-neutral-900 rounded-2xl">
-            <h3 className="font-heading font-bold mb-2">CMS Integration</h3>
+            <h3 className="font-heading font-bold text-navy mb-2">CMS Integration</h3>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
               To enable headless CMS, configure Contentful credentials in .env.local
               (CONTENTFUL_SPACE_ID, CONTENTFUL_ACCESS_TOKEN) and migrate blog content.

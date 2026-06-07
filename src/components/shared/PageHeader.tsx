@@ -14,7 +14,7 @@ export function PageHeader({ title, subtitle, breadcrumbs }: PageHeaderProps) {
               <span key={i}>
                 {i > 0 && <span className="mx-2">/</span>}
                 {crumb.href ? (
-                  <a href={crumb.href} className="hover:text-primary transition-colors">{crumb.label}</a>
+                  <a href={crumb.href} className="text-charcoal hover:text-primary transition-colors">{crumb.label}</a>
                 ) : (
                   <span className="text-navy font-medium">{crumb.label}</span>
                 )}

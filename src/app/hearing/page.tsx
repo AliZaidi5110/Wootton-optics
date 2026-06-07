@@ -36,7 +36,7 @@ export default function HearingPage() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="font-heading text-3xl font-bold mb-6">
+              <h2 className="font-heading text-3xl font-bold text-navy mb-6">
                 Why Choose Wootton Hearing?
               </h2>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">
@@ -75,7 +75,7 @@ export default function HearingPage() {
                     <item.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-heading font-bold">{item.title}</p>
+                    <p className="font-heading font-bold text-navy">{item.title}</p>
                     <p className="text-sm text-neutral-500">{item.desc}</p>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function HearingPage() {
 
       <section id="hearing-test" className="py-20 bg-neutral-50 dark:bg-neutral-900">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-center mb-4">
+          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-4">
             Your Hearing Test Explained
           </h2>
           <p className="text-center text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-12">
@@ -108,7 +108,7 @@ export default function HearingPage() {
                 <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4">
                   {item.step}
                 </div>
-                <h3 className="font-heading font-bold mb-2">{item.title}</h3>
+                <h3 className="font-heading font-bold text-navy mb-2">{item.title}</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400">{item.desc}</p>
               </div>
             ))}
@@ -118,7 +118,7 @@ export default function HearingPage() {
 
       <section id="hearing-aids" className="py-20">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-center mb-4">
+          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-4">
             Types of Hearing Aids
           </h2>
           <p className="text-center text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-12">
@@ -137,7 +137,7 @@ export default function HearingPage() {
                 </div>
                 <div className="p-6">
                   <span className="text-xs font-bold text-primary uppercase">{aid.type}</span>
-                  <h3 className="font-heading font-bold text-lg mt-1 mb-2">{aid.name}</h3>
+                  <h3 className="font-heading font-bold text-lg text-navy mt-1 mb-2">{aid.name}</h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
                     {aid.description}
                   </p>
@@ -155,7 +155,7 @@ export default function HearingPage() {
           </div>
 
           <div className="overflow-x-auto">
-            <h3 className="font-heading text-2xl font-bold mb-6">Product Comparison</h3>
+            <h3 className="font-heading text-2xl font-bold text-navy mb-6">Product Comparison</h3>
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-primary text-white">
@@ -195,7 +195,7 @@ export default function HearingPage() {
 
       <section id="aftercare" className="py-20 bg-neutral-50 dark:bg-neutral-900">
         <div className="container max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold text-center mb-8">
+          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-8">
             Book Your Hearing Assessment
           </h2>
           <div className="bg-white dark:bg-neutral-800 rounded-2xl p-8 shadow-sm border border-neutral-200 dark:border-neutral-700">

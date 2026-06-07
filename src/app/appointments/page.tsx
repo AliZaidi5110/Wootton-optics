@@ -55,7 +55,7 @@ export default function AppointmentsPage() {
                 className="bg-neutral-50 dark:bg-neutral-900 rounded-2xl p-6 text-center"
               >
                 <item.icon className="w-10 h-10 text-primary mx-auto mb-4" />
-                <h3 className="font-heading font-bold mb-2">{item.title}</h3>
+                <h3 className="font-heading font-bold text-navy mb-2">{item.title}</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400">{item.desc}</p>
               </div>
             ))}
@@ -63,14 +63,14 @@ export default function AppointmentsPage() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="font-heading text-2xl font-bold mb-6">Request an Appointment</h2>
+              <h2 className="font-heading text-2xl font-bold text-navy mb-6">Request an Appointment</h2>
               <div className="bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-700">
                 <BookingForm />
               </div>
             </div>
 
             <div>
-              <h2 className="font-heading text-2xl font-bold mb-6">What to Expect</h2>
+              <h2 className="font-heading text-2xl font-bold text-navy mb-6">What to Expect</h2>
               <div className="space-y-4">
                 {[
                   "Confirmation email within 24 hours",
@@ -89,7 +89,7 @@ export default function AppointmentsPage() {
 
               {calendlyUrl && (
                 <div className="mt-8">
-                  <h3 className="font-heading font-bold mb-4">Or Book via Calendly</h3>
+                  <h3 className="font-heading font-bold text-navy mb-4">Or Book via Calendly</h3>
                   <a
                     href={calendlyUrl}
                     target="_blank"
