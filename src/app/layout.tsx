@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { NavigationProvider } from "@/components/providers/NavigationProvider";
+import { PageTransition } from "@/components/layout/PageTransition";
 import { CookieConsent } from "@/components/shared/CookieConsent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { generateSEO, localBusinessSchema } from "@/lib/seo";
@@ -36,10 +38,14 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col antialiased">
         <ThemeProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <CookieConsent />
+          <NavigationProvider>
+            <Header />
+            <main className="flex-1">
+              <PageTransition>{children}</PageTransition>
+            </main>
+            <Footer />
+            <CookieConsent />
+          </NavigationProvider>
         </ThemeProvider>
         {process.env.NEXT_PUBLIC_GA_ID && (
           <script
