@@ -49,8 +49,5 @@ export const NAV_LINKS = [
   { href: "/hearing", label: "Hearing Care" },
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
-  { href: "/care-packages", label: "Care Packages" },
-  { href: "/testimonials", label: "Testimonials" },
-  { href: "/blog", label: "Resources" },
   { href: "/contact", label: "Contact" },
 ] as const;

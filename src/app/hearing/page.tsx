@@ -3,7 +3,6 @@ import { CTA } from "@/components/home/CTA";
 import { BookingForm } from "@/components/forms/BookingForm";
 import { hearingAids } from "@/data/hearing-aids";
 import { generateSEO } from "@/lib/seo";
-import { Button } from "@/components/ui/Button";
 import { Check, Ear, Volume2, Heart } from "lucide-react";
 import Link from "next/link";
 
@@ -202,17 +201,6 @@ export default function HearingPage() {
           <div className="bg-white dark:bg-neutral-800 rounded-2xl p-8 shadow-sm border border-neutral-200 dark:border-neutral-700">
             <BookingForm />
           </div>
-        </div>
-      </section>
-
-      <section className="py-12">
-        <div className="container text-center">
-          <p className="text-neutral-600 dark:text-neutral-400 mb-4">
-            Read our latest hearing health articles
-          </p>
-          <Button href="/blog" variant="primary">
-            Hearing Health Resources
-          </Button>
         </div>
       </section>
 
