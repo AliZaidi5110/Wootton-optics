@@ -45,6 +45,11 @@ export default function AboutPage() {
           { label: "Home", href: "/" },
           { label: "About Us" },
         ]}
+        backgroundImages={[
+          { src: "/about-1.avif", alt: "Wootton Hearing & Optics clinic in Ilford" },
+          { src: "/about-2.avif", alt: "Family-run hearing and optical care at Wootton" },
+          { src: "/about-3.avif", alt: "Expert clinicians at Wootton Hearing & Optics" },
+        ]}
       />
 
       <section className="py-20">
