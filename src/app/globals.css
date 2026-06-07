@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 :root {
+  --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading-fallback: Georgia, "Times New Roman", serif;
+  --font-body-fallback: "Trebuchet MS", "Lucida Grande", sans-serif;
   --background: #ffffff;
   --foreground: #001f3f;
   --primary: #00a8cc;
@@ -65,8 +69,31 @@
   --color-neutral-800: var(--neutral-800);
   --color-neutral-900: var(--neutral-900);
   --color-neutral-950: var(--neutral-950);
-  --font-sans: var(--font-body);
-  --font-heading: var(--font-heading);
+  --font-family-heading: var(--font-heading);
+  --font-family-body: var(--font-body);
+  --font-family-sans: var(--font-body);
+  --font-family-serif: var(--font-heading);
+
+  --text-xs: 12px;
+  --text-xs--line-height: 1.5;
+  --text-sm: 14px;
+  --text-sm--line-height: 1.6;
+  --text-base: 17px;
+  --text-base--line-height: 1.75;
+  --text-lg: 18px;
+  --text-lg--line-height: 1.7;
+  --text-xl: 20px;
+  --text-xl--line-height: 1.5;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 1.4;
+  --text-3xl: 28px;
+  --text-3xl--line-height: 1.3;
+  --text-4xl: 32px;
+  --text-4xl--line-height: 1.3;
+  --text-5xl: 42px;
+  --text-5xl--line-height: 1.25;
+  --text-6xl: 54px;
+  --text-6xl--line-height: 1.2;
 }
 
 html {
@@ -76,18 +103,140 @@ html {
 body {
   background: var(--background);
   color: var(--charcoal);
-  font-family: var(--font-body), system-ui, sans-serif;
-  line-height: 1.7;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0;
 }
 
 .font-heading {
-  font-family: var(--font-heading), system-ui, sans-serif;
+  font-family: var(--font-heading);
   color: var(--navy);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), system-ui, sans-serif;
+.font-body {
+  font-family: var(--font-body);
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
   color: var(--navy);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.3px;
+  color: var(--navy);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.2px;
+  color: var(--navy);
+}
+
+h4 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--navy);
+}
+
+h5 {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--navy);
+}
+
+h6 {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--navy);
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--charcoal);
+}
+
+small {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+button,
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.625rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.375rem;
+  }
+
+  h2 {
+    font-size: 2.625rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+  }
 }
 
 .container {
@@ -114,7 +263,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prose h2 {
-  font-family: var(--font-heading), system-ui, sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
   margin-top: 2rem;
@@ -123,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prose h3 {
-  font-family: var(--font-heading), system-ui, sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 600;
   margin-top: 1.5rem;
