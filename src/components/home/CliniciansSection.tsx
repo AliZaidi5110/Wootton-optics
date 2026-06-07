@@ -22,7 +22,7 @@ export function CliniciansSection() {
             </h2>
 
             <p className="text-lg sm:text-xl font-semibold text-charcoal leading-relaxed mb-6">
-              With over 35 years of experience, our healthcare professionals are
+              With 20+ years of experience, our healthcare professionals are
               experts at providing accessible eye and hearing care.
             </p>
 
