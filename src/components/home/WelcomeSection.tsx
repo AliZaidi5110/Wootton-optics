@@ -109,14 +109,7 @@ export function WelcomeSection() {
             </div>
 
             <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-neutral-200">
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-sky border-2 border-fresh flex items-center justify-center overflow-hidden">
-                  <span className="font-heading font-bold text-primary text-lg">MW</span>
-                </div>
-                <p className="font-heading text-xl text-primary italic">Margaret &amp; Daniel Wootton</p>
-              </div>
-
-              <div className="flex items-center gap-3 bg-white rounded-xl px-5 py-3 shadow-md border border-neutral-100 ml-auto">
+              <div className="flex items-center gap-3 bg-white rounded-xl px-5 py-3 shadow-md border border-neutral-100">
                 <div className="w-10 h-10 rounded-lg bg-sky flex items-center justify-center">
                   <Eye className="w-5 h-5 text-primary" />
                 </div>
