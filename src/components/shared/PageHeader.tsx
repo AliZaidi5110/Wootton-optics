@@ -20,7 +20,7 @@ export function PageHeader({ title, subtitle, breadcrumbs, backgroundImages }: P
         <>
           <HeroImageSlider images={backgroundImages!} />
           <div
-            className="absolute inset-0 bg-gradient-to-br from-white/92 via-sky/85 to-white/88"
+            className="absolute inset-0 bg-gradient-to-r from-white/55 via-white/20 to-transparent"
             aria-hidden="true"
           />
         </>
@@ -40,8 +40,22 @@ export function PageHeader({ title, subtitle, breadcrumbs, backgroundImages }: P
             ))}
           </nav>
         )}
-        <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-4">{title}</h1>
-        {subtitle && <p className="text-lg text-muted max-w-2xl">{subtitle}</p>}
+        <h1
+          className={`font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-4 ${
+            hasSlider ? "[text-shadow:0_1px_2px_rgba(255,255,255,0.9)]" : ""
+          }`}
+        >
+          {title}
+        </h1>
+        {subtitle && (
+          <p
+            className={`text-lg max-w-2xl ${
+              hasSlider ? "text-charcoal [text-shadow:0_1px_2px_rgba(255,255,255,0.8)]" : "text-muted"
+            }`}
+          >
+            {subtitle}
+          </p>
+        )}
       </div>
     </section>
   );
