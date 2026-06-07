@@ -30,6 +30,11 @@ export default function HearingPage() {
           { label: "Home", href: "/" },
           { label: "Hearing Care" },
         ]}
+        backgroundImages={[
+          { src: "/hearing-1.webp", alt: "Hearing assessment at Wootton Hearing Care, Ilford" },
+          { src: "/hearing-2.webp", alt: "Premium hearing aids at Wootton Hearing Care" },
+          { src: "/hearing-3.avif", alt: "Audiologist consultation at Wootton Hearing Care clinic" },
+        ]}
       />
 
       <section className="py-20">

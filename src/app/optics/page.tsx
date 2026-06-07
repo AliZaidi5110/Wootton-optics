@@ -30,6 +30,11 @@ export default function OpticsPage() {
           { label: "Home", href: "/" },
           { label: "Optics" },
         ]}
+        backgroundImages={[
+          { src: "/optics-1.avif", alt: "Designer eyewear display at Wootton Optics, Ilford" },
+          { src: "/optics-2.webp", alt: "Professional eye examination at Wootton Optics" },
+          { src: "/optics-3.avif", alt: "Premium optical services at Wootton Optics clinic" },
+        ]}
       />
 
       <BrandMarquee />

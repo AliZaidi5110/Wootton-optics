@@ -1,13 +1,31 @@
+import { HeroImageSlider, type HeroSlideImage } from "@/components/shared/HeroImageSlider";
+
 interface PageHeaderProps {
   title: string;
   subtitle?: string;
   breadcrumbs?: { label: string; href?: string }[];
+  backgroundImages?: HeroSlideImage[];
 }
 
-export function PageHeader({ title, subtitle, breadcrumbs }: PageHeaderProps) {
+export function PageHeader({ title, subtitle, breadcrumbs, backgroundImages }: PageHeaderProps) {
+  const hasSlider = Boolean(backgroundImages?.length);
+
   return (
-    <section className="gradient-sky py-16 border-b border-primary/10">
-      <div className="container">
+    <section
+      className={`relative py-16 border-b border-primary/10 overflow-hidden ${
+        hasSlider ? "" : "gradient-sky"
+      }`}
+    >
+      {hasSlider && (
+        <>
+          <HeroImageSlider images={backgroundImages!} />
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-white/92 via-sky/85 to-white/88"
+            aria-hidden="true"
+          />
+        </>
+      )}
+      <div className="container relative z-10">
         {breadcrumbs && (
           <nav aria-label="Breadcrumb" className="text-sm text-muted mb-4">
             {breadcrumbs.map((crumb, i) => (
