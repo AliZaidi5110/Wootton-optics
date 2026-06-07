@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Eye, Glasses, CircleDot, Contact, Baby, Activity, Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
@@ -14,29 +15,33 @@ export function EyeCareSection() {
   return (
     <section className="py-20 gradient-sky">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="bg-white rounded-3xl p-8 shadow-lg border-t-4 border-primary">
-              <div className="w-20 h-20 bg-sky rounded-2xl flex items-center justify-center mb-6">
-                <Glasses className="w-10 h-10 text-primary" />
-              </div>
-              <ul className="space-y-3">
-                {["NHS & private eye tests", "100+ designer frame styles", "Varifocal & occupational lenses", "Free NHS voucher accepted"].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-charcoal">
-                    <Check className="w-5 h-5 text-primary shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+          <div className="order-2 lg:order-1 flex justify-center lg:justify-start lg:sticky lg:top-28">
+            <div className="relative w-full max-w-[420px] sm:max-w-[480px] lg:max-w-none aspect-[4/3] overflow-hidden rounded-3xl shadow-lg ring-1 ring-primary/10 bg-white">
+              <Image
+                src="/img-2.avif"
+                alt="Patient selecting designer eyewear at Wootton Optics, Ilford"
+                fill
+                sizes="(max-width: 640px) 420px, (max-width: 1024px) 480px, 50vw"
+                className="object-cover object-center"
+              />
             </div>
           </div>
           <div className="order-1 lg:order-2">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy mb-4">
               Wootton Optics — Vision Clarity
             </h2>
-            <p className="text-muted text-lg mb-8 leading-relaxed">
+            <p className="text-muted text-lg mb-6 leading-relaxed">
               From thorough eye examinations to designer frames and advanced lens technology — our dispensing opticians deliver crystal-clear vision with a personal touch.
             </p>
+            <ul className="space-y-3 mb-8">
+              {["NHS & private eye tests", "100+ designer frame styles", "Varifocal & occupational lenses", "Free NHS voucher accepted"].map((item) => (
+                <li key={item} className="flex items-center gap-3 text-charcoal">
+                  <Check className="w-5 h-5 text-primary shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
             <div className="grid grid-cols-2 gap-4 mb-8">
               {features.map((f) => (
                 <div key={f.label} className="flex items-center gap-3 bg-white/70 rounded-xl p-3">
