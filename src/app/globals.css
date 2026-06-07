@@ -205,7 +205,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.welcome-badge-spin {
+  animation: welcome-badge-rotate 18s linear infinite;
+}
+
+@keyframes welcome-badge-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .welcome-badge-spin {
+    animation: none;
+  }
+
   .brand-marquee-track {
     animation: none;
     flex-wrap: wrap;
