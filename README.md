@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wootton Hearing & Optics
 
-## Getting Started
+Professional website for **Wootton Hearing Care Ltd** and **Wootton Optics** — a family-run hearing and optical services business in Ilford, Essex, UK.
 
-First, run the development server:
+## Tech Stack
+
+- **Frontend:** Next.js 16 (App Router) + TypeScript
+- **Styling:** Tailwind CSS v4 + Framer Motion
+- **Backend:** Next.js API Routes (REST)
+- **Database:** MongoDB (Mongoose)
+- **CMS:** Contentful-ready (file-based blog included)
+- **Hosting:** Vercel (recommended)
+
+## Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Copy environment variables
+cp .env.example .env.local
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+See `.env.example` for all configuration options including MongoDB, JWT auth, email, Google Analytics, Calendly, and Stripe.
 
-## Learn More
+## Pages
 
-To learn more about Next.js, take a look at the following resources:
+| Route | Description |
+|-------|-------------|
+| `/` | Home page with hero, services, testimonials, FAQ |
+| `/hearing` | Hearing aids, tests, comparison table |
+| `/optics` | Eye care, eyewear, lens technology |
+| `/about` | Company story, team, values |
+| `/services` | All services with pricing |
+| `/blog` | 22 SEO-optimized articles |
+| `/appointments` | Booking form with virtual option |
+| `/contact` | Contact form + Google Maps |
+| `/dashboard` | User appointment history |
+| `/admin` | CMS admin dashboard |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API Endpoints
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `POST /api/contact` — Contact form submissions
+- `POST /api/appointments` — Book appointments
+- `GET /api/appointments` — User appointment history (auth required)
+- `POST /api/newsletter` — Newsletter subscription
+- `POST /api/auth/register` — User registration
+- `POST /api/auth/login` — User login
 
-## Deploy on Vercel
+## Deployment (Vercel)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push to GitHub
+2. Import project in [Vercel](https://vercel.com)
+3. Add environment variables from `.env.example`
+4. Deploy
+
+## Documentation
+
+- `docs/SEO-AUDIT-REPORT.md` — SEO implementation audit
+- `docs/PERFORMANCE-OPTIMIZATION.md` — Performance guide
+- `docs/CONTENT-STRATEGY.md` — Content & keyword strategy
+- `docs/MAINTENANCE.md` — Maintenance & update guide
+
+## License
+
+Proprietary — Wootton Hearing Care Ltd

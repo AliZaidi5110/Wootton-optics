@@ -1,0 +1,58 @@
+import type { Testimonial } from "@/types";
+
+export const testimonials: Testimonial[] = [
+  {
+    id: "1",
+    name: "Margaret Thompson",
+    location: "Ilford, Essex",
+    service: "hearing",
+    rating: 5,
+    text: "The team at Wootton Hearing transformed my life. After years of struggling in conversations, my new hearing aids are virtually invisible and the sound quality is remarkable. Truly a family business that cares.",
+    date: "2025-11-12",
+  },
+  {
+    id: "2",
+    name: "James Okonkwo",
+    location: "Redbridge, London",
+    service: "optics",
+    rating: 5,
+    text: "I brought my whole family here for eye tests. Professional, thorough, and the frame selection is outstanding. My children love their new glasses and the UV protection advice was invaluable.",
+    date: "2025-10-28",
+  },
+  {
+    id: "3",
+    name: "Patricia Davies",
+    location: "Barkingside, Essex",
+    service: "hearing",
+    rating: 5,
+    text: "From the free consultation to ongoing aftercare, Wootton Hearing exceeded every expectation. They took time to explain every option without any pressure. Highly recommend to anyone in Essex.",
+    date: "2025-09-15",
+  },
+  {
+    id: "4",
+    name: "Robert Chen",
+    location: "Gants Hill, Ilford",
+    service: "optics",
+    rating: 5,
+    text: "The lens technology options were explained clearly and I chose progressive lenses that work perfectly. Fast turnaround and excellent fitting. Best optical services in the Ilford area.",
+    date: "2025-08-22",
+  },
+  {
+    id: "5",
+    name: "Susan Williams",
+    location: "Chadwell Heath, Essex",
+    service: "hearing",
+    rating: 5,
+    text: "As a senior, I was nervous about getting hearing aids. The mother-and-son team made me feel completely at ease. My rechargeable aids are so convenient and the follow-up appointments are always helpful.",
+    date: "2025-07-08",
+  },
+  {
+    id: "6",
+    name: "David Miller",
+    location: "Romford, Essex",
+    service: "optics",
+    rating: 5,
+    text: "Designer frames at competitive prices with expert advice on lens coatings. The eye test was comprehensive and they detected an early issue my previous optician missed. Outstanding care.",
+    date: "2025-06-19",
+  },
+];
