@@ -19,7 +19,7 @@ export function Testimonials() {
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy mb-4">
             Real Stories from Real Patients
           </h2>
-          <p className="text-muted text-lg">Trusted by families across Ilford, Essex &amp; Greater London</p>
+          <p className="text-muted text-lg">Trusted by families across Northampton &amp; Northamptonshire</p>
         </div>
 
         <div className="max-w-3xl mx-auto relative">

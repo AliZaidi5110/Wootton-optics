@@ -7,13 +7,13 @@ import { Check, Ear, Eye, Volume2, Glasses, Heart, Contact } from "lucide-react"
 import Link from "next/link";
 
 export const metadata = generateSEO({
-  title: "Our Services | Hearing & Optical Care Ilford",
+  title: "Our Services | Hearing & Optical Care Northampton",
   description:
-    "Complete hearing and optical services in Ilford: hearing tests, hearing aids, eye tests, eyewear, contact lenses & aftercare. View pricing & book today.",
+    "Complete hearing and optical services in Northampton: hearing tests, hearing aids, eye tests, eyewear, contact lenses & aftercare. View pricing & book today.",
   path: "/services",
   keywords: [
-    "hearing services Ilford",
-    "optical services Essex",
+    "hearing services Northampton",
+    "optical services Northamptonshire",
     "eye test price",
     "hearing aid prices",
   ],
@@ -52,7 +52,7 @@ export default function ServicesPage() {
     <>
       <PageHeader
         title="Our Services"
-        subtitle="Comprehensive hearing and optical care under one roof at our Ilford clinic."
+        subtitle="Comprehensive hearing and optical care under one roof at our Northampton clinic."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services" },

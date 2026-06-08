@@ -5,13 +5,13 @@ export const faqs: FAQ[] = [
     category: "general",
     question: "Where is Wootton Hearing & Optics located?",
     answer:
-      "We are located at 555-557 Cranbrook Road, Ilford, IG2 6HE, Essex. We are easily accessible by public transport and have parking nearby. We serve clients across Ilford, Essex, and Greater London.",
+      "We are located at 9 Tudor Court, Wootton Hope Drive, Northampton, NN4 6FF. We are easily accessible by car and public transport with parking nearby. We serve clients across Northampton, Wootton Fields, and Northamptonshire.",
   },
   {
     category: "hearing",
-    question: "How much does a hearing test cost in Ilford?",
+    question: "How much does a hearing test cost in Northampton?",
     answer:
-      "We offer free initial hearing consultations at our Ilford clinic. A comprehensive audiometric assessment is included, and there is no obligation to purchase hearing aids. Book your free consultation online or by phone.",
+      "We offer free initial hearing consultations at our Northampton clinic. A comprehensive audiometric assessment is included, and there is no obligation to purchase hearing aids. Book your free consultation online or by phone.",
   },
   {
     category: "hearing",
@@ -29,7 +29,7 @@ export const faqs: FAQ[] = [
     category: "optics",
     question: "How often should I have an eye test?",
     answer:
-      "Adults should have an eye test every two years, or annually if you are over 40, diabetic, or have a family history of glaucoma. Children should be tested annually. Our Essex-based opticians provide thorough examinations using the latest technology.",
+      "Adults should have an eye test every two years, or annually if you are over 40, diabetic, or have a family history of glaucoma. Children should be tested annually. Our Northampton-based opticians provide thorough examinations using the latest technology.",
   },
   {
     category: "optics",
@@ -41,7 +41,7 @@ export const faqs: FAQ[] = [
     category: "optics",
     question: "Do you accept NHS vouchers for glasses?",
     answer:
-      "Yes, we accept NHS optical vouchers. Bring your voucher to our Ilford practice and our team will help you select from our range of frames covered by the voucher, with options to upgrade lenses and frames if desired.",
+      "Yes, we accept NHS optical vouchers. Bring your voucher to our Northampton practice and our team will help you select from our range of frames covered by the voucher, with options to upgrade lenses and frames if desired.",
   },
   {
     category: "optics",
@@ -59,7 +59,7 @@ export const faqs: FAQ[] = [
     category: "hearing",
     question: "Do you offer ear wax removal?",
     answer:
-      "Yes. We provide professional ear wax removal at our Ilford clinic using safe clinical methods. This service is ideal if you have blocked ears, muffled hearing, or wax affecting your hearing aids.",
+      "Yes. We provide professional ear wax removal at our Northampton clinic using safe clinical methods. This service is ideal if you have blocked ears, muffled hearing, or wax affecting your hearing aids.",
   },
   {
     category: "hearing",
@@ -71,7 +71,7 @@ export const faqs: FAQ[] = [
     category: "general",
     question: "Can I book a virtual consultation?",
     answer:
-      "Yes, we offer virtual consultations for initial hearing assessments and follow-up appointments. This is ideal if you cannot visit our Cranbrook Road clinic in person. Book through our appointments page and select the virtual consultation option.",
+      "Yes, we offer virtual consultations for initial hearing assessments and follow-up appointments. This is ideal if you cannot visit our Wootton Hope Drive clinic in person. Book through our appointments page and select the virtual consultation option.",
   },
   {
     category: "general",

@@ -5,12 +5,12 @@ export const opticsIntro = {
   established: 2003,
   headline: "Expert Optical Care Since 2003",
   description:
-    "Wootton Optics has been serving Ilford and Essex since 2003. Our dispensing opticians provide thorough eye examinations, specialist contact lens care, and advanced clinical screening — whether you are NHS-funded or choosing a private appointment for extra time and technology.",
+    "Wootton Optics has been serving Northampton and Northamptonshire since 2003. Our dispensing opticians provide thorough eye examinations, specialist contact lens care, and advanced clinical screening — whether you are NHS-funded or choosing a private appointment for extra time and technology.",
 };
 
 export const hearingIntro = {
   name: "Wootton Hearing Care",
-  headline: "Trusted Hearing Care for Ilford & Essex",
+  headline: "Trusted Hearing Care for Northampton & Northamptonshire",
   description:
     "Wootton Hearing Care Ltd offers free hearing screenings and consultations, professional ear wax removal, and expert fitting, supply, and maintenance of hearing aids from leading manufacturers — with the personal attention of a family-run practice.",
 };
@@ -158,7 +158,7 @@ export const hearingServices: DetailedService[] = [
     id: "ear-wax-removal",
     title: "Ear Wax Removal",
     summary:
-      "Safe, professional removal of excess ear wax using microsuction or irrigation by trained clinicians in our Ilford clinic.",
+      "Safe, professional removal of excess ear wax using microsuction or irrigation by trained clinicians in our Northampton clinic.",
     whoNeedsIt:
       "Anyone with blocked ears, muffled hearing, ear discomfort, or wax build-up affecting hearing aid performance.",
     benefits: [

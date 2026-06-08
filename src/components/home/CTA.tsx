@@ -8,7 +8,7 @@ export function CTA() {
           Ready for Expert Care?
         </h2>
         <p className="text-white/90 text-lg max-w-2xl mx-auto mb-8">
-          Book your free consultation today at our Cranbrook Road clinic in Ilford.
+          Book your free consultation today at our Northampton clinic on Wootton Hope Drive.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
           <Button href="/appointments?service=eye-test" variant="accent" size="lg">

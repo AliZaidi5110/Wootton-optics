@@ -11,9 +11,9 @@ import { KEYWORDS } from "@/lib/constants";
 import "./globals.css";
 
 export const metadata: Metadata = generateSEO({
-  title: "Hearing Aids Ilford & Eye Care Ilford | Wootton Hearing & Optics",
+  title: "Hearing Aids Northampton & Eye Care Northampton | Wootton Hearing & Optics",
   description:
-    "Expert eye & hearing care from the heart. Family-run Wootton Hearing & Optics in Ilford — free consultations, NHS & premium options, care packages.",
+    "Expert eye & hearing care from the heart. Family-run Wootton Hearing & Optics in Northampton — free consultations, NHS & premium options.",
   path: "/",
   keywords: [...KEYWORDS],
 });

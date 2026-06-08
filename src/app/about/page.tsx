@@ -5,11 +5,11 @@ import { generateSEO } from "@/lib/seo";
 import { Heart, Target, Users, Award } from "lucide-react";
 
 export const metadata = generateSEO({
-  title: "About Us | Family Hearing & Optical Care Ilford",
+  title: "About Us | Family Hearing & Optical Care Northampton",
   description:
-    "Meet the Wootton family — mother & son team providing expert hearing care and optical services in Ilford, Essex for over 20 years.",
+    "Meet the Wootton family — mother & son team providing expert hearing care and optical services in Northampton for over 20 years.",
   path: "/about",
-  keywords: ["Wootton Hearing", "family business Ilford", "audiologist Essex", "optician Ilford"],
+  keywords: ["Wootton Hearing", "family business Northampton", "audiologist Northamptonshire", "optician Northampton"],
 });
 
 const values = [
@@ -26,7 +26,7 @@ const values = [
   {
     icon: Users,
     title: "Community Focus",
-    desc: "Proudly serving Ilford, Essex, and Greater London. We support local events and health awareness campaigns.",
+    desc: "Proudly serving Northampton, Wootton Fields, and Northamptonshire. We support local events and health awareness campaigns.",
   },
   {
     icon: Award,
@@ -46,7 +46,7 @@ export default function AboutPage() {
           { label: "About Us" },
         ]}
         backgroundImages={[
-          { src: "/about-1.avif", alt: "Wootton Hearing & Optics clinic in Ilford" },
+          { src: "/about-1.avif", alt: "Wootton Hearing & Optics clinic in Northampton" },
           { src: "/about-2.avif", alt: "Family-run hearing and optical care at Wootton" },
           { src: "/about-3.avif", alt: "Expert clinicians at Wootton Hearing & Optics" },
         ]}
@@ -60,9 +60,9 @@ export default function AboutPage() {
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                 Wootton Hearing Care was founded in 2003 by Margaret Wootton, a
                 passionate audiologist who saw a need for personal, community-focused
-                hearing care in Ilford. What began as a small hearing aid clinic on
-                Cranbrook Road has grown into a trusted destination for thousands of
-                clients across Essex and London.
+                hearing care in Northampton. What began as a small hearing aid clinic on
+                Wootton Hope Drive has grown into a trusted destination for thousands of
+                clients across Northamptonshire.
               </p>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                 In 2015, Margaret&apos;s son Daniel joined the business, bringing his
@@ -73,7 +73,7 @@ export default function AboutPage() {
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
                 Today, our mother-and-son team combines over 35 years of combined
                 clinical experience with the warmth and personal attention that only a
-                family business can provide. We are proud to be part of the Ilford
+                family business can provide. We are proud to be part of the Northampton
                 community and committed to improving lives through better hearing and
                 clearer vision.
               </p>
@@ -87,7 +87,7 @@ export default function AboutPage() {
                 Margaret & Daniel Wootton
               </p>
               <p className="text-sm text-neutral-500 mt-4">
-                Serving Ilford since 2003
+                Serving Northampton since 2003
               </p>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function AboutPage() {
           <h2 className="font-heading text-3xl font-bold text-navy mb-4">Community Involvement</h2>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed">
             We actively participate in local health fairs, provide free hearing
-            screenings at community events, support the Ilford Business Improvement
+            screenings at community events, support local Northampton business and health
             District, and sponsor local sports teams. Giving back to the community
             that has supported us for over 20 years is at the heart of who we are.
           </p>

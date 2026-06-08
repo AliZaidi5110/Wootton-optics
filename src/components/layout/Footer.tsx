@@ -19,7 +19,7 @@ export function Footer() {
               <span className="font-heading font-bold text-lg text-white ml-1">Wootton</span>
             </div>
             <p className="text-sm leading-relaxed text-neutral-300 mb-6">
-              Family-run hearing care and optical services in Ilford, Essex.
+              Family-run hearing care and optical services in Northampton, Northamptonshire.
               Quality service and individual care for every patient since 2003.
             </p>
             <div className="flex gap-3">

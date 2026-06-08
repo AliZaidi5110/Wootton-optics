@@ -7,15 +7,15 @@ import { Check, Ear, Volume2, Heart } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = generateSEO({
-  title: "Hearing Aids Ilford | Expert Hearing Care Essex",
+  title: "Hearing Aids Northampton | Expert Hearing Care Northamptonshire",
   description:
-    "Premium hearing aids, free hearing tests & audiologist services in Ilford. BTE, RIC, ITE & invisible hearing aids with expert fitting & aftercare.",
+    "Premium hearing aids, free hearing tests & audiologist services in Northampton. BTE, RIC, ITE & invisible hearing aids with expert fitting & aftercare.",
   path: "/hearing",
   keywords: [
-    "hearing aids Ilford",
-    "hearing test Ilford",
-    "hearing care London",
-    "audiologist Essex",
+    "hearing aids Northampton",
+    "hearing test Northampton",
+    "hearing care Northamptonshire",
+    "audiologist Northampton",
     "free hearing test",
   ],
 });
@@ -25,13 +25,13 @@ export default function HearingPage() {
     <>
       <PageHeader
         title="Wootton Hearing Care"
-        subtitle="Expert hearing tests, premium hearing aids, and lifetime aftercare from Ilford's trusted family audiologists."
+        subtitle="Expert hearing tests, premium hearing aids, and lifetime aftercare from Northampton's trusted family audiologists."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Hearing Care" },
         ]}
         backgroundImages={[
-          { src: "/hearing-1.webp", alt: "Hearing assessment at Wootton Hearing Care, Ilford" },
+          { src: "/hearing-1.webp", alt: "Hearing assessment at Wootton Hearing Care, Northampton" },
           { src: "/hearing-2.webp", alt: "Premium hearing aids at Wootton Hearing Care" },
           { src: "/hearing-3.avif", alt: "Audiologist consultation at Wootton Hearing Care clinic" },
         ]}
@@ -46,7 +46,7 @@ export default function HearingPage() {
               </h2>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">
                 At Wootton Hearing Care Ltd, we believe everyone deserves to hear
-                life&apos;s precious moments clearly. Our Ilford clinic offers
+                life&apos;s precious moments clearly. Our Northampton clinic offers
                 comprehensive hearing assessments, the latest hearing aid
                 technology, and compassionate ongoing support.
               </p>

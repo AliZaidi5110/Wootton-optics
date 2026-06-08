@@ -52,7 +52,7 @@ export function WelcomeSection() {
               <div className="relative rounded-2xl overflow-hidden shadow-lg">
                 <Image
                   src="/welcome-1.jpg"
-                  alt="Eye examination at Wootton Optics, Ilford"
+                  alt="Eye examination at Wootton Optics, Northampton"
                   width={520}
                   height={620}
                   className="w-full h-auto object-cover aspect-[4/5]"
@@ -84,7 +84,7 @@ export function WelcomeSection() {
               <strong className="text-navy">Wootton Optics</strong> has been open since 2003,
               providing NHS and private eye tests, specialist contact lenses, dry eye
               assessment, myopia management, glaucoma screening, and children&apos;s eye tests
-              from our Cranbrook Road clinic in Ilford.
+              from our Wootton Hope Drive clinic in Northampton.
             </p>
             <p className="text-muted text-base sm:text-lg leading-relaxed mb-8">
               <strong className="text-navy">Wootton Hearing Care Ltd</strong> complements this

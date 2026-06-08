@@ -17,19 +17,19 @@ export function Hero() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-sky text-primary rounded-full text-sm font-semibold mb-6">
               <Heart className="w-4 h-4 text-coral" />
-              Family-Run Since 2003 · Ilford, Essex
+              Family-Run Since 2003 · Northampton
             </span>
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-[56px] font-bold text-navy leading-tight mb-6">
               Wootton Optics &amp; Wootton Hearing Care
             </h1>
             <p className="text-lg text-muted mb-4 max-w-xl leading-relaxed">
               {SITE.tagline} From NHS and private eye tests to free hearing
-              consultations — expert clinical care under one roof on Cranbrook Road, Ilford.
+              consultations — expert clinical care under one roof in Wootton Fields, Northampton.
             </p>
             <p className="text-base text-charcoal mb-8 max-w-xl leading-relaxed">
               <strong className="text-navy">Wootton Optics</strong> has been open since 2003.
               Alongside <strong className="text-navy">Wootton Hearing Care</strong>, we provide
-              comprehensive vision and hearing services for families across Essex and London.
+              comprehensive vision and hearing services for families across Northamptonshire.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <Button href="/appointments?service=eye-test" variant="primary" size="lg">

@@ -8,7 +8,7 @@ export function CliniciansSection() {
           <div className="relative">
             <Image
               src="/img-1.jpg"
-              alt="Wootton clinician consulting with a patient using a tablet at our Ilford practice"
+              alt="Wootton clinician consulting with a patient using a tablet at our Northampton practice"
               width={640}
               height={480}
               className="w-full h-auto rounded-3xl object-cover shadow-lg"

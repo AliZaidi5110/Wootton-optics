@@ -5,18 +5,18 @@ export const SITE = {
   tagline: "Personalized care. Quality you deserve. Family you trust.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.woottonhearing.co.uk",
   description:
-    "Family-run hearing aids and optical services in Ilford, Essex. Expert hearing care, eye tests, and premium eyewear near London.",
+    "Family-run hearing aids and optical services in Northampton. Expert hearing care, eye tests, and premium eyewear in Wootton Fields.",
   phone: "+44 20 8554 1234",
   email: "info@woottonhearing.co.uk",
   address: {
-    street: "555-557 Cranbrook Road",
-    city: "Ilford",
-    county: "Essex",
-    postcode: "IG2 6HE",
+    street: "9 Tudor Court, Wootton Hope Drive",
+    city: "Northampton",
+    county: "Northamptonshire",
+    postcode: "NN4 6FF",
     country: "UK",
-    full: "555-557 Cranbrook Road, Ilford, IG2 6HE, UK",
+    full: "9 Tudor Court, Wootton Hope Drive, Northampton, NN4 6FF, UK",
   },
-  coordinates: { lat: 51.5792, lng: 0.0678 },
+  coordinates: { lat: 52.218, lng: -0.8925 },
   hours: {
     weekdays: "Mon–Fri: 9:00 AM – 6:00 PM",
     saturday: "Sat: 9:00 AM – 4:00 PM",
@@ -31,16 +31,16 @@ export const SITE = {
 } as const;
 
 export const KEYWORDS = [
-  "hearing aids Ilford",
-  "eye test Ilford",
-  "optician Ilford",
-  "optical services Essex",
-  "hearing care London",
-  "hearing test Ilford",
-  "eye care Ilford",
-  "audiologist Essex",
-  "designer glasses Ilford",
-  "free hearing test Ilford",
+  "hearing aids Northampton",
+  "eye test Northampton",
+  "optician Northampton",
+  "optical services Northamptonshire",
+  "hearing care Northampton",
+  "hearing test Northampton",
+  "eye care Northampton",
+  "audiologist Northamptonshire",
+  "designer glasses Northampton",
+  "free hearing test Northampton",
 ] as const;
 
 export const NAV_LINKS = [

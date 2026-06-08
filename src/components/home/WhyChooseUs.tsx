@@ -1,7 +1,7 @@
 import { Users, UserCheck, ShieldCheck, Layers, Sparkles, Headphones } from "lucide-react";
 
 const features = [
-  { icon: Users, title: "Family-Owned Trust", desc: "Mother & son team with 20+ years serving Ilford", color: "text-accent bg-coral/20" },
+  { icon: Users, title: "Family-Owned Trust", desc: "Mother & son team with 20+ years serving Northampton", color: "text-accent bg-coral/20" },
   { icon: UserCheck, title: "Same Staff Every Visit", desc: "Build a lasting relationship with your clinician", color: "text-primary bg-sky" },
   { icon: ShieldCheck, title: "Non-Tolerance Guarantee", desc: "Try lenses and aids with complete confidence", color: "text-fresh bg-mint/40" },
   { icon: Layers, title: "NHS + Premium Options", desc: "From free NHS to Italian designer brands", color: "text-gold bg-gold/15" },

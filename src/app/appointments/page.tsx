@@ -5,14 +5,14 @@ import { SITE } from "@/lib/constants";
 import { Calendar, Video, Phone, Check } from "lucide-react";
 
 export const metadata = generateSEO({
-  title: "Book Appointment | Free Consultation Ilford",
+  title: "Book Appointment | Free Consultation Northampton",
   description:
-    "Book your free hearing test or eye test appointment at Wootton Hearing & Optics, Ilford. Online booking with confirmation email. Virtual consultations available.",
+    "Book your free hearing test or eye test appointment at Wootton Hearing & Optics, Northampton. Online booking with confirmation email. Virtual consultations available.",
   path: "/appointments",
   keywords: [
-    "book hearing test Ilford",
-    "eye test appointment Essex",
-    "free consultation Ilford",
+    "book hearing test Northampton",
+    "eye test appointment Northamptonshire",
+    "free consultation Northampton",
   ],
 });
 
@@ -37,7 +37,7 @@ export default function AppointmentsPage() {
               {
                 icon: Calendar,
                 title: "In-Clinic Visit",
-                desc: "Visit our Cranbrook Road clinic for comprehensive assessments.",
+                desc: "Visit our Wootton Hope Drive clinic for comprehensive assessments.",
               },
               {
                 icon: Video,

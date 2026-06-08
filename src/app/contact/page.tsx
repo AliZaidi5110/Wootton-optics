@@ -5,11 +5,11 @@ import { SITE } from "@/lib/constants";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 
 export const metadata = generateSEO({
-  title: "Contact Us | Wootton Hearing & Optics Ilford",
+  title: "Contact Us | Wootton Hearing & Optics Northampton",
   description:
-    "Contact Wootton Hearing & Optics at 555-557 Cranbrook Road, Ilford IG2 6HE. Call, email, or visit our Essex clinic for hearing and optical services.",
+    "Contact Wootton Hearing & Optics at 9 Tudor Court, Wootton Hope Drive, Northampton NN4 6FF. Call, email, or visit our clinic for hearing and optical services.",
   path: "/contact",
-  keywords: ["contact Wootton Hearing", "Ilford optician contact", "hearing clinic Essex"],
+  keywords: ["contact Wootton Hearing", "Northampton optician contact", "hearing clinic Northamptonshire"],
 });
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
     <>
       <PageHeader
         title="Contact Us"
-        subtitle="We'd love to hear from you. Visit our Ilford clinic, call, or send us a message."
+        subtitle="We'd love to hear from you. Visit our Northampton clinic, call, or send us a message."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact" },

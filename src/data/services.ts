@@ -140,7 +140,7 @@ export const services: Service[] = [
     id: "ear-wax-removal",
     title: "Ear Wax Removal",
     description:
-      "Safe professional wax removal by microsuction or irrigation in our Ilford clinic.",
+      "Safe professional wax removal by microsuction or irrigation in our Northampton clinic.",
     icon: "ear",
     href: "/#hearing-services",
     features: [
@@ -188,7 +188,7 @@ export const processSteps = [
     step: 1,
     title: "Book Your Appointment",
     description:
-      "Schedule online, by phone, or visit our Cranbrook Road clinic. Choose hearing, optical, or both services.",
+      "Schedule online, by phone, or visit our Wootton Hope Drive clinic. Choose hearing, optical, or both services.",
   },
   {
     step: 2,

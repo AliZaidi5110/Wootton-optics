@@ -20,7 +20,7 @@ export function EyeCareSection() {
             <div className="relative w-full max-w-[420px] sm:max-w-[480px] lg:max-w-none aspect-[4/3] overflow-hidden rounded-3xl shadow-lg ring-1 ring-primary/10 bg-white">
               <Image
                 src="/img-2.avif"
-                alt="Patient selecting designer eyewear at Wootton Optics, Ilford"
+                alt="Patient selecting designer eyewear at Wootton Optics, Northampton"
                 fill
                 sizes="(max-width: 640px) 420px, (max-width: 1024px) 480px, 50vw"
                 className="object-cover object-center"

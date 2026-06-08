@@ -7,15 +7,15 @@ import { generateSEO } from "@/lib/seo";
 import { Check, Eye, Glasses, Sun, Shield } from "lucide-react";
 
 export const metadata = generateSEO({
-  title: "Optical Services Essex | Eye Tests & Eyewear Ilford",
+  title: "Optical Services Northamptonshire | Eye Tests & Eyewear Northampton",
   description:
-    "Professional eye tests, designer eyewear & advanced lens technology in Ilford, Essex. NHS & private appointments at Wootton Optics.",
+    "Professional eye tests, designer eyewear & advanced lens technology in Northampton. NHS & private appointments at Wootton Optics.",
   path: "/optics",
   keywords: [
-    "optical services Essex",
-    "eye test Ilford",
-    "optician Essex",
-    "prescription glasses Ilford",
+    "optical services Northamptonshire",
+    "eye test Northampton",
+    "optician Northampton",
+    "prescription glasses Northampton",
     "designer eyewear",
   ],
 });
@@ -25,13 +25,13 @@ export default function OpticsPage() {
     <>
       <PageHeader
         title="Wootton Optics"
-        subtitle="Comprehensive eye care, designer eyewear, and advanced lens technology from Essex's trusted dispensing opticians."
+        subtitle="Comprehensive eye care, designer eyewear, and advanced lens technology from Northampton's trusted dispensing opticians."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Optics" },
         ]}
         backgroundImages={[
-          { src: "/optics-1.avif", alt: "Designer eyewear display at Wootton Optics, Ilford" },
+          { src: "/optics-1.avif", alt: "Designer eyewear display at Wootton Optics, Northampton" },
           { src: "/optics-2.webp", alt: "Professional eye examination at Wootton Optics" },
           { src: "/optics-3.avif", alt: "Premium optical services at Wootton Optics clinic" },
         ]}
@@ -49,7 +49,7 @@ export default function OpticsPage() {
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                 Wootton Optics provides thorough eye examinations, expert frame
                 styling, and the latest lens technology. Whether you need a routine
-                eye test, new prescription glasses, or contact lenses, our Ilford
+                eye test, new prescription glasses, or contact lenses, our Northampton
                 team delivers exceptional optical services.
               </p>
               <div className="space-y-3">

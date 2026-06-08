@@ -117,9 +117,9 @@ export function localBusinessSchema() {
     ],
     priceRange: "££",
     areaServed: [
-      { "@type": "City", name: "Ilford" },
-      { "@type": "AdministrativeArea", name: "Essex" },
-      { "@type": "City", name: "London" },
+      { "@type": "City", name: "Northampton" },
+      { "@type": "AdministrativeArea", name: "Northamptonshire" },
+      { "@type": "City", name: "Wootton Fields" },
     ],
     sameAs: Object.values(SITE.social),
     hasOfferCatalog: {
@@ -131,7 +131,7 @@ export function localBusinessSchema() {
           itemOffered: {
             "@type": "Service",
             name: "Hearing Tests",
-            description: "Comprehensive hearing assessments in Ilford",
+            description: "Comprehensive hearing assessments in Northampton",
           },
         },
         {
@@ -147,7 +147,7 @@ export function localBusinessSchema() {
           itemOffered: {
             "@type": "Service",
             name: "Eye Tests",
-            description: "Professional eye examinations in Essex",
+            description: "Professional eye examinations in Northamptonshire",
           },
         },
         {

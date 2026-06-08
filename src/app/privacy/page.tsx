@@ -5,7 +5,7 @@ import { SITE } from "@/lib/constants";
 export const metadata = generateSEO({
   title: "Privacy Policy",
   description:
-    "Wootton Hearing Care Ltd privacy policy. GDPR-compliant data protection for hearing and optical services in Ilford, Essex.",
+    "Wootton Hearing Care Ltd privacy policy. GDPR-compliant data protection for hearing and optical services in Northampton, Northamptonshire.",
   path: "/privacy",
 });
 

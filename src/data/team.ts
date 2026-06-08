@@ -5,7 +5,7 @@ export const team: TeamMember[] = [
     id: "1",
     name: "Margaret Wootton",
     role: "Founder & Lead Audiologist",
-    bio: "Margaret founded Wootton Hearing Care over two decades ago with a vision to bring compassionate, expert hearing care to the Ilford community. With extensive clinical experience and a genuine passion for improving lives, she leads our hearing services with warmth and professionalism.",
+    bio: "Margaret founded Wootton Hearing Care over two decades ago with a vision to bring compassionate, expert hearing care to the Northampton community. With extensive clinical experience and a genuine passion for improving lives, she leads our hearing services with warmth and professionalism.",
     qualifications: [
       "BSc (Hons) Audiology",
       "Registered Hearing Aid Dispenser (RHAD)",

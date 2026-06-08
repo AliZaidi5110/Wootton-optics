@@ -30,7 +30,7 @@ export default function AccessibilityPage() {
           </p>
           <h2>Physical Accessibility</h2>
           <p>
-            Our Cranbrook Road clinic is wheelchair accessible with step-free access.
+            Our Wootton Hope Drive clinic is wheelchair accessible with step-free access.
             Please contact us in advance if you need any additional accommodations.
           </p>
           <h2>Feedback</h2>

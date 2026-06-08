@@ -23,7 +23,7 @@ export function ServicesOverview() {
             Comprehensive Hearing &amp; Vision Care
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto text-lg">
-            From free hearing tests to designer eyewear, our Ilford clinic provides
+            From free hearing tests to designer eyewear, our Northampton clinic provides
             everything your ears and eyes need under one roof.
           </p>
         </div>
