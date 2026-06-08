@@ -1,24 +1,39 @@
 import type { DetailedService } from "@/types";
 
 export const opticsIntro = {
-  name: "Wootton Optics",
+  name: "Wootton Optician",
   established: 2003,
-  headline: "Expert Optical Care Since 2003",
+  headline: "Wootton Optician",
   description:
-    "Wootton Optics has been serving Northampton and Northamptonshire since 2003. Our dispensing opticians provide thorough eye examinations, specialist contact lens care, and advanced clinical screening — whether you are NHS-funded or choosing a private appointment for extra time and technology.",
+    "Established in 2003, Wootton Optician provides NHS and private sight tests, specialist contact lenses, dry eye assessment, myopia management, glaucoma screening, and children's eye examinations — with the personalised care of an independent practice.",
 };
 
 export const hearingIntro = {
   name: "Wootton Hearing Care",
-  headline: "Trusted Hearing Care for Northampton & Northamptonshire",
+  headline: "Wootton Hearing Care",
   description:
-    "Wootton Hearing Care Ltd offers free hearing screenings and consultations, professional ear wax removal, and expert fitting, supply, and maintenance of hearing aids from leading manufacturers — with the personal attention of a family-run practice.",
+    "Wootton Hearing Care Ltd offers free hearing screenings and consultations, professional ear wax removal, and expert supply, fitting, and maintenance of hearing aids — with honest, independent advice and no sales pressure.",
 };
+
+export const trustStats = [
+  { value: "20+", label: "Years of experience" },
+  { value: "5,000+", label: "Patients cared for" },
+  { value: "NHS", label: "& private services" },
+  { value: "100%", label: "Independent practice" },
+];
+
+export const trustStripItems = [
+  "Independent family practice since 2003",
+  "NHS & private sight tests available",
+  "Free hearing screenings & consultations",
+  "HCPC-registered clinicians",
+  "Personalised care, no sales pressure",
+];
 
 export const opticsServices: DetailedService[] = [
   {
-    id: "nhs-eye-test",
-    title: "NHS Eye Tests",
+    id: "nhs-sight-test",
+    title: "NHS Sight Test",
     summary:
       "A full sight test funded by the NHS for eligible patients, including vision assessment, eye health checks, and a prescription when needed.",
     whoNeedsIt:
@@ -32,8 +47,8 @@ export const opticsServices: DetailedService[] = [
     pricing: "Free for eligible NHS patients",
   },
   {
-    id: "private-eye-test",
-    title: "Private Eye Tests",
+    id: "private-sight-test",
+    title: "Private Sight Test",
     summary:
       "An extended private sight test with additional clinical time, digital retinal imaging, and a detailed explanation of your results.",
     whoNeedsIt:
@@ -104,11 +119,11 @@ export const opticsServices: DetailedService[] = [
       "Visual field testing where clinically indicated",
       "Prompt referral and co-management with ophthalmology",
     ],
-    pricing: "Included in private eye test · Standalone from £35",
+    pricing: "Included in private sight test · Standalone from £35",
   },
   {
-    id: "child-eye-tests",
-    title: "Children's Eye Tests",
+    id: "childrens-sight-tests",
+    title: "Children's Sight Tests",
     summary:
       "Child-friendly eye examinations designed to detect vision problems early, supporting learning, development, and long-term eye health.",
     whoNeedsIt:
@@ -170,33 +185,18 @@ export const hearingServices: DetailedService[] = [
     pricing: "From £60 per ear",
   },
   {
-    id: "hearing-aid-supply",
-    title: "Hearing Aid Supply & Fitting",
+    id: "hearing-aids",
+    title: "Hearing Aids — Supply & Maintenance",
     summary:
-      "Supply, custom programming, and fitting of digital hearing aids from leading manufacturers to match your hearing loss and lifestyle.",
+      "Supply, custom programming, fitting, and ongoing maintenance of digital hearing aids from leading manufacturers.",
     whoNeedsIt:
-      "People with diagnosed hearing loss who want clearer speech, better social confidence, and modern features like Bluetooth and rechargeability.",
+      "People with diagnosed hearing loss who want clearer speech, better confidence, and modern features — plus existing aid users needing servicing or repairs.",
     benefits: [
-      "All major brands including Phonak, Oticon, Widex, and more",
-      "Custom programming for your unique hearing profile",
+      "All major brands with custom programming",
       "Trial periods available on selected models",
-      "Rechargeable and Bluetooth-enabled options",
+      "Professional cleaning, servicing, and reprogramming",
+      "Repairs, batteries, and accessories in clinic",
     ],
-    pricing: "From £495 per aid",
-  },
-  {
-    id: "hearing-aid-maintenance",
-    title: "Hearing Aid Maintenance & Repairs",
-    summary:
-      "Ongoing cleaning, servicing, reprogramming, and repairs to keep your hearing aids performing at their best for years to come.",
-    whoNeedsIt:
-      "All hearing aid users — regular maintenance prevents faults, extends device life, and ensures consistent sound quality.",
-    benefits: [
-      "Professional cleaning and performance checks",
-      "Reprogramming as your hearing changes",
-      "Fast repair turnaround for most faults",
-      "Batteries, domes, and accessories available in clinic",
-    ],
-    pricing: "Aftercare included with purchase · Repairs from £45",
+    pricing: "From £495 per aid · Repairs from £45",
   },
 ];

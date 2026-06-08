@@ -6,19 +6,17 @@ import {
 } from "@/data/homepage-services";
 import { Button } from "@/components/ui/Button";
 import { ServiceDetailCard } from "@/components/home/ServiceDetailCard";
-import { Glasses, Ear } from "lucide-react";
 
 export function HomepageServices() {
   return (
     <>
-      <section id="optics-services" className="py-20 bg-white">
+      <section id="optician-services" className="py-20 bg-cream">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-sky text-primary rounded-full text-sm font-semibold mb-4">
-              <Glasses className="w-4 h-4" />
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
               Open since {opticsIntro.established}
-            </div>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy mb-4">
+            </p>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-4">
               {opticsIntro.headline}
             </h2>
             <p className="text-lg text-charcoal leading-relaxed">{opticsIntro.description}</p>
@@ -26,46 +24,50 @@ export function HomepageServices() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {opticsServices.map((service) => (
-              <ServiceDetailCard key={service.id} service={service} accent="primary" />
+              <ServiceDetailCard key={service.id} service={service} variant="light" />
             ))}
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button href="/appointments?service=eye-test" variant="primary" size="lg">
-              Book an Eye Test
+              Book a Sight Test
             </Button>
             <Button href="/optics" variant="outline" size="lg">
-              View All Eye Care
+              Learn More About Eye Care
             </Button>
           </div>
         </div>
       </section>
 
-      <section id="hearing-services" className="py-20 gradient-sky">
+      <section id="hearing-services" className="py-20 bg-navy text-white">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white text-accent rounded-full text-sm font-semibold mb-4">
-              <Ear className="w-4 h-4" />
+            <p className="text-sm font-semibold uppercase tracking-widest text-teal-light mb-3">
               {hearingIntro.name}
-            </div>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy mb-4">
+            </p>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               {hearingIntro.headline}
             </h2>
-            <p className="text-lg text-charcoal leading-relaxed">{hearingIntro.description}</p>
+            <p className="text-lg text-white/80 leading-relaxed">{hearingIntro.description}</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {hearingServices.map((service) => (
-              <ServiceDetailCard key={service.id} service={service} accent="accent" />
+              <ServiceDetailCard key={service.id} service={service} variant="dark" />
             ))}
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Button href="/appointments?service=hearing-test" variant="accent" size="lg">
-              Book a Free Hearing Consultation
+            <Button href="/appointments?service=hearing-test" variant="primary" size="lg">
+              Book a Free Consultation
             </Button>
-            <Button href="/hearing" variant="outline" size="lg">
-              View All Hearing Care
+            <Button
+              href="/hearing"
+              variant="outline"
+              size="lg"
+              className="border-white/40 text-white hover:bg-white hover:text-navy"
+            >
+              Learn More About Hearing Care
             </Button>
           </div>
         </div>

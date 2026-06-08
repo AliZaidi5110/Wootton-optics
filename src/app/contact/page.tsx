@@ -5,9 +5,9 @@ import { SITE } from "@/lib/constants";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 
 export const metadata = generateSEO({
-  title: "Contact Us | Wootton Hearing & Optics Northampton",
+  title: "Contact Us | Wootton Optician & Hearing Care Northampton",
   description:
-    "Contact Wootton Hearing & Optics at 9 Tudor Court, Wootton Hope Drive, Northampton NN4 6FF. Call, email, or visit our clinic for hearing and optical services.",
+    "Contact Wootton Optician & Hearing Care at 9 Tudor Court, Wootton Hope Drive, Northampton NN4 6FF. Call, email, or visit our clinic for hearing and optical services.",
   path: "/contact",
   keywords: ["contact Wootton Hearing", "Northampton optician contact", "hearing clinic Northamptonshire"],
 });
@@ -86,7 +86,7 @@ export default function ContactPage() {
 
               <div className="rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-700 h-64 bg-neutral-100 dark:bg-neutral-800">
                 <iframe
-                  title="Wootton Hearing & Optics location on Google Maps"
+                  title="Wootton Optician & Hearing Care location on Google Maps"
                   src={`https://maps.google.com/maps?q=${encodeURIComponent(SITE.address.full)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                   width="100%"
                   height="100%"

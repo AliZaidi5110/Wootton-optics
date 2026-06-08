@@ -18,7 +18,7 @@ export const team: TeamMember[] = [
     id: "2",
     name: "Daniel Wootton",
     role: "Director & Dispensing Optician",
-    bio: "Daniel joined the family business to expand Wootton Optics, bringing fresh energy and modern optical expertise. He specialises in advanced lens technology and designer eyewear, ensuring every client receives personalised vision care.",
+    bio: "Daniel joined the family business to expand Wootton Optician, bringing fresh energy and modern optical expertise. He specialises in advanced lens technology and designer eyewear, ensuring every client receives personalised vision care.",
     qualifications: [
       "BSc (Hons) Ophthalmic Dispensing",
       "FBDO – Fellow of the Association of British Dispensing Opticians",

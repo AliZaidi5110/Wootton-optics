@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Phone, Clock, Ear, Glasses } from "lucide-react";
+import { Menu, X, Phone, Ear, Glasses } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
@@ -16,10 +16,10 @@ function isNavActive(pathname: string, href: string): boolean {
 function navLinkClass(active: boolean, mobile = false) {
   return cn(
     "font-medium transition-colors rounded-lg",
-    mobile ? "px-4 py-3 text-base min-h-[48px] flex items-center" : "px-2.5 py-2 text-sm",
+    mobile ? "px-4 py-3 text-base min-h-[48px] flex items-center" : "px-3 py-2 text-sm",
     active
-      ? "bg-primary text-white font-semibold shadow-sm"
-      : "text-charcoal hover:text-primary hover:bg-sky/60"
+      ? "bg-primary text-white font-semibold"
+      : "text-navy hover:text-primary hover:bg-teal-light/60"
   );
 }
 
@@ -27,52 +27,28 @@ export function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const appointmentsActive = isNavActive(pathname, "/appointments");
+  const phoneDisplay = SITE.phoneDisplay ?? SITE.phone;
 
   return (
-    <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-md border-b border-neutral-200 shadow-sm">
-      <div className="bg-sky text-navy text-sm py-2">
-        <div className="container flex justify-between items-center gap-4">
-          <div className="hidden md:flex items-center gap-4 text-charcoal">
-            <span className="flex items-center gap-1">
-              <Clock className="w-3.5 h-3.5 text-primary" />
-              {SITE.hours.weekdays}
-            </span>
-            <span className="hidden lg:inline text-charcoal/40">|</span>
-            <span className="hidden lg:inline">{SITE.address.full}</span>
-          </div>
-          <a
-            href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-            className="flex items-center gap-1.5 text-primary font-semibold hover:text-accent transition-colors ml-auto"
-          >
-            <Phone className="w-4 h-4" />
-            {SITE.phone}
-          </a>
-        </div>
-      </div>
-
+    <header className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md border-b border-cream-dark shadow-sm">
       <div className="container py-3">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3 group shrink-0">
             <div className="flex items-center">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Ear className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
+                <Ear className="w-5 h-5 text-teal-light" />
               </div>
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center -ml-2">
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center -ml-2">
                 <Glasses className="w-5 h-5 text-white" />
               </div>
             </div>
             <div>
-              <p className="font-heading font-bold text-lg text-navy leading-tight">
-                Wootton
-              </p>
-              <p className="text-xs text-charcoal flex items-center gap-1">
-                Hearing & Optics
-                <span className="w-2 h-2 bg-sunny rounded-full inline-block" aria-hidden="true" />
-              </p>
+              <p className="font-heading font-bold text-lg text-navy leading-tight">Wootton</p>
+              <p className="text-xs text-charcoal">Optician &amp; Hearing Care</p>
             </div>
           </Link>
 
-          <nav className="hidden xl:flex items-center gap-0.5" aria-label="Main navigation">
+          <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
             {NAV_LINKS.map((link) => {
               const active = isNavActive(pathname, link.href);
               return (
@@ -88,21 +64,25 @@ export function Header() {
             })}
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
+            <a
+              href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+              className="hidden lg:flex items-center gap-1.5 text-sm text-navy font-semibold hover:text-primary transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              {phoneDisplay}
+            </a>
             <Button
               href="/appointments"
               variant={appointmentsActive ? "primary" : "accent"}
               size="sm"
-              className={cn(
-                "hidden sm:inline-flex",
-                appointmentsActive && "ring-2 ring-primary ring-offset-2"
-              )}
+              className={cn("hidden sm:inline-flex", appointmentsActive && "ring-2 ring-primary ring-offset-2")}
               aria-current={appointmentsActive ? "page" : undefined}
             >
               Book Now
             </Button>
             <button
-              className="xl:hidden p-2 rounded-lg hover:bg-sky min-w-[48px] min-h-[48px] flex items-center justify-center text-navy"
+              className="xl:hidden p-2 rounded-lg hover:bg-teal-light min-w-[48px] min-h-[48px] flex items-center justify-center text-navy"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
@@ -113,10 +93,7 @@ export function Header() {
         </div>
 
         {mobileOpen && (
-          <nav
-            className="xl:hidden mt-3 pb-4 border-t border-neutral-200 pt-3"
-            aria-label="Mobile navigation"
-          >
+          <nav className="xl:hidden mt-3 pb-4 border-t border-cream-dark pt-3" aria-label="Mobile navigation">
             <div className="flex flex-col gap-1">
               {NAV_LINKS.map((link) => {
                 const active = isNavActive(pathname, link.href);
@@ -132,11 +109,17 @@ export function Header() {
                   </Link>
                 );
               })}
+              <a
+                href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+                className="flex items-center gap-2 px-4 py-3 text-navy font-semibold"
+              >
+                <Phone className="w-4 h-4" />
+                {phoneDisplay}
+              </a>
               <Button
                 href="/appointments"
                 variant={appointmentsActive ? "primary" : "accent"}
                 className={cn("mt-2 mx-4", appointmentsActive && "ring-2 ring-primary ring-offset-2")}
-                aria-current={appointmentsActive ? "page" : undefined}
                 onClick={() => setMobileOpen(false)}
               >
                 Book Now

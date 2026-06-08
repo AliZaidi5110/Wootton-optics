@@ -9,7 +9,7 @@ import { Check, Eye, Glasses, Sun, Shield } from "lucide-react";
 export const metadata = generateSEO({
   title: "Optical Services Northamptonshire | Eye Tests & Eyewear Northampton",
   description:
-    "Professional eye tests, designer eyewear & advanced lens technology in Northampton. NHS & private appointments at Wootton Optics.",
+    "Professional eye tests, designer eyewear & advanced lens technology in Northampton. NHS & private appointments at Wootton Optician.",
   path: "/optics",
   keywords: [
     "optical services Northamptonshire",
@@ -24,16 +24,16 @@ export default function OpticsPage() {
   return (
     <>
       <PageHeader
-        title="Wootton Optics"
+        title="Wootton Optician"
         subtitle="Comprehensive eye care, designer eyewear, and advanced lens technology from Northampton's trusted dispensing opticians."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Optics" },
         ]}
         backgroundImages={[
-          { src: "/optics-1.avif", alt: "Designer eyewear display at Wootton Optics, Northampton" },
-          { src: "/optics-2.webp", alt: "Professional eye examination at Wootton Optics" },
-          { src: "/optics-3.avif", alt: "Premium optical services at Wootton Optics clinic" },
+          { src: "/optics-1.avif", alt: "Designer eyewear display at Wootton Optician, Northampton" },
+          { src: "/optics-2.webp", alt: "Professional eye examination at Wootton Optician" },
+          { src: "/optics-3.avif", alt: "Premium optical services at Wootton Optician clinic" },
         ]}
       />
 
@@ -47,7 +47,7 @@ export default function OpticsPage() {
                 Eye Care Services Overview
               </h2>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                Wootton Optics provides thorough eye examinations, expert frame
+                Wootton Optician provides thorough eye examinations, expert frame
                 styling, and the latest lens technology. Whether you need a routine
                 eye test, new prescription glasses, or contact lenses, our Northampton
                 team delivers exceptional optical services.
@@ -107,7 +107,7 @@ export default function OpticsPage() {
           </h2>
           <p className="text-center text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-12">
             From classic styles to the latest designer frames, find your perfect
-            look at Wootton Optics.
+            look at Wootton Optician.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {eyewearFrames.map((frame) => (
@@ -174,7 +174,7 @@ export default function OpticsPage() {
                 </h2>
                 <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                   UV radiation damages eyes year-round, not just in summer. All lenses
-                  dispensed at Wootton Optics include UV protection as standard. We
+                  dispensed at Wootton Optician include UV protection as standard. We
                   also offer prescription sunglasses with UV400-rated protection for
                   complete outdoor eye safety.
                 </p>

@@ -1,24 +1,51 @@
+import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { SITE } from "@/lib/constants";
 
 export function CTA() {
+  const telHref = `tel:${SITE.phone.replace(/\s/g, "")}`;
+
   return (
-    <section className="py-20 gradient-cta">
+    <section className="py-20 bg-navy-deep text-white">
       <div className="container text-center">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
-          Ready for Expert Care?
+          Ready to Book Your Appointment?
         </h2>
-        <p className="text-white/90 text-lg max-w-2xl mx-auto mb-8">
-          Book your free consultation today at our Northampton clinic on Wootton Hope Drive.
+        <p className="text-white/80 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+          Contact our Northampton clinic today. We&apos;re here to help with sight
+          tests, hearing assessments, and personalised advice — with no obligation.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
-          <Button href="/appointments?service=eye-test" variant="accent" size="lg">
-            Book Eye Test
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+          <a
+            href={telHref}
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-lg bg-primary text-white font-semibold hover:bg-primary-dark transition-colors"
+          >
+            <Phone className="w-5 h-5" />
+            {SITE.phoneDisplay ?? SITE.phone}
+          </a>
+          <a
+            href={`mailto:${SITE.email}`}
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-lg bg-white/10 text-white font-semibold border border-white/20 hover:bg-white/20 transition-colors"
+          >
+            <Mail className="w-5 h-5" />
+            {SITE.email}
+          </a>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/appointments?service=eye-test" variant="white" size="lg">
+            Book Sight Test Online
           </Button>
-          <Button href="/appointments?service=hearing-test" variant="white" size="lg">
-            Book Hearing Test
+          <Button
+            href="/appointments?service=hearing-test"
+            variant="outline"
+            size="lg"
+            className="border-white/40 text-white hover:bg-white hover:text-navy"
+          >
+            Book Hearing Test Online
           </Button>
         </div>
-        <p className="text-white/80 text-sm">Same-day appointments available where possible</p>
       </div>
     </section>
   );

@@ -39,16 +39,16 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        title="About Wootton Hearing & Optics"
+        title="About Wootton Optician & Hearing Care"
         subtitle="A mother & son family business dedicated to helping you hear and see the world more clearly."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "About Us" },
         ]}
         backgroundImages={[
-          { src: "/about-1.avif", alt: "Wootton Hearing & Optics clinic in Northampton" },
+          { src: "/about-1.avif", alt: "Wootton Optician & Hearing Care clinic in Northampton" },
           { src: "/about-2.avif", alt: "Family-run hearing and optical care at Wootton" },
-          { src: "/about-3.avif", alt: "Expert clinicians at Wootton Hearing & Optics" },
+          { src: "/about-3.avif", alt: "Expert clinicians at Wootton Optician & Hearing Care" },
         ]}
       />
 
@@ -66,7 +66,7 @@ export default function AboutPage() {
               </p>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
                 In 2015, Margaret&apos;s son Daniel joined the business, bringing his
-                expertise as a dispensing optician to create Wootton Optics. This
+                expertise as a dispensing optician to create Wootton Optician. This
                 natural expansion meant families could address both their hearing and
                 vision needs in one welcoming, familiar environment.
               </p>

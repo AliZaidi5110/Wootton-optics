@@ -7,7 +7,7 @@ import { Calendar, Video, Phone, Check } from "lucide-react";
 export const metadata = generateSEO({
   title: "Book Appointment | Free Consultation Northampton",
   description:
-    "Book your free hearing test or eye test appointment at Wootton Hearing & Optics, Northampton. Online booking with confirmation email. Virtual consultations available.",
+    "Book your free hearing test or sight test appointment at Wootton Optician & Hearing Care, Northampton. Online booking with confirmation email. Virtual consultations available.",
   path: "/appointments",
   keywords: [
     "book hearing test Northampton",

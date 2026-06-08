@@ -11,9 +11,9 @@ import { KEYWORDS } from "@/lib/constants";
 import "./globals.css";
 
 export const metadata: Metadata = generateSEO({
-  title: "Hearing Aids Northampton & Eye Care Northampton | Wootton Hearing & Optics",
+  title: "Hearing Aids Northampton & Sight Tests | Wootton Optician & Hearing Care",
   description:
-    "Expert eye & hearing care from the heart. Family-run Wootton Hearing & Optics in Northampton — free consultations, NHS & premium options.",
+    "Independent family practice in Northampton since 2003. Wootton Optician and Wootton Hearing Care — NHS & private sight tests, free hearing consultations, personalised care.",
   path: "/",
   keywords: [...KEYWORDS],
 });
@@ -40,7 +40,7 @@ export default function RootLayout({
         <ThemeProvider>
           <NavigationProvider>
             <Header />
-            <main className="flex-1">
+            <main className="flex-1 pt-[72px]">
               <PageTransition>{children}</PageTransition>
             </main>
             <Footer />

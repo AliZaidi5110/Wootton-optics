@@ -80,7 +80,7 @@ export function localBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     "@id": `${SITE.url}/#organization`,
-    name: SITE.name,
+    name: `${SITE.opticsName} & ${SITE.hearingName}`,
     alternateName: [SITE.hearingName, SITE.opticsName],
     url: SITE.url,
     logo: `${SITE.url}/logo.png`,

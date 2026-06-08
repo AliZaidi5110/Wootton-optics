@@ -3,7 +3,7 @@ import type { FAQ } from "@/types";
 export const faqs: FAQ[] = [
   {
     category: "general",
-    question: "Where is Wootton Hearing & Optics located?",
+    question: "Where is Wootton Optician & Hearing Care located?",
     answer:
       "We are located at 9 Tudor Court, Wootton Hope Drive, Northampton, NN4 6FF. We are easily accessible by car and public transport with parking nearby. We serve clients across Northampton, Wootton Fields, and Northamptonshire.",
   },
@@ -47,7 +47,7 @@ export const faqs: FAQ[] = [
     category: "optics",
     question: "What is myopia management?",
     answer:
-      "Myopia management uses specialist contact lenses and spectacle lenses to slow the progression of short-sightedness in children. At Wootton Optics, we assess suitability and create a monitoring plan to protect long-term eye health.",
+      "Myopia management uses specialist contact lenses and spectacle lenses to slow the progression of short-sightedness in children. At Wootton Optician, we assess suitability and create a monitoring plan to protect long-term eye health.",
   },
   {
     category: "optics",

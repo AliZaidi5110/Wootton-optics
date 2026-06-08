@@ -1,13 +1,15 @@
 export const SITE = {
-  name: "Wootton Hearing & Optics",
+  name: "Wootton Hearing & Optician",
   hearingName: "Wootton Hearing Care Ltd",
-  opticsName: "Wootton Optics",
-  tagline: "Personalized care. Quality you deserve. Family you trust.",
+  opticsName: "Wootton Optician",
+  tagline: "Personalised care. Quality you deserve. Family you trust.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.woottonhearing.co.uk",
   description:
-    "Family-run hearing aids and optical services in Northampton. Expert hearing care, eye tests, and premium eyewear in Wootton Fields.",
-  phone: "+44 20 8554 1234",
+    "Family-run hearing care and optician services in Northampton. Expert hearing assessments, sight tests, and personalised eyewear in Wootton Fields.",
+  phone: "+44 1604 875111",
+  phoneDisplay: "+44 1604 875 111",
   email: "info@woottonhearing.co.uk",
+  companyNumber: "",
   address: {
     street: "9 Tudor Court, Wootton Hope Drive",
     city: "Northampton",
@@ -25,7 +27,7 @@ export const SITE = {
   social: {
     facebook: "https://facebook.com/woottonhearing",
     instagram: "https://instagram.com/woottonhearing",
-    whatsapp: "https://wa.me/442085541234",
+    whatsapp: "https://wa.me/441604875111",
     youtube: "https://youtube.com/@woottonhearing",
   },
 } as const;
