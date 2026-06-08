@@ -20,11 +20,16 @@ export function Hero() {
               Family-Run Since 2003 · Ilford, Essex
             </span>
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-[56px] font-bold text-navy leading-tight mb-6">
-              Expert Eye &amp; Hearing Care from the Heart
+              Wootton Optics &amp; Wootton Hearing Care
             </h1>
-            <p className="text-lg text-muted mb-8 max-w-xl leading-relaxed">
-              {SITE.tagline} Whether NHS or premium designer — you deserve quality
-              without compromise.
+            <p className="text-lg text-muted mb-4 max-w-xl leading-relaxed">
+              {SITE.tagline} From NHS and private eye tests to free hearing
+              consultations — expert clinical care under one roof on Cranbrook Road, Ilford.
+            </p>
+            <p className="text-base text-charcoal mb-8 max-w-xl leading-relaxed">
+              <strong className="text-navy">Wootton Optics</strong> has been open since 2003.
+              Alongside <strong className="text-navy">Wootton Hearing Care</strong>, we provide
+              comprehensive vision and hearing services for families across Essex and London.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <Button href="/appointments?service=eye-test" variant="primary" size="lg">
@@ -51,14 +56,14 @@ export function Hero() {
                   <Glasses className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-heading font-bold text-navy text-lg mb-2">Wootton Optics</h3>
-                <p className="text-sm text-muted">Designer frames, premium lenses &amp; expert eye tests</p>
+                <p className="text-sm text-muted">Since 2003 · NHS &amp; private eye tests, specialist contact lenses &amp; clinical screening</p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-lg border-t-4 border-accent card-hover mt-8">
                 <div className="w-16 h-16 bg-coral/30 rounded-2xl flex items-center justify-center mb-4">
                   <Ear className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="font-heading font-bold text-navy text-lg mb-2">Wootton Hearing</h3>
-                <p className="text-sm text-muted">Premium hearing aids, care packages &amp; free tests</p>
+                <p className="text-sm text-muted">Free screenings &amp; consultations, ear wax removal &amp; hearing aid supply</p>
               </div>
               <div className="col-span-2 bg-gradient-to-r from-primary/10 via-sky to-accent/10 rounded-2xl p-6 flex items-center justify-center gap-6">
                 {["HCPC Registered", "NHS & Premium", "Non-Tolerance Guarantee"].map((badge) => (

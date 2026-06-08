@@ -29,12 +29,24 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function ServicesPage() {
-  const hearingServices = services.filter((s) =>
-    ["hearing-test", "hearing-aids", "hearing-aftercare"].includes(s.id)
-  );
-  const opticalServices = services.filter((s) =>
-    ["eye-test", "eyewear", "contact-lenses"].includes(s.id)
-  );
+  const hearingServiceIds = [
+    "free-hearing-screening",
+    "free-hearing-consultation",
+    "ear-wax-removal",
+    "hearing-aids",
+    "hearing-aid-maintenance",
+  ];
+  const opticalServiceIds = [
+    "nhs-eye-test",
+    "private-eye-test",
+    "specialist-contact-lenses",
+    "dry-eye-assessment",
+    "myopia-management",
+    "glaucoma-screening",
+    "child-eye-tests",
+  ];
+  const hearingServices = services.filter((s) => hearingServiceIds.includes(s.id));
+  const opticalServices = services.filter((s) => opticalServiceIds.includes(s.id));
 
   return (
     <>

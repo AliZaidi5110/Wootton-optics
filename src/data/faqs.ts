@@ -44,6 +44,30 @@ export const faqs: FAQ[] = [
       "Yes, we accept NHS optical vouchers. Bring your voucher to our Ilford practice and our team will help you select from our range of frames covered by the voucher, with options to upgrade lenses and frames if desired.",
   },
   {
+    category: "optics",
+    question: "What is myopia management?",
+    answer:
+      "Myopia management uses specialist contact lenses and spectacle lenses to slow the progression of short-sightedness in children. At Wootton Optics, we assess suitability and create a monitoring plan to protect long-term eye health.",
+  },
+  {
+    category: "optics",
+    question: "Do you offer dry eye treatment?",
+    answer:
+      "Yes. Our dry eye assessment identifies the underlying cause of your symptoms and provides a personalised treatment plan including clinical advice, recommended products, and follow-up care.",
+  },
+  {
+    category: "hearing",
+    question: "Do you offer ear wax removal?",
+    answer:
+      "Yes. We provide professional ear wax removal at our Ilford clinic using safe clinical methods. This service is ideal if you have blocked ears, muffled hearing, or wax affecting your hearing aids.",
+  },
+  {
+    category: "hearing",
+    question: "Is a hearing screening the same as a full hearing test?",
+    answer:
+      "A hearing screening is a quick, free check to see whether further assessment is needed. A full hearing consultation includes comprehensive audiometry, lifestyle discussion, and detailed recommendations.",
+  },
+  {
     category: "general",
     question: "Can I book a virtual consultation?",
     answer:

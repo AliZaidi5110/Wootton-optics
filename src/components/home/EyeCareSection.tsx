@@ -1,14 +1,14 @@
 import Image from "next/image";
-import { Eye, Glasses, CircleDot, Contact, Baby, Activity, Check } from "lucide-react";
+import { Eye, Contact, Droplets, Focus, ScanEye, Baby, Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 const features = [
-  { icon: Eye, label: "Eye Tests & Examinations", color: "text-sunny bg-sunny/20" },
-  { icon: Glasses, label: "Designer Frames", color: "text-gold bg-gold/15" },
-  { icon: CircleDot, label: "Premium Lenses", color: "text-primary bg-sky" },
-  { icon: Contact, label: "Contact Lenses", color: "text-accent bg-coral/20" },
-  { icon: Baby, label: "Children's Eyewear", color: "text-fresh bg-mint/40" },
-  { icon: Activity, label: "Solutions for Every Lifestyle", color: "text-accent bg-accent/10" },
+  { icon: Eye, label: "NHS & Private Eye Tests", color: "text-sunny bg-sunny/20" },
+  { icon: Contact, label: "Specialist Contact Lenses", color: "text-primary bg-sky" },
+  { icon: Droplets, label: "Dry Eye Assessment", color: "text-accent bg-coral/20" },
+  { icon: Focus, label: "Myopia Management", color: "text-gold bg-gold/15" },
+  { icon: ScanEye, label: "Glaucoma Screening", color: "text-fresh bg-mint/40" },
+  { icon: Baby, label: "Children's Eye Tests", color: "text-accent bg-accent/10" },
 ];
 
 export function EyeCareSection() {
@@ -32,10 +32,19 @@ export function EyeCareSection() {
               Wootton Optics — Vision Clarity
             </h2>
             <p className="text-muted text-lg mb-6 leading-relaxed">
-              From thorough eye examinations to designer frames and advanced lens technology — our dispensing opticians deliver crystal-clear vision with a personal touch.
+              Open since 2003, Wootton Optics provides NHS and private sight tests, specialist
+              contact lens fitting, dry eye assessment, myopia management for children, glaucoma
+              screening, and child-friendly eye examinations.
             </p>
             <ul className="space-y-3 mb-8">
-              {["NHS & private eye tests", "100+ designer frame styles", "Varifocal & occupational lenses", "Free NHS voucher accepted"].map((item) => (
+              {[
+                "NHS & private eye tests",
+                "Specialist contact lenses",
+                "Dry eye assessment",
+                "Myopia management",
+                "Glaucoma screening",
+                "Children's eye tests",
+              ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-charcoal">
                   <Check className="w-5 h-5 text-primary shrink-0" />
                   {item}

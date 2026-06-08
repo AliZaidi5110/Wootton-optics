@@ -5,6 +5,7 @@ import { BrandMarquee } from "@/components/home/BrandMarquee";
 import { CliniciansSection } from "@/components/home/CliniciansSection";
 import { EyeCareSection } from "@/components/home/EyeCareSection";
 import { HearingCareSection } from "@/components/home/HearingCareSection";
+import { HomepageServices } from "@/components/home/HomepageServices";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { FAQ } from "@/components/home/FAQ";
 import { CTA } from "@/components/home/CTA";
@@ -19,6 +20,7 @@ export default function HomePage() {
       <CliniciansSection />
       <EyeCareSection />
       <HearingCareSection />
+      <HomepageServices />
       <WhyChooseUs />
       <FAQ />
       <CTA />

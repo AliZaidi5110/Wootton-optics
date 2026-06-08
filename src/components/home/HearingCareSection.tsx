@@ -1,12 +1,11 @@
-import { Ear, Volume2, Package, Settings, Headphones, Wrench, Check } from "lucide-react";
+import { Ear, Stethoscope, Sparkles, Volume2, Wrench, Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 const features = [
-  { icon: Ear, label: "Hearing Tests & Assessments", color: "text-primary bg-sky" },
-  { icon: Volume2, label: "Premium Hearing Aids", color: "text-gold bg-gold/15" },
-  { icon: Package, label: "Care Packages Available", color: "text-accent bg-coral/20" },
-  { icon: Settings, label: "Expert Fitting & Adjustment", color: "text-fresh bg-mint/40" },
-  { icon: Headphones, label: "Aftercare & Support", color: "text-accent bg-accent/10" },
+  { icon: Ear, label: "Free Hearing Screenings", color: "text-primary bg-sky" },
+  { icon: Stethoscope, label: "Free Consultations", color: "text-fresh bg-mint/40" },
+  { icon: Sparkles, label: "Ear Wax Removal", color: "text-accent bg-coral/20" },
+  { icon: Volume2, label: "Hearing Aid Supply", color: "text-gold bg-gold/15" },
   { icon: Wrench, label: "Maintenance & Repairs", color: "text-sunny bg-sunny/20" },
 ];
 
@@ -20,9 +19,11 @@ export function HearingCareSection() {
               Wootton Hearing — Sound Clarity
             </h2>
             <p className="text-muted text-lg mb-8 leading-relaxed">
-              Comprehensive hearing assessments, state-of-the-art hearing aids, and tailored care packages — all with the warmth of a family-run practice you can trust.
+              Wootton Hearing Care provides free hearing screenings, free consultations, safe
+              ear wax removal, and expert supply, fitting, and maintenance of hearing aids —
+              with honest advice and no pressure.
             </p>
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {features.map((f) => (
                 <div key={f.label} className="flex items-center gap-3 bg-sky/40 rounded-xl p-3">
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${f.color}`}>
@@ -42,7 +43,12 @@ export function HearingCareSection() {
                 <Ear className="w-10 h-10 text-accent" />
               </div>
               <ul className="space-y-3">
-                {["Free initial hearing consultation", "All major hearing aid brands", "Trial periods available", "Lifetime aftercare on purchase"].map((item) => (
+                {[
+                  "Free hearing screenings",
+                  "Free hearing consultations",
+                  "Ear wax removal",
+                  "Hearing aid supply & maintenance",
+                ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-charcoal">
                     <Check className="w-5 h-5 text-accent shrink-0" />
                     {item}

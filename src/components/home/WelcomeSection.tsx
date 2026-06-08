@@ -80,11 +80,17 @@ export function WelcomeSection() {
               <span className="text-navy">Your Trusted Family Eye &amp; Hearing Clinic</span>
             </h2>
 
+            <p className="text-muted text-base sm:text-lg leading-relaxed mb-4">
+              <strong className="text-navy">Wootton Optics</strong> has been open since 2003,
+              providing NHS and private eye tests, specialist contact lenses, dry eye
+              assessment, myopia management, glaucoma screening, and children&apos;s eye tests
+              from our Cranbrook Road clinic in Ilford.
+            </p>
             <p className="text-muted text-base sm:text-lg leading-relaxed mb-8">
-              Wootton Hearing Care Ltd and Wootton Optics are a mother-and-son practice on
-              Cranbrook Road, Ilford — delivering expert eye tests, designer eyewear, hearing
-              assessments, and premium hearing aids with the personal care only a family business
-              can offer.
+              <strong className="text-navy">Wootton Hearing Care Ltd</strong> complements this
+              with free hearing screenings, free consultations, professional ear wax removal,
+              and the supply and maintenance of premium hearing aids — all delivered with the
+              warmth and continuity of a family-run practice.
             </p>
 
             <ul className="space-y-4 mb-8">

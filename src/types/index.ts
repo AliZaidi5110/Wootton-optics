@@ -27,6 +27,15 @@ export interface Service {
   price?: string;
 }
 
+export interface DetailedService {
+  id: string;
+  title: string;
+  summary: string;
+  whoNeedsIt: string;
+  benefits: string[];
+  pricing: string;
+}
+
 export interface Testimonial {
   id: string;
   name: string;
