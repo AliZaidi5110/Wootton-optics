@@ -21,7 +21,7 @@ export function PageHeader({ title, subtitle, breadcrumbs, backgroundImages }: P
         {breadcrumbs && (
           <nav
             aria-label="Breadcrumb"
-            className={`text-sm mb-4 ${hasSlider ? "text-white/90 font-medium drop-shadow-md" : "text-muted"}`}
+            className={`text-sm mb-4 ${hasSlider ? "text-white/95 font-medium drop-shadow-md" : "text-muted"}`}
           >
             {breadcrumbs.map((crumb, i) => (
               <span key={i}>
@@ -59,7 +59,7 @@ export function PageHeader({ title, subtitle, breadcrumbs, backgroundImages }: P
           <p
             className={`max-w-2xl ${
               hasSlider
-                ? "text-lg sm:text-xl text-white/95 font-medium leading-relaxed drop-shadow-[0_2px_6px_rgba(0,31,63,0.75)]"
+                ? "text-lg sm:text-xl text-white font-normal leading-relaxed drop-shadow-[0_2px_6px_rgba(0,31,63,0.75)]"
                 : "text-lg text-muted"
             }`}
           >

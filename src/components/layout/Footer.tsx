@@ -19,18 +19,18 @@ export function Footer() {
               </div>
               <span className="font-heading font-bold text-xl text-white ml-1">Wootton</span>
             </div>
-            <p className="text-sm leading-relaxed text-white/75 mb-2 max-w-md">
+            <p className="text-sm leading-relaxed text-white/85 mb-2 max-w-md">
               {SITE.opticsName} &amp; {SITE.hearingName} — an independent, family-run
               practice providing personalised eye and hearing care in Northampton since 2003.
             </p>
-            <p className="text-sm text-white/60">
+            <p className="text-sm text-white/70">
               NHS and private services · Free hearing consultations · No sales pressure
             </p>
           </div>
 
           <div>
             <h4 className="font-heading font-semibold text-white mb-4">Contact</h4>
-            <ul className="space-y-3 text-sm text-white/75">
+            <ul className="space-y-3 text-sm text-white/85">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span>{SITE.address.full}</span>
@@ -38,7 +38,7 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                  className="flex items-center gap-3 hover:text-primary transition-colors"
+                  className="flex items-center gap-3 text-white/85 hover:text-sky transition-colors"
                 >
                   <Phone className="w-5 h-5 text-primary shrink-0" />
                   {phoneDisplay}
@@ -47,7 +47,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="flex items-center gap-3 hover:text-primary transition-colors"
+                  className="flex items-center gap-3 text-white/85 hover:text-sky transition-colors"
                 >
                   <Mail className="w-5 h-5 text-primary shrink-0" />
                   {SITE.email}
@@ -58,24 +58,24 @@ export function Footer() {
 
           <div>
             <h4 className="font-heading font-semibold text-white mb-4">Opening Hours</h4>
-            <ul className="space-y-2 text-sm text-white/75 mb-6">
+            <ul className="space-y-2 text-sm text-white/85 mb-6">
               <li>{SITE.hours.weekdays}</li>
               <li>{SITE.hours.saturday}</li>
               <li>{SITE.hours.sunday}</li>
             </ul>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/optics" className="text-white/75 hover:text-primary transition-colors">
+                <Link href="/optics" className="text-white/85 hover:text-sky transition-colors">
                   {SITE.opticsName}
                 </Link>
               </li>
               <li>
-                <Link href="/hearing" className="text-white/75 hover:text-primary transition-colors">
+                <Link href="/hearing" className="text-white/85 hover:text-sky transition-colors">
                   {SITE.hearingName}
                 </Link>
               </li>
               <li>
-                <Link href="/appointments" className="text-white/75 hover:text-primary transition-colors">
+                <Link href="/appointments" className="text-white/85 hover:text-sky transition-colors">
                   Book an Appointment
                 </Link>
               </li>
@@ -85,7 +85,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/50">
+        <div className="container py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/65">
           <div>
             <p>&copy; {new Date().getFullYear()} {SITE.hearingName}. All rights reserved.</p>
             {SITE.companyNumber && (
@@ -93,13 +93,13 @@ export function Footer() {
             )}
           </div>
           <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-primary transition-colors">
+            <Link href="/privacy" className="text-white/75 hover:text-sky transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/cookies" className="hover:text-primary transition-colors">
+            <Link href="/cookies" className="text-white/75 hover:text-sky transition-colors">
               Cookie Policy
             </Link>
-            <Link href="/accessibility" className="hover:text-primary transition-colors">
+            <Link href="/accessibility" className="text-white/75 hover:text-sky transition-colors">
               Accessibility
             </Link>
           </div>

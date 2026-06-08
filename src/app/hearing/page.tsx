@@ -4,7 +4,6 @@ import { BookingForm } from "@/components/forms/BookingForm";
 import { hearingAids } from "@/data/hearing-aids";
 import { generateSEO } from "@/lib/seo";
 import { Check, Ear, Volume2, Heart } from "lucide-react";
-import Link from "next/link";
 
 export const metadata = generateSEO({
   title: "Hearing Aids Northampton | Expert Hearing Care Northamptonshire",
@@ -37,14 +36,14 @@ export default function HearingPage() {
         ]}
       />
 
-      <section className="py-20">
+      <section className="py-20 bg-cream">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="font-heading text-3xl font-bold text-navy mb-6">
                 Why Choose Wootton Hearing?
               </h2>
-              <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-8">
+              <p className="text-navy/85 leading-relaxed mb-8">
                 At Wootton Hearing Care Ltd, we believe everyone deserves to hear
                 life&apos;s precious moments clearly. Our Northampton clinic offers
                 comprehensive hearing assessments, the latest hearing aid
@@ -61,7 +60,7 @@ export default function HearingPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-fresh shrink-0 mt-0.5" />
-                    <span className="text-neutral-700 dark:text-neutral-300">{item}</span>
+                    <span className="text-navy/90">{item}</span>
                   </div>
                 ))}
               </div>
@@ -74,14 +73,14 @@ export default function HearingPage() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="flex items-center gap-4 bg-neutral-50 dark:bg-neutral-900 rounded-xl p-5"
+                  className="flex items-center gap-4 bg-navy-deep rounded-xl p-5 border border-white/15 shadow-sm"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <item.icon className="w-6 h-6 text-primary" />
+                  <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                    <item.icon className="w-6 h-6 text-sky" />
                   </div>
                   <div>
-                    <p className="font-heading font-bold text-navy">{item.title}</p>
-                    <p className="text-sm text-neutral-500">{item.desc}</p>
+                    <p className="font-heading font-bold text-white">{item.title}</p>
+                    <p className="text-sm text-white/80">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -90,12 +89,12 @@ export default function HearingPage() {
         </div>
       </section>
 
-      <section id="hearing-test" className="py-20 bg-neutral-50 dark:bg-neutral-900">
+      <section id="hearing-test" className="py-20 section-hearing">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-4">
+          <h2 className="font-heading text-3xl font-bold text-white text-center mb-4">
             Your Hearing Test Explained
           </h2>
-          <p className="text-center text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-12">
+          <p className="text-center text-white/90 max-w-2xl mx-auto mb-12">
             A comprehensive hearing assessment takes approximately 60 minutes and
             includes several tests to build a complete picture of your hearing health.
           </p>
@@ -108,25 +107,25 @@ export default function HearingPage() {
             ].map((item) => (
               <div
                 key={item.step}
-                className="bg-white dark:bg-neutral-800 rounded-2xl p-6 text-center border border-neutral-200 dark:border-neutral-700"
+                className="on-light bg-white rounded-2xl p-6 text-center border border-white/20 shadow-sm"
               >
                 <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4">
                   {item.step}
                 </div>
                 <h3 className="font-heading font-bold text-navy mb-2">{item.title}</h3>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400">{item.desc}</p>
+                <p className="text-sm text-navy/85">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="hearing-aids" className="py-20">
+      <section id="hearing-aids" className="py-20 bg-white">
         <div className="container">
           <h2 className="font-heading text-3xl font-bold text-navy text-center mb-4">
             Types of Hearing Aids
           </h2>
-          <p className="text-center text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-12">
+          <p className="text-center text-navy/85 max-w-2xl mx-auto mb-12">
             We offer the full spectrum of modern hearing aid styles to suit every
             degree of hearing loss and lifestyle preference.
           </p>
@@ -135,20 +134,18 @@ export default function HearingPage() {
             {hearingAids.map((aid) => (
               <div
                 key={aid.id}
-                className="bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-700 hover:shadow-lg transition-shadow"
+                className="bg-cream rounded-2xl overflow-hidden border border-cream-dark hover:shadow-lg transition-shadow"
               >
-                <div className="h-40 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+                <div className="h-40 bg-gradient-to-br from-teal-light to-sky flex items-center justify-center">
                   <Ear className="w-16 h-16 text-primary/30" />
                 </div>
                 <div className="p-6">
-                  <span className="text-xs font-bold text-primary uppercase">{aid.type}</span>
+                  <span className="text-xs font-bold text-navy/70 uppercase">{aid.type}</span>
                   <h3 className="font-heading font-bold text-lg text-navy mt-1 mb-2">{aid.name}</h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
-                    {aid.description}
-                  </p>
+                  <p className="text-sm text-navy/85 mb-4">{aid.description}</p>
                   <ul className="space-y-1 mb-4">
                     {aid.features.slice(0, 3).map((f) => (
-                      <li key={f} className="text-xs text-neutral-500 flex items-center gap-2">
+                      <li key={f} className="text-xs text-navy/75 flex items-center gap-2">
                         <Check className="w-3 h-3 text-fresh" /> {f}
                       </li>
                     ))}
@@ -175,9 +172,9 @@ export default function HearingPage() {
                   (feature, i) => (
                     <tr
                       key={feature}
-                      className={i % 2 === 0 ? "bg-neutral-50 dark:bg-neutral-900" : ""}
+                      className={i % 2 === 0 ? "bg-sky/50" : "bg-white"}
                     >
-                      <td className="p-4 font-medium">{feature}</td>
+                      <td className="p-4 font-medium text-navy">{feature}</td>
                       {hearingAids.slice(0, 4).map((a) => (
                         <td key={a.id} className="p-4">
                           {a.features.some((f) =>
@@ -185,7 +182,7 @@ export default function HearingPage() {
                           ) ? (
                             <Check className="w-5 h-5 text-fresh" />
                           ) : (
-                            <span className="text-neutral-400">—</span>
+                            <span className="text-navy/40">—</span>
                           )}
                         </td>
                       ))}
@@ -198,12 +195,12 @@ export default function HearingPage() {
         </div>
       </section>
 
-      <section id="aftercare" className="py-20 bg-neutral-50 dark:bg-neutral-900">
+      <section id="aftercare" className="py-20 section-hearing">
         <div className="container max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-8">
+          <h2 className="font-heading text-3xl font-bold text-white text-center mb-8">
             Book Your Hearing Assessment
           </h2>
-          <div className="bg-white dark:bg-neutral-800 rounded-2xl p-8 shadow-sm border border-neutral-200 dark:border-neutral-700">
+          <div className="on-light bg-white rounded-2xl p-8 shadow-lg border border-white/20">
             <BookingForm />
           </div>
         </div>

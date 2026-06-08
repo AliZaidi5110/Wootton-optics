@@ -7,8 +7,8 @@ export function TrustStrip() {
       <div className="container">
         <ul className="flex flex-wrap justify-center gap-x-8 gap-y-3">
           {trustStripItems.map((item) => (
-            <li key={item} className="flex items-center gap-2 text-sm font-medium text-navy">
-              <Check className="w-4 h-4 text-primary shrink-0" />
+            <li key={item} className="flex items-center gap-2 text-sm font-medium text-navy/90">
+              <Check className="w-4 h-4 text-navy shrink-0" />
               {item}
             </li>
           ))}

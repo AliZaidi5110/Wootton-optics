@@ -15,8 +15,8 @@ export function ServiceDetailCard({ service, variant = "light" }: ServiceDetailC
       className={cn(
         "rounded-2xl border p-6 sm:p-7 h-full flex flex-col transition-shadow duration-300 hover:shadow-lg",
         isDark
-          ? "bg-white/5 border-white/15 border-t-teal-light hover:bg-white/10"
-          : "bg-white/90 border-sky border-t-navy shadow-sm backdrop-blur-sm"
+          ? "bg-white/10 border-white/25 border-t-sky hover:bg-white/15 text-white"
+          : "bg-white border-primary/20 border-t-navy shadow-sm"
       )}
     >
       <h3
@@ -33,12 +33,12 @@ export function ServiceDetailCard({ service, variant = "light" }: ServiceDetailC
           <p
             className={cn(
               "text-xs font-semibold uppercase tracking-wide mb-1",
-              isDark ? "text-teal-light" : "text-muted"
+              isDark ? "text-sky" : "text-navy/70"
             )}
           >
             What it is
           </p>
-          <p className={cn("leading-relaxed", isDark ? "text-white/85" : "text-charcoal")}>
+          <p className={cn("leading-relaxed", isDark ? "text-white/90" : "text-navy/90")}>
             {service.summary}
           </p>
         </div>
@@ -47,12 +47,12 @@ export function ServiceDetailCard({ service, variant = "light" }: ServiceDetailC
           <p
             className={cn(
               "text-xs font-semibold uppercase tracking-wide mb-1",
-              isDark ? "text-teal-light" : "text-muted"
+              isDark ? "text-sky" : "text-navy/70"
             )}
           >
             Who it&apos;s for
           </p>
-          <p className={cn("leading-relaxed", isDark ? "text-white/85" : "text-charcoal")}>
+          <p className={cn("leading-relaxed", isDark ? "text-white/90" : "text-navy/90")}>
             {service.whoNeedsIt}
           </p>
         </div>
@@ -61,7 +61,7 @@ export function ServiceDetailCard({ service, variant = "light" }: ServiceDetailC
           <p
             className={cn(
               "text-xs font-semibold uppercase tracking-wide mb-2",
-              isDark ? "text-teal-light" : "text-muted"
+              isDark ? "text-sky" : "text-navy/70"
             )}
           >
             Key benefits
@@ -72,10 +72,15 @@ export function ServiceDetailCard({ service, variant = "light" }: ServiceDetailC
                 key={benefit}
                 className={cn(
                   "flex items-start gap-2",
-                  isDark ? "text-white/85" : "text-charcoal"
+                  isDark ? "text-white/90" : "text-navy/90"
                 )}
               >
-                <Check className="w-4 h-4 shrink-0 mt-0.5 text-primary" />
+                <Check
+                  className={cn(
+                    "w-4 h-4 shrink-0 mt-0.5",
+                    isDark ? "text-sky" : "text-primary"
+                  )}
+                />
                 <span>{benefit}</span>
               </li>
             ))}
@@ -86,7 +91,7 @@ export function ServiceDetailCard({ service, variant = "light" }: ServiceDetailC
       <p
         className={cn(
           "mt-5 pt-4 border-t font-semibold",
-          isDark ? "border-white/15 text-teal-light" : "border-primary/20 text-navy"
+          isDark ? "border-white/25 text-white" : "border-primary/25 text-navy"
         )}
       >
         {service.pricing}

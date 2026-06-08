@@ -11,7 +11,7 @@ export function CTA() {
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
           Ready to Book Your Appointment?
         </h2>
-        <p className="text-white/80 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-white/90 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
           Contact our Northampton clinic today. We&apos;re here to help with sight
           tests, hearing assessments, and personalised advice — with no obligation.
         </p>

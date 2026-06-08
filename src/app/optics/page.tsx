@@ -39,14 +39,14 @@ export default function OpticsPage() {
 
       <BrandMarquee />
 
-      <section className="py-20">
+      <section className="py-20 section-optician">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="font-heading text-3xl font-bold text-navy mb-6">
                 Eye Care Services Overview
               </h2>
-              <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
+              <p className="text-navy/85 leading-relaxed mb-6">
                 Wootton Optician provides thorough eye examinations, expert frame
                 styling, and the latest lens technology. Whether you need a routine
                 eye test, new prescription glasses, or contact lenses, our Northampton
@@ -63,7 +63,7 @@ export default function OpticsPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-fresh shrink-0 mt-0.5" />
-                    <span>{item}</span>
+                    <span className="text-navy/90">{item}</span>
                   </div>
                 ))}
               </div>
@@ -77,11 +77,11 @@ export default function OpticsPage() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-neutral-50 dark:bg-neutral-900 rounded-2xl p-6 text-center"
+                  className="bg-navy-deep rounded-2xl p-6 text-center border border-white/15 shadow-sm"
                 >
-                  <item.icon className="w-8 h-8 text-accent mx-auto mb-3" />
-                  <p className="font-heading font-bold text-navy">{item.label}</p>
-                  <p className="text-sm text-neutral-500">{item.value}</p>
+                  <item.icon className="w-8 h-8 text-sky mx-auto mb-3" />
+                  <p className="font-heading font-bold text-white">{item.label}</p>
+                  <p className="text-sm text-white/80">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -89,23 +89,23 @@ export default function OpticsPage() {
         </div>
       </section>
 
-      <section id="eye-test" className="py-20 bg-neutral-50 dark:bg-neutral-900">
+      <section id="eye-test" className="py-20 section-hearing">
         <div className="container max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-8">
+          <h2 className="font-heading text-3xl font-bold text-white text-center mb-8">
             Book Your Eye Test
           </h2>
-          <div className="bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-700">
+          <div className="on-light bg-white rounded-2xl p-8 border border-white/20 shadow-sm">
             <BookingForm />
           </div>
         </div>
       </section>
 
-      <section id="collections" className="py-20">
+      <section id="collections" className="py-20 bg-white">
         <div className="container">
           <h2 className="font-heading text-3xl font-bold text-navy text-center mb-4">
             Eyewear Collections
           </h2>
-          <p className="text-center text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-12">
+          <p className="text-center text-navy/85 max-w-2xl mx-auto mb-12">
             From classic styles to the latest designer frames, find your perfect
             look at Wootton Optician.
           </p>
@@ -113,16 +113,16 @@ export default function OpticsPage() {
             {eyewearFrames.map((frame) => (
               <div
                 key={frame.id}
-                className="bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-700 hover:shadow-lg transition-shadow group"
+                className="bg-cream rounded-2xl overflow-hidden border border-cream-dark hover:shadow-lg transition-shadow group"
               >
-                <div className="h-36 bg-gradient-to-br from-secondary/10 to-primary/10 flex items-center justify-center">
+                <div className="h-36 bg-gradient-to-br from-teal-light to-sky flex items-center justify-center">
                   <Glasses className="w-12 h-12 text-accent/40 group-hover:scale-110 transition-transform" />
                 </div>
                 <div className="p-4">
-                  <p className="text-xs text-neutral-500">{frame.brand}</p>
+                  <p className="text-xs text-navy/70">{frame.brand}</p>
                   <h3 className="font-heading font-bold text-sm text-navy">{frame.name}</h3>
                   <div className="flex justify-between items-center mt-2">
-                    <span className="text-xs text-neutral-500">{frame.style}</span>
+                    <span className="text-xs text-navy/70">{frame.style}</span>
                     <span className="font-semibold text-primary text-sm">{frame.price}</span>
                   </div>
                 </div>
@@ -132,27 +132,25 @@ export default function OpticsPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-neutral-50 dark:bg-neutral-900">
+      <section className="py-20 section-hearing">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-4">
+          <h2 className="font-heading text-3xl font-bold text-white text-center mb-4">
             Lens Technology
           </h2>
-          <p className="text-center text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-12">
+          <p className="text-center text-white/90 max-w-2xl mx-auto mb-12">
             Advanced lens options for every vision need and lifestyle.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             {lensTechnologies.map((lens) => (
               <div
                 key={lens.name}
-                className="bg-white dark:bg-neutral-800 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-700"
+                className="on-light bg-white rounded-2xl p-6 border border-white/20 shadow-sm"
               >
                 <h3 className="font-heading font-bold text-lg text-navy mb-2">{lens.name}</h3>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
-                  {lens.description}
-                </p>
+                <p className="text-sm text-navy/85 mb-4">{lens.description}</p>
                 <ul className="space-y-1">
                   {lens.benefits.map((b) => (
-                    <li key={b} className="text-sm flex items-center gap-2">
+                    <li key={b} className="text-sm flex items-center gap-2 text-navy/90">
                       <Check className="w-4 h-4 text-fresh" /> {b}
                     </li>
                   ))}
@@ -163,22 +161,22 @@ export default function OpticsPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 bg-cream">
         <div className="container">
-          <div className="bg-gradient-to-r from-secondary/10 to-primary/10 rounded-2xl p-8 lg:p-12">
+          <div className="bg-white rounded-2xl p-8 lg:p-12 border border-cream-dark shadow-sm">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="font-heading text-2xl font-bold text-navy mb-4 flex items-center gap-3">
                   <Sun className="w-8 h-8 text-accent" />
                   UV Protection Information
                 </h2>
-                <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
+                <p className="text-navy/85 leading-relaxed mb-4">
                   UV radiation damages eyes year-round, not just in summer. All lenses
                   dispensed at Wootton Optician include UV protection as standard. We
                   also offer prescription sunglasses with UV400-rated protection for
                   complete outdoor eye safety.
                 </p>
-                <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                <p className="text-navy/85 leading-relaxed">
                   Children&apos;s eyes are especially vulnerable — we recommend UV-blocking
                   lenses and proper sunglasses from an early age.
                 </p>
@@ -188,7 +186,7 @@ export default function OpticsPage() {
                   (item) => (
                     <div
                       key={item}
-                      className="bg-white dark:bg-neutral-800 rounded-xl p-4 text-center font-medium text-sm"
+                      className="bg-navy-deep rounded-xl p-4 text-center font-medium text-sm text-white border border-white/15"
                     >
                       {item}
                     </div>

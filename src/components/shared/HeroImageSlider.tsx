@@ -53,8 +53,10 @@ export function HeroImageSlider({ images }: HeroImageSliderProps) {
         </motion.div>
       </AnimatePresence>
 
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-navy-deep/92 via-navy/82 to-navy-deep/65" />
+
       {images.length > 1 && (
-        <div className="absolute bottom-4 right-4 z-10 flex gap-2">
+        <div className="absolute bottom-4 right-4 z-[2] flex gap-2">
           {images.map((image, i) => (
             <span
               key={image.src}
