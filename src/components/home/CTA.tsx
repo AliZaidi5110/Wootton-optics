@@ -34,7 +34,12 @@ export function CTA() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button href="/appointments?service=eye-test" variant="white" size="lg">
+          <Button
+            href="/appointments?service=eye-test"
+            variant="white"
+            size="lg"
+            className="!text-black hover:!text-black"
+          >
             Book Sight Test Online
           </Button>
           <Button
