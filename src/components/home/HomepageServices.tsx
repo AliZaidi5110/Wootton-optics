@@ -10,7 +10,7 @@ import { ServiceDetailCard } from "@/components/home/ServiceDetailCard";
 export function HomepageServices() {
   return (
     <>
-      <section id="optician-services" className="py-20 bg-cream">
+      <section id="optician-services" className="py-20 section-optician">
         <div className="container">
           <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
@@ -39,7 +39,7 @@ export function HomepageServices() {
         </div>
       </section>
 
-      <section id="hearing-services" className="py-20 bg-navy text-white">
+      <section id="hearing-services" className="py-20 section-hearing text-white">
         <div className="container">
           <div className="max-w-3xl mb-12">
             <p className="text-sm font-semibold uppercase tracking-widest text-teal-light mb-3">

@@ -15,8 +15,8 @@ export function ServiceDetailCard({ service, variant = "light" }: ServiceDetailC
       className={cn(
         "rounded-2xl border p-6 sm:p-7 h-full flex flex-col transition-shadow duration-300 hover:shadow-lg",
         isDark
-          ? "bg-white/5 border-white/15 border-t-primary hover:bg-white/8"
-          : "bg-white border-cream-dark border-t-primary shadow-sm"
+          ? "bg-white/5 border-white/15 border-t-teal-light hover:bg-white/10"
+          : "bg-white/90 border-sky border-t-navy shadow-sm backdrop-blur-sm"
       )}
     >
       <h3
@@ -86,7 +86,7 @@ export function ServiceDetailCard({ service, variant = "light" }: ServiceDetailC
       <p
         className={cn(
           "mt-5 pt-4 border-t font-semibold",
-          isDark ? "border-white/15 text-teal-light" : "border-cream-dark text-primary"
+          isDark ? "border-white/15 text-teal-light" : "border-primary/20 text-navy"
         )}
       >
         {service.pricing}

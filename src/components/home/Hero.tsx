@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section className="border-b border-neutral-200">
       <div className="grid lg:grid-cols-2 min-h-[520px]">
-        <div className="bg-navy text-white px-6 py-14 sm:px-10 lg:px-14 lg:py-20 flex flex-col justify-center">
+        <div className="section-hearing text-white px-6 py-14 sm:px-10 lg:px-14 lg:py-20 flex flex-col justify-center">
           <div className="flex flex-wrap gap-3 mb-6">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-teal-light text-sm font-medium border border-white/15">
               <Award className="w-4 h-4 text-primary" />
@@ -53,7 +53,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="bg-cream px-6 py-14 sm:px-10 lg:px-14 lg:py-20 flex flex-col justify-center">
+        <div className="section-optician px-6 py-14 sm:px-10 lg:px-14 lg:py-20 flex flex-col justify-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-6">
             Why patients trust us
           </p>
