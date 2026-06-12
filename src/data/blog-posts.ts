@@ -1,17 +1,21 @@
 import type { BlogPost } from "@/types";
 
 const authors = {
+  clinical: {
+    name: "Wootton Clinical Team",
+    bio: "Qualified audiologists and dispensing opticians at Wootton Optician & Hearing Care, Northampton.",
+  },
   margaret: {
-    name: "Margaret Wootton",
-    bio: "Lead Audiologist and founder of Wootton Hearing Care Ltd with 20+ years of experience in Ilford and Essex.",
+    name: "Wootton Clinical Team",
+    bio: "Qualified audiologists and dispensing opticians at Wootton Optician & Hearing Care, Northampton.",
   },
   daniel: {
-    name: "Daniel Wootton",
-    bio: "Dispensing Optician and Director of Wootton Optics, specialising in advanced lens technology and designer eyewear.",
+    name: "Wootton Clinical Team",
+    bio: "Qualified audiologists and dispensing opticians at Wootton Optician & Hearing Care, Northampton.",
   },
   sarah: {
-    name: "Sarah Mitchell",
-    bio: "Clinical Audiologist at Wootton Hearing, passionate about helping clients rediscover the joy of hearing.",
+    name: "Wootton Clinical Team",
+    bio: "Qualified audiologists and dispensing opticians at Wootton Optician & Hearing Care, Northampton.",
   },
 };
 

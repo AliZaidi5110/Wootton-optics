@@ -8,8 +8,8 @@ import { trustStats } from "@/data/homepage-services";
 export function Hero() {
   return (
     <section className="border-b border-neutral-200">
-      <div className="grid lg:grid-cols-2 min-h-[520px]">
-        <div className="section-hearing text-white px-6 py-14 sm:px-10 lg:px-14 lg:py-20 flex flex-col justify-center">
+      <div className="grid lg:grid-cols-2 lg:min-h-[520px]">
+        <div className="section-hearing text-white px-5 py-12 sm:px-10 sm:py-14 lg:px-14 lg:py-20 flex flex-col justify-center">
           <div className="flex flex-wrap gap-3 mb-6">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white/90 text-sm font-medium border border-white/20">
               <Award className="w-4 h-4 text-sky" />
@@ -21,7 +21,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-[3.25rem] font-bold leading-tight mb-6 text-white">
+          <h1 className="font-heading text-3xl sm:text-5xl lg:text-[3.25rem] font-bold leading-tight mb-6 text-white">
             Expert Eye &amp; Hearing Care in Northampton
           </h1>
 
@@ -53,20 +53,20 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="section-optician px-6 py-14 sm:px-10 lg:px-14 lg:py-20 flex flex-col justify-center">
+        <div className="section-optician px-5 py-12 sm:px-10 sm:py-14 lg:px-14 lg:py-20 flex flex-col justify-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-navy mb-6">
             Why patients trust us
           </p>
-          <div className="grid grid-cols-2 gap-5 sm:gap-6">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6">
             {trustStats.map((stat) => (
               <div
                 key={stat.label}
-                className="bg-white rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-sm"
+                className="bg-white rounded-2xl p-4 sm:p-7 border border-cream-dark shadow-sm"
               >
-                <p className="font-heading text-3xl sm:text-4xl font-bold text-navy mb-1">
+                <p className="font-heading text-2xl sm:text-4xl font-bold text-navy mb-1">
                   {stat.value}
                 </p>
-                <p className="text-sm text-navy/85 leading-snug">{stat.label}</p>
+                <p className="text-xs sm:text-sm text-navy/85 leading-snug">{stat.label}</p>
               </div>
             ))}
           </div>
