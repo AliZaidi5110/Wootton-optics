@@ -14,7 +14,7 @@ const features = [
   {
     icon: Heart,
     title: "Family-Run Since 2003",
-    desc: "A mother-and-son practice built on trust, continuity, and genuine patient relationships.",
+    desc: "An independent family practice built on trust, continuity, and genuine patient relationships.",
   },
   {
     icon: UserCheck,
