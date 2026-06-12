@@ -12,14 +12,18 @@ export function CookieConsent() {
     if (!consent) setVisible(true);
   }, []);
 
-  function accept() {
-    localStorage.setItem("cookie-consent", "accepted");
+  function updateConsent(value: "accepted" | "declined") {
+    localStorage.setItem("cookie-consent", value);
     setVisible(false);
+    window.dispatchEvent(new CustomEvent("cookie-consent-updated", { detail: value }));
+  }
+
+  function accept() {
+    updateConsent("accepted");
   }
 
   function decline() {
-    localStorage.setItem("cookie-consent", "declined");
-    setVisible(false);
+    updateConsent("declined");
   }
 
   if (!visible) return null;

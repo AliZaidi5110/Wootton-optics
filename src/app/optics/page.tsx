@@ -4,19 +4,24 @@ import { CTA } from "@/components/home/CTA";
 import { BookingForm } from "@/components/forms/BookingForm";
 import { eyewearFrames, lensTechnologies } from "@/data/eyewear";
 import { generateSEO } from "@/lib/seo";
+import { IMAGES } from "@/lib/images";
 import { Check, Eye, Glasses, Sun, Shield } from "lucide-react";
+
+export const revalidate = 86400;
 
 export const metadata = generateSEO({
   title: "Optical Services Northamptonshire | Eye Tests & Eyewear Northampton",
   description:
-    "Professional eye tests, designer eyewear & advanced lens technology in Northampton. NHS & private appointments at Wootton Optician.",
+    "Professional eye tests, designer eyewear & advanced lens technology in Northampton. NHS & private appointments at Wootton Optician since 2003.",
   path: "/optics",
+  image: IMAGES.clinic,
   keywords: [
     "optical services Northamptonshire",
     "eye test Northampton",
     "optician Northampton",
     "prescription glasses Northampton",
     "designer eyewear",
+    "NHS sight test Northampton",
   ],
 });
 
@@ -26,14 +31,16 @@ export default function OpticsPage() {
       <PageHeader
         title="Wootton Optician"
         subtitle="Comprehensive eye care, designer eyewear, and advanced lens technology from Northampton's trusted dispensing opticians."
+        currentPath="/optics"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Optics" },
         ]}
         backgroundImages={[
-          { src: "/optics-1.avif", alt: "Designer eyewear display at Wootton Optician, Northampton" },
-          { src: "/optics-2.webp", alt: "Professional eye examination at Wootton Optician" },
-          { src: "/optics-3.avif", alt: "Premium optical services at Wootton Optician clinic" },
+          {
+            src: IMAGES.clinic,
+            alt: "Wootton Optician clinic storefront with designer eyewear, Northampton",
+          },
         ]}
       />
 

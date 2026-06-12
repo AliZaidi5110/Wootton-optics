@@ -4,19 +4,24 @@ import { EarWaxRemovalSection } from "@/components/hearing/EarWaxRemovalSection"
 import { BookingForm } from "@/components/forms/BookingForm";
 import { hearingAids } from "@/data/hearing-aids";
 import { generateSEO } from "@/lib/seo";
+import { IMAGES } from "@/lib/images";
 import { Check, Ear, Volume2, Heart } from "lucide-react";
+
+export const revalidate = 86400;
 
 export const metadata = generateSEO({
   title: "Hearing Aids Northampton | Expert Hearing Care Northamptonshire",
   description:
-    "Premium hearing aids, free hearing tests & audiologist services in Northampton. BTE, RIC, ITE & invisible hearing aids with expert fitting & aftercare.",
+    "Premium hearing aids, free hearing tests, ear wax removal (£35/£70) & audiologist services in Northampton. BTE, RIC, ITE & invisible hearing aids with expert fitting & aftercare.",
   path: "/hearing",
+  image: IMAGES.clinic,
   keywords: [
     "hearing aids Northampton",
     "hearing test Northampton",
     "hearing care Northamptonshire",
     "audiologist Northampton",
     "free hearing test",
+    "ear wax removal Northampton",
   ],
 });
 
@@ -26,15 +31,16 @@ export default function HearingPage() {
       <PageHeader
         title="Wootton Hearing Care"
         subtitle="Expert hearing tests, premium hearing aids, and lifetime aftercare from Northampton's trusted family audiologists."
+        currentPath="/hearing"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Hearing Care" },
         ]}
         backgroundImages={[
-          { src: "/wootton-clinic.jpg", alt: "Wootton Optician and Wootton Hearing Care clinic, Northampton" },
-          { src: "/hearing-1.webp", alt: "Hearing assessment at Wootton Hearing Care, Northampton" },
-          { src: "/hearing-2.webp", alt: "Premium hearing aids at Wootton Hearing Care" },
-          { src: "/hearing-3.avif", alt: "Audiologist consultation at Wootton Hearing Care clinic" },
+          {
+            src: IMAGES.clinic,
+            alt: "Wootton Optician and Wootton Hearing Care clinic storefront, Northampton",
+          },
         ]}
       />
 

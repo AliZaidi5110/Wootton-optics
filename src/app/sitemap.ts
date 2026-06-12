@@ -1,24 +1,32 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
 
+const LAST_CONTENT_UPDATE = new Date("2026-06-07");
+
+const routes: {
+  path: string;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+  priority: number;
+}[] = [
+  { path: "", changeFrequency: "weekly", priority: 1 },
+  { path: "/hearing", changeFrequency: "weekly", priority: 0.95 },
+  { path: "/optics", changeFrequency: "weekly", priority: 0.95 },
+  { path: "/appointments", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/services", changeFrequency: "monthly", priority: 0.85 },
+  { path: "/about", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/contact", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/cookies", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/accessibility", changeFrequency: "yearly", priority: 0.3 },
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE.url;
 
-  return [
-    "",
-    "/hearing",
-    "/optics",
-    "/about",
-    "/services",
-    "/appointments",
-    "/contact",
-    "/privacy",
-    "/cookies",
-    "/accessibility",
-  ].map((path) => ({
+  return routes.map(({ path, changeFrequency, priority }) => ({
     url: `${baseUrl}${path}`,
-    lastModified: new Date(),
-    changeFrequency: path === "" ? ("weekly" as const) : ("monthly" as const),
-    priority: path === "" ? 1 : path === "/hearing" || path === "/optics" ? 0.9 : 0.7,
+    lastModified: LAST_CONTENT_UPDATE,
+    changeFrequency,
+    priority,
   }));
 }

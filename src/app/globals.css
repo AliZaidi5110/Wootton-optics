@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --font-body: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-source-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-heading-fallback: Georgia, "Times New Roman", serif;
   --font-body-fallback: "Trebuchet MS", "Lucida Grande", sans-serif;
   --background: #faf8f4;
@@ -410,6 +410,27 @@ button,
 
 .bg-navy-deep a:where(:not([class*="text-"])):hover {
   color: var(--sky);
+  text-decoration: none;
+}
+
+.page-hero-header {
+  color: #ffffff;
+}
+
+.page-hero-header h1,
+.page-hero-header p,
+.page-hero-header nav,
+.page-hero-header a,
+.page-hero-header span {
+  color: #ffffff !important;
+}
+
+.page-hero-header p {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.page-hero-header nav a:hover {
+  color: var(--sky) !important;
   text-decoration: none;
 }
 

@@ -4,6 +4,8 @@ import { generateSEO } from "@/lib/seo";
 import { SITE } from "@/lib/constants";
 import { Calendar, Video, Phone, Check } from "lucide-react";
 
+export const revalidate = 86400;
+
 export const metadata = generateSEO({
   title: "Book Appointment | Free Consultation Northampton",
   description:
@@ -23,7 +25,8 @@ export default function AppointmentsPage() {
     <>
       <PageHeader
         title="Book Your Appointment"
-        subtitle="Schedule a free consultation for hearing tests, hearing aids, eye tests, or optical services."
+        subtitle="Schedule a free consultation for hearing tests, hearing aids, ear wax removal, eye tests, or optical services."
+        currentPath="/appointments"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Book Appointment" },

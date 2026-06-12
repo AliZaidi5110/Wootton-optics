@@ -6,16 +6,19 @@ import { Button } from "@/components/ui/Button";
 import { Check, Ear, Eye, Volume2, Glasses, Heart, Contact } from "lucide-react";
 import Link from "next/link";
 
+export const revalidate = 86400;
+
 export const metadata = generateSEO({
   title: "Our Services | Hearing & Optical Care Northampton",
   description:
-    "Complete hearing and optical services in Northampton: hearing tests, hearing aids, eye tests, eyewear, contact lenses & aftercare. View pricing & book today.",
+    "Complete hearing and optical services in Northampton: hearing tests, hearing aids, ear wax removal, eye tests, eyewear, contact lenses & aftercare. View pricing & book today.",
   path: "/services",
   keywords: [
     "hearing services Northampton",
     "optical services Northamptonshire",
     "eye test price",
     "hearing aid prices",
+    "ear wax removal price Northampton",
   ],
 });
 
@@ -53,6 +56,7 @@ export default function ServicesPage() {
       <PageHeader
         title="Our Services"
         subtitle="Comprehensive hearing and optical care under one roof at our Northampton clinic."
+        currentPath="/services"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services" },
@@ -164,6 +168,7 @@ export default function ServicesPage() {
               <tbody>
                 {[
                   { name: "Hearing Test", duration: "60 mins", price: "Free consultation" },
+                  { name: "Ear Wax Removal", duration: "30 mins", price: "£35 / £70 both ears" },
                   { name: "Hearing Aid Fitting", duration: "90 mins", price: "From £495" },
                   { name: "Eye Test (Private)", duration: "30 mins", price: "From £35" },
                   { name: "Eye Test (NHS)", duration: "30 mins", price: "Free (if eligible)" },

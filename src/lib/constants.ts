@@ -50,6 +50,11 @@ export const KEYWORDS = [
   "audiologist Northamptonshire",
   "designer glasses Northampton",
   "free hearing test Northampton",
+  "ear wax removal Northampton",
+  "Wootton Optician",
+  "Wootton Hearing Care",
+  "sight test Northampton",
+  "NHS eye test Northampton",
 ] as const;
 
 export const NAV_LINKS = [

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { SITE } from "./constants";
+import { DEFAULT_OG_IMAGE } from "./images";
+
+const SITE_SUFFIX = SITE.name;
 
 type SEOProps = {
   title: string;
@@ -10,57 +13,61 @@ type SEOProps = {
   noIndex?: boolean;
 };
 
+function buildTitle(title: string): string {
+  if (title.includes(SITE_SUFFIX) || title.includes("Wootton")) {
+    return title;
+  }
+  return `${title} | ${SITE_SUFFIX}`;
+}
+
 export function generateSEO({
   title,
   description,
   path = "",
-  image = "/og-image.jpg",
+  image = DEFAULT_OG_IMAGE,
   keywords = [],
   noIndex = false,
 }: SEOProps): Metadata {
   const url = `${SITE.url}${path}`;
   const metaDescription =
     description.length > 160 ? `${description.slice(0, 157)}...` : description;
+  const fullTitle = buildTitle(title);
 
   return {
-    title: `${title} | ${SITE.name}`,
+    title: fullTitle,
     description: metaDescription,
-    keywords: keywords.join(", "),
+    keywords: keywords.length > 0 ? keywords.join(", ") : undefined,
     authors: [{ name: SITE.hearingName }],
     creator: SITE.hearingName,
     publisher: SITE.hearingName,
     metadataBase: new URL(SITE.url),
     alternates: {
       canonical: url,
-      languages: {
-        "en-GB": url,
-        "en-US": url,
-      },
     },
     openGraph: {
       type: "website",
       locale: "en_GB",
       url,
       siteName: SITE.name,
-      title,
+      title: fullTitle,
       description: metaDescription,
       images: [
         {
           url: image,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: `${SITE.opticsName} & ${SITE.hearingName} — Northampton`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: fullTitle,
       description: metaDescription,
       images: [image],
     },
     robots: noIndex
-      ? { index: false, follow: false }
+      ? { index: false, follow: false, nocache: true }
       : {
           index: true,
           follow: true,
@@ -72,6 +79,25 @@ export function generateSEO({
             "max-snippet": -1,
           },
         },
+    other: {
+      "geo.region": "GB-NTH",
+      "geo.placename": "Northampton",
+      "geo.position": `${SITE.coordinates.lat};${SITE.coordinates.lng}`,
+      ICBM: `${SITE.coordinates.lat}, ${SITE.coordinates.lng}`,
+    },
+  };
+}
+
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE.url}/#website`,
+    url: SITE.url,
+    name: SITE.name,
+    description: SITE.description,
+    inLanguage: "en-GB",
+    publisher: { "@id": `${SITE.url}/#organization` },
   };
 }
 
@@ -81,10 +107,10 @@ export function localBusinessSchema() {
     "@type": "MedicalBusiness",
     "@id": `${SITE.url}/#organization`,
     name: `${SITE.opticsName} & ${SITE.hearingName}`,
-    alternateName: [SITE.hearingName, SITE.opticsName],
+    alternateName: [SITE.hearingName, SITE.opticsName, "Wootton Opticians"],
     url: SITE.url,
-    logo: `${SITE.url}/logo.png`,
-    image: `${SITE.url}/og-image.jpg`,
+    logo: `${SITE.url}${DEFAULT_OG_IMAGE}`,
+    image: `${SITE.url}${DEFAULT_OG_IMAGE}`,
     description: SITE.description,
     telephone: SITE.phone,
     email: SITE.email,
@@ -138,6 +164,14 @@ export function localBusinessSchema() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
+            name: "Ear Wax Removal",
+            description: "Professional microsuction — £35 per ear, £70 for both ears",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
             name: "Hearing Aids",
             description: "Premium hearing aid fitting and aftercare",
           },
@@ -147,7 +181,7 @@ export function localBusinessSchema() {
           itemOffered: {
             "@type": "Service",
             name: "Eye Tests",
-            description: "Professional eye examinations in Northamptonshire",
+            description: "NHS and private sight tests in Northamptonshire",
           },
         },
         {
@@ -176,6 +210,21 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
   };
 }
 
+export function faqSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
 export function articleSchema(article: {
   title: string;
   description: string;
@@ -191,7 +240,7 @@ export function articleSchema(article: {
     "@type": "Article",
     headline: article.title,
     description: article.description,
-    image: article.image || `${SITE.url}/og-image.jpg`,
+    image: article.image || `${SITE.url}${DEFAULT_OG_IMAGE}`,
     datePublished: article.datePublished,
     dateModified: article.dateModified,
     author: {
@@ -203,7 +252,7 @@ export function articleSchema(article: {
       name: SITE.hearingName,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE.url}/logo.png`,
+        url: `${SITE.url}${DEFAULT_OG_IMAGE}`,
       },
     },
     mainEntityOfPage: {

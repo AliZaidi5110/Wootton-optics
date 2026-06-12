@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Check, Ear, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { EAR_WAX_PRICING, SITE } from "@/lib/constants";
+import { IMAGES } from "@/lib/images";
 
 const benefits = [
   "Safe microsuction by trained clinicians",
@@ -21,7 +22,7 @@ export function EarWaxRemovalSection() {
           <div className="relative">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/20 shadow-xl">
               <Image
-                src="/wootton-clinic.jpg"
+                src={IMAGES.clinic}
                 alt="Wootton Optician and Wootton Hearing Care clinic at 9 Tudor Court, Northampton"
                 fill
                 className="object-cover"

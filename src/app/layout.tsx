@@ -6,17 +6,28 @@ import { NavigationProvider } from "@/components/providers/NavigationProvider";
 import { PageTransition } from "@/components/layout/PageTransition";
 import { CookieConsent } from "@/components/shared/CookieConsent";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { generateSEO, localBusinessSchema } from "@/lib/seo";
+import { Analytics } from "@/components/seo/Analytics";
+import { generateSEO, localBusinessSchema, websiteSchema } from "@/lib/seo";
+import { cormorantGaramond, sourceSans } from "@/lib/fonts";
+import { IMAGES } from "@/lib/images";
 import { KEYWORDS } from "@/lib/constants";
 import "./globals.css";
 
-export const metadata: Metadata = generateSEO({
-  title: "Hearing Aids Northampton & Sight Tests | Wootton Optician & Hearing Care",
-  description:
-    "Independent family practice in Northampton since 2003. Wootton Optician and Wootton Hearing Care — NHS & private sight tests, free hearing consultations, personalised care.",
-  path: "/",
-  keywords: [...KEYWORDS],
-});
+export const metadata: Metadata = {
+  ...generateSEO({
+    title: "Hearing Aids Northampton & Sight Tests | Wootton Optician & Hearing Care",
+    description:
+      "Independent family practice in Northampton since 2003. Wootton Optician and Wootton Hearing Care — NHS & private sight tests, free hearing consultations, ear wax removal, personalised care.",
+    path: "/",
+    keywords: [...KEYWORDS],
+  }),
+  icons: {
+    icon: IMAGES.clinic,
+    apple: IMAGES.clinic,
+  },
+  manifest: "/manifest.webmanifest",
+  category: "health",
+};
 
 export default function RootLayout({
   children,
@@ -24,19 +35,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-GB" suppressHydrationWarning>
+    <html
+      lang="en-GB"
+      suppressHydrationWarning
+      className={`${cormorantGaramond.variable} ${sourceSans.variable}`}
+    >
       <head>
         <JsonLd data={localBusinessSchema()} />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="theme-color" content="#00A8CC" />
+        <JsonLd data={websiteSchema()} />
+        <meta name="theme-color" content="#0a1f35" />
       </head>
-      <body className="min-h-screen flex flex-col antialiased">
+      <body className={`${sourceSans.className} min-h-screen flex flex-col antialiased`}>
         <ThemeProvider>
           <NavigationProvider>
             <Header />
@@ -47,12 +56,7 @@ export default function RootLayout({
             <CookieConsent />
           </NavigationProvider>
         </ThemeProvider>
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-          />
-        )}
+        <Analytics />
       </body>
     </html>
   );

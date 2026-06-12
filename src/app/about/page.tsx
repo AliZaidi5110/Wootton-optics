@@ -4,13 +4,17 @@ import { CTA } from "@/components/home/CTA";
 import { team } from "@/data/team";
 import { generateSEO } from "@/lib/seo";
 import { SITE } from "@/lib/constants";
+import { IMAGES } from "@/lib/images";
 import { Heart, Target, Users, Award, MapPin } from "lucide-react";
+
+export const revalidate = 86400;
 
 export const metadata = generateSEO({
   title: "About Us | Family Hearing & Optical Care Northampton",
   description:
     "Meet the Wootton family — mother & son team providing expert hearing care and optical services in Northampton for over 20 years.",
   path: "/about",
+  image: IMAGES.clinic,
   keywords: ["Wootton Hearing", "family business Northampton", "audiologist Northamptonshire", "optician Northampton"],
 });
 
@@ -43,14 +47,16 @@ export default function AboutPage() {
       <PageHeader
         title="About Wootton Optician & Hearing Care"
         subtitle="A mother & son family business dedicated to helping you hear and see the world more clearly."
+        currentPath="/about"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "About Us" },
         ]}
         backgroundImages={[
-          { src: "/about-1.avif", alt: "Wootton Optician & Hearing Care clinic in Northampton" },
-          { src: "/about-2.avif", alt: "Family-run hearing and optical care at Wootton" },
-          { src: "/about-3.avif", alt: "Expert clinicians at Wootton Optician & Hearing Care" },
+          {
+            src: IMAGES.clinic,
+            alt: "Wootton Optician & Hearing Care family clinic in Northampton",
+          },
         ]}
       />
 
@@ -83,7 +89,7 @@ export default function AboutPage() {
             <div className="rounded-2xl overflow-hidden border border-cream-dark shadow-lg">
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/wootton-clinic.jpg"
+                  src={IMAGES.clinic}
                   alt="Wootton Optician and Wootton Hearing Care clinic storefront in Northampton"
                   fill
                   className="object-cover"

@@ -4,6 +4,8 @@ import { generateSEO } from "@/lib/seo";
 import { SITE } from "@/lib/constants";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 
+export const revalidate = 86400;
+
 export const metadata = generateSEO({
   title: "Contact Us | Wootton Optician & Hearing Care Northampton",
   description:
@@ -18,6 +20,7 @@ export default function ContactPage() {
       <PageHeader
         title="Contact Us"
         subtitle="We'd love to hear from you. Visit our Northampton clinic, call, or send us a message."
+        currentPath="/contact"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact" },

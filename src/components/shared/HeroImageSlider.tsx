@@ -48,12 +48,14 @@ export function HeroImageSlider({ images }: HeroImageSliderProps) {
             fill
             className="object-cover"
             priority={index === 0}
+            fetchPriority={index === 0 ? "high" : "auto"}
             sizes="100vw"
+            quality={index === 0 ? 85 : 75}
           />
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-navy-deep/92 via-navy/82 to-navy-deep/65" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-navy-deep/95 via-navy/88 to-navy-deep/75" />
 
       {images.length > 1 && (
         <div className="absolute bottom-4 right-4 z-[2] flex gap-2">
