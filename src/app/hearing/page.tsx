@@ -1,5 +1,6 @@
 import { PageHeader } from "@/components/shared/PageHeader";
 import { CTA } from "@/components/home/CTA";
+import { EarWaxRemovalSection } from "@/components/hearing/EarWaxRemovalSection";
 import { BookingForm } from "@/components/forms/BookingForm";
 import { hearingAids } from "@/data/hearing-aids";
 import { generateSEO } from "@/lib/seo";
@@ -30,6 +31,7 @@ export default function HearingPage() {
           { label: "Hearing Care" },
         ]}
         backgroundImages={[
+          { src: "/wootton-clinic.jpg", alt: "Wootton Optician and Wootton Hearing Care clinic, Northampton" },
           { src: "/hearing-1.webp", alt: "Hearing assessment at Wootton Hearing Care, Northampton" },
           { src: "/hearing-2.webp", alt: "Premium hearing aids at Wootton Hearing Care" },
           { src: "/hearing-3.avif", alt: "Audiologist consultation at Wootton Hearing Care clinic" },
@@ -57,6 +59,7 @@ export default function HearingPage() {
                   "Trial periods on selected models",
                   "Rechargeable and Bluetooth-enabled options",
                   "Lifetime aftercare included with purchase",
+                  "Ear wax removal — £35 per ear, £70 for both ears",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-fresh shrink-0 mt-0.5" />
@@ -88,6 +91,8 @@ export default function HearingPage() {
           </div>
         </div>
       </section>
+
+      <EarWaxRemovalSection />
 
       <section id="hearing-test" className="py-20 section-hearing">
         <div className="container">

@@ -1,8 +1,10 @@
+import Image from "next/image";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { CTA } from "@/components/home/CTA";
 import { team } from "@/data/team";
 import { generateSEO } from "@/lib/seo";
-import { Heart, Target, Users, Award } from "lucide-react";
+import { SITE } from "@/lib/constants";
+import { Heart, Target, Users, Award, MapPin } from "lucide-react";
 
 export const metadata = generateSEO({
   title: "About Us | Family Hearing & Optical Care Northampton",
@@ -78,17 +80,27 @@ export default function AboutPage() {
                 clearer vision.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-12 text-center">
-              <div className="w-32 h-32 bg-primary/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Users className="w-16 h-16 text-primary" />
+            <div className="rounded-2xl overflow-hidden border border-cream-dark shadow-lg">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src="/wootton-clinic.jpg"
+                  alt="Wootton Optician and Wootton Hearing Care clinic storefront in Northampton"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
-              <p className="font-heading text-2xl font-bold text-navy mb-2">Mother & Son</p>
-              <p className="text-neutral-600 dark:text-neutral-400">
-                Margaret & Daniel Wootton
-              </p>
-              <p className="text-sm text-neutral-500 mt-4">
-                Serving Northampton since 2003
-              </p>
+              <div className="bg-navy-deep p-6 text-center">
+                <p className="font-heading text-xl font-bold text-white mb-1">
+                  Wootton Optician &amp; Hearing Care
+                </p>
+                <p className="text-white/80 text-sm mb-3">Margaret &amp; Daniel Wootton</p>
+                <p className="flex items-center justify-center gap-2 text-sm text-white/75">
+                  <MapPin className="w-4 h-4 text-sky shrink-0" />
+                  {SITE.address.full}
+                </p>
+                <p className="text-xs text-white/60 mt-3">Serving Northampton since 2003</p>
+              </div>
             </div>
           </div>
         </div>

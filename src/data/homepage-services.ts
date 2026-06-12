@@ -182,7 +182,7 @@ export const hearingServices: DetailedService[] = [
       "Restores hearing aid performance when wax-blocked",
       "Performed by trained clinical staff",
     ],
-    pricing: "From £60 per ear",
+    pricing: "£35 per ear · £70 for both ears",
   },
   {
     id: "hearing-aids",

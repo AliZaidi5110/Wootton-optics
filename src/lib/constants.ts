@@ -32,6 +32,13 @@ export const SITE = {
   },
 } as const;
 
+export const EAR_WAX_PRICING = {
+  oneEar: 35,
+  bothEars: 70,
+  display: "£35 per ear · £70 for both ears",
+  short: "£35 (one ear) · £70 (both ears)",
+} as const;
+
 export const KEYWORDS = [
   "hearing aids Northampton",
   "eye test Northampton",

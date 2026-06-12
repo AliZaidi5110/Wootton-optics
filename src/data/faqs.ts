@@ -59,7 +59,7 @@ export const faqs: FAQ[] = [
     category: "hearing",
     question: "Do you offer ear wax removal?",
     answer:
-      "Yes. We provide professional ear wax removal at our Northampton clinic using safe clinical methods. This service is ideal if you have blocked ears, muffled hearing, or wax affecting your hearing aids.",
+      "Yes. We provide professional ear wax removal at our Northampton clinic using safe microsuction methods. Pricing is £35 for one ear or £70 for both ears. This service is ideal if you have blocked ears, muffled hearing, or wax affecting your hearing aids.",
   },
   {
     category: "hearing",

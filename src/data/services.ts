@@ -149,7 +149,7 @@ export const services: Service[] = [
       "Hearing aid users welcome",
       "Trained clinicians",
     ],
-    price: "From £60 per ear",
+    price: "£35 per ear · £70 for both ears",
   },
   {
     id: "hearing-aids",

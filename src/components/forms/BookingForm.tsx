@@ -104,6 +104,7 @@ export function BookingForm() {
             className={inputClass}
           >
             <option value="hearing-test">Hearing Test</option>
+            <option value="ear-wax-removal">Ear Wax Removal</option>
             <option value="hearing-aid">Hearing Aid Consultation</option>
             <option value="eye-test">Eye Test</option>
             <option value="optical">Optical Consultation</option>
