@@ -10,9 +10,9 @@ import { Check, Ear, Volume2, Heart } from "lucide-react";
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
-  title: "Hearing Aids Northampton | Expert Hearing Care Northamptonshire",
+  title: "Hearing Tests & Hearing Aids Northampton | Wootton",
   description:
-    "Premium hearing aids, free hearing tests, ear wax removal (£35/£70) & audiologist services in Northampton. BTE, RIC, ITE & invisible hearing aids with expert fitting & aftercare.",
+    "Book hearing tests, hearing aid fittings and ear wax removal in Northampton. Trusted independent hearing care with expert fitting and ongoing aftercare.",
   path: "/hearing",
   image: IMAGES.clinic,
   keywords: [
@@ -30,7 +30,7 @@ export default function HearingPage() {
     <>
       <PageHeader
         title="Wootton Hearing Care"
-        subtitle="Expert hearing tests, premium hearing aids, and lifetime aftercare from Northampton's trusted family audiologists."
+        subtitle="Expert hearing tests, premium hearing aids, and ongoing aftercare from Northampton's trusted, independent hearing care team."
         currentPath="/hearing"
         breadcrumbs={[
           { label: "Home", href: "/" },
@@ -64,7 +64,7 @@ export default function HearingPage() {
                   "Custom programming and fitting",
                   "Trial periods on selected models",
                   "Rechargeable and Bluetooth-enabled options",
-                  "Lifetime aftercare included with purchase",
+                  "Aftercare included with hearing aid purchase (terms may apply)",
                   "Ear wax removal — £35 per ear, £70 for both ears",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
@@ -78,7 +78,7 @@ export default function HearingPage() {
               {[
                 { icon: Ear, title: "Hearing Tests", desc: "Comprehensive audiometry" },
                 { icon: Volume2, title: "Hearing Aids", desc: "All styles & brands" },
-                { icon: Heart, title: "Aftercare", desc: "Lifetime support" },
+                { icon: Heart, title: "Aftercare", desc: "Ongoing support" },
               ].map((item) => (
                 <div
                   key={item.title}

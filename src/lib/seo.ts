@@ -104,15 +104,15 @@ export function websiteSchema() {
 export function localBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": ["MedicalBusiness", "Optician"],
     "@id": `${SITE.url}/#organization`,
-    name: `${SITE.opticsName} & ${SITE.hearingName}`,
+    name: SITE.name,
     alternateName: [SITE.hearingName, SITE.opticsName, "Wootton Opticians"],
     url: SITE.url,
     logo: `${SITE.url}${DEFAULT_OG_IMAGE}`,
     image: `${SITE.url}${DEFAULT_OG_IMAGE}`,
     description: SITE.description,
-    telephone: SITE.phone,
+    telephone: SITE.phone.replace(/\s/g, ""),
     email: SITE.email,
     address: {
       "@type": "PostalAddress",
@@ -147,7 +147,6 @@ export function localBusinessSchema() {
       { "@type": "AdministrativeArea", name: "Northamptonshire" },
       { "@type": "City", name: "Wootton Fields" },
     ],
-    sameAs: Object.values(SITE.social),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Hearing & Optical Services",

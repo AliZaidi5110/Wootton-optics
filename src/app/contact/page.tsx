@@ -7,9 +7,9 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
-  title: "Contact Us | Wootton Optician & Hearing Care Northampton",
+  title: "Contact Wootton Optician & Hearing Care Northampton",
   description:
-    "Contact Wootton Optician & Hearing Care at 9 Tudor Court, Wootton Hope Drive, Northampton NN4 6FF. Call, email, or visit our clinic for hearing and optical services.",
+    "Contact Wootton Optician & Hearing Care in Northampton to book an eye test, hearing consultation, ear wax removal or general appointment.",
   path: "/contact",
   keywords: ["contact Wootton Hearing", "Northampton optician contact", "hearing clinic Northamptonshire"],
 });
@@ -52,7 +52,7 @@ export default function ContactPage() {
                       href={`tel:${SITE.phone.replace(/\s/g, "")}`}
                       className="text-primary hover:underline"
                     >
-                      {SITE.phone}
+                      {SITE.phoneDisplay ?? SITE.phone}
                     </a>
                   </div>
                 </div>

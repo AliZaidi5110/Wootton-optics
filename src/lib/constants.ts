@@ -1,13 +1,15 @@
 export const SITE = {
-  name: "Wootton Hearing & Optician",
+  name: "Wootton Optician & Hearing Care",
   hearingName: "Wootton Hearing Care Ltd",
   opticsName: "Wootton Optician",
   tagline: "Personalised care. Quality you deserve. Family you trust.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.woottonhearing.co.uk",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://www.woottonopticianshearingcare.co.uk",
   description:
-    "Family-run hearing care and optician services in Northampton. Expert hearing assessments, sight tests, and personalised eyewear in Wootton Fields.",
+    "Independent, family-run opticians and hearing care in Wootton, Northampton. NHS and private eye tests, designer eyewear, hearing tests, hearing aids and ear wax removal.",
   phone: "+44 1604 875111",
-  phoneDisplay: "+44 1604 875 111",
+  phoneDisplay: "01604 875111",
   email: "info@woottonhearing.co.uk",
   companyNumber: "",
   address: {

@@ -9,9 +9,9 @@ import Link from "next/link";
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
-  title: "Our Services | Hearing & Optical Care Northampton",
+  title: "Eye Care & Hearing Services Northampton | Wootton",
   description:
-    "Complete hearing and optical services in Northampton: hearing tests, hearing aids, ear wax removal, eye tests, eyewear, contact lenses & aftercare. View pricing & book today.",
+    "Explore NHS and private eye tests, designer eyewear, hearing tests, hearing aids and ear wax removal at our independent Northampton clinic, Wootton.",
   path: "/services",
   keywords: [
     "hearing services Northampton",

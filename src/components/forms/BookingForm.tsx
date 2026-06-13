@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
+import { SITE } from "@/lib/constants";
 
 export function BookingForm() {
   const [form, setForm] = useState({
@@ -59,6 +60,7 @@ export function BookingForm() {
             id="booking-name"
             type="text"
             required
+            autoComplete="name"
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
             className={inputClass}
@@ -72,6 +74,7 @@ export function BookingForm() {
             id="booking-email"
             type="email"
             required
+            autoComplete="email"
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             className={inputClass}
@@ -88,6 +91,7 @@ export function BookingForm() {
             id="booking-phone"
             type="tel"
             required
+            autoComplete="tel"
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
             className={inputClass}
@@ -181,8 +185,12 @@ export function BookingForm() {
         </p>
       )}
       {status === "error" && (
-        <p className="text-red-500 font-medium" role="alert">
-          Booking failed. Please call us at {form.phone ? "" : ""}020 8554 1234.
+        <p className="text-red-600 font-medium" role="alert">
+          Booking failed. Please call us on{" "}
+          <a href={`tel:${SITE.phone.replace(/\s/g, "")}`} className="underline">
+            {SITE.phoneDisplay ?? SITE.phone}
+          </a>
+          .
         </p>
       )}
     </form>

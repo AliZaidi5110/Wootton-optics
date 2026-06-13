@@ -15,9 +15,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   ...generateSEO({
-    title: "Hearing Aids Northampton & Sight Tests | Wootton Optician & Hearing Care",
+    title: "Opticians & Hearing Care Northampton | Wootton Care",
     description:
-      "Independent family practice in Northampton since 2003. Wootton Optician and Wootton Hearing Care — NHS & private sight tests, free hearing consultations, ear wax removal, personalised care.",
+      "Independent opticians and hearing care specialists in Northampton. NHS and private eye tests, designer eyewear, hearing aids and ear wax removal.",
     path: "/",
     keywords: [...KEYWORDS],
   }),

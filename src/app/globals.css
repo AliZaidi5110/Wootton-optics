@@ -167,6 +167,52 @@ h4 {
   }
 }
 
+/* Interactive cursor affordances */
+a,
+button,
+[role="button"],
+label[for],
+input[type="submit"],
+select {
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled="true"],
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+}
+
+/* Mobile-friendly, tap-friendly form controls */
+@media (max-width: 768px) {
+  form input,
+  form select,
+  form textarea,
+  form button {
+    width: 100%;
+    min-height: 48px;
+    font-size: 16px;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .brand-marquee-track {
+    animation: none !important;
+  }
+}
+
 .font-heading {
   font-family: var(--font-heading);
 }

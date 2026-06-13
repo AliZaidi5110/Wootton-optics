@@ -10,9 +10,9 @@ import { Check, Eye, Glasses, Sun, Shield } from "lucide-react";
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
-  title: "Optical Services Northamptonshire | Eye Tests & Eyewear Northampton",
+  title: "Opticians Northampton | Eye Tests & Glasses | Wootton",
   description:
-    "Professional eye tests, designer eyewear & advanced lens technology in Northampton. NHS & private appointments at Wootton Optician since 2003.",
+    "Book NHS and private eye tests in Northampton. Discover designer glasses, contact lenses, retinal imaging and professional optical care at Wootton Optician.",
   path: "/optics",
   image: IMAGES.clinic,
   keywords: [

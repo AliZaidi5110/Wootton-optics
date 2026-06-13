@@ -70,9 +70,9 @@ export const hearingAids: HearingAid[] = [
     name: "Invisible-in-Canal",
     type: "IIC",
     description:
-      "The most discreet hearing aid available. Placed deep in the canal, invisible to others.",
+      "One of the most discreet options available. Sits deep in the ear canal and is highly discreet when fitted correctly.",
     features: [
-      "100% invisible when worn",
+      "Highly discreet when fitted correctly",
       "Premium sound quality",
       "Smartphone compatible",
       "Automatic environment detection",

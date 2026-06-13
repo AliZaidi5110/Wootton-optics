@@ -9,9 +9,9 @@ import { Heart, Target, Users, Award, MapPin } from "lucide-react";
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
-  title: "About Us | Family Hearing & Optical Care Northampton",
+  title: "About Wootton Optician & Hearing Care Northampton",
   description:
-    "Independent family-run hearing and optical practice in Northampton since 2003. Expert audiologists and dispensing opticians at Wootton Optician & Hearing Care.",
+    "Learn about our independent, family-run opticians and hearing care clinic serving Wootton, Northampton and the local community since 2003.",
   path: "/about",
   image: IMAGES.clinic,
   keywords: ["Wootton Hearing", "family business Northampton", "audiologist Northamptonshire", "optician Northampton"],
