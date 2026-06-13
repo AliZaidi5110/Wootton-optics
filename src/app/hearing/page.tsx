@@ -167,9 +167,9 @@ export default function HearingPage() {
             ))}
           </div>
 
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
             <h3 className="font-heading text-2xl font-bold text-navy mb-6">Product Comparison</h3>
-            <table className="w-full text-sm border-collapse">
+            <table className="w-full min-w-[560px] text-sm border-collapse">
               <thead>
                 <tr className="bg-primary text-white">
                   <th className="p-4 text-left rounded-tl-lg">Feature</th>

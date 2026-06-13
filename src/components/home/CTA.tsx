@@ -19,17 +19,17 @@ export function CTA() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
           <a
             href={telHref}
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-lg bg-primary text-white font-semibold hover:bg-primary-dark transition-colors"
+            className="inline-flex items-center justify-center gap-3 px-5 sm:px-8 py-4 rounded-lg bg-primary text-white font-semibold hover:bg-primary-dark transition-colors"
           >
-            <Phone className="w-5 h-5" />
+            <Phone className="w-5 h-5 shrink-0" />
             {SITE.phoneDisplay ?? SITE.phone}
           </a>
           <a
             href={`mailto:${SITE.email}`}
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-lg bg-white/10 text-white font-semibold border border-white/20 hover:bg-white/20 transition-colors"
+            className="inline-flex items-center justify-center gap-3 px-5 sm:px-8 py-4 rounded-lg bg-white/10 text-white font-semibold border border-white/20 hover:bg-white/20 transition-colors text-sm sm:text-base min-w-0"
           >
-            <Mail className="w-5 h-5" />
-            {SITE.email}
+            <Mail className="w-5 h-5 shrink-0" />
+            <span className="break-all">{SITE.email}</span>
           </a>
         </div>
 

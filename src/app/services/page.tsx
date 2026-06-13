@@ -155,8 +155,8 @@ export default function ServicesPage() {
           <h2 className="font-heading text-3xl font-bold text-navy text-center mb-8">
             Service Comparison
           </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm border-collapse max-w-4xl mx-auto">
+          <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+            <table className="w-full min-w-[600px] text-sm border-collapse max-w-4xl mx-auto">
               <thead>
                 <tr className="bg-neutral-900 text-white">
                   <th className="p-4 text-left">Service</th>
