@@ -116,14 +116,6 @@ export function Header() {
                 <Phone className="w-4 h-4" />
                 {phoneDisplay}
               </a>
-              <Button
-                href="/appointments"
-                variant={appointmentsActive ? "primary" : "accent"}
-                className={cn("mt-2 mx-4", appointmentsActive && "ring-2 ring-primary ring-offset-2")}
-                onClick={() => setMobileOpen(false)}
-              >
-                Book Now
-              </Button>
             </div>
           </nav>
         )}
