@@ -76,7 +76,7 @@ export function Header() {
               href="/appointments"
               variant={appointmentsActive ? "primary" : "accent"}
               size="sm"
-              className={cn("hidden sm:inline-flex shrink-0", appointmentsActive && "ring-2 ring-primary ring-offset-2")}
+              className={cn("hidden xl:inline-flex shrink-0", appointmentsActive && "ring-2 ring-primary ring-offset-2")}
               aria-current={appointmentsActive ? "page" : undefined}
             >
               Book Now
