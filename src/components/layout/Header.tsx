@@ -42,9 +42,11 @@ export function Header() {
                 <Glasses className="w-5 h-5 text-white" />
               </div>
             </div>
-            <div className="min-w-0">
-              <p className="font-heading font-bold text-lg text-navy leading-tight truncate">Wootton</p>
-              <p className="text-xs text-charcoal truncate">Optician &amp; Hearing Care</p>
+            <div className="min-w-0 leading-tight">
+              <p className="font-heading font-bold text-base sm:text-lg text-navy">Wootton</p>
+              <p className="text-[11px] sm:text-xs text-charcoal leading-snug">
+                Optician &amp; Hearing Care
+              </p>
             </div>
           </Link>
 

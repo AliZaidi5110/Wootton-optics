@@ -29,14 +29,14 @@ export function HomepageServices() {
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Button href="/appointments?service=eye-test" variant="primary" size="lg">
+            <Button href="/appointments?service=eye-test" variant="primary" size="lg" className="w-full sm:w-auto">
               Book a Sight Test
             </Button>
             <Button
               href="/optics"
               variant="outline"
               size="lg"
-              className="border-navy text-navy bg-white/60 hover:bg-navy hover:text-white"
+              className="w-full sm:w-auto border-navy text-navy bg-white/60 hover:bg-navy hover:text-white"
             >
               Learn More About Eye Care
             </Button>
@@ -63,14 +63,14 @@ export function HomepageServices() {
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Button href="/appointments?service=hearing-test" variant="primary" size="lg">
+            <Button href="/appointments?service=hearing-test" variant="primary" size="lg" className="w-full sm:w-auto">
               Book a Free Consultation
             </Button>
             <Button
               href="/hearing"
               variant="outline"
               size="lg"
-              className="border-white/40 text-white hover:bg-white hover:text-navy"
+              className="w-full sm:w-auto border-white/40 text-white hover:bg-white hover:text-navy"
             >
               Learn More About Hearing Care
             </Button>

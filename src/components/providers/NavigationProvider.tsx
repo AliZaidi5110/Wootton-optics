@@ -11,10 +11,9 @@ import {
 import { usePathname } from "next/navigation";
 import { PageLoader } from "@/components/shared/PageLoader";
 
-const MIN_DISPLAY_MS = 500;
+const MIN_DISPLAY_MS = 300;
 const MAX_DISPLAY_MS = 1200;
 const FADE_OUT_MS = 400;
-const INITIAL_LOAD_MS = 700;
 
 type NavigationContextValue = {
   showLoader: () => void;
@@ -57,8 +56,8 @@ function isInternalNavigationLink(anchor: HTMLAnchorElement): boolean {
 
 export function NavigationProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const startTimeRef = useRef(Date.now());
   const hideTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const fadeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -100,22 +99,6 @@ export function NavigationProvider({ children }: { children: React.ReactNode }) 
       finishHiding();
     }, remaining);
   }, [finishHiding]);
-
-  useEffect(() => {
-    const handleLoad = () => hideLoader();
-    const fallback = setTimeout(hideLoader, INITIAL_LOAD_MS);
-
-    if (document.readyState === "complete") {
-      hideLoader();
-    } else {
-      window.addEventListener("load", handleLoad);
-    }
-
-    return () => {
-      window.removeEventListener("load", handleLoad);
-      clearTimeout(fallback);
-    };
-  }, [hideLoader]);
 
   useEffect(() => {
     if (isInitialMountRef.current) {

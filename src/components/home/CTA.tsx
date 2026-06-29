@@ -16,29 +16,29 @@ export function CTA() {
           tests, hearing assessments, and personalised advice — with no obligation.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 max-w-lg sm:max-w-none mx-auto sm:mx-0">
           <a
             href={telHref}
-            className="inline-flex items-center justify-center gap-3 px-5 sm:px-8 py-4 rounded-lg bg-primary text-white font-semibold hover:bg-primary-dark transition-colors"
+            className="inline-flex items-center justify-center gap-3 px-5 sm:px-8 py-4 rounded-lg bg-primary text-white font-semibold hover:bg-primary-dark transition-colors w-full sm:w-auto"
           >
             <Phone className="w-5 h-5 shrink-0" />
             {SITE.phoneDisplay ?? SITE.phone}
           </a>
           <a
             href={`mailto:${SITE.email}`}
-            className="inline-flex items-center justify-center gap-3 px-5 sm:px-8 py-4 rounded-lg bg-white/10 text-white font-semibold border border-white/20 hover:bg-white/20 transition-colors text-sm sm:text-base min-w-0"
+            className="inline-flex items-center justify-center gap-3 px-5 sm:px-8 py-4 rounded-lg bg-white/10 text-white font-semibold border border-white/20 hover:bg-white/20 transition-colors text-sm sm:text-base min-w-0 w-full sm:w-auto"
           >
             <Mail className="w-5 h-5 shrink-0" />
             <span className="break-all">{SITE.email}</span>
           </a>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg sm:max-w-none mx-auto sm:mx-0">
           <Button
             href="/appointments?service=eye-test"
             variant="white"
             size="lg"
-            className="!text-black hover:!text-black"
+            className="w-full sm:w-auto !text-black hover:!text-black"
           >
             Book Sight Test Online
           </Button>
@@ -46,7 +46,7 @@ export function CTA() {
             href="/appointments?service=hearing-test"
             variant="outline"
             size="lg"
-            className="border-white/40 text-white hover:bg-white hover:text-navy"
+            className="w-full sm:w-auto border-white/40 text-white hover:bg-white hover:text-navy"
           >
             Book Hearing Test Online
           </Button>

@@ -49,7 +49,7 @@ export default function RootLayout({
         <ThemeProvider>
           <NavigationProvider>
             <Header />
-            <main className="flex-1 pt-[72px]">
+            <main className="flex-1 pt-[80px] sm:pt-[72px]">
               <PageTransition>{children}</PageTransition>
             </main>
             <Footer />

@@ -85,14 +85,14 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/65">
+        <div className="container py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/65 text-center sm:text-left">
           <div>
             <p>&copy; {new Date().getFullYear()} {SITE.hearingName}. All rights reserved.</p>
             {SITE.companyNumber && (
               <p className="mt-1">Registered in England &amp; Wales · Co. {SITE.companyNumber}</p>
             )}
           </div>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center sm:justify-end gap-x-6 gap-y-2">
             <Link href="/privacy" className="text-white/75 hover:text-sky transition-colors">
               Privacy Policy
             </Link>

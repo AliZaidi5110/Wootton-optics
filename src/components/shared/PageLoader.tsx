@@ -21,7 +21,7 @@ export function PageLoader({ visible }: PageLoaderProps) {
         <div className="loader-dot" />
         <div className="loader-dot" />
       </div>
-      <p className="loader-text">Loading...</p>
+      <span className="sr-only">Loading page</span>
     </div>
   );
 }

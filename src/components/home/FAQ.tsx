@@ -23,10 +23,10 @@ export function FAQ() {
             <div key={i} className="bg-sky/30 rounded-xl border border-primary/20 overflow-hidden">
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left min-h-[56px]"
+                className="w-full flex items-center justify-between p-4 sm:p-5 text-left min-h-[56px] gap-3"
                 aria-expanded={openIndex === i}
               >
-                <span className="font-medium text-navy pr-4">{faq.question}</span>
+                <span className="font-medium text-navy text-sm sm:text-base pr-2">{faq.question}</span>
                 <ChevronDown className={`w-5 h-5 text-primary shrink-0 transition-transform ${openIndex === i ? "rotate-180" : ""}`} />
               </button>
               <AnimatePresence>

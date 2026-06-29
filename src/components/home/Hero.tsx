@@ -38,7 +38,7 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button href="/appointments?service=eye-test" variant="primary" size="lg">
+            <Button href="/appointments?service=eye-test" variant="primary" size="lg" className="w-full sm:w-auto">
               Book Sight Test
               <ArrowRight className="w-5 h-5" />
             </Button>
@@ -46,7 +46,7 @@ export function Hero() {
               href="/appointments?service=hearing-test"
               variant="outline"
               size="lg"
-              className="border-white/40 text-white hover:bg-white hover:text-navy"
+              className="w-full sm:w-auto border-white/40 text-white hover:bg-white hover:text-navy"
             >
               Book Hearing Test
             </Button>
