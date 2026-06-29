@@ -3,9 +3,9 @@ export interface Brand {
 }
 
 export const brands: Brand[] = [
-  { name: "Götti" },
+  { name: "Gotti" },
   { name: "Coco Song" },
-  { name: "FRB31" },
+  { name: "FRB 31st" },
   { name: "Porsche Design" },
   { name: "Rodenstock" },
   { name: "Longchamp" },
