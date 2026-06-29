@@ -23,6 +23,19 @@ function navLinkClass(active: boolean, mobile = false) {
   );
 }
 
+function BrandMark() {
+  return (
+    <div className="relative shrink-0 w-12 h-9 sm:w-[3.25rem] sm:h-10" aria-hidden="true">
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 bg-navy rounded-lg flex items-center justify-center">
+        <Ear className="w-4 h-4 sm:w-5 sm:h-5 text-teal-light" />
+      </div>
+      <div className="absolute left-[1.125rem] sm:left-5 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center ring-2 ring-cream">
+        <Glasses className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+      </div>
+    </div>
+  );
+}
+
 export function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -31,26 +44,25 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md border-b border-cream-dark shadow-sm">
-      <div className="container py-3">
-        <div className="flex items-center justify-between gap-2 sm:gap-4">
-          <Link href="/" className="flex items-center gap-2 sm:gap-3 group min-w-0">
-            <div className="flex items-center shrink-0">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 bg-navy rounded-lg flex items-center justify-center">
-                <Ear className="w-5 h-5 text-teal-light" />
-              </div>
-              <div className="w-9 h-9 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center -ml-2">
-                <Glasses className="w-5 h-5 text-white" />
-              </div>
-            </div>
-            <div className="min-w-0 leading-tight">
-              <p className="font-heading font-bold text-base sm:text-lg text-navy">Wootton</p>
-              <p className="text-[11px] sm:text-xs text-charcoal leading-snug">
+      <div className="container py-2.5 sm:py-3">
+        <div className="flex items-center justify-between gap-3">
+          <Link
+            href="/"
+            className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1 overflow-hidden"
+            aria-label="Wootton Optician and Hearing Care home"
+          >
+            <BrandMark />
+            <div className="min-w-0 overflow-hidden">
+              <p className="font-heading font-bold text-lg sm:text-xl text-navy leading-none whitespace-nowrap">
+                Wootton
+              </p>
+              <p className="hidden min-[400px]:block text-[11px] sm:text-xs text-charcoal leading-tight whitespace-nowrap truncate mt-0.5 max-w-[11rem] min-[480px]:max-w-none sm:max-w-[14rem] md:max-w-none">
                 Optician &amp; Hearing Care
               </p>
             </div>
           </Link>
 
-          <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
+          <nav className="hidden xl:flex items-center gap-1 shrink-0" aria-label="Main navigation">
             {NAV_LINKS.map((link) => {
               const active = isNavActive(pathname, link.href);
               return (
@@ -66,24 +78,28 @@ export function Header() {
             })}
           </nav>
 
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-2 shrink-0">
             <a
               href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-              className="hidden lg:flex items-center gap-1.5 text-sm text-navy font-semibold hover:text-primary transition-colors"
+              className="hidden lg:flex items-center gap-1.5 text-sm text-navy font-semibold hover:text-primary transition-colors whitespace-nowrap"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4 shrink-0" />
               {phoneDisplay}
             </a>
             <Button
               href="/appointments"
               variant={appointmentsActive ? "primary" : "accent"}
               size="sm"
-              className={cn("hidden xl:inline-flex shrink-0", appointmentsActive && "ring-2 ring-primary ring-offset-2")}
+              className={cn(
+                "!hidden xl:!inline-flex shrink-0",
+                appointmentsActive && "ring-2 ring-primary ring-offset-2"
+              )}
               aria-current={appointmentsActive ? "page" : undefined}
             >
               Book Now
             </Button>
             <button
+              type="button"
               className="xl:hidden shrink-0 p-2 rounded-lg hover:bg-teal-light min-w-[44px] min-h-[44px] flex items-center justify-center text-navy"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
@@ -113,9 +129,9 @@ export function Header() {
               })}
               <a
                 href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-2 px-4 py-3 text-navy font-semibold"
+                className="flex items-center gap-2 px-4 py-3 text-navy font-semibold min-h-[48px]"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 shrink-0" />
                 {phoneDisplay}
               </a>
             </div>
