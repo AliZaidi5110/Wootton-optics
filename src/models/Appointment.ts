@@ -8,7 +8,7 @@ const AppointmentSchema = new Schema(
     phone: { type: String, required: true },
     service: {
       type: String,
-      enum: ["hearing-test", "hearing-aid", "eye-test", "optical", "virtual"],
+      enum: ["hearing-test", "ear-wax-removal", "hearing-aid", "eye-test", "optical"],
       required: true,
     },
     preferredDate: { type: Date, required: true },
@@ -18,7 +18,6 @@ const AppointmentSchema = new Schema(
       required: true,
     },
     notes: String,
-    virtualConsultation: { type: Boolean, default: false },
     status: {
       type: String,
       enum: ["pending", "confirmed", "completed", "cancelled"],

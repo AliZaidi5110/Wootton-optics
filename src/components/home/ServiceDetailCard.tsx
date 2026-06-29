@@ -88,14 +88,16 @@ export function ServiceDetailCard({ service, variant = "light" }: ServiceDetailC
         </div>
       </div>
 
-      <p
-        className={cn(
-          "mt-5 pt-4 border-t font-semibold",
-          isDark ? "border-white/25 text-white" : "border-primary/25 text-navy"
-        )}
-      >
-        {service.pricing}
-      </p>
+      {service.pricing && (
+        <p
+          className={cn(
+            "mt-5 pt-4 border-t font-semibold",
+            isDark ? "border-white/25 text-white" : "border-primary/25 text-navy"
+          )}
+        >
+          {service.pricing}
+        </p>
+      )}
     </article>
   );
 }

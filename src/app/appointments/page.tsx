@@ -2,14 +2,14 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { BookingForm } from "@/components/forms/BookingForm";
 import { generateSEO } from "@/lib/seo";
 import { SITE } from "@/lib/constants";
-import { Calendar, Video, Phone, Check } from "lucide-react";
+import { Calendar, MapPin, Phone, Check } from "lucide-react";
 
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
   title: "Book Appointment | Free Consultation Northampton",
   description:
-    "Book your free hearing test or sight test appointment at Wootton Optician & Hearing Care, Northampton. Online booking with confirmation email. Virtual consultations available.",
+    "Book your free hearing test or sight test appointment at Wootton Optician & Hearing Care, Northampton. Online booking with confirmation email.",
   path: "/appointments",
   keywords: [
     "book hearing test Northampton",
@@ -35,22 +35,17 @@ export default function AppointmentsPage() {
 
       <section className="py-20">
         <div className="container">
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid sm:grid-cols-2 gap-8 mb-16">
             {[
               {
-                icon: Calendar,
-                title: "In-Clinic Visit",
+                icon: MapPin,
+                title: "Visit the Practice",
                 desc: "Visit our Wootton Hope Drive clinic for comprehensive assessments.",
-              },
-              {
-                icon: Video,
-                title: "Virtual Consultation",
-                desc: "Initial consultations available via video call from home.",
               },
               {
                 icon: Phone,
                 title: "Phone Booking",
-                desc: `Call ${SITE.phone} to speak with our team directly.`,
+                desc: `Call ${SITE.phoneDisplay ?? SITE.phone} to speak with our team directly.`,
               },
             ].map((item) => (
               <div
@@ -78,7 +73,6 @@ export default function AppointmentsPage() {
                 {[
                   "Confirmation email within 24 hours",
                   "SMS reminder 24 hours before appointment",
-                  "Free parking available nearby",
                   "Allow 60 minutes for hearing assessments",
                   "Bring current glasses for eye tests",
                   "No obligation to purchase",

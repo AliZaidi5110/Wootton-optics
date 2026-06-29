@@ -169,10 +169,10 @@ export default function ServicesPage() {
                 {[
                   { name: "Hearing Test", duration: "60 mins", price: "Free consultation" },
                   { name: "Ear Wax Removal", duration: "30 mins", price: "£35 / £70 both ears" },
-                  { name: "Hearing Aid Fitting", duration: "90 mins", price: "From £495" },
-                  { name: "Eye Test (Private)", duration: "30 mins", price: "From £35" },
+                  { name: "Eye Test (Private)", duration: "30 mins", price: "From £55" },
                   { name: "Eye Test (NHS)", duration: "30 mins", price: "Free (if eligible)" },
-                  { name: "Contact Lens Fitting", duration: "45 mins", price: "Free with purchase" },
+                  { name: "Contact Lens Fitting", duration: "45 mins", price: "" },
+                  { name: "Children's Eye Test (NHS)", duration: "30 mins", price: "Free (if eligible)" },
                 ].map((row, i) => (
                   <tr
                     key={row.name}
@@ -180,7 +180,9 @@ export default function ServicesPage() {
                   >
                     <td className="p-4 font-medium">{row.name}</td>
                     <td className="p-4">{row.duration}</td>
-                    <td className="p-4 text-primary font-semibold">{row.price}</td>
+                    <td className="p-4 text-primary font-semibold">
+                      {row.price || "—"}
+                    </td>
                     <td className="p-4">
                       <Link href="/appointments" className="text-primary hover:underline text-sm">
                         Book Now

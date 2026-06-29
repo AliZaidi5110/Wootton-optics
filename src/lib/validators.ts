@@ -13,11 +13,10 @@ export const appointmentSchema = z.object({
   name: z.string().min(2).max(100),
   email: z.string().email(),
   phone: z.string().min(10).max(20),
-  service: z.enum(["hearing-test", "hearing-aid", "eye-test", "optical", "virtual"]),
+  service: z.enum(["hearing-test", "ear-wax-removal", "hearing-aid", "eye-test", "optical"]),
   preferredDate: z.string().min(1, "Please select a preferred date"),
   preferredTime: z.enum(["morning", "afternoon", "evening"]),
   notes: z.string().max(500).optional(),
-  virtualConsultation: z.boolean().optional(),
 });
 
 export const newsletterSchema = z.object({

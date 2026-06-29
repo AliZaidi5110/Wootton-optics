@@ -14,7 +14,6 @@ export const hearingAids: HearingAid[] = [
       "App control",
       "Telecoil compatible",
     ],
-    priceRange: "£1,295 – £2,495",
     image: "/products/bte-hearing-aid.jpg",
   },
   {
@@ -30,7 +29,6 @@ export const hearingAids: HearingAid[] = [
       "Direct smartphone streaming",
       "Remote adjustments",
     ],
-    priceRange: "£1,495 – £2,995",
     image: "/products/ric-hearing-aid.jpg",
   },
   {
@@ -46,7 +44,6 @@ export const hearingAids: HearingAid[] = [
       "Feedback cancellation",
       "Multiple colour options",
     ],
-    priceRange: "£995 – £1,895",
     image: "/products/ite-hearing-aid.jpg",
   },
   {
@@ -54,7 +51,7 @@ export const hearingAids: HearingAid[] = [
     name: "Completely-in-Canal",
     type: "CIC",
     description:
-      "Virtually invisible hearing solution. Sits deep in the ear canal for maximum discretion.",
+      "Highly discreet hearing solution. Sits deep in the ear canal for maximum discretion.",
     features: [
       "Near-invisible profile",
       "Natural wind performance",
@@ -62,7 +59,6 @@ export const hearingAids: HearingAid[] = [
       "Push-button control",
       "Suitable for mild to moderate loss",
     ],
-    priceRange: "£1,195 – £2,195",
     image: "/products/cic-hearing-aid.jpg",
   },
   {
@@ -78,7 +74,6 @@ export const hearingAids: HearingAid[] = [
       "Automatic environment detection",
       "Premium comfort coating",
     ],
-    priceRange: "£1,795 – £3,495",
     image: "/products/iic-hearing-aid.jpg",
   },
 ];

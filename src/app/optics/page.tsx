@@ -2,7 +2,7 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { BrandMarquee } from "@/components/home/BrandMarquee";
 import { CTA } from "@/components/home/CTA";
 import { BookingForm } from "@/components/forms/BookingForm";
-import { eyewearFrames, lensTechnologies } from "@/data/eyewear";
+import { lensTechnologies } from "@/data/eyewear";
 import { generateSEO } from "@/lib/seo";
 import { IMAGES } from "@/lib/images";
 import { Check, Eye, Glasses, Sun, Shield } from "lucide-react";
@@ -62,8 +62,9 @@ export default function OpticsPage() {
               <div className="space-y-3">
                 {[
                   "NHS and private eye tests available",
+                  "ABDO-registered dispensing opticians",
                   "Digital retinal imaging and glaucoma screening",
-                  "100+ designer and everyday frame styles",
+                  "Designer and everyday frame styles",
                   "Varifocal and occupational lens specialists",
                   "Contact lens fitting and aftercare",
                   "UV protection and blue light filtering",
@@ -78,7 +79,7 @@ export default function OpticsPage() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { icon: Eye, label: "Eye Tests", value: "NHS & Private" },
-                { icon: Glasses, label: "Frames", value: "100+ Styles" },
+                { icon: Glasses, label: "Frames", value: "Designer & NHS" },
                 { icon: Sun, label: "UV Protection", value: "Standard" },
                 { icon: Shield, label: "Lens Tech", value: "Advanced" },
               ].map((item) => (
@@ -103,38 +104,6 @@ export default function OpticsPage() {
           </h2>
           <div className="on-light bg-white rounded-2xl p-8 border border-white/20 shadow-sm">
             <BookingForm />
-          </div>
-        </div>
-      </section>
-
-      <section id="collections" className="py-20 bg-white">
-        <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-4">
-            Eyewear Collections
-          </h2>
-          <p className="text-center text-navy/85 max-w-2xl mx-auto mb-12">
-            From classic styles to the latest designer frames, find your perfect
-            look at Wootton Optician.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {eyewearFrames.map((frame) => (
-              <div
-                key={frame.id}
-                className="bg-cream rounded-2xl overflow-hidden border border-cream-dark hover:shadow-lg transition-shadow group"
-              >
-                <div className="h-36 bg-gradient-to-br from-teal-light to-sky flex items-center justify-center">
-                  <Glasses className="w-12 h-12 text-accent/40 group-hover:scale-110 transition-transform" />
-                </div>
-                <div className="p-4">
-                  <p className="text-xs text-navy/70">{frame.brand}</p>
-                  <h3 className="font-heading font-bold text-sm text-navy">{frame.name}</h3>
-                  <div className="flex justify-between items-center mt-2">
-                    <span className="text-xs text-navy/70">{frame.style}</span>
-                    <span className="font-semibold text-primary text-sm">{frame.price}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

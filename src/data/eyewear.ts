@@ -92,4 +92,37 @@ export const lensTechnologies = [
       "Thinner, lighter lenses for strong prescriptions without bulky appearance.",
     benefits: ["Lighter weight", "Slimmer profile", "Better aesthetics"],
   },
+  {
+    name: "Rodenstock B.I.G. Biometric Lenses",
+    description:
+      "Biometric Intelligent Glasses tailored using detailed measurements of your individual eye for natural, sharp all-round vision.",
+    benefits: [
+      "Personalised to your eye biometry",
+      "Sharper all-round vision",
+      "Natural visual experience",
+    ],
+  },
+  {
+    name: "Rodenstock Pro 410 Lenses",
+    description:
+      "Premium progressive lens design offering wide, comfortable fields of vision at every distance.",
+    benefits: ["Wide vision zones", "Smooth distance transitions", "All-day comfort"],
+  },
+  {
+    name: "Rodenstock Road Lenses",
+    description:
+      "Lenses optimised for driving, helping to reduce glare and improve contrast in low light and challenging conditions.",
+    benefits: ["Reduced glare while driving", "Better contrast in low light", "Clearer night vision"],
+  },
+  {
+    name: "Sports Lenses — Biometric Intelligent Glasses",
+    description:
+      "Sports-focused lens options including Rodenstock Biometric Intelligent Glasses for active lifestyles, with durable materials and precise visual performance.",
+    benefits: [
+      "Biometric Intelligent Glasses technology",
+      "Impact-resistant materials",
+      "Wraparound fit options",
+      "UV protection",
+    ],
+  },
 ];

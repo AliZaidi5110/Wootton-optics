@@ -62,7 +62,6 @@ export default function HearingPage() {
                   "Free initial hearing consultation — no obligation",
                   "All major hearing aid brands available",
                   "Custom programming and fitting",
-                  "Trial periods on selected models",
                   "Rechargeable and Bluetooth-enabled options",
                   "Aftercare included with hearing aid purchase (terms may apply)",
                   "Ear wax removal — £35 per ear, £70 for both ears",
@@ -161,7 +160,6 @@ export default function HearingPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="font-semibold text-primary">{aid.priceRange}</p>
                 </div>
               </div>
             ))}

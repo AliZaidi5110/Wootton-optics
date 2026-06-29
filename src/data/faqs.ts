@@ -5,7 +5,7 @@ export const faqs: FAQ[] = [
     category: "general",
     question: "Where is Wootton Optician & Hearing Care located?",
     answer:
-      "We are located at 9 Tudor Court, Wootton Hope Drive, Northampton, NN4 6FF. We are easily accessible by car and public transport with parking nearby. We serve clients across Northampton, Wootton Fields, and Northamptonshire.",
+      "We are located at 9 Tudor Court, Wootton Hope Drive, Northampton, NN4 6FF. We serve clients across Northampton, Wootton Fields, and Northamptonshire.",
   },
   {
     category: "hearing",
@@ -20,12 +20,6 @@ export const faqs: FAQ[] = [
       "We stock a full range including behind-the-ear (BTE), receiver-in-canal (RIC), in-the-ear (ITE), completely-in-canal (CIC), and invisible-in-canal (IIC) models from leading manufacturers. Our audiologists will recommend the best option for your lifestyle and hearing loss profile.",
   },
   {
-    category: "hearing",
-    question: "Do you offer hearing aid trials?",
-    answer:
-      "Yes, we offer trial periods on selected hearing aid models so you can experience the difference in real-world situations before committing. Our team provides full fitting, programming, and adjustment support throughout your trial.",
-  },
-  {
     category: "optics",
     question: "How often should I have an eye test?",
     answer:
@@ -35,7 +29,7 @@ export const faqs: FAQ[] = [
     category: "optics",
     question: "What lens options are available?",
     answer:
-      "We offer single vision, bifocal, varifocal (progressive), occupational, and specialist lenses. Advanced coatings include anti-reflective, blue light filtering, photochromic (Transitions), and UV protection. Our team will guide you to the best combination for your needs.",
+      "We offer single vision, bifocal, varifocal (progressive), occupational, and specialist lenses including Rodenstock B.I.G. Biometric Intelligent Glasses, Rodenstock Pro 410, Rodenstock Road, and sports lens options. Advanced coatings include anti-reflective, blue light filtering, photochromic (Transitions), and UV protection. Our team will guide you to the best combination for your needs.",
   },
   {
     category: "optics",
@@ -66,12 +60,6 @@ export const faqs: FAQ[] = [
     question: "Is a hearing screening the same as a full hearing test?",
     answer:
       "A hearing screening is a quick, free check to see whether further assessment is needed. A full hearing consultation includes comprehensive audiometry, lifestyle discussion, and detailed recommendations.",
-  },
-  {
-    category: "general",
-    question: "Can I book a virtual consultation?",
-    answer:
-      "Yes, we offer virtual consultations for initial hearing assessments and follow-up appointments. This is ideal if you cannot visit our Wootton Hope Drive clinic in person. Book through our appointments page and select the virtual consultation option.",
   },
   {
     category: "general",

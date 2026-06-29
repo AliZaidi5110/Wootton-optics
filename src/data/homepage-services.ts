@@ -26,6 +26,7 @@ export const trustStripItems = [
   "Independent family practice since 2003",
   "NHS & private sight tests available",
   "Free hearing screenings & consultations",
+  "ABDO-registered dispensing opticians",
   "HCPC-registered clinicians",
   "Personalised care, no sales pressure",
 ];
@@ -37,7 +38,7 @@ export const opticsServices: DetailedService[] = [
     summary:
       "A full sight test funded by the NHS for eligible patients, including vision assessment, eye health checks, and a prescription when needed.",
     whoNeedsIt:
-      "Adults and children who qualify under NHS rules — typically every two years, or annually if you are under 16, over 60, diabetic, or have a family history of glaucoma.",
+      "Adults and children who qualify under NHS rules — typically every two years, or annually if you are under 16, over 70, diabetic, or have a family history of glaucoma.",
     benefits: [
       "No charge for eligible patients",
       "Comprehensive vision and eye health examination",
@@ -59,7 +60,7 @@ export const opticsServices: DetailedService[] = [
       "Same-day results and clear recommendations",
       "Ideal for busy professionals and contact lens wearers",
     ],
-    pricing: "From £45",
+    pricing: "From £55",
   },
   {
     id: "specialist-contact-lenses",
@@ -74,7 +75,6 @@ export const opticsServices: DetailedService[] = [
       "Ongoing aftercare and supply management",
       "Access to leading contact lens brands",
     ],
-    pricing: "Fitting from £55 · Lenses from £15/month",
   },
   {
     id: "dry-eye-assessment",
@@ -82,14 +82,13 @@ export const opticsServices: DetailedService[] = [
     summary:
       "A dedicated clinical assessment to identify the cause of dry, gritty, or watery eyes and create a personalised treatment plan.",
     whoNeedsIt:
-      "Anyone experiencing dry, irritated, burning, or tired eyes — especially screen users, contact lens wearers, and people over 40.",
+      "Anyone experiencing dry, irritated, burning, or tired eyes — especially screen users and contact lens wearers.",
     benefits: [
       "Identifies underlying causes, not just symptoms",
       "Personalised treatment including drops, heat therapy, and lifestyle advice",
       "Improved comfort for daily life and contact lens wear",
       "Ongoing monitoring and plan adjustments",
     ],
-    pricing: "From £55",
   },
   {
     id: "myopia-management",
@@ -104,22 +103,20 @@ export const opticsServices: DetailedService[] = [
       "Regular monitoring with a dedicated care plan",
       "Options include specialist contact lenses and spectacle lenses",
     ],
-    pricing: "Programmes from £220/year",
   },
   {
     id: "glaucoma-screening",
     title: "Glaucoma Screening",
     summary:
-      "Advanced screening to detect early signs of glaucoma including intraocular pressure measurement, optic nerve assessment, and visual field testing.",
+      "Advanced screening to detect early signs of glaucoma including intraocular pressure measurement, optic nerve assessment, and visual field testing. Available as part of a private sight test.",
     whoNeedsIt:
-      "Adults over 40, those with a family history of glaucoma, people of African-Caribbean descent, and anyone with elevated eye pressure or optic nerve changes.",
+      "Adults over 40, those with a family history of glaucoma, and anyone with elevated eye pressure or optic nerve changes.",
     benefits: [
       "Early detection before noticeable vision loss",
       "Comprehensive pressure and nerve head assessment",
       "Visual field testing where clinically indicated",
       "Prompt referral and co-management with ophthalmology",
     ],
-    pricing: "Included in private sight test · Standalone from £35",
   },
   {
     id: "childrens-sight-tests",
@@ -134,7 +131,7 @@ export const opticsServices: DetailedService[] = [
       "NHS testing available for eligible children",
       "Clear guidance for parents and schools",
     ],
-    pricing: "NHS free for eligible children · Private from £35",
+    pricing: "Free for eligible children under the NHS",
   },
 ];
 
@@ -193,10 +190,9 @@ export const hearingServices: DetailedService[] = [
       "People with diagnosed hearing loss who want clearer speech, better confidence, and modern features — plus existing aid users needing servicing or repairs.",
     benefits: [
       "All major brands with custom programming",
-      "Trial periods available on selected models",
       "Professional cleaning, servicing, and reprogramming",
       "Repairs, batteries, and accessories in clinic",
+      "Ongoing aftercare and support",
     ],
-    pricing: "From £495 per aid · Repairs from £45",
   },
 ];

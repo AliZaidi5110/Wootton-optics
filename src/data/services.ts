@@ -29,7 +29,7 @@ export const services: Service[] = [
       "Same-day results",
       "Advanced screening included",
     ],
-    price: "From £45",
+    price: "From £55",
   },
   {
     id: "specialist-contact-lenses",
@@ -44,7 +44,6 @@ export const services: Service[] = [
       "Ongoing aftercare",
       "All major brands",
     ],
-    price: "Fitting from £55",
   },
   {
     id: "dry-eye-assessment",
@@ -59,7 +58,6 @@ export const services: Service[] = [
       "Lifestyle and product advice",
       "Follow-up monitoring",
     ],
-    price: "From £55",
   },
   {
     id: "myopia-management",
@@ -74,7 +72,6 @@ export const services: Service[] = [
       "Regular monitoring",
       "Long-term eye health benefits",
     ],
-    price: "From £220/year",
   },
   {
     id: "glaucoma-screening",
@@ -89,7 +86,6 @@ export const services: Service[] = [
       "Visual field testing",
       "Specialist referral",
     ],
-    price: "From £35",
   },
   {
     id: "child-eye-tests",
@@ -104,7 +100,7 @@ export const services: Service[] = [
       "NHS tests for eligible children",
       "Parent guidance included",
     ],
-    price: "NHS free / Private from £35",
+    price: "Free for eligible children under the NHS",
   },
   {
     id: "free-hearing-screening",
@@ -155,16 +151,15 @@ export const services: Service[] = [
     id: "hearing-aids",
     title: "Hearing Aid Supply & Fitting",
     description:
-      "Digital hearing aids from leading brands with custom programming and trial options.",
+      "Digital hearing aids from leading brands with custom programming and expert fitting.",
     icon: "volume",
     href: "/#hearing-services",
     features: [
       "All major brands",
       "Custom programming",
-      "Trial periods available",
       "Rechargeable options",
+      "Ongoing aftercare",
     ],
-    price: "From £495 per aid",
   },
   {
     id: "hearing-aid-maintenance",
@@ -179,7 +174,6 @@ export const services: Service[] = [
       "Fast repairs",
       "Accessories in stock",
     ],
-    price: "Aftercare included · Repairs from £45",
   },
 ];
 

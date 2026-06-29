@@ -33,7 +33,7 @@ export interface DetailedService {
   summary: string;
   whoNeedsIt: string;
   benefits: string[];
-  pricing: string;
+  pricing?: string;
 }
 
 export interface Testimonial {
@@ -67,7 +67,6 @@ export interface HearingAid {
   type: string;
   description: string;
   features: string[];
-  priceRange: string;
   image: string;
 }
 

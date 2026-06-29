@@ -13,7 +13,6 @@ export function BookingForm() {
     preferredDate: "",
     preferredTime: "morning",
     notes: "",
-    virtualConsultation: false,
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -36,7 +35,6 @@ export function BookingForm() {
           preferredDate: "",
           preferredTime: "morning",
           notes: "",
-          virtualConsultation: false,
         });
       } else {
         setStatus("error");
@@ -112,7 +110,6 @@ export function BookingForm() {
             <option value="hearing-aid">Hearing Aid Consultation</option>
             <option value="eye-test">Eye Test</option>
             <option value="optical">Optical Consultation</option>
-            <option value="virtual">Virtual Consultation</option>
           </select>
         </div>
       </div>
@@ -162,18 +159,6 @@ export function BookingForm() {
           placeholder="Any specific requirements or questions..."
         />
       </div>
-
-      <label className="flex items-center gap-3 cursor-pointer min-h-[48px]">
-        <input
-          type="checkbox"
-          checked={form.virtualConsultation}
-          onChange={(e) =>
-            setForm({ ...form, virtualConsultation: e.target.checked })
-          }
-          className="w-5 h-5 rounded border-neutral-300 text-primary focus:ring-primary"
-        />
-        <span className="text-sm">I would prefer a virtual consultation</span>
-      </label>
 
       <Button type="submit" size="lg" disabled={status === "loading"}>
         {status === "loading" ? "Booking..." : "Book Appointment"}
