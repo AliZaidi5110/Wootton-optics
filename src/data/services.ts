@@ -9,12 +9,12 @@ export const services: Service[] = [
     icon: "eye",
     href: "/#optics-services",
     features: [
-      "Free for eligible patients",
+      "Funded for eligible patients",
       "Vision and eye health examination",
       "NHS voucher toward glasses",
       "Referrals when needed",
     ],
-    price: "Free for eligible patients",
+    price: "Funded for eligible patients",
   },
   {
     id: "private-eye-test",
@@ -100,7 +100,7 @@ export const services: Service[] = [
       "NHS tests for eligible children",
       "Parent guidance included",
     ],
-    price: "Free for eligible children under the NHS",
+    price: "Funded for eligible patients",
   },
   {
     id: "free-hearing-screening",

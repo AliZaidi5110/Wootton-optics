@@ -11,6 +11,7 @@ export const SITE = {
   phone: "+44 1604 875111",
   phoneDisplay: "01604 875111",
   email: "info@woottonhearing.co.uk",
+  opticsEmail: "wootton.opticians@live.co.uk",
   companyNumber: "",
   address: {
     street: "9 Tudor Court, Wootton Hope Drive",
@@ -22,8 +23,8 @@ export const SITE = {
   },
   coordinates: { lat: 52.218, lng: -0.8925 },
   hours: {
-    weekdays: "Mon–Fri: 9:00 AM – 6:00 PM",
-    saturday: "Sat: 9:00 AM – 4:00 PM",
+    weekdays: "Mon–Fri: 9:00 AM – 5:00 PM",
+    saturday: "Sat: 9:00 AM – 12:00 PM",
     sunday: "Sun: Closed",
   },
   social: {

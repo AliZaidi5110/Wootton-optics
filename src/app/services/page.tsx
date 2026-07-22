@@ -170,9 +170,9 @@ export default function ServicesPage() {
                   { name: "Hearing Test", duration: "60 mins", price: "Free consultation" },
                   { name: "Ear Wax Removal", duration: "30 mins", price: "£35 / £70 both ears" },
                   { name: "Eye Test (Private)", duration: "30 mins", price: "From £55" },
-                  { name: "Eye Test (NHS)", duration: "30 mins", price: "Free (if eligible)" },
+                  { name: "Eye Test (NHS)", duration: "30 mins", price: "Funded for eligible patients" },
                   { name: "Contact Lens Fitting", duration: "45 mins", price: "" },
-                  { name: "Children's Eye Test (NHS)", duration: "30 mins", price: "Free (if eligible)" },
+                  { name: "Children's Eye Test (NHS)", duration: "30 mins", price: "Funded for eligible patients" },
                 ].map((row, i) => (
                   <tr
                     key={row.name}

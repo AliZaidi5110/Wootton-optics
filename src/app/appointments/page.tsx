@@ -61,7 +61,7 @@ export default function AppointmentsPage() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="font-heading text-2xl font-bold text-navy mb-6">Request an Appointment</h2>
+              <h2 className="font-heading text-2xl font-bold text-navy mb-6">Book an Appointment</h2>
               <div className="bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-700">
                 <BookingForm />
               </div>

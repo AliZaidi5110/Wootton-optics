@@ -29,7 +29,7 @@ export const faqs: FAQ[] = [
     category: "optics",
     question: "What lens options are available?",
     answer:
-      "We offer single vision, bifocal, varifocal (progressive), occupational, and specialist lenses including Rodenstock B.I.G. Biometric Intelligent Glasses, Rodenstock Pro 410, Rodenstock Road, and sports lens options. Advanced coatings include anti-reflective, blue light filtering, photochromic (Transitions), and UV protection. Our team will guide you to the best combination for your needs.",
+      "We offer single vision, bifocal, varifocal (progressive), occupational, and specialist sports lens options. Advanced coatings include anti-reflective, blue light filtering, and photochromic lenses. Our team will guide you to the best combination for your needs.",
   },
   {
     category: "optics",
@@ -65,7 +65,7 @@ export const faqs: FAQ[] = [
     category: "general",
     question: "What are your opening hours?",
     answer:
-      "We are open Monday to Friday 9:00 AM – 6:00 PM, and Saturday 9:00 AM – 4:00 PM. We are closed on Sundays and bank holidays. Evening appointments may be available by arrangement.",
+      "We are open Monday to Friday 9:00 AM – 5:00 PM, and Saturday 9:00 AM – 12:00 PM. We are closed on Sundays and bank holidays.",
   },
   {
     category: "hearing",

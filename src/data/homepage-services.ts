@@ -40,12 +40,12 @@ export const opticsServices: DetailedService[] = [
     whoNeedsIt:
       "Adults and children who qualify under NHS rules — typically every two years, or annually if you are under 16, over 70, diabetic, or have a family history of glaucoma.",
     benefits: [
-      "No charge for eligible patients",
+      "Funded for eligible patients",
       "Comprehensive vision and eye health examination",
       "NHS optical voucher toward glasses if required",
       "Referral to specialists when clinically necessary",
     ],
-    pricing: "Free for eligible NHS patients",
+    pricing: "Funded for eligible patients",
   },
   {
     id: "private-sight-test",
@@ -131,7 +131,7 @@ export const opticsServices: DetailedService[] = [
       "NHS testing available for eligible children",
       "Clear guidance for parents and schools",
     ],
-    pricing: "Free for eligible children under the NHS",
+    pricing: "Funded for eligible patients",
   },
 ];
 

@@ -20,7 +20,7 @@ export function BrandMarquee() {
     >
       <div className="container mb-8 text-center">
         <h2 className="font-heading text-2xl sm:text-3xl font-bold text-navy mb-2">
-          Designer Brands We Stock
+          Designer brands we stock
         </h2>
         <p className="text-muted text-sm md:text-base max-w-2xl mx-auto">
           From NHS frames to the latest designer brands — independent sourcing

@@ -5,7 +5,7 @@ import { BookingForm } from "@/components/forms/BookingForm";
 import { lensTechnologies } from "@/data/eyewear";
 import { generateSEO } from "@/lib/seo";
 import { IMAGES } from "@/lib/images";
-import { Check, Eye, Glasses, Sun, Shield } from "lucide-react";
+import { Check, Eye, Glasses, Shield } from "lucide-react";
 
 export const revalidate = 86400;
 
@@ -29,12 +29,12 @@ export default function OpticsPage() {
   return (
     <>
       <PageHeader
-        title="Wootton Optician"
+        title="Eye Care"
         subtitle="Comprehensive eye care, designer eyewear, and advanced lens technology from Northampton's trusted dispensing opticians."
         currentPath="/optics"
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Optics" },
+          { label: "Eye Care" },
         ]}
         backgroundImages={[
           {
@@ -44,15 +44,16 @@ export default function OpticsPage() {
         ]}
       />
 
-      <BrandMarquee />
-
       <section className="py-20 section-optician">
         <div className="container">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy mb-10 text-center">
+            Wootton Optician
+          </h2>
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="font-heading text-3xl font-bold text-navy mb-6">
+              <h3 className="font-heading text-2xl sm:text-3xl font-bold text-navy mb-6">
                 Eye Care Services Overview
-              </h2>
+              </h3>
               <p className="text-navy/85 leading-relaxed mb-6">
                 Wootton Optician provides thorough eye examinations, expert frame
                 styling, and the latest lens technology. Whether you need a routine
@@ -67,7 +68,7 @@ export default function OpticsPage() {
                   "Designer and everyday frame styles",
                   "Varifocal and occupational lens specialists",
                   "Contact lens fitting and aftercare",
-                  "UV protection and blue light filtering",
+                  "Blue light filtering options",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-fresh shrink-0 mt-0.5" />
@@ -80,8 +81,8 @@ export default function OpticsPage() {
               {[
                 { icon: Eye, label: "Eye Tests", value: "NHS & Private" },
                 { icon: Glasses, label: "Frames", value: "Designer & NHS" },
-                { icon: Sun, label: "UV Protection", value: "Standard" },
                 { icon: Shield, label: "Lens Tech", value: "Advanced" },
+                { icon: Check, label: "Aftercare", value: "Included" },
               ].map((item) => (
                 <div
                   key={item.label}
@@ -96,6 +97,8 @@ export default function OpticsPage() {
           </div>
         </div>
       </section>
+
+      <BrandMarquee />
 
       <section id="eye-test" className="py-20 section-hearing">
         <div className="container max-w-3xl">
@@ -133,43 +136,6 @@ export default function OpticsPage() {
                 </ul>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-cream">
-        <div className="container">
-          <div className="bg-white rounded-2xl p-8 lg:p-12 border border-cream-dark shadow-sm">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="font-heading text-2xl font-bold text-navy mb-4 flex items-center gap-3">
-                  <Sun className="w-8 h-8 text-accent" />
-                  UV Protection Information
-                </h2>
-                <p className="text-navy/85 leading-relaxed mb-4">
-                  UV radiation damages eyes year-round, not just in summer. All lenses
-                  dispensed at Wootton Optician include UV protection as standard. We
-                  also offer prescription sunglasses with UV400-rated protection for
-                  complete outdoor eye safety.
-                </p>
-                <p className="text-navy/85 leading-relaxed">
-                  Children&apos;s eyes are especially vulnerable — we recommend UV-blocking
-                  lenses and proper sunglasses from an early age.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                {["UV400 Protection", "Polarised Options", "Photochromic Lenses", "Prescription Sun"].map(
-                  (item) => (
-                    <div
-                      key={item}
-                      className="bg-navy-deep rounded-xl p-4 text-center font-medium text-sm text-white border border-white/15"
-                    >
-                      {item}
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
           </div>
         </div>
       </section>

@@ -81,10 +81,10 @@ export const lensTechnologies = [
     benefits: ["Less eye fatigue", "Better sleep quality", "Clear screen vision"],
   },
   {
-    name: "Photochromic (Transitions)",
+    name: "Photochromic Lenses",
     description:
       "Lenses that darken in sunlight and clear indoors. Two pairs in one.",
-    benefits: ["UV protection", "Glare reduction", "Convenience"],
+    benefits: ["Glare reduction", "Convenience", "All-day comfort"],
   },
   {
     name: "High-Index Thin Lenses",
@@ -93,36 +93,13 @@ export const lensTechnologies = [
     benefits: ["Lighter weight", "Slimmer profile", "Better aesthetics"],
   },
   {
-    name: "Rodenstock B.I.G. Biometric Lenses",
+    name: "Sports Lenses",
     description:
-      "Biometric Intelligent Glasses tailored using detailed measurements of your individual eye for natural, sharp all-round vision.",
+      "Sports-focused lens options for active lifestyles, with durable materials and precise visual performance.",
     benefits: [
-      "Personalised to your eye biometry",
-      "Sharper all-round vision",
-      "Natural visual experience",
-    ],
-  },
-  {
-    name: "Rodenstock Pro 410 Lenses",
-    description:
-      "Premium progressive lens design offering wide, comfortable fields of vision at every distance.",
-    benefits: ["Wide vision zones", "Smooth distance transitions", "All-day comfort"],
-  },
-  {
-    name: "Rodenstock Road Lenses",
-    description:
-      "Lenses optimised for driving, helping to reduce glare and improve contrast in low light and challenging conditions.",
-    benefits: ["Reduced glare while driving", "Better contrast in low light", "Clearer night vision"],
-  },
-  {
-    name: "Sports Lenses — Biometric Intelligent Glasses",
-    description:
-      "Sports-focused lens options including Rodenstock Biometric Intelligent Glasses for active lifestyles, with durable materials and precise visual performance.",
-    benefits: [
-      "Biometric Intelligent Glasses technology",
       "Impact-resistant materials",
       "Wraparound fit options",
-      "UV protection",
+      "Clear vision during activity",
     ],
   },
 ];
