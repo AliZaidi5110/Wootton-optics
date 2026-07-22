@@ -10,18 +10,18 @@ import { Check, Ear, Volume2, Heart } from "lucide-react";
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
-  title: "Hearing Tests & Hearing Aids Northampton | Wootton",
+  title: "Hearing Test Northampton | Free Consult | Wootton",
   description:
-    "Book hearing tests, hearing aid fittings and ear wax removal in Northampton. Trusted independent hearing care with expert fitting and ongoing aftercare.",
+    "Free hearing consultations in Northampton plus ear wax removal from £35 and hearing aid fitting with honest advice and ongoing aftercare. Book today.",
   path: "/hearing",
   image: IMAGES.clinic,
   keywords: [
-    "hearing aids Northampton",
     "hearing test Northampton",
-    "hearing care Northamptonshire",
-    "audiologist Northampton",
-    "free hearing test",
+    "hearing aids Northampton",
     "ear wax removal Northampton",
+    "free hearing test Northampton",
+    "audiologist Northampton",
+    "hearing aid repairs Northampton",
   ],
 });
 

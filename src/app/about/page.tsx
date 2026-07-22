@@ -9,12 +9,17 @@ import { Heart, Target, Users, Award, MapPin } from "lucide-react";
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
-  title: "About Wootton Optician & Hearing Care Northampton",
+  title: "About Us | Family Optician Northampton | Wootton",
   description:
-    "Learn about our independent, family-run opticians and hearing care clinic serving Wootton, Northampton and the local community since 2003.",
+    "Family-run optician and hearing care in Northampton since 2003. Independent NHS and private eye care plus free hearing consultations in Wootton Fields.",
   path: "/about",
   image: IMAGES.clinic,
-  keywords: ["Wootton Hearing", "family business Northampton", "audiologist Northamptonshire", "optician Northampton"],
+  keywords: [
+    "optician Northampton",
+    "family optician Northampton",
+    "Wootton Optician",
+    "hearing care Northampton",
+  ],
 });
 
 const values = [

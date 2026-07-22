@@ -1,8 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
 
-const LAST_CONTENT_UPDATE = new Date("2026-06-07");
-
 const routes: {
   path: string;
   changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
@@ -22,10 +20,11 @@ const routes: {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE.url;
+  const lastModified = new Date();
 
   return routes.map(({ path, changeFrequency, priority }) => ({
     url: `${baseUrl}${path}`,
-    lastModified: LAST_CONTENT_UPDATE,
+    lastModified,
     changeFrequency,
     priority,
   }));

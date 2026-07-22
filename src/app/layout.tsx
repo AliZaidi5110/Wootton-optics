@@ -7,7 +7,7 @@ import { PageTransition } from "@/components/layout/PageTransition";
 import { CookieConsent } from "@/components/shared/CookieConsent";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Analytics } from "@/components/seo/Analytics";
-import { generateSEO, localBusinessSchema, websiteSchema } from "@/lib/seo";
+import { generateSEO, localBusinessSchema, websiteSchema, serviceSchemas } from "@/lib/seo";
 import { cormorantGaramond, sourceSans } from "@/lib/fonts";
 import { IMAGES } from "@/lib/images";
 import { KEYWORDS } from "@/lib/constants";
@@ -15,9 +15,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   ...generateSEO({
-    title: "Opticians & Hearing Care Northampton | Wootton Care",
+    title: "Optician & Hearing Care Northampton | Wootton",
     description:
-      "Independent opticians and hearing care specialists in Northampton. NHS and private eye tests, designer eyewear, hearing aids and ear wax removal.",
+      "Independent optician and hearing care in Northampton since 2003. NHS & private eye tests, free hearing consultations, ear wax removal and hearing aids.",
     path: "/",
     keywords: [...KEYWORDS],
   }),
@@ -43,6 +43,7 @@ export default function RootLayout({
       <head>
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
+        <JsonLd data={serviceSchemas()} />
         <meta name="theme-color" content="#0a1f35" />
       </head>
       <body className={`${sourceSans.className} min-h-screen flex flex-col antialiased`}>

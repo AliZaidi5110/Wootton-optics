@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { SITE } from "@/lib/constants";
+import { trackBookingSubmit } from "@/lib/analytics";
 
 export function BookingForm() {
   const [form, setForm] = useState({
@@ -26,6 +27,7 @@ export function BookingForm() {
         body: JSON.stringify(form),
       });
       if (res.ok) {
+        trackBookingSubmit(form.service);
         setStatus("success");
         setForm({
           name: "",

@@ -11,7 +11,7 @@ import { faqs } from "@/data/faqs";
 export const revalidate = 86400;
 
 export default function HomePage() {
-  const faqItems = faqs.slice(0, 6).map((f) => ({ question: f.question, answer: f.answer }));
+  const faqItems = faqs.map((f) => ({ question: f.question, answer: f.answer }));
 
   return (
     <>

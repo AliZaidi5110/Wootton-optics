@@ -9,16 +9,16 @@ import Link from "next/link";
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
-  title: "Eye Care & Hearing Services Northampton | Wootton",
+  title: "Eye & Hearing Services Northampton | Wootton",
   description:
-    "Explore NHS and private eye tests, designer eyewear, hearing tests, hearing aids and ear wax removal at our independent Northampton clinic, Wootton.",
+    "Full price list for NHS eye tests, private sight tests, free hearing consultations and ear wax removal at Wootton Optician & Hearing Care, Northampton.",
   path: "/services",
   keywords: [
-    "hearing services Northampton",
-    "optical services Northamptonshire",
-    "eye test price",
-    "hearing aid prices",
-    "ear wax removal price Northampton",
+    "ear wax removal cost Northampton",
+    "eye test price Northampton",
+    "hearing test Northampton",
+    "NHS eye test Northampton",
+    "hearing aid prices Northampton",
   ],
 });
 

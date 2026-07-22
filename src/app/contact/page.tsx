@@ -7,11 +7,16 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
-  title: "Contact Wootton Optician & Hearing Care Northampton",
+  title: "Contact Optician Northampton | Wootton",
   description:
-    "Contact Wootton Optician & Hearing Care in Northampton to book an eye test, hearing consultation, ear wax removal or general appointment.",
+    "Contact our Northampton clinic at 9 Tudor Court, Wootton Hope Drive. Call 01604 875111 to book an eye test, hearing consultation or ear wax removal.",
   path: "/contact",
-  keywords: ["contact Wootton Hearing", "Northampton optician contact", "hearing clinic Northamptonshire"],
+  keywords: [
+    "contact optician Northampton",
+    "Wootton Optician phone",
+    "hearing clinic Northampton",
+    "book eye test Northampton",
+  ],
 });
 
 export default function ContactPage() {

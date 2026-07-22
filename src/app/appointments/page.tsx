@@ -7,14 +7,15 @@ import { Calendar, MapPin, Phone, Check } from "lucide-react";
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
-  title: "Book Appointment | Free Consultation Northampton",
+  title: "Book Eye or Hearing Test Northampton | Wootton",
   description:
-    "Book your free hearing test or sight test appointment at Wootton Optician & Hearing Care, Northampton. Online booking with confirmation email.",
+    "Book an NHS eye test, private sight test or free hearing consultation online at our Northampton clinic. Confirmation by email within 24 hours.",
   path: "/appointments",
   keywords: [
+    "book eye test Northampton",
     "book hearing test Northampton",
-    "eye test appointment Northamptonshire",
-    "free consultation Northampton",
+    "NHS eye test appointment Northampton",
+    "free hearing consultation Northampton",
   ],
 });
 

@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { trackBookCtaClick } from "@/lib/analytics";
 
 type ButtonVariant = "primary" | "accent" | "gold" | "outline" | "ghost" | "white";
 type ButtonSize = "sm" | "md" | "lg";
@@ -10,6 +13,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   children: React.ReactNode;
   className?: string;
+  trackLabel?: string;
 }
 
 const variants: Record<ButtonVariant, string> = {
@@ -33,6 +37,7 @@ export function Button({
   href,
   children,
   className,
+  trackLabel,
   ...props
 }: ButtonProps) {
   const classes = cn(
@@ -43,8 +48,20 @@ export function Button({
   );
 
   if (href) {
+    const label =
+      trackLabel ||
+      (typeof children === "string" ? children : href.includes("appointment") ? "Book Now" : undefined);
+
     return (
-      <Link href={href} className={classes}>
+      <Link
+        href={href}
+        className={classes}
+        onClick={() => {
+          if (label && (href.includes("/appointments") || href.includes("book"))) {
+            trackBookCtaClick(label, href);
+          }
+        }}
+      >
         {children}
       </Link>
     );

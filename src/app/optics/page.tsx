@@ -10,18 +10,18 @@ import { Check, Eye, Glasses, Shield } from "lucide-react";
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
-  title: "Opticians Northampton | Eye Tests & Glasses | Wootton",
+  title: "Optician Northampton | NHS Eye Tests | Wootton",
   description:
-    "Book NHS and private eye tests in Northampton. Discover designer glasses, contact lenses, retinal imaging and professional optical care at Wootton Optician.",
+    "Book an NHS or private eye test in Northampton at Wootton Optician. Designer glasses, contact lenses, myopia management and children's sight tests.",
   path: "/optics",
   image: IMAGES.clinic,
   keywords: [
-    "optical services Northamptonshire",
-    "eye test Northampton",
     "optician Northampton",
-    "prescription glasses Northampton",
-    "designer eyewear",
+    "eye test Northampton",
+    "NHS eye test Northampton",
     "NHS sight test Northampton",
+    "prescription glasses Northampton",
+    "designer eyewear Northampton",
   ],
 });
 
