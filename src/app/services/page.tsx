@@ -74,22 +74,22 @@ export default function ServicesPage() {
               return (
                 <div
                   key={service.id}
-                  className="bg-white dark:bg-neutral-800 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-700"
+                  className="bg-navy-deep rounded-2xl p-6 border border-white/15"
                 >
-                  <Icon className="w-8 h-8 text-primary mb-4" />
-                  <h3 className="font-heading font-bold text-lg text-navy mb-2">{service.title}</h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
+                  <Icon className="w-8 h-8 text-sky mb-4" />
+                  <h3 className="font-heading font-bold text-lg text-white mb-2">{service.title}</h3>
+                  <p className="text-sm text-white/85 mb-4">
                     {service.description}
                   </p>
                   <ul className="space-y-2 mb-4">
                     {service.features.map((f) => (
-                      <li key={f} className="text-sm flex items-center gap-2">
+                      <li key={f} className="text-sm flex items-center gap-2 text-white/90">
                         <Check className="w-4 h-4 text-fresh shrink-0" /> {f}
                       </li>
                     ))}
                   </ul>
                   {service.price && (
-                    <p className="font-semibold text-primary">{service.price}</p>
+                    <p className="font-semibold text-sky">{service.price}</p>
                   )}
                 </div>
               );
@@ -105,22 +105,22 @@ export default function ServicesPage() {
               return (
                 <div
                   key={service.id}
-                  className="bg-white dark:bg-neutral-800 rounded-2xl p-6 border border-neutral-200 dark:border-neutral-700"
+                  className="bg-navy-deep rounded-2xl p-6 border border-white/15"
                 >
-                  <Icon className="w-8 h-8 text-accent mb-4" />
-                  <h3 className="font-heading font-bold text-lg text-navy mb-2">{service.title}</h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
+                  <Icon className="w-8 h-8 text-sky mb-4" />
+                  <h3 className="font-heading font-bold text-lg text-white mb-2">{service.title}</h3>
+                  <p className="text-sm text-white/85 mb-4">
                     {service.description}
                   </p>
                   <ul className="space-y-2 mb-4">
                     {service.features.map((f) => (
-                      <li key={f} className="text-sm flex items-center gap-2">
+                      <li key={f} className="text-sm flex items-center gap-2 text-white/90">
                         <Check className="w-4 h-4 text-fresh shrink-0" /> {f}
                       </li>
                     ))}
                   </ul>
                   {service.price && (
-                    <p className="font-semibold text-accent">{service.price}</p>
+                    <p className="font-semibold text-sky">{service.price}</p>
                   )}
                 </div>
               );
