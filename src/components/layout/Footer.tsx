@@ -68,9 +68,9 @@ export function Footer() {
           <div>
             <h4 className="font-heading font-semibold text-white mb-4">Opening Hours</h4>
             <ul className="space-y-2 text-sm text-white/85 mb-6">
-              <li>{SITE.hours.weekdays}</li>
-              <li>{SITE.hours.saturday}</li>
-              <li>{SITE.hours.sunday}</li>
+              {SITE.hours.display.map((line) => (
+                <li key={line}>{line}</li>
+              ))}
             </ul>
             <ul className="space-y-2 text-sm">
               <li>

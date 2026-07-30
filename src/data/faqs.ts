@@ -77,7 +77,7 @@ export const faqs: FAQ[] = [
     category: "general",
     question: "What are your opening hours?",
     answer:
-      "We are open Monday to Friday 9:00 AM – 5:00 PM, and Saturday 9:00 AM – 12:00 PM. We are closed on Sundays and bank holidays. Book eye tests, hearing consultations, or ear wax removal online or by phone.",
+      "We are open Monday, Tuesday, Thursday and Friday 9:00 AM – 5:30 PM (closed for lunch 1:00 PM – 2:00 PM), Wednesday 9:00 AM – 12:00 PM, and Saturday 9:00 AM – 12:00 PM. We are closed on Sundays and bank holidays. Book eye tests, hearing consultations, or ear wax removal online or by phone.",
   },
   {
     category: "hearing",

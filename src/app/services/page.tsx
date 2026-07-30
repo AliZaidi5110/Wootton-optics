@@ -129,10 +129,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-neutral-50 dark:bg-neutral-900">
+      <section className="py-20 section-hearing">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-12">
-            How Our Process Works
+          <h2 className="font-heading text-3xl font-bold text-white text-center mb-12">
+            Services
           </h2>
           <div className="grid md:grid-cols-5 gap-6">
             {processSteps.map((step) => (
@@ -140,8 +140,8 @@ export default function ServicesPage() {
                 <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4 text-lg">
                   {step.step}
                 </div>
-                <h3 className="font-heading font-bold text-sm text-navy mb-2">{step.title}</h3>
-                <p className="text-xs text-neutral-600 dark:text-neutral-400">
+                <h3 className="font-heading font-bold text-sm text-white mb-2">{step.title}</h3>
+                <p className="text-xs text-white/85">
                   {step.description}
                 </p>
               </div>
@@ -150,15 +150,15 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 section-hearing border-t border-white/10">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-8">
-            Service Comparison
+          <h2 className="font-heading text-3xl font-bold text-white text-center mb-8">
+            Services
           </h2>
           <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
-            <table className="w-full min-w-[600px] text-sm border-collapse max-w-4xl mx-auto">
+            <table className="w-full min-w-[600px] text-sm border-collapse max-w-4xl mx-auto text-white">
               <thead>
-                <tr className="bg-neutral-900 text-white">
+                <tr className="bg-navy-deep text-white">
                   <th className="p-4 text-left">Service</th>
                   <th className="p-4 text-left">Duration</th>
                   <th className="p-4 text-left">Price</th>
@@ -176,15 +176,15 @@ export default function ServicesPage() {
                 ].map((row, i) => (
                   <tr
                     key={row.name}
-                    className={i % 2 === 0 ? "bg-neutral-50 dark:bg-neutral-900" : ""}
+                    className={i % 2 === 0 ? "bg-white/10" : "bg-transparent"}
                   >
-                    <td className="p-4 font-medium">{row.name}</td>
-                    <td className="p-4">{row.duration}</td>
-                    <td className="p-4 text-primary font-semibold">
+                    <td className="p-4 font-medium text-white">{row.name}</td>
+                    <td className="p-4 text-white/90">{row.duration}</td>
+                    <td className="p-4 text-sky font-semibold">
                       {row.price || "—"}
                     </td>
                     <td className="p-4">
-                      <Link href="/appointments" className="text-primary hover:underline text-sm">
+                      <Link href="/appointments" className="text-white hover:text-sky underline text-sm">
                         Book Now
                       </Link>
                     </td>

@@ -23,9 +23,22 @@ export const SITE = {
   },
   coordinates: { lat: 52.218, lng: -0.8925 },
   hours: {
-    weekdays: "Mon–Fri: 9:00 AM – 5:00 PM",
+    monday: "Mon: 9:00 AM – 5:30 PM",
+    tuesday: "Tue: 9:00 AM – 5:30 PM",
+    wednesday: "Wed: 9:00 AM – 12:00 PM",
+    thursday: "Thu: 9:00 AM – 5:30 PM",
+    friday: "Fri: 9:00 AM – 5:30 PM",
     saturday: "Sat: 9:00 AM – 12:00 PM",
     sunday: "Sun: Closed",
+    lunch: "Lunch: Closed 1:00 PM – 2:00 PM",
+    /** Ordered lines for footer / contact display */
+    display: [
+      "Mon, Tue, Thu, Fri: 9:00 AM – 5:30 PM",
+      "Wednesday: 9:00 AM – 12:00 PM",
+      "Saturday: 9:00 AM – 12:00 PM",
+      "Sunday: Closed",
+      "Lunch: Closed 1:00 PM – 2:00 PM",
+    ],
   },
   social: {
     facebook: "https://facebook.com/woottonhearing",

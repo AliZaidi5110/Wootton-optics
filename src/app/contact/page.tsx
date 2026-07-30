@@ -84,9 +84,11 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium">Opening Hours</p>
-                    <p className="text-neutral-600 dark:text-neutral-400">{SITE.hours.weekdays}</p>
-                    <p className="text-neutral-600 dark:text-neutral-400">{SITE.hours.saturday}</p>
-                    <p className="text-neutral-600 dark:text-neutral-400">{SITE.hours.sunday}</p>
+                    {SITE.hours.display.map((line) => (
+                      <p key={line} className="text-neutral-600 dark:text-neutral-400">
+                        {line}
+                      </p>
+                    ))}
                   </div>
                 </div>
                 <a
