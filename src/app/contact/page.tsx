@@ -2,7 +2,7 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { generateSEO } from "@/lib/seo";
 import { SITE } from "@/lib/constants";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export const revalidate = 86400;
 
@@ -91,13 +91,6 @@ export default function ContactPage() {
                     ))}
                   </div>
                 </div>
-                <a
-                  href={SITE.social.whatsapp}
-                  className="inline-flex items-center gap-3 bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors min-h-[48px]"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Chat on WhatsApp
-                </a>
               </div>
 
               <div className="rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-700 h-64 bg-neutral-100 dark:bg-neutral-800">

@@ -43,7 +43,6 @@ export const SITE = {
   social: {
     facebook: "https://facebook.com/woottonhearing",
     instagram: "https://instagram.com/woottonhearing",
-    whatsapp: "https://wa.me/441604875111",
     youtube: "https://youtube.com/@woottonhearing",
   },
 } as const;
