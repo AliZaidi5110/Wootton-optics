@@ -70,14 +70,14 @@ export default function AboutPage() {
             <div>
               <h2 className="font-heading text-3xl font-bold text-navy mb-6">Our Story</h2>
               <p className="text-navy/85 leading-relaxed mb-4">
-                Wootton Hearing Care was established in 2003 with a clear vision: to bring
-                personal, community-focused hearing care to Northampton. What began as a
-                dedicated hearing clinic on Wootton Hope Drive has grown into a trusted
+                Wootton Opticians was established in 2003 with a clear vision: to bring
+                personal, community-focused eye care to Northampton. What began as a
+                dedicated optical practice on Wootton Hope Drive has grown into a trusted
                 destination for thousands of clients across Northamptonshire.
               </p>
               <p className="text-navy/85 leading-relaxed mb-4">
                 As demand grew, the practice naturally expanded to include Wootton
-                Optician — allowing families to address both their hearing and vision needs
+                Hearing Care — allowing families to address both their vision and hearing needs
                 in one welcoming, familiar environment.
               </p>
               <p className="text-navy/85 leading-relaxed">
