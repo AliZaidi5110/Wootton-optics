@@ -85,6 +85,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/eye-care-northampton"
+                  className="text-white/85 hover:text-sky transition-colors"
+                >
+                  Eye Care Northampton
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/ear-wax-removal-northampton"
                   className="text-white/85 hover:text-sky transition-colors"
                 >

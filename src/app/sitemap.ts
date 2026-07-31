@@ -9,6 +9,7 @@ const routes: {
   { path: "", changeFrequency: "weekly", priority: 1 },
   { path: "/hearing", changeFrequency: "weekly", priority: 0.95 },
   { path: "/optics", changeFrequency: "weekly", priority: 0.95 },
+  { path: "/eye-care-northampton", changeFrequency: "weekly", priority: 0.94 },
   { path: "/ear-wax-removal-northampton", changeFrequency: "monthly", priority: 0.92 },
   { path: "/free-hearing-test-northampton", changeFrequency: "monthly", priority: 0.92 },
   { path: "/nhs-eye-test-northampton", changeFrequency: "monthly", priority: 0.92 },

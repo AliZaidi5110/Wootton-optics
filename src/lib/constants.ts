@@ -61,21 +61,22 @@ export const EAR_WAX_PRICING = {
 } as const;
 
 export const KEYWORDS = [
-  "hearing aids Northampton",
-  "eye test Northampton",
+  "eye care Northampton",
+  "eye care in Northampton",
   "optician Northampton",
+  "eye test Northampton",
+  "NHS eye test Northampton",
+  "hearing aids Northampton",
+  "hearing test Northampton",
+  "ear wax removal Northampton",
+  "free hearing test Northampton",
   "optical services Northamptonshire",
   "hearing care Northampton",
-  "hearing test Northampton",
-  "eye care Northampton",
   "audiologist Northamptonshire",
   "designer glasses Northampton",
-  "free hearing test Northampton",
-  "ear wax removal Northampton",
   "Wootton Optician",
   "Wootton Hearing Care",
   "sight test Northampton",
-  "NHS eye test Northampton",
 ] as const;
 
 export const NAV_LINKS = [

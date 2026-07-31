@@ -10,18 +10,20 @@ import { Check, Eye, Glasses, Shield } from "lucide-react";
 export const revalidate = 86400;
 
 export const metadata = generateSEO({
-  title: "Optician Northampton | NHS Eye Tests | Wootton",
+  title: "Eye Care Northampton | Optician & Eye Tests | Wootton",
   description:
-    "Book an NHS or private eye test in Northampton at Wootton Optician. Designer glasses, contact lenses, myopia management and children's sight tests.",
+    "Eye care in Northampton at Wootton Opticians. NHS & private eye tests, glasses, contact lenses, myopia management and dry eye clinics in Wootton Fields.",
   path: "/optics",
   image: IMAGES.clinic,
   keywords: [
+    "eye care Northampton",
+    "eye care in Northampton",
     "optician Northampton",
     "eye test Northampton",
     "NHS eye test Northampton",
     "NHS sight test Northampton",
     "prescription glasses Northampton",
-    "designer eyewear Northampton",
+    "independent optician Northampton",
   ],
 });
 
@@ -29,8 +31,8 @@ export default function OpticsPage() {
   return (
     <>
       <PageHeader
-        title="Eye Care"
-        subtitle="Comprehensive eye care, designer eyewear, and advanced lens technology from Northampton's trusted dispensing opticians."
+        title="Eye Care in Northampton"
+        subtitle="Independent eye care from Wootton Opticians — NHS and private sight tests, designer eyewear and specialist clinics at our Wootton Hope Drive practice."
         currentPath="/optics"
         breadcrumbs={[
           { label: "Home", href: "/" },
@@ -39,16 +41,21 @@ export default function OpticsPage() {
         backgroundImages={[
           {
             src: IMAGES.clinic,
-            alt: "Wootton Optician clinic storefront with designer eyewear, Northampton",
+            alt: "Eye care at Wootton Opticians clinic, Northampton — eye tests and designer glasses",
           },
         ]}
       />
 
       <section className="py-20 section-optician">
         <div className="container">
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy mb-10 text-center">
-            Wootton Optician
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-navy mb-4 text-center">
+            Wootton Opticians — Eye Care Northampton
           </h2>
+          <p className="text-center text-navy/85 max-w-3xl mx-auto mb-10 leading-relaxed">
+            Looking for reliable eye care in Northampton? Our independent practice has served
+            families in Wootton Fields and across Northamptonshire since 2003 with unhurried
+            NHS and private eye examinations, expert frame fitting and specialist clinics.
+          </p>
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h3 className="font-heading text-2xl sm:text-3xl font-bold text-navy mb-6">
