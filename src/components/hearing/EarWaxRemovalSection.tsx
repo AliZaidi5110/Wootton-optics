@@ -23,7 +23,7 @@ export function EarWaxRemovalSection() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/20 shadow-xl">
               <Image
                 src={IMAGES.clinic}
-                alt="Wootton Optician and Wootton Hearing Care clinic at 9 Tudor Court, Northampton"
+                alt="Microsuction ear wax removal clinic at Wootton Opticians, Northampton"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

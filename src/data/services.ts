@@ -7,7 +7,7 @@ export const services: Service[] = [
     description:
       "Full NHS-funded sight tests for eligible patients including vision assessment and eye health checks.",
     icon: "eye",
-    href: "/#optics-services",
+    href: "/nhs-eye-test-northampton",
     features: [
       "Funded for eligible patients",
       "Vision and eye health examination",
@@ -51,7 +51,7 @@ export const services: Service[] = [
     description:
       "Clinical assessment and personalised treatment for dry, gritty, or watery eyes.",
     icon: "eye",
-    href: "/#optics-services",
+    href: "/dry-eye-assessment-northampton",
     features: [
       "Root cause identification",
       "Personalised treatment plan",
@@ -65,7 +65,7 @@ export const services: Service[] = [
     description:
       "Evidence-based programmes to slow short-sightedness progression in children.",
     icon: "eye",
-    href: "/#optics-services",
+    href: "/myopia-management-northampton",
     features: [
       "Specialist contact lens options",
       "Spectacle lens programmes",
@@ -108,7 +108,7 @@ export const services: Service[] = [
     description:
       "Quick, no-obligation hearing checks to identify whether a full assessment is needed.",
     icon: "ear",
-    href: "/#hearing-services",
+    href: "/free-hearing-test-northampton",
     features: [
       "Completely free",
       "15–20 minute appointment",
@@ -123,7 +123,7 @@ export const services: Service[] = [
     description:
       "Comprehensive audiometric assessment and honest advice from qualified audiologists.",
     icon: "ear",
-    href: "/#hearing-services",
+    href: "/free-hearing-test-northampton",
     features: [
       "Full hearing assessment",
       "Lifestyle discussion",
@@ -138,7 +138,7 @@ export const services: Service[] = [
     description:
       "Safe professional wax removal by microsuction or irrigation in our Northampton clinic.",
     icon: "ear",
-    href: "/#hearing-services",
+    href: "/ear-wax-removal-northampton",
     features: [
       "Microsuction available",
       "Immediate relief",
@@ -167,7 +167,7 @@ export const services: Service[] = [
     description:
       "Cleaning, servicing, reprogramming, and repairs to keep aids performing optimally.",
     icon: "heart",
-    href: "/#hearing-services",
+    href: "/hearing-aid-repairs-northampton",
     features: [
       "Professional cleaning",
       "Reprogramming as needed",

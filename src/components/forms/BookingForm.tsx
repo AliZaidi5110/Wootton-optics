@@ -167,9 +167,23 @@ export function BookingForm() {
       </Button>
 
       {status === "success" && (
-        <p className="text-fresh font-medium" role="status">
-          Appointment request received! We will confirm by email shortly.
-        </p>
+        <div className="space-y-2" role="status">
+          <p className="text-fresh font-medium">
+            Appointment request received! We will confirm by email shortly.
+          </p>
+          <p className="text-sm text-navy/80">
+            Happy with your visit?{" "}
+            <a
+              href={SITE.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-semibold underline hover:no-underline"
+            >
+              Leave us a Google review
+            </a>{" "}
+            — it helps other local patients find us.
+          </p>
+        </div>
       )}
       {status === "error" && (
         <p className="text-red-600 font-medium" role="alert">

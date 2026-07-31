@@ -1,4 +1,5 @@
 import type { DetailedService } from "@/types";
+import Link from "next/link";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -10,8 +11,15 @@ interface ServiceDetailCardProps {
 export function ServiceDetailCard({ service, variant = "light" }: ServiceDetailCardProps) {
   const isDark = variant === "dark";
 
+  const titleClass = cn(
+    "font-heading text-xl font-bold mb-3",
+    isDark ? "text-white" : "text-navy",
+    service.href && (isDark ? "hover:text-sky" : "hover:text-primary")
+  );
+
   return (
     <article
+      id={service.id}
       className={cn(
         "rounded-2xl border p-6 sm:p-7 h-full flex flex-col transition-shadow duration-300 hover:shadow-lg",
         isDark
@@ -19,14 +27,15 @@ export function ServiceDetailCard({ service, variant = "light" }: ServiceDetailC
           : "bg-white border-primary/20 border-t-navy shadow-sm"
       )}
     >
-      <h3
-        className={cn(
-          "font-heading text-xl font-bold mb-3",
-          isDark ? "text-white" : "text-navy"
-        )}
-      >
-        {service.title}
-      </h3>
+      {service.href ? (
+        <h3 className={titleClass}>
+          <Link href={service.href} className="hover:underline underline-offset-2">
+            {service.title}
+          </Link>
+        </h3>
+      ) : (
+        <h3 className={titleClass}>{service.title}</h3>
+      )}
 
       <div className="space-y-4 text-sm sm:text-base flex-1">
         <div>

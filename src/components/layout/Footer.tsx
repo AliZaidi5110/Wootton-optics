@@ -84,9 +84,43 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/ear-wax-removal-northampton"
+                  className="text-white/85 hover:text-sky transition-colors"
+                >
+                  Ear Wax Removal
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/nhs-eye-test-northampton"
+                  className="text-white/85 hover:text-sky transition-colors"
+                >
+                  NHS Eye Test
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/free-hearing-test-northampton"
+                  className="text-white/85 hover:text-sky transition-colors"
+                >
+                  Free Hearing Test
+                </Link>
+              </li>
+              <li>
                 <Link href="/appointments" className="text-white/85 hover:text-sky transition-colors">
                   Book an Appointment
                 </Link>
+              </li>
+              <li>
+                <a
+                  href={SITE.googleReviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/85 hover:text-sky transition-colors"
+                >
+                  Leave a Google Review
+                </a>
               </li>
             </ul>
           </div>

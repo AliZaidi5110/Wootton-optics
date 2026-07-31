@@ -34,6 +34,7 @@ export interface DetailedService {
   whoNeedsIt: string;
   benefits: string[];
   pricing?: string;
+  href?: string;
 }
 
 export interface Testimonial {

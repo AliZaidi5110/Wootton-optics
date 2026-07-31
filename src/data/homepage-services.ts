@@ -46,6 +46,7 @@ export const opticsServices: DetailedService[] = [
       "Referral to specialists when clinically necessary",
     ],
     pricing: "Funded for eligible patients",
+    href: "/nhs-eye-test-northampton",
   },
   {
     id: "private-sight-test",
@@ -61,6 +62,7 @@ export const opticsServices: DetailedService[] = [
       "Ideal for busy professionals and contact lens wearers",
     ],
     pricing: "From £55",
+    href: "/optics",
   },
   {
     id: "specialist-contact-lenses",
@@ -75,6 +77,7 @@ export const opticsServices: DetailedService[] = [
       "Ongoing aftercare and supply management",
       "Access to leading contact lens brands",
     ],
+    href: "/optics",
   },
   {
     id: "dry-eye-assessment",
@@ -89,6 +92,7 @@ export const opticsServices: DetailedService[] = [
       "Improved comfort for daily life and contact lens wear",
       "Ongoing monitoring and plan adjustments",
     ],
+    href: "/dry-eye-assessment-northampton",
   },
   {
     id: "myopia-management",
@@ -103,6 +107,7 @@ export const opticsServices: DetailedService[] = [
       "Regular monitoring with a dedicated care plan",
       "Options include specialist contact lenses and spectacle lenses",
     ],
+    href: "/myopia-management-northampton",
   },
   {
     id: "glaucoma-screening",
@@ -117,6 +122,7 @@ export const opticsServices: DetailedService[] = [
       "Visual field testing where clinically indicated",
       "Prompt referral and co-management with ophthalmology",
     ],
+    href: "/optics",
   },
   {
     id: "childrens-sight-tests",
@@ -132,6 +138,7 @@ export const opticsServices: DetailedService[] = [
       "Clear guidance for parents and schools",
     ],
     pricing: "Funded for eligible patients",
+    href: "/nhs-eye-test-northampton",
   },
 ];
 
@@ -150,6 +157,7 @@ export const hearingServices: DetailedService[] = [
       "Referral to full consultation if needed",
     ],
     pricing: "Free",
+    href: "/free-hearing-test-northampton",
   },
   {
     id: "free-hearing-consultation",
@@ -165,6 +173,7 @@ export const hearingServices: DetailedService[] = [
       "Personalised recommendations based on your lifestyle",
     ],
     pricing: "Free initial consultation",
+    href: "/free-hearing-test-northampton",
   },
   {
     id: "ear-wax-removal",
@@ -180,6 +189,7 @@ export const hearingServices: DetailedService[] = [
       "Performed by trained clinical staff",
     ],
     pricing: "£35 per ear · £70 for both ears",
+    href: "/ear-wax-removal-northampton",
   },
   {
     id: "hearing-aids",
@@ -194,5 +204,6 @@ export const hearingServices: DetailedService[] = [
       "Repairs, batteries, and accessories in clinic",
       "Ongoing aftercare and support",
     ],
+    href: "/hearing-aid-repairs-northampton",
   },
 ];

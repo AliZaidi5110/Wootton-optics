@@ -45,6 +45,12 @@ export const SITE = {
     instagram: "https://instagram.com/woottonhearing",
     youtube: "https://youtube.com/@woottonhearing",
   },
+  /** Google Maps search — replace with direct Place ID review URL when GBP is claimed */
+  googleMapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Wootton+Opticians+9+Tudor+Court+Northampton+NN4+6FF",
+  googleReviewUrl:
+    process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL ||
+    "https://www.google.com/maps/search/?api=1&query=Wootton+Opticians+9+Tudor+Court+Northampton+NN4+6FF",
 } as const;
 
 export const EAR_WAX_PRICING = {
