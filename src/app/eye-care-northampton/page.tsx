@@ -36,9 +36,9 @@ export default function EyeCareNorthamptonPage() {
         { label: "Eye Care Northampton" },
       ]}
       intro={[
-        "Looking for eye care in Northampton? Wootton Opticians provides thorough NHS and private eye tests, prescription glasses, contact lenses and specialist services at 9 Tudor Court, Wootton Hope Drive (NN4 6FF).",
-        "As a family-run independent practice since 2003, we take time over every appointment — from children’s sight tests and myopia management to dry eye assessment and glaucoma screening — with clear advice and no sales pressure.",
-        "Patients across Northampton, Wootton Fields, Hardingstone and Collingtree choose us for personalised eye care close to home, with free parking nearby and easy online booking.",
+        "Searching for eye care in Northampton? Wootton Opticians is a local independent practice on Wootton Hope Drive (NN4 6FF), serving Wootton Fields, Hardingstone, Collingtree and the wider Northampton area.",
+        "We focus on thorough NHS and private eye tests, clear prescriptions, and specialist clinics — including children’s sight tests, myopia management, dry eye assessment and glaucoma screening — with time to explain every result.",
+        "Unlike large chains, you see the same trusted clinicians in a family-run setting established in 2003, with free parking nearby and simple online booking.",
       ]}
       whoFor={[
         "Anyone needing an NHS or private eye test in Northampton",

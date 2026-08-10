@@ -106,7 +106,7 @@ const CORE_SERVICES = [
     name: "NHS Sight Test",
     description:
       "NHS-funded sight tests for eligible patients at our Northampton clinic, including vision assessment and eye health checks.",
-    url: `${SITE.url}/optics`,
+    url: `${SITE.url}/nhs-eye-test-northampton`,
     price: "0",
     priceCurrency: "GBP",
     category: "Eye Care",
@@ -115,7 +115,7 @@ const CORE_SERVICES = [
     name: "Private Sight Test",
     description:
       "Extended private eye examinations with digital retinal imaging at Wootton Optician, Northampton.",
-    url: `${SITE.url}/optics`,
+    url: `${SITE.url}/eye-care-northampton`,
     price: "55",
     priceCurrency: "GBP",
     category: "Eye Care",
@@ -124,7 +124,7 @@ const CORE_SERVICES = [
     name: "Free Hearing Consultation",
     description:
       "Free hearing consultation and audiometric assessment in Northampton with no obligation to purchase.",
-    url: `${SITE.url}/hearing`,
+    url: `${SITE.url}/free-hearing-test-northampton`,
     price: "0",
     priceCurrency: "GBP",
     category: "Hearing Care",
@@ -133,7 +133,7 @@ const CORE_SERVICES = [
     name: "Ear Wax Removal",
     description:
       "Professional microsuction ear wax removal at our Northampton clinic. Clear pricing, no referral needed.",
-    url: `${SITE.url}/hearing`,
+    url: `${SITE.url}/ear-wax-removal-northampton`,
     price: String(EAR_WAX_PRICING.oneEar),
     priceCurrency: "GBP",
     category: "Hearing Care",

@@ -2,6 +2,22 @@ import Link from "next/link";
 import { Phone, Mail, MapPin, Ear, Glasses } from "lucide-react";
 import { SITE } from "@/lib/constants";
 
+const exploreLinks = [
+  { href: "/optics", label: "Eye Care Hub" },
+  { href: "/hearing", label: "Hearing Care Hub" },
+  { href: "/eye-care-northampton", label: "Eye Care Northampton" },
+  { href: "/nhs-eye-test-northampton", label: "NHS Eye Test" },
+  { href: "/myopia-management-northampton", label: "Myopia Management" },
+  { href: "/dry-eye-assessment-northampton", label: "Dry Eye Assessment" },
+  { href: "/free-hearing-test-northampton", label: "Free Hearing Test" },
+  { href: "/ear-wax-removal-northampton", label: "Ear Wax Removal" },
+  { href: "/hearing-aid-repairs-northampton", label: "Hearing Aid Repairs" },
+  { href: "/services", label: "All Services" },
+  { href: "/about", label: "About Us" },
+  { href: "/contact", label: "Contact" },
+  { href: "/appointments", label: "Book an Appointment" },
+];
+
 export function Footer() {
   const phoneDisplay = SITE.phoneDisplay ?? SITE.phone;
 
@@ -9,7 +25,7 @@ export function Footer() {
     <footer className="bg-navy-deep text-white">
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div className="lg:col-span-2">
+          <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center">
                 <Ear className="w-4 h-4 text-white" />
@@ -20,12 +36,20 @@ export function Footer() {
               <span className="font-heading font-bold text-xl text-white ml-1">Wootton</span>
             </div>
             <p className="text-sm leading-relaxed text-white/85 mb-2 max-w-md">
-              {SITE.opticsName} &amp; {SITE.hearingName} — an independent, family-run
-              practice providing personalised eye and hearing care in Northampton since 2003.
+              {SITE.opticsName} &amp; {SITE.hearingName} — independent eye and hearing care in
+              Northampton since 2003.
             </p>
-            <p className="text-sm text-white/70">
+            <p className="text-sm text-white/70 mb-4">
               NHS and private services · Free hearing consultations · No sales pressure
             </p>
+            <a
+              href={SITE.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-sky hover:underline font-medium"
+            >
+              Leave a Google Review
+            </a>
           </div>
 
           <div>
@@ -67,69 +91,23 @@ export function Footer() {
 
           <div>
             <h4 className="font-heading font-semibold text-white mb-4">Opening Hours</h4>
-            <ul className="space-y-2 text-sm text-white/85 mb-6">
+            <ul className="space-y-2 text-sm text-white/85">
               {SITE.hours.display.map((line) => (
                 <li key={line}>{line}</li>
               ))}
             </ul>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/optics" className="text-white/85 hover:text-sky transition-colors">
-                  {SITE.opticsName}
-                </Link>
-              </li>
-              <li>
-                <Link href="/hearing" className="text-white/85 hover:text-sky transition-colors">
-                  {SITE.hearingName}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/eye-care-northampton"
-                  className="text-white/85 hover:text-sky transition-colors"
-                >
-                  Eye Care Northampton
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/ear-wax-removal-northampton"
-                  className="text-white/85 hover:text-sky transition-colors"
-                >
-                  Ear Wax Removal
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/nhs-eye-test-northampton"
-                  className="text-white/85 hover:text-sky transition-colors"
-                >
-                  NHS Eye Test
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/free-hearing-test-northampton"
-                  className="text-white/85 hover:text-sky transition-colors"
-                >
-                  Free Hearing Test
-                </Link>
-              </li>
-              <li>
-                <Link href="/appointments" className="text-white/85 hover:text-sky transition-colors">
-                  Book an Appointment
-                </Link>
-              </li>
-              <li>
-                <a
-                  href={SITE.googleReviewUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/85 hover:text-sky transition-colors"
-                >
-                  Leave a Google Review
-                </a>
-              </li>
+          </div>
+
+          <div>
+            <h4 className="font-heading font-semibold text-white mb-4">Explore</h4>
+            <ul className="space-y-2 text-sm columns-1">
+              {exploreLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-white/85 hover:text-sky transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -138,7 +116,9 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/65 text-center sm:text-left">
           <div>
-            <p>&copy; {new Date().getFullYear()} {SITE.hearingName}. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()} {SITE.hearingName}. All rights reserved.
+            </p>
             {SITE.companyNumber && (
               <p className="mt-1">Registered in England &amp; Wales · Co. {SITE.companyNumber}</p>
             )}

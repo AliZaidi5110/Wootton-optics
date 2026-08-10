@@ -100,6 +100,16 @@ export function EarWaxRemovalSection() {
               </Button>
             </div>
 
+            <p className="text-sm text-white/80 mb-6">
+              Full details, pricing and FAQs:{" "}
+              <Link
+                href="/ear-wax-removal-northampton"
+                className="text-sky font-medium hover:text-white underline underline-offset-2"
+              >
+                Ear wax removal in Northampton
+              </Link>
+            </p>
+
             <div className="flex items-start gap-2 text-sm text-white/75">
               <MapPin className="w-4 h-4 text-sky shrink-0 mt-0.5" />
               <span>

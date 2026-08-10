@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { CTA } from "@/components/home/CTA";
 import { generateSEO } from "@/lib/seo";
@@ -148,6 +149,27 @@ export default function AboutPage() {
             initiatives, and sponsor local sports teams. Giving back to the community
             that has supported us for over 20 years is at the heart of who we are.
           </p>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white">
+        <div className="container max-w-3xl text-center">
+          <h2 className="font-heading text-xl font-bold text-navy mb-4">Explore our care</h2>
+          <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+            {[
+              { href: "/eye-care-northampton", label: "Eye Care Northampton" },
+              { href: "/optics", label: "Eye Care Services" },
+              { href: "/hearing", label: "Hearing Care" },
+              { href: "/services", label: "Prices & Services" },
+              { href: "/contact", label: "Contact" },
+            ].map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="text-primary font-medium hover:underline">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

@@ -22,7 +22,7 @@ export const services: Service[] = [
     description:
       "Extended private sight tests with digital retinal imaging and detailed clinical time.",
     icon: "eye",
-    href: "/#optics-services",
+    href: "/optics",
     features: [
       "Longer appointment time",
       "Digital retinal photography",
@@ -37,7 +37,7 @@ export const services: Service[] = [
     description:
       "Expert fitting for toric, multifocal, rigid, and specialty contact lenses.",
     icon: "contact",
-    href: "/#optics-services",
+    href: "/optics",
     features: [
       "Complex prescriptions",
       "Trial lenses included",
@@ -79,7 +79,7 @@ export const services: Service[] = [
     description:
       "Early detection screening including pressure checks and optic nerve assessment.",
     icon: "eye",
-    href: "/#optics-services",
+    href: "/optics",
     features: [
       "Intraocular pressure measurement",
       "Optic nerve assessment",
@@ -93,7 +93,7 @@ export const services: Service[] = [
     description:
       "Child-friendly examinations to support learning, development, and eye health.",
     icon: "eye",
-    href: "/#optics-services",
+    href: "/optics",
     features: [
       "Age-appropriate testing",
       "Lazy eye and squint detection",
@@ -153,7 +153,7 @@ export const services: Service[] = [
     description:
       "Digital hearing aids from leading brands with custom programming and expert fitting.",
     icon: "volume",
-    href: "/#hearing-services",
+    href: "/hearing",
     features: [
       "All major brands",
       "Custom programming",

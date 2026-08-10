@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   opticsIntro,
   hearingIntro,
@@ -6,6 +7,19 @@ import {
 } from "@/data/homepage-services";
 import { Button } from "@/components/ui/Button";
 import { ServiceDetailCard } from "@/components/home/ServiceDetailCard";
+
+const opticsQuickLinks = [
+  { href: "/eye-care-northampton", label: "Eye Care Northampton" },
+  { href: "/nhs-eye-test-northampton", label: "NHS Eye Test" },
+  { href: "/myopia-management-northampton", label: "Myopia Management" },
+  { href: "/dry-eye-assessment-northampton", label: "Dry Eye Assessment" },
+];
+
+const hearingQuickLinks = [
+  { href: "/free-hearing-test-northampton", label: "Free Hearing Test" },
+  { href: "/ear-wax-removal-northampton", label: "Ear Wax Removal" },
+  { href: "/hearing-aid-repairs-northampton", label: "Hearing Aid Repairs" },
+];
 
 export function HomepageServices() {
   return (
@@ -41,6 +55,16 @@ export function HomepageServices() {
               Learn More About Eye Care
             </Button>
           </div>
+
+          <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            {opticsQuickLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="text-navy/80 font-medium hover:text-primary hover:underline">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -75,6 +99,16 @@ export function HomepageServices() {
               Learn More About Hearing Care
             </Button>
           </div>
+
+          <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            {hearingQuickLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="text-white/80 font-medium hover:text-sky hover:underline">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </>

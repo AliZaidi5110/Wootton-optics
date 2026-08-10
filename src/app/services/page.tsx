@@ -31,6 +31,45 @@ const iconMap: Record<string, React.ElementType> = {
   contact: Contact,
 };
 
+const pricingRows = [
+  {
+    name: "Hearing Test",
+    duration: "60 mins",
+    price: "Free consultation",
+    href: "/free-hearing-test-northampton",
+  },
+  {
+    name: "Ear Wax Removal",
+    duration: "30 mins",
+    price: "£35 / £70 both ears",
+    href: "/ear-wax-removal-northampton",
+  },
+  {
+    name: "Eye Test (Private)",
+    duration: "30 mins",
+    price: "From £55",
+    href: "/optics",
+  },
+  {
+    name: "Eye Test (NHS)",
+    duration: "30 mins",
+    price: "Funded for eligible patients",
+    href: "/nhs-eye-test-northampton",
+  },
+  {
+    name: "Contact Lens Fitting",
+    duration: "45 mins",
+    price: "",
+    href: "/optics",
+  },
+  {
+    name: "Children's Eye Test (NHS)",
+    duration: "30 mins",
+    price: "Funded for eligible patients",
+    href: "/optics",
+  },
+];
+
 export default function ServicesPage() {
   const hearingServiceIds = [
     "free-hearing-screening",
@@ -77,10 +116,16 @@ export default function ServicesPage() {
                   className="bg-navy-deep rounded-2xl p-6 border border-white/15"
                 >
                   <Icon className="w-8 h-8 text-sky mb-4" />
-                  <h3 className="font-heading font-bold text-lg text-white mb-2">{service.title}</h3>
-                  <p className="text-sm text-white/85 mb-4">
-                    {service.description}
-                  </p>
+                  <h3 className="font-heading font-bold text-lg text-white mb-2">
+                    {service.href ? (
+                      <Link href={service.href} className="hover:text-sky transition-colors">
+                        {service.title}
+                      </Link>
+                    ) : (
+                      service.title
+                    )}
+                  </h3>
+                  <p className="text-sm text-white/85 mb-4">{service.description}</p>
                   <ul className="space-y-2 mb-4">
                     {service.features.map((f) => (
                       <li key={f} className="text-sm flex items-center gap-2 text-white/90">
@@ -90,6 +135,14 @@ export default function ServicesPage() {
                   </ul>
                   {service.price && (
                     <p className="font-semibold text-sky">{service.price}</p>
+                  )}
+                  {service.href && (
+                    <Link
+                      href={service.href}
+                      className="inline-block mt-3 text-sm text-sky hover:underline font-medium"
+                    >
+                      Learn more
+                    </Link>
                   )}
                 </div>
               );
@@ -108,10 +161,16 @@ export default function ServicesPage() {
                   className="bg-navy-deep rounded-2xl p-6 border border-white/15"
                 >
                   <Icon className="w-8 h-8 text-sky mb-4" />
-                  <h3 className="font-heading font-bold text-lg text-white mb-2">{service.title}</h3>
-                  <p className="text-sm text-white/85 mb-4">
-                    {service.description}
-                  </p>
+                  <h3 className="font-heading font-bold text-lg text-white mb-2">
+                    {service.href ? (
+                      <Link href={service.href} className="hover:text-sky transition-colors">
+                        {service.title}
+                      </Link>
+                    ) : (
+                      service.title
+                    )}
+                  </h3>
+                  <p className="text-sm text-white/85 mb-4">{service.description}</p>
                   <ul className="space-y-2 mb-4">
                     {service.features.map((f) => (
                       <li key={f} className="text-sm flex items-center gap-2 text-white/90">
@@ -121,6 +180,14 @@ export default function ServicesPage() {
                   </ul>
                   {service.price && (
                     <p className="font-semibold text-sky">{service.price}</p>
+                  )}
+                  {service.href && (
+                    <Link
+                      href={service.href}
+                      className="inline-block mt-3 text-sm text-sky hover:underline font-medium"
+                    >
+                      Learn more
+                    </Link>
                   )}
                 </div>
               );
@@ -132,7 +199,7 @@ export default function ServicesPage() {
       <section className="py-20 section-hearing">
         <div className="container">
           <h2 className="font-heading text-3xl font-bold !text-white text-center mb-12">
-            Services
+            How booking works
           </h2>
           <div className="grid md:grid-cols-5 gap-6">
             {processSteps.map((step) => (
@@ -141,9 +208,7 @@ export default function ServicesPage() {
                   {step.step}
                 </div>
                 <h3 className="font-heading font-bold text-sm !text-white mb-2">{step.title}</h3>
-                <p className="text-xs !text-white/90">
-                  {step.description}
-                </p>
+                <p className="text-xs !text-white/90">{step.description}</p>
               </div>
             ))}
           </div>
@@ -153,7 +218,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-white">
         <div className="container">
           <h2 className="font-heading text-3xl font-bold text-navy text-center mb-8">
-            Services
+            Service prices
           </h2>
           <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
             <table className="w-full min-w-[600px] text-sm border-collapse max-w-4xl mx-auto">
@@ -166,25 +231,23 @@ export default function ServicesPage() {
                 </tr>
               </thead>
               <tbody>
-                {[
-                  { name: "Hearing Test", duration: "60 mins", price: "Free consultation" },
-                  { name: "Ear Wax Removal", duration: "30 mins", price: "£35 / £70 both ears" },
-                  { name: "Eye Test (Private)", duration: "30 mins", price: "From £55" },
-                  { name: "Eye Test (NHS)", duration: "30 mins", price: "Funded for eligible patients" },
-                  { name: "Contact Lens Fitting", duration: "45 mins", price: "" },
-                  { name: "Children's Eye Test (NHS)", duration: "30 mins", price: "Funded for eligible patients" },
-                ].map((row, i) => (
+                {pricingRows.map((row, i) => (
                   <tr
                     key={row.name}
                     className={i % 2 === 0 ? "bg-neutral-50" : "bg-white"}
                   >
-                    <td className="p-4 font-medium text-navy">{row.name}</td>
-                    <td className="p-4 text-navy/80">{row.duration}</td>
-                    <td className="p-4 text-navy font-semibold">
-                      {row.price || "—"}
+                    <td className="p-4 font-medium text-navy">
+                      <Link href={row.href} className="hover:text-primary underline-offset-2 hover:underline">
+                        {row.name}
+                      </Link>
                     </td>
+                    <td className="p-4 text-navy/80">{row.duration}</td>
+                    <td className="p-4 text-navy font-semibold">{row.price || "—"}</td>
                     <td className="p-4">
-                      <Link href="/appointments" className="text-navy hover:text-primary underline text-sm font-medium">
+                      <Link
+                        href="/appointments"
+                        className="text-navy hover:text-primary underline text-sm font-medium"
+                      >
                         Book Now
                       </Link>
                     </td>

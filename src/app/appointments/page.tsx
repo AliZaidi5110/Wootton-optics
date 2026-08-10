@@ -3,6 +3,7 @@ import { BookingForm } from "@/components/forms/BookingForm";
 import { generateSEO } from "@/lib/seo";
 import { SITE } from "@/lib/constants";
 import { Calendar, MapPin, Phone, Check } from "lucide-react";
+import Link from "next/link";
 
 export const revalidate = 86400;
 
@@ -101,6 +102,27 @@ export default function AppointmentsPage() {
               )}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="pb-16">
+        <div className="container max-w-3xl text-center">
+          <h2 className="font-heading text-xl font-bold text-navy mb-4">Popular appointments</h2>
+          <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+            {[
+              { href: "/nhs-eye-test-northampton", label: "NHS Eye Test" },
+              { href: "/eye-care-northampton", label: "Eye Care" },
+              { href: "/free-hearing-test-northampton", label: "Free Hearing Test" },
+              { href: "/ear-wax-removal-northampton", label: "Ear Wax Removal" },
+              { href: "/services", label: "View Prices" },
+            ].map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="text-primary font-medium hover:underline">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </>

@@ -2,25 +2,30 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { CTA } from "@/components/home/CTA";
 import { EarWaxRemovalSection } from "@/components/hearing/EarWaxRemovalSection";
 import { BookingForm } from "@/components/forms/BookingForm";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { hearingAids } from "@/data/hearing-aids";
-import { generateSEO } from "@/lib/seo";
+import { faqs } from "@/data/faqs";
+import { generateSEO, faqSchema } from "@/lib/seo";
 import { IMAGES } from "@/lib/images";
 import { Check, Ear, Volume2, Heart } from "lucide-react";
+import Link from "next/link";
 
 export const revalidate = 86400;
 
+const hearingFaqs = faqs.filter((f) => f.category === "hearing");
+
 export const metadata = generateSEO({
-  title: "Hearing Test Northampton | Free Consult | Wootton",
+  title: "Hearing Care Northampton | Tests & Aids | Wootton",
   description:
-    "Free hearing consultations in Northampton plus ear wax removal from £35 and hearing aid fitting with honest advice and ongoing aftercare. Book today.",
+    "Hearing care in Northampton — free consultations, ear wax removal from £35, hearing aids and repairs at Wootton Hearing Care. Honest advice, no pressure.",
   path: "/hearing",
   image: IMAGES.clinic,
   keywords: [
+    "hearing care Northampton",
     "hearing test Northampton",
     "hearing aids Northampton",
     "ear wax removal Northampton",
     "free hearing test Northampton",
-    "audiologist Northampton",
     "hearing aid repairs Northampton",
   ],
 });
@@ -28,9 +33,12 @@ export const metadata = generateSEO({
 export default function HearingPage() {
   return (
     <>
+      <JsonLd
+        data={faqSchema(hearingFaqs.map((f) => ({ question: f.question, answer: f.answer })))}
+      />
       <PageHeader
-        title="Wootton Hearing Care"
-        subtitle="Expert hearing tests, premium hearing aids, and ongoing aftercare from Northampton's trusted, independent hearing care team."
+        title="Hearing Care in Northampton"
+        subtitle="Free hearing consultations, ear wax removal, hearing aids and aftercare from Wootton Hearing Care at our Wootton Hope Drive clinic."
         currentPath="/hearing"
         breadcrumbs={[
           { label: "Home", href: "/" },
@@ -39,7 +47,7 @@ export default function HearingPage() {
         backgroundImages={[
           {
             src: IMAGES.clinic,
-            alt: "Wootton Optician and Wootton Hearing Care clinic storefront, Northampton",
+            alt: "Hearing care clinic at Wootton Opticians & Hearing Care, Northampton",
           },
         ]}
       />
@@ -211,6 +219,45 @@ export default function HearingPage() {
           </h2>
           <div className="on-light bg-white rounded-2xl p-8 shadow-lg border border-white/20">
             <BookingForm />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-cream">
+        <div className="container max-w-4xl">
+          <h2 className="font-heading text-2xl font-bold text-navy text-center mb-6">
+            Popular hearing services in Northampton
+          </h2>
+          <ul className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm">
+            {[
+              { href: "/free-hearing-test-northampton", label: "Free Hearing Test" },
+              { href: "/ear-wax-removal-northampton", label: "Ear Wax Removal" },
+              { href: "/hearing-aid-repairs-northampton", label: "Hearing Aid Repairs" },
+              { href: "/services", label: "All Services & Prices" },
+              { href: "/appointments?service=hearing-test", label: "Book a Hearing Appointment" },
+            ].map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="text-primary font-medium hover:underline">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white" id="faq">
+        <div className="container max-w-3xl">
+          <h2 className="font-heading text-2xl sm:text-3xl font-bold text-navy mb-8 text-center">
+            Hearing care FAQs
+          </h2>
+          <div className="space-y-6">
+            {hearingFaqs.map((faq) => (
+              <div key={faq.question}>
+                <h3 className="font-heading font-bold text-navy mb-2">{faq.question}</h3>
+                <p className="text-navy/85 text-sm sm:text-base leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

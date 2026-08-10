@@ -3,6 +3,7 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import { generateSEO } from "@/lib/seo";
 import { SITE } from "@/lib/constants";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import Link from "next/link";
 
 export const revalidate = 86400;
 
@@ -112,6 +113,27 @@ export default function ContactPage() {
               <ContactForm />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="pb-16">
+        <div className="container max-w-3xl text-center">
+          <h2 className="font-heading text-xl font-bold text-navy mb-4">Looking for a service?</h2>
+          <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+            {[
+              { href: "/appointments", label: "Book an Appointment" },
+              { href: "/eye-care-northampton", label: "Eye Care Northampton" },
+              { href: "/ear-wax-removal-northampton", label: "Ear Wax Removal" },
+              { href: "/free-hearing-test-northampton", label: "Free Hearing Test" },
+              { href: "/nhs-eye-test-northampton", label: "NHS Eye Test" },
+            ].map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="text-primary font-medium hover:underline">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </>
