@@ -13,6 +13,7 @@ const exploreLinks = [
   { href: "/ear-wax-removal-northampton", label: "Ear Wax Removal" },
   { href: "/hearing-aid-repairs-northampton", label: "Hearing Aid Repairs" },
   { href: "/services", label: "All Services" },
+  { href: "/blog", label: "Advice & Blog" },
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
   { href: "/appointments", label: "Book an Appointment" },

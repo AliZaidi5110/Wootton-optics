@@ -20,8 +20,8 @@ export function BlogPreview() {
           {posts.map((post) => (
             <article key={post.slug} className="bg-white rounded-2xl overflow-hidden shadow-md border border-neutral-100 card-hover group">
               <div className="h-44 bg-gradient-to-br from-sky to-primary/10 flex items-center justify-center">
-                <span className="text-5xl opacity-40">
-                  {post.category === "hearing-health" ? "👂" : post.category === "eye-care" ? "👁️" : "💚"}
+                <span className="text-sm font-semibold uppercase tracking-widest text-primary/70">
+                  {getCategoryLabel(post.category)}
                 </span>
               </div>
               <div className="p-6">

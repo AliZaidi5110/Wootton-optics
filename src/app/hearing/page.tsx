@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { hearingAids } from "@/data/hearing-aids";
 import { faqs } from "@/data/faqs";
 import { generateSEO, faqSchema } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { IMAGES } from "@/lib/images";
 import { Check, Ear, Volume2, Heart } from "lucide-react";
 import Link from "next/link";
@@ -20,14 +21,7 @@ export const metadata = generateSEO({
     "Hearing care in Northampton — free consultations, ear wax removal from £35, hearing aids and repairs at Wootton Hearing Care. Honest advice, no pressure.",
   path: "/hearing",
   image: IMAGES.clinic,
-  keywords: [
-    "hearing care Northampton",
-    "hearing test Northampton",
-    "hearing aids Northampton",
-    "ear wax removal Northampton",
-    "free hearing test Northampton",
-    "hearing aid repairs Northampton",
-  ],
+  keywords: pageKeywords("hearing"),
 });
 
 export default function HearingPage() {

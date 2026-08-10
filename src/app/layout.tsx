@@ -10,7 +10,7 @@ import { Analytics } from "@/components/seo/Analytics";
 import { generateSEO, localBusinessSchema, websiteSchema, serviceSchemas } from "@/lib/seo";
 import { cormorantGaramond, sourceSans } from "@/lib/fonts";
 import { IMAGES } from "@/lib/images";
-import { KEYWORDS } from "@/lib/constants";
+import { pageKeywords } from "@/lib/keywords";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description:
       "Eye care in Northampton plus hearing tests at Wootton Opticians. NHS & private eye tests, free hearing consultations, ear wax removal and hearing aids since 2003.",
     path: "/",
-    keywords: [...KEYWORDS, "eye care Northampton", "eye care in Northampton"],
+    keywords: pageKeywords("home"),
   }),
   icons: {
     icon: IMAGES.clinic,

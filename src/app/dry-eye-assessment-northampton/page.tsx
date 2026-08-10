@@ -1,5 +1,6 @@
 import { ServiceLanding } from "@/components/services/ServiceLanding";
 import { generateSEO } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { SITE } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
@@ -13,11 +14,7 @@ export const metadata = generateSEO({
     "Dry eye assessment in Northampton at Wootton Opticians. Personalised treatment for dry, gritty, burning or watery eyes — book today.",
   path,
   image: IMAGES.clinic,
-  keywords: [
-    "dry eye assessment Northampton",
-    "dry eye treatment Northampton",
-    "dry eyes optician Northampton",
-  ],
+  keywords: pageKeywords("dry-eye-assessment-northampton"),
 });
 
 export default function DryEyeAssessmentNorthamptonPage() {

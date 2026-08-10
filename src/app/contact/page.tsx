@@ -1,6 +1,7 @@
 import { PageHeader } from "@/components/shared/PageHeader";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { generateSEO } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { SITE } from "@/lib/constants";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Link from "next/link";
@@ -12,12 +13,7 @@ export const metadata = generateSEO({
   description:
     "Contact our Northampton clinic at 9 Tudor Court, Wootton Hope Drive. Call 01604 875111 to book an eye test, hearing consultation or ear wax removal.",
   path: "/contact",
-  keywords: [
-    "contact optician Northampton",
-    "Wootton Optician phone",
-    "hearing clinic Northampton",
-    "book eye test Northampton",
-  ],
+  keywords: pageKeywords("contact"),
 });
 
 export default function ContactPage() {

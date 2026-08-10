@@ -1,5 +1,6 @@
 import { ServiceLanding } from "@/components/services/ServiceLanding";
 import { generateSEO } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { SITE } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
@@ -13,12 +14,7 @@ export const metadata = generateSEO({
     "Book a free hearing consultation in Northampton at Wootton Hearing Care. Full assessment, honest advice, and no obligation to purchase hearing aids.",
   path,
   image: IMAGES.clinic,
-  keywords: [
-    "free hearing test Northampton",
-    "hearing test Northampton",
-    "free hearing consultation Northampton",
-    "audiologist Northampton",
-  ],
+  keywords: pageKeywords("free-hearing-test-northampton"),
 });
 
 export default function FreeHearingTestNorthamptonPage() {

@@ -60,24 +60,7 @@ export const EAR_WAX_PRICING = {
   short: "£35 (one ear) · £70 (both ears)",
 } as const;
 
-export const KEYWORDS = [
-  "eye care Northampton",
-  "eye care in Northampton",
-  "optician Northampton",
-  "eye test Northampton",
-  "NHS eye test Northampton",
-  "hearing aids Northampton",
-  "hearing test Northampton",
-  "ear wax removal Northampton",
-  "free hearing test Northampton",
-  "optical services Northamptonshire",
-  "hearing care Northampton",
-  "audiologist Northamptonshire",
-  "designer glasses Northampton",
-  "Wootton Optician",
-  "Wootton Hearing Care",
-  "sight test Northampton",
-] as const;
+export { CORE_KEYWORDS as KEYWORDS } from "./keywords";
 
 export const NAV_LINKS = [
   { href: "/", label: "Home" },

@@ -1,5 +1,6 @@
 import { ServiceLanding } from "@/components/services/ServiceLanding";
 import { generateSEO } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { SITE } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
@@ -13,14 +14,7 @@ export const metadata = generateSEO({
     "Eye care in Northampton at Wootton Opticians — NHS & private eye tests, glasses, contact lenses, myopia management and dry eye assessment in Wootton Fields.",
   path,
   image: IMAGES.clinic,
-  keywords: [
-    "eye care Northampton",
-    "eye care in Northampton",
-    "optician Northampton",
-    "eye test Northampton",
-    "NHS eye test Northampton",
-    "independent optician Northampton",
-  ],
+  keywords: pageKeywords("eye-care-northampton"),
 });
 
 export default function EyeCareNorthamptonPage() {

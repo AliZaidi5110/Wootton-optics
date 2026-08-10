@@ -1,5 +1,6 @@
 import { ServiceLanding } from "@/components/services/ServiceLanding";
 import { generateSEO } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { SITE } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
@@ -13,12 +14,7 @@ export const metadata = generateSEO({
     "Hearing aid repairs, cleaning, reprogramming and servicing in Northampton. Batteries and accessories available at Wootton Hearing Care.",
   path,
   image: IMAGES.clinic,
-  keywords: [
-    "hearing aid repairs Northampton",
-    "hearing aid servicing Northampton",
-    "hearing aid cleaning Northampton",
-    "hearing aid batteries Northampton",
-  ],
+  keywords: pageKeywords("hearing-aid-repairs-northampton"),
 });
 
 export default function HearingAidRepairsNorthamptonPage() {

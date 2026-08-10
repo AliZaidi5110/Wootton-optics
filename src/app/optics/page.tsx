@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { lensTechnologies } from "@/data/eyewear";
 import { faqs } from "@/data/faqs";
 import { generateSEO, faqSchema } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { IMAGES } from "@/lib/images";
 import { Check, Eye, Glasses, Shield } from "lucide-react";
 import Link from "next/link";
@@ -20,14 +21,7 @@ export const metadata = generateSEO({
     "Independent opticians in Northampton for NHS & private eye tests, designer glasses, contact lenses and specialist clinics at Wootton Hope Drive.",
   path: "/optics",
   image: IMAGES.clinic,
-  keywords: [
-    "optician Northampton",
-    "opticians Northampton",
-    "glasses Northampton",
-    "eye test Northampton",
-    "designer glasses Northampton",
-    "contact lenses Northampton",
-  ],
+  keywords: pageKeywords("optics"),
 });
 
 export default function OpticsPage() {

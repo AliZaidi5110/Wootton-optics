@@ -1,6 +1,7 @@
 import { PageHeader } from "@/components/shared/PageHeader";
 import { BookingForm } from "@/components/forms/BookingForm";
 import { generateSEO } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { SITE } from "@/lib/constants";
 import { Calendar, MapPin, Phone, Check } from "lucide-react";
 import Link from "next/link";
@@ -12,12 +13,7 @@ export const metadata = generateSEO({
   description:
     "Book an NHS eye test, private sight test or free hearing consultation online at our Northampton clinic. Confirmation by email within 24 hours.",
   path: "/appointments",
-  keywords: [
-    "book eye test Northampton",
-    "book hearing test Northampton",
-    "NHS eye test appointment Northampton",
-    "free hearing consultation Northampton",
-  ],
+  keywords: pageKeywords("appointments"),
 });
 
 export default function AppointmentsPage() {

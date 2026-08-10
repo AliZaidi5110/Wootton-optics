@@ -2,6 +2,7 @@ import { Hero } from "@/components/home/Hero";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { HomepageServices } from "@/components/home/HomepageServices";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
+import { BlogPreview } from "@/components/home/BlogPreview";
 import { CTA } from "@/components/home/CTA";
 import { FAQ } from "@/components/home/FAQ";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -20,6 +21,7 @@ export default function HomePage() {
       <TrustStrip />
       <HomepageServices />
       <WhyChooseUs />
+      <BlogPreview />
       <FAQ />
       <CTA />
     </>

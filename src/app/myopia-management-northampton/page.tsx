@@ -1,5 +1,6 @@
 import { ServiceLanding } from "@/components/services/ServiceLanding";
 import { generateSEO } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { SITE } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
@@ -13,12 +14,7 @@ export const metadata = generateSEO({
     "Myopia management for children in Northampton at Wootton Opticians. Specialist lenses and monitoring to help slow short-sightedness progression.",
   path,
   image: IMAGES.clinic,
-  keywords: [
-    "myopia management Northampton",
-    "myopia management for children Northampton",
-    "short sightedness children Northampton",
-    "children eye test Northampton",
-  ],
+  keywords: pageKeywords("myopia-management-northampton"),
 });
 
 export default function MyopiaManagementNorthamptonPage() {

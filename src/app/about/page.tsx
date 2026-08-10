@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { CTA } from "@/components/home/CTA";
 import { generateSEO } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { SITE } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 import { Heart, Target, Users, Award, MapPin } from "lucide-react";
@@ -15,12 +16,7 @@ export const metadata = generateSEO({
     "Family-run optician and hearing care in Northampton since 2003. Independent NHS and private eye care plus free hearing consultations in Wootton Fields.",
   path: "/about",
   image: IMAGES.clinic,
-  keywords: [
-    "optician Northampton",
-    "family optician Northampton",
-    "Wootton Optician",
-    "hearing care Northampton",
-  ],
+  keywords: pageKeywords("about"),
 });
 
 const values = [

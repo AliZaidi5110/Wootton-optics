@@ -2,6 +2,7 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { CTA } from "@/components/home/CTA";
 import { services, processSteps } from "@/data/services";
 import { generateSEO } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { Button } from "@/components/ui/Button";
 import { Check, Ear, Eye, Volume2, Glasses, Heart, Contact } from "lucide-react";
 import Link from "next/link";
@@ -13,13 +14,7 @@ export const metadata = generateSEO({
   description:
     "Full price list for NHS eye tests, private sight tests, free hearing consultations and ear wax removal at Wootton Optician & Hearing Care, Northampton.",
   path: "/services",
-  keywords: [
-    "ear wax removal cost Northampton",
-    "eye test price Northampton",
-    "hearing test Northampton",
-    "NHS eye test Northampton",
-    "hearing aid prices Northampton",
-  ],
+  keywords: pageKeywords("services"),
 });
 
 const iconMap: Record<string, React.ElementType> = {

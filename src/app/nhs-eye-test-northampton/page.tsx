@@ -1,5 +1,6 @@
 import { ServiceLanding } from "@/components/services/ServiceLanding";
 import { generateSEO } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { SITE } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
@@ -13,12 +14,7 @@ export const metadata = generateSEO({
     "Book an NHS eye test in Northampton at Wootton Opticians. Funded for eligible patients, with NHS optical vouchers toward glasses when required.",
   path,
   image: IMAGES.clinic,
-  keywords: [
-    "NHS eye test Northampton",
-    "NHS sight test Northampton",
-    "free eye test Northampton",
-    "optician Northampton NHS",
-  ],
+  keywords: pageKeywords("nhs-eye-test-northampton"),
 });
 
 export default function NhsEyeTestNorthamptonPage() {

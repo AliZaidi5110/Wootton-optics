@@ -1,5 +1,6 @@
 import { ServiceLanding } from "@/components/services/ServiceLanding";
 import { generateSEO } from "@/lib/seo";
+import { pageKeywords } from "@/lib/keywords";
 import { SITE, EAR_WAX_PRICING } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 
@@ -13,12 +14,7 @@ export const metadata = generateSEO({
     "Professional microsuction ear wax removal in Northampton from £35 per ear or £70 for both. No referral needed at Wootton Optician & Hearing Care.",
   path,
   image: IMAGES.clinic,
-  keywords: [
-    "ear wax removal Northampton",
-    "ear wax removal cost Northampton",
-    "microsuction Northampton",
-    "blocked ears Northampton",
-  ],
+  keywords: pageKeywords("ear-wax-removal-northampton"),
 });
 
 export default function EarWaxRemovalNorthamptonPage() {
