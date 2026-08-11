@@ -78,15 +78,6 @@ export function Footer() {
                   <span className="break-all">{SITE.email}</span>
                 </a>
               </li>
-              <li>
-                <a
-                  href={`mailto:${SITE.opticsEmail}`}
-                  className="flex items-center gap-3 text-white/85 hover:text-sky transition-colors min-w-0"
-                >
-                  <Mail className="w-5 h-5 text-primary shrink-0" />
-                  <span className="break-all">{SITE.opticsEmail}</span>
-                </a>
-              </li>
             </ul>
           </div>
 

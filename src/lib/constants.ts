@@ -10,8 +10,8 @@ export const SITE = {
     "Independent, family-run opticians and hearing care in Wootton, Northampton. NHS and private eye tests, designer eyewear, hearing tests, hearing aids and ear wax removal.",
   phone: "+44 1604 875111",
   phoneDisplay: "01604 875111",
-  email: "info@woottonhearing.co.uk",
-  opticsEmail: "wootton.opticians@live.co.uk",
+  email: "Admin@woottonopticianshearingcare.co.uk",
+  opticsEmail: "Admin@woottonopticianshearingcare.co.uk",
   companyNumber: "",
   address: {
     street: "9 Tudor Court, Wootton Hope Drive",

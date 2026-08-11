@@ -67,12 +67,6 @@ export default function ContactPage() {
                     <a href={`mailto:${SITE.email}`} className="text-primary hover:underline block">
                       {SITE.email}
                     </a>
-                    <a
-                      href={`mailto:${SITE.opticsEmail}`}
-                      className="text-primary hover:underline block mt-1"
-                    >
-                      {SITE.opticsEmail}
-                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
