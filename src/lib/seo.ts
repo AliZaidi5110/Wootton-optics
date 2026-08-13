@@ -222,14 +222,6 @@ export function localBusinessSchema() {
         availableLanguage: "English",
         email: SITE.email,
       },
-      {
-        "@type": "ContactPoint",
-        telephone: SITE.phone.replace(/\s/g, ""),
-        contactType: "reservations",
-        areaServed: "GB",
-        availableLanguage: "English",
-        email: SITE.opticsEmail,
-      },
     ],
     knowsAbout: [
       "NHS eye tests",

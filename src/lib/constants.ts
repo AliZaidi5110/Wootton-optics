@@ -11,7 +11,6 @@ export const SITE = {
   phone: "+44 1604 875111",
   phoneDisplay: "01604 875111",
   email: "Admin@woottonopticianshearingcare.co.uk",
-  opticsEmail: "Admin@woottonopticianshearingcare.co.uk",
   companyNumber: "",
   address: {
     street: "9 Tudor Court, Wootton Hope Drive",
