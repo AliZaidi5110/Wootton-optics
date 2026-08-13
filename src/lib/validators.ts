@@ -72,15 +72,71 @@ export type ContactApiError = {
 
 export type ContactApiResponse = ContactApiSuccess | ContactApiError;
 
+export const APPOINTMENT_SERVICES = [
+  "hearing-test",
+  "ear-wax-removal",
+  "hearing-aid",
+  "eye-test",
+  "optical",
+] as const;
+
 export const appointmentSchema = z.object({
-  name: z.string().min(2).max(100),
-  email: z.string().email(),
-  phone: z.string().min(10).max(20),
-  service: z.enum(["hearing-test", "ear-wax-removal", "hearing-aid", "eye-test", "optical"]),
-  preferredDate: z.string().min(1, "Please select a preferred date"),
-  preferredTime: z.enum(["morning", "afternoon", "evening"]),
-  notes: z.string().max(500).optional(),
+  name: z
+    .string()
+    .trim()
+    .min(2, "Enter your full name (at least 2 characters)")
+    .max(100, "Name must be 100 characters or fewer"),
+  email: z
+    .string()
+    .trim()
+    .min(1, "Enter a valid email address")
+    .email("Enter a valid email address")
+    .max(254, "Email address is too long"),
+  phone: z
+    .string()
+    .trim()
+    .regex(phoneRegex, "Enter a valid phone number")
+    .max(30, "Phone number is too long"),
+  service: z.enum(APPOINTMENT_SERVICES, {
+    error: "Please select a service",
+  }),
+  preferredDate: z.string().trim().min(1, "Please select a preferred date"),
+  preferredTime: z.enum(["morning", "afternoon", "evening"], {
+    error: "Please select a preferred time",
+  }),
+  notes: z.preprocess(
+    (val) => {
+      if (val === undefined || val === null) return undefined;
+      if (typeof val !== "string") return val;
+      const trimmed = val.trim();
+      return trimmed === "" ? undefined : trimmed;
+    },
+    z.string().max(500, "Notes must be 500 characters or fewer").optional()
+  ),
+  website: z.string().optional(),
 });
+
+export type AppointmentInput = z.infer<typeof appointmentSchema>;
+
+export type AppointmentFieldErrors = Partial<
+  Record<
+    "name" | "email" | "phone" | "service" | "preferredDate" | "preferredTime" | "notes",
+    string
+  >
+>;
+
+export type AppointmentApiSuccess = {
+  success: true;
+  message: string;
+};
+
+export type AppointmentApiError = {
+  success: false;
+  error: string;
+  errors?: AppointmentFieldErrors;
+};
+
+export type AppointmentApiResponse = AppointmentApiSuccess | AppointmentApiError;
 
 export const newsletterSchema = z.object({
   email: z.string().email(),
@@ -99,7 +155,6 @@ export const loginSchema = z.object({
   password: z.string().min(1),
 });
 
-export type AppointmentInput = z.infer<typeof appointmentSchema>;
 export type NewsletterInput = z.infer<typeof newsletterSchema>;
 export type RegisterInput = z.infer<typeof registerSchema>;
 export type LoginInput = z.infer<typeof loginSchema>;
@@ -122,6 +177,30 @@ export function contactFieldErrors(
     const key = String(issue.path[0] ?? "");
     if (fields.has(key) && !errors[key as keyof ContactFieldErrors]) {
       errors[key as keyof ContactFieldErrors] = issue.message;
+    }
+  }
+
+  return errors;
+}
+
+export function appointmentFieldErrors(
+  issues: { path: PropertyKey[]; message: string }[]
+): AppointmentFieldErrors {
+  const errors: AppointmentFieldErrors = {};
+  const fields = new Set([
+    "name",
+    "email",
+    "phone",
+    "service",
+    "preferredDate",
+    "preferredTime",
+    "notes",
+  ]);
+
+  for (const issue of issues) {
+    const key = String(issue.path[0] ?? "");
+    if (fields.has(key) && !errors[key as keyof AppointmentFieldErrors]) {
+      errors[key as keyof AppointmentFieldErrors] = issue.message;
     }
   }
 
