@@ -1,6 +1,14 @@
 /**
  * Sitewide SEO keyword map for Wootton Optician & Hearing Care (Northampton).
- * Sourced from service pages, local search intent, and blog tags.
+ *
+ * Built from:
+ * - Local service intent (eye tests, hearing, wax removal)
+ * - Condition-style themes used by premium eye clinics (e.g. myopia, astigmatism, dry eye)
+ *   — adapted to Northampton and ONLY where Wootton offers assessment / dispensing / referral
+ *
+ * Intentionally excluded from competitors like EuroEyes (London laser clinic):
+ * LASIK, SMILE, PRK, laser eye surgery, refractive lens exchange, ICL surgery —
+ * those are surgical products Wootton does not provide and would attract the wrong traffic.
  */
 
 export const CORE_KEYWORDS = [
@@ -10,6 +18,7 @@ export const CORE_KEYWORDS = [
   "opticians Northampton",
   "eye test Northampton",
   "NHS eye test Northampton",
+  "private eye test Northampton",
   "sight test Northampton",
   "hearing care Northampton",
   "hearing test Northampton",
@@ -20,6 +29,10 @@ export const CORE_KEYWORDS = [
   "audiologist Northampton",
   "designer glasses Northampton",
   "contact lenses Northampton",
+  "short sightedness Northampton",
+  "long sightedness Northampton",
+  "astigmatism optician Northampton",
+  "presbyopia Northampton",
   "Wootton Optician",
   "Wootton Hearing Care",
   "optician Wootton Fields",
@@ -35,6 +48,8 @@ export const PAGE_KEYWORDS: Record<string, string[]> = {
     "hearing aid repairs Northampton",
     "dry eye assessment Northampton",
     "myopia management Northampton",
+    "cataract screening Northampton",
+    "glaucoma screening Northampton",
   ],
   optics: [
     "optician Northampton",
@@ -44,8 +59,13 @@ export const PAGE_KEYWORDS: Record<string, string[]> = {
     "designer glasses Northampton",
     "contact lenses Northampton",
     "varifocal lenses Northampton",
+    "progressive lenses Northampton",
     "blue light glasses Northampton",
     "prescription sunglasses Northampton",
+    "short sightedness Northampton",
+    "long sightedness Northampton",
+    "astigmatism glasses Northampton",
+    "reading glasses Northampton",
     "optician Wootton Fields",
   ],
   hearing: [
@@ -68,6 +88,7 @@ export const PAGE_KEYWORDS: Record<string, string[]> = {
     "hearing aid prices Northampton",
     "private eye test Northampton",
     "contact lens fitting Northampton",
+    "varifocal lenses cost Northampton",
   ],
   about: [
     "family optician Northampton",
@@ -99,6 +120,9 @@ export const PAGE_KEYWORDS: Record<string, string[]> = {
     "NHS eye test Northampton",
     "independent optician Northampton",
     "optician Wootton Fields",
+    "short sightedness Northampton",
+    "astigmatism Northampton",
+    "cataract check Northampton",
   ],
   "nhs-eye-test-northampton": [
     "NHS eye test Northampton",
@@ -124,8 +148,9 @@ export const PAGE_KEYWORDS: Record<string, string[]> = {
   "myopia-management-northampton": [
     "myopia management Northampton",
     "myopia control Northampton",
-    "children eye test Northampton",
+    "short sightedness Northampton",
     "short sighted children Northampton",
+    "children eye test Northampton",
     "myopia management Wootton Fields",
   ],
   "dry-eye-assessment-northampton": [
@@ -148,6 +173,8 @@ export const PAGE_KEYWORDS: Record<string, string[]> = {
     "optician blog Northampton",
     "hearing aids guide Northampton",
     "eye test tips Northamptonshire",
+    "myopia advice Northampton",
+    "dry eye advice Northampton",
   ],
 };
 
