@@ -2,7 +2,13 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { CONTACT_SERVICES, type ContactApiResponse, type ContactFieldErrors } from "@/lib/validators";
+import {
+  CONTACT_SERVICES,
+  validateContactForm,
+  type ContactApiResponse,
+  type ContactFieldErrors,
+} from "@/lib/validators";
+import { EMAIL_ERROR, UK_PHONE_ERROR, validateEmail, validateUkPhone } from "@/lib/form-validation";
 
 type FormState = {
   fullName: string;
@@ -42,6 +48,7 @@ export function ContactForm() {
   const [fieldErrors, setFieldErrors] = useState<ContactFieldErrors>({});
   const [formError, setFormError] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [touched, setTouched] = useState<Partial<Record<keyof ContactFieldErrors, boolean>>>({});
 
   const fullNameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
@@ -86,23 +93,74 @@ export function ContactForm() {
     summaryRef.current?.focus();
   }, [status, fieldErrors]);
 
+  function setFieldError(field: keyof ContactFieldErrors, message: string | null) {
+    setFieldErrors((prev) => {
+      const next = { ...prev };
+      if (message) next[field] = message;
+      else delete next[field];
+      return next;
+    });
+  }
+
   function updateField<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
     if (key !== "website" && fieldErrors[key as keyof ContactFieldErrors]) {
-      setFieldErrors((prev) => {
-        const next = { ...prev };
-        delete next[key as keyof ContactFieldErrors];
-        return next;
-      });
+      setFieldError(key as keyof ContactFieldErrors, null);
     }
+  }
+
+  function blurValidate(field: keyof ContactFieldErrors) {
+    setTouched((prev) => ({ ...prev, [field]: true }));
+    if (field === "email") {
+      setFieldError("email", validateEmail(form.email));
+      return;
+    }
+    if (field === "phone") {
+      setFieldError("phone", validateUkPhone(form.phone, true));
+      return;
+    }
+    const all = validateContactForm({
+      fullName: form.fullName,
+      email: form.email,
+      phone: form.phone,
+      service: form.service,
+      subject: form.subject,
+      message: form.message,
+    });
+    setFieldError(field, all[field] ?? null);
   }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setSuccessMessage(null);
+    setFormError(null);
+
+    const clientErrors = validateContactForm({
+      fullName: form.fullName,
+      email: form.email,
+      phone: form.phone,
+      service: form.service,
+      subject: form.subject,
+      message: form.message,
+    });
+
+    if (Object.keys(clientErrors).length > 0) {
+      setFieldErrors(clientErrors);
+      setStatus("error");
+      setFormError("Please correct the highlighted fields");
+      setTouched({
+        fullName: true,
+        email: true,
+        phone: true,
+        service: true,
+        subject: true,
+        message: true,
+      });
+      return;
+    }
+
     setStatus("submitting");
     setFieldErrors({});
-    setFormError(null);
-    setSuccessMessage(null);
 
     try {
       const res = await fetch("/api/contact", {
@@ -110,7 +168,7 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           fullName: form.fullName,
-          email: form.email,
+          email: form.email.trim().toLowerCase(),
           phone: form.phone,
           service: form.service,
           subject: form.subject,
@@ -125,6 +183,7 @@ export function ContactForm() {
         setStatus("success");
         setSuccessMessage(data.message || "Thank you! We will respond within 24 hours.");
         setForm(initialForm);
+        setTouched({});
         return;
       }
 
@@ -154,14 +213,17 @@ export function ContactForm() {
     return fieldErrors[field] ? errorId : undefined;
   }
 
+  function showError(field: keyof ContactFieldErrors) {
+    return Boolean(fieldErrors[field] && (touched[field] || status === "error"));
+  }
+
   return (
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
-      {/* Honeypot — hidden from users and assistive tech; bots often fill it */}
       <div
         aria-hidden="true"
         style={{ position: "absolute", left: "-9999px", height: 0, overflow: "hidden" }}
       >
-        <label htmlFor={`${formId}-website`}>Website</label>
+        <label htmlFor={`${formId}-website`}>Company</label>
         <input
           id={`${formId}-website`}
           name="website"
@@ -208,14 +270,15 @@ export function ContactForm() {
             autoComplete="name"
             required
             aria-required="true"
-            aria-invalid={fieldErrors.fullName ? true : undefined}
+            aria-invalid={showError("fullName") ? true : undefined}
             aria-describedby={fieldDescribedBy("fullName", ids.fullNameError)}
             value={form.fullName}
             onChange={(e) => updateField("fullName", e.target.value)}
-            className={`${inputClass} ${fieldErrors.fullName ? invalidClass : ""}`}
+            onBlur={() => blurValidate("fullName")}
+            className={`${inputClass} ${showError("fullName") ? invalidClass : ""}`}
             disabled={isSubmitting}
           />
-          {fieldErrors.fullName && (
+          {showError("fullName") && (
             <p id={ids.fullNameError} className={errorTextClass} role="alert">
               {fieldErrors.fullName}
             </p>
@@ -234,16 +297,18 @@ export function ContactForm() {
             autoComplete="email"
             required
             aria-required="true"
-            aria-invalid={fieldErrors.email ? true : undefined}
+            aria-invalid={showError("email") ? true : undefined}
             aria-describedby={fieldDescribedBy("email", ids.emailError)}
             value={form.email}
             onChange={(e) => updateField("email", e.target.value)}
-            className={`${inputClass} ${fieldErrors.email ? invalidClass : ""}`}
+            onBlur={() => blurValidate("email")}
+            className={`${inputClass} ${showError("email") ? invalidClass : ""}`}
             disabled={isSubmitting}
+            placeholder="name@example.com"
           />
-          {fieldErrors.email && (
+          {showError("email") && (
             <p id={ids.emailError} className={errorTextClass} role="alert">
-              {fieldErrors.email}
+              {fieldErrors.email || EMAIL_ERROR}
             </p>
           )}
         </div>
@@ -252,7 +317,8 @@ export function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label htmlFor={ids.phone} className="block text-sm font-medium mb-2 text-navy">
-            Phone <span className="sr-only">(optional)</span>
+            Phone <span aria-hidden="true">*</span>
+            <span className="sr-only">(required)</span>
           </label>
           <input
             ref={phoneRef}
@@ -260,16 +326,20 @@ export function ContactForm() {
             name="phone"
             type="tel"
             autoComplete="tel"
-            aria-invalid={fieldErrors.phone ? true : undefined}
+            required
+            aria-required="true"
+            aria-invalid={showError("phone") ? true : undefined}
             aria-describedby={fieldDescribedBy("phone", ids.phoneError)}
             value={form.phone}
             onChange={(e) => updateField("phone", e.target.value)}
-            className={`${inputClass} ${fieldErrors.phone ? invalidClass : ""}`}
+            onBlur={() => blurValidate("phone")}
+            className={`${inputClass} ${showError("phone") ? invalidClass : ""}`}
             disabled={isSubmitting}
+            placeholder="07123 456789"
           />
-          {fieldErrors.phone && (
+          {showError("phone") && (
             <p id={ids.phoneError} className={errorTextClass} role="alert">
-              {fieldErrors.phone}
+              {fieldErrors.phone || UK_PHONE_ERROR}
             </p>
           )}
         </div>
@@ -284,13 +354,14 @@ export function ContactForm() {
             name="service"
             required
             aria-required="true"
-            aria-invalid={fieldErrors.service ? true : undefined}
+            aria-invalid={showError("service") ? true : undefined}
             aria-describedby={fieldDescribedBy("service", ids.serviceError)}
             value={form.service}
             onChange={(e) =>
               updateField("service", e.target.value as FormState["service"])
             }
-            className={`${inputClass} ${fieldErrors.service ? invalidClass : ""}`}
+            onBlur={() => blurValidate("service")}
+            className={`${inputClass} ${showError("service") ? invalidClass : ""}`}
             disabled={isSubmitting}
           >
             <option value="" disabled>
@@ -302,7 +373,7 @@ export function ContactForm() {
               </option>
             ))}
           </select>
-          {fieldErrors.service && (
+          {showError("service") && (
             <p id={ids.serviceError} className={errorTextClass} role="alert">
               {fieldErrors.service}
             </p>
@@ -322,14 +393,15 @@ export function ContactForm() {
           type="text"
           required
           aria-required="true"
-          aria-invalid={fieldErrors.subject ? true : undefined}
+          aria-invalid={showError("subject") ? true : undefined}
           aria-describedby={fieldDescribedBy("subject", ids.subjectError)}
           value={form.subject}
           onChange={(e) => updateField("subject", e.target.value)}
-          className={`${inputClass} ${fieldErrors.subject ? invalidClass : ""}`}
+          onBlur={() => blurValidate("subject")}
+          className={`${inputClass} ${showError("subject") ? invalidClass : ""}`}
           disabled={isSubmitting}
         />
-        {fieldErrors.subject && (
+        {showError("subject") && (
           <p id={ids.subjectError} className={errorTextClass} role="alert">
             {fieldErrors.subject}
           </p>
@@ -348,14 +420,15 @@ export function ContactForm() {
           required
           rows={5}
           aria-required="true"
-          aria-invalid={fieldErrors.message ? true : undefined}
+          aria-invalid={showError("message") ? true : undefined}
           aria-describedby={fieldDescribedBy("message", ids.messageError)}
           value={form.message}
           onChange={(e) => updateField("message", e.target.value)}
-          className={`${inputClass} min-h-[120px] ${fieldErrors.message ? invalidClass : ""}`}
+          onBlur={() => blurValidate("message")}
+          className={`${inputClass} min-h-[120px] ${showError("message") ? invalidClass : ""}`}
           disabled={isSubmitting}
         />
-        {fieldErrors.message && (
+        {showError("message") && (
           <p id={ids.messageError} className={errorTextClass} role="alert">
             {fieldErrors.message}
           </p>

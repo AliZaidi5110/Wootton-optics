@@ -19,15 +19,15 @@ import { SITE } from "@/lib/constants";
 import {
   PRACTICE_EMAIL,
   FROM_ADDRESS,
-  escapeHtml,
   getClientIp,
   isAllowedOrigin,
   isHoneypotFilled,
   getResendClient,
-  emailRowsHtml,
-  hoursListHtml,
-  hoursListText,
 } from "@/lib/resend-mail";
+import {
+  appointmentNotificationEmail,
+  appointmentConfirmationEmail,
+} from "@/lib/email-templates";
 
 const APPOINTMENT_RATE_MAX = 5;
 const APPOINTMENT_RATE_WINDOW_MS = 10 * 60 * 1000;
@@ -45,77 +45,6 @@ const TIME_LABELS: Record<AppointmentInput["preferredTime"], string> = {
   afternoon: "Afternoon (12pm – 4pm)",
   evening: "Late Afternoon (4pm – 6pm)",
 };
-
-function buildNotificationHtml(data: AppointmentInput): string {
-  const service = SERVICE_LABELS[data.service];
-  const time = TIME_LABELS[data.preferredTime];
-  const bodyRows = emailRowsHtml([
-    ["Full name", data.name],
-    ["Email", data.email],
-    ["Phone", data.phone],
-    ["Service", service],
-    ["Preferred date", data.preferredDate],
-    ["Preferred time", time],
-    ["Notes", data.notes?.trim() ? data.notes : "None"],
-  ]);
-
-  return `
-    <div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1f2937;">
-      <h1 style="font-size:18px;color:#0a1f35;margin:0 0 12px;">New appointment request</h1>
-      <p style="margin:0 0 16px;">A visitor requested a booking on ${escapeHtml(SITE.name)}.</p>
-      <table style="border-collapse:collapse;width:100%;max-width:640px;border:1px solid #e5e7eb;">
-        ${bodyRows}
-      </table>
-    </div>
-  `.trim();
-}
-
-function buildNotificationText(data: AppointmentInput): string {
-  return [
-    "New appointment request",
-    "",
-    `Full name: ${data.name}`,
-    `Email: ${data.email}`,
-    `Phone: ${data.phone}`,
-    `Service: ${SERVICE_LABELS[data.service]}`,
-    `Preferred date: ${data.preferredDate}`,
-    `Preferred time: ${TIME_LABELS[data.preferredTime]}`,
-    `Notes: ${data.notes?.trim() ? data.notes : "None"}`,
-  ].join("\n");
-}
-
-function buildConfirmationHtml(data: AppointmentInput): string {
-  return `
-    <div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1f2937;">
-      <p>Dear ${escapeHtml(data.name)},</p>
-      <p>We've received your appointment request for <strong>${escapeHtml(SERVICE_LABELS[data.service])}</strong> on <strong>${escapeHtml(data.preferredDate)}</strong> (${escapeHtml(TIME_LABELS[data.preferredTime])}).</p>
-      <p>Our team will confirm your booking shortly by email or phone.</p>
-      <p>If you need to speak to us sooner, call <strong>${escapeHtml(SITE.phoneDisplay ?? SITE.phone)}</strong>.</p>
-      <p><strong>Opening hours</strong></p>
-      <ul>${hoursListHtml()}</ul>
-      <p style="margin-top:16px;">Kind regards,<br/>${escapeHtml(SITE.name)}<br/>${escapeHtml(SITE.address.full)}</p>
-    </div>
-  `.trim();
-}
-
-function buildConfirmationText(data: AppointmentInput): string {
-  return [
-    `Dear ${data.name},`,
-    "",
-    `We've received your appointment request for ${SERVICE_LABELS[data.service]} on ${data.preferredDate} (${TIME_LABELS[data.preferredTime]}).`,
-    "",
-    "Our team will confirm your booking shortly by email or phone.",
-    "",
-    `If you need to speak to us sooner, call ${SITE.phoneDisplay ?? SITE.phone}.`,
-    "",
-    "Opening hours:",
-    hoursListText(),
-    "",
-    "Kind regards,",
-    SITE.name,
-    SITE.address.full,
-  ].join("\n");
-}
 
 function json<T extends AppointmentApiResponse>(body: T, status: number) {
   return NextResponse.json(body, { status });
@@ -191,14 +120,26 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  const serviceLabel = SERVICE_LABELS[data.service];
+  const timeLabel = TIME_LABELS[data.preferredTime];
+  const notification = appointmentNotificationEmail({
+    name: data.name,
+    email: data.email,
+    phone: data.phone,
+    service: serviceLabel,
+    preferredDate: data.preferredDate,
+    preferredTime: timeLabel,
+    notes: data.notes?.trim() ? data.notes : "None",
+  });
+
   try {
     const { error } = await resend.emails.send({
       from: FROM_ADDRESS,
       to: [PRACTICE_EMAIL],
       replyTo: data.email,
-      subject: `New appointment: ${SERVICE_LABELS[data.service]} — ${data.preferredDate}`,
-      html: buildNotificationHtml(data),
-      text: buildNotificationText(data),
+      subject: `New appointment: ${serviceLabel} — ${data.preferredDate}`,
+      html: notification.html,
+      text: notification.text,
     });
 
     if (error) {
@@ -227,13 +168,20 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  const confirmation = appointmentConfirmationEmail({
+    name: data.name,
+    service: serviceLabel,
+    preferredDate: data.preferredDate,
+    preferredTime: timeLabel,
+  });
+
   try {
     const { error: confirmError } = await resend.emails.send({
       from: FROM_ADDRESS,
       to: [data.email],
       subject: `We've received your appointment request — ${SITE.name}`,
-      html: buildConfirmationHtml(data),
-      text: buildConfirmationText(data),
+      html: confirmation.html,
+      text: confirmation.text,
     });
 
     if (confirmError) {
