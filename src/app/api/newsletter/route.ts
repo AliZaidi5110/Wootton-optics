@@ -9,11 +9,11 @@ import { rateLimit } from "@/lib/rate-limit";
 import {
   PRACTICE_EMAIL,
   FROM_ADDRESS,
-  escapeHtml,
   getClientIp,
   isAllowedOrigin,
   getResendClient,
 } from "@/lib/resend-mail";
+import { newsletterSignupEmail } from "@/lib/email-templates";
 
 export async function POST(request: NextRequest) {
   if (!isAllowedOrigin(request)) {
@@ -36,13 +36,15 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Email not configured" }, { status: 500 });
     }
 
+    const template = newsletterSignupEmail(data.email);
+
     const { error } = await resend.emails.send({
       from: FROM_ADDRESS,
       to: [PRACTICE_EMAIL],
       replyTo: data.email,
       subject: `New newsletter signup: ${data.email}`,
-      html: `<p>New newsletter signup: <strong>${escapeHtml(data.email)}</strong></p>`,
-      text: `New newsletter signup: ${data.email}`,
+      html: template.html,
+      text: template.text,
     });
 
     if (error) {
