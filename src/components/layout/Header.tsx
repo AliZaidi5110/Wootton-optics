@@ -100,18 +100,23 @@ export function Header() {
             </Button>
             <button
               type="button"
-              className="xl:hidden shrink-0 p-2 rounded-lg hover:bg-teal-light min-w-[44px] min-h-[44px] flex items-center justify-center text-navy"
+              className="xl:hidden shrink-0 p-2 rounded-lg hover:bg-teal-light min-w-[44px] min-h-[44px] flex items-center justify-center text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
+              aria-controls="mobile-navigation"
             >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
 
         {mobileOpen && (
-          <nav className="xl:hidden mt-3 pb-4 border-t border-cream-dark pt-3" aria-label="Mobile navigation">
+          <nav
+            id="mobile-navigation"
+            className="xl:hidden mt-3 pb-4 border-t border-cream-dark pt-3"
+            aria-label="Mobile navigation"
+          >
             <div className="flex flex-col gap-1">
               {NAV_LINKS.map((link) => {
                 const active = isNavActive(pathname, link.href);

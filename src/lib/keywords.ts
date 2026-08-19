@@ -25,6 +25,7 @@ export const CORE_KEYWORDS = [
   "free hearing test Northampton",
   "hearing aids Northampton",
   "ear wax removal Northampton",
+  "ear wax removal cost Northampton",
   "microsuction Northampton",
   "audiologist Northampton",
   "designer glasses Northampton",
@@ -175,6 +176,10 @@ export const PAGE_KEYWORDS: Record<string, string[]> = {
     "eye test tips Northamptonshire",
     "myopia advice Northampton",
     "dry eye advice Northampton",
+    "NHS eye test eligibility Northampton",
+    "ear wax removal cost Northampton",
+    "free hearing test guide Northampton",
+    "short sightedness advice Northampton",
   ],
 };
 

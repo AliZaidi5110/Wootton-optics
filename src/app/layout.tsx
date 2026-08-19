@@ -47,10 +47,13 @@ export default function RootLayout({
         <meta name="theme-color" content="#0a1f35" />
       </head>
       <body className={`${sourceSans.className} min-h-screen flex flex-col antialiased`}>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <ThemeProvider>
           <NavigationProvider>
             <Header />
-            <main className="flex-1 pt-[60px] sm:pt-[68px] xl:pt-[72px]">
+            <main id="main-content" className="flex-1 pt-[60px] sm:pt-[68px] xl:pt-[72px]" tabIndex={-1}>
               <PageTransition>{children}</PageTransition>
             </main>
             <Footer />

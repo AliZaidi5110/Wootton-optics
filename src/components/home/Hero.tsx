@@ -1,5 +1,3 @@
-"use client";
-
 import { ArrowRight, Award, Shield } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SITE } from "@/lib/constants";

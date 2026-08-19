@@ -1,34 +1,22 @@
 "use client";
 
 import { useEffect } from "react";
-import { motion, useReducedMotion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 interface PageTransitionProps {
   children: React.ReactNode;
 }
 
+/** Lightweight page change handler — scroll to top without Framer Motion JS cost. */
 export function PageTransition({ children }: PageTransitionProps) {
   const pathname = usePathname();
-  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
-  }, [pathname, prefersReducedMotion]);
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  }, [pathname]);
 
-  if (prefersReducedMotion) {
-    return <div className="page-transition-content">{children}</div>;
-  }
-
-  return (
-    <motion.div
-      key={pathname}
-      className="page-transition-content"
-      initial={{ opacity: 0, scale: 1.02 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-    >
-      {children}
-    </motion.div>
-  );
+  return <div className="page-transition-content animate-page-in">{children}</div>;
 }

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 
 export function BlogPreview() {
-  const posts = getFeaturedPosts();
+  const posts = getFeaturedPosts().slice(0, 3);
 
   return (
     <section className="py-20 bg-white">

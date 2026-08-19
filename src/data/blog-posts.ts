@@ -616,6 +616,251 @@ Visit Wootton Optician & Hearing Care for allergy-season eye and ear health supp
     "2025-04-05",
     ["spring allergies Northampton", "allergic conjunctivitis Wootton Fields", "seasonal eye care Northamptonshire"]
   ),
+  createPost(
+    "nhs-eye-test-northampton-eligibility",
+    "NHS Eye Test Eligibility in Northampton: Who Qualifies and How to Book",
+    "Clear guide to NHS eye test eligibility in Northampton — who gets a free sight test, what to bring, and how to book at Wootton Optician in Wootton Fields.",
+    `If you are searching for an **NHS eye test in Northampton**, the first question is usually the same: am I eligible for a free sight test? This guide explains who qualifies under NHS England rules, what happens at your appointment, and how to book at our independent practice on Wootton Hope Drive.
+
+## Who is eligible for an NHS eye test?
+
+NHS-funded sight tests are available to people who meet specific criteria. Common groups include:
+
+- Children and young people under 16 (and under 19 if in full-time education)
+- People aged 60 and over
+- People diagnosed with diabetes or glaucoma
+- People aged 40+ who are a close relative of someone with glaucoma
+- People registered as sight impaired or severely sight impaired
+- People eligible for certain benefits (for example Income Support, Universal Credit with specific elements, or Pension Credit Guarantee Credit — always check current NHS guidance)
+- People who need complex lenses and qualify for a voucher
+
+Eligibility rules can change. If you are unsure, call us on **01604 875111** and we will help you check before you book.
+
+## NHS eye test vs private eye test in Northampton
+
+An **NHS eye test** covers the clinical sight test when you are eligible. A **private eye test** is available when you are not eligible, or if you prefer a private appointment slot. Both include professional assessment of your vision and eye health. Frames, lenses, and extras are separate unless you hold an NHS optical voucher that contributes toward glasses.
+
+## What to bring to your appointment
+
+- Photo ID if you have it
+- Your current glasses or contact lenses
+- A list of medications and any eye conditions in the family
+- Proof of entitlement if you are claiming an NHS sight test or voucher (letter or documentation as advised)
+
+## What we check during your eye test
+
+At Wootton Optician we assess visual acuity, prescription needs, binocular vision, and signs of common eye conditions. Where appropriate we discuss cataract changes, glaucoma risk factors, and dry eye symptoms. If something needs hospital or specialist follow-up, we explain the next steps clearly — without sales pressure.
+
+## How to book an NHS eye test in Northampton
+
+1. Check eligibility (or ask our reception team)
+2. [Book online](/appointments) or phone **01604 875111**
+3. Visit us at **9 Tudor Court, Wootton Hope Drive, Northampton, NN4 6FF**
+
+Opening hours include weekday appointments and Saturday mornings. Lunchtime closure is 1:00–2:00 PM on full days.
+
+## Related local services
+
+- [NHS eye test Northampton landing page](/nhs-eye-test-northampton)
+- [Eye care in Northampton](/eye-care-northampton)
+- [Myopia management for short-sightedness](/myopia-management-northampton)
+- [Dry eye assessment](/dry-eye-assessment-northampton)
+
+Ready to book? Use our [appointments form](/appointments) or contact the practice — we are happy to advise on NHS eligibility before you visit.`,
+    "eye-care",
+    "clinical",
+    "2026-07-22",
+    [
+      "NHS eye test Northampton",
+      "NHS eye test eligibility Northampton",
+      "free eye test Northampton",
+      "sight test Northampton",
+      "optician Northampton NHS",
+    ],
+    true
+  ),
+  createPost(
+    "ear-wax-removal-cost-northampton",
+    "Ear Wax Removal Cost in Northampton: Microsuction Prices Explained",
+    "Transparent ear wax removal costs in Northampton — £35 one ear, £70 both ears — plus what microsuction involves and when to book at Wootton Hearing Care.",
+    `Blocked ears are uncomfortable and often affect hearing clarity. If you are comparing **ear wax removal cost in Northampton**, here is a straightforward guide to our microsuction pricing and what to expect at Wootton Hearing Care.
+
+## Our ear wax removal prices
+
+At our Wootton Fields practice we charge:
+
+- **£35** for one ear
+- **£70** for both ears
+
+Prices are clear before treatment. We explain findings first and only proceed with your consent.
+
+## Why microsuction is preferred
+
+**Microsuction** uses gentle suction under magnification to remove wax. Compared with older syringing methods, it is precise and suitable for many patients when clinically appropriate. We assess your ears first — if wax removal is not safe or needed that day, we will say so.
+
+## Signs you may need wax removal
+
+- Sudden muffled hearing
+- Feeling of fullness or blockage
+- Ringing that started with a blocked sensation
+- Discomfort after swimming or using cotton buds (we advise against cotton buds)
+
+Not every blocked sensation is wax. A hearing assessment or GP advice may be better first if you have pain, discharge, or recent ear surgery.
+
+## What happens at your appointment
+
+1. Brief history and ear examination
+2. Explanation of findings and price confirmation
+3. Microsuction if appropriate
+4. Aftercare advice
+
+Most visits are short. You can combine wax removal with a [free hearing consultation](/free-hearing-test-northampton) if hearing concerns continue after clearance.
+
+## Book ear wax removal in Northampton
+
+Call **01604 875111** or [book an appointment](/appointments). Find us at **9 Tudor Court, Wootton Hope Drive, Northampton, NN4 6FF**.
+
+## Related guides and pages
+
+- [Ear wax removal Northampton](/ear-wax-removal-northampton)
+- [Free hearing test Northampton](/free-hearing-test-northampton)
+- [Hearing care hub](/hearing)
+- [Hearing aid repairs](/hearing-aid-repairs-northampton)
+
+Clear pricing and careful clinical care — that is how we approach microsuction at Wootton.`,
+    "hearing-health",
+    "daniel",
+    "2026-07-22",
+    [
+      "ear wax removal cost Northampton",
+      "ear wax removal Northampton",
+      "microsuction Northampton",
+      "microsuction cost Northampton",
+      "blocked ear Northampton",
+    ],
+    true
+  ),
+  createPost(
+    "free-hearing-test-northampton-guide",
+    "Free Hearing Test in Northampton: What to Expect at Your Consultation",
+    "What a free hearing test in Northampton involves — assessment steps, no sales pressure, and how to book at Wootton Hearing Care in Wootton Fields.",
+    `Looking for a **free hearing test in Northampton**? At Wootton Hearing Care we offer a free hearing consultation so you can understand your hearing health without pressure to buy aids on the day.
+
+## What “free hearing test” means here
+
+Our free consultation includes a professional discussion of your hearing concerns and an appropriate assessment pathway. We explain results in plain English. If hearing aids could help, we outline options and costs transparently — you decide if and when to proceed.
+
+## Who should book a hearing check?
+
+Consider booking if you:
+
+- Ask people to repeat themselves often
+- Struggle with TV volume or group conversations
+- Notice ringing (tinnitus) or muffled sound
+- Have a family history of hearing loss
+- Recently had wax cleared but hearing still feels reduced
+
+Early assessment helps. Hearing changes are gradual, so friends and family often notice first.
+
+## What happens during your visit
+
+1. **History** — lifestyle, noise exposure, medications, ear health
+2. **Ear check** — look for wax or other visible issues
+3. **Hearing assessment** — clinical testing suited to your needs
+4. **Results discussion** — clear explanation and next steps
+
+If wax is blocking accurate testing, we may recommend [ear wax removal](/ear-wax-removal-northampton) first (priced separately).
+
+## NHS vs private hearing pathways
+
+Some patients are suitable for NHS hearing aid provision via GP referral. Others prefer private technology for faster access, style choice, or features such as Bluetooth. We give honest advice on both routes — see also our blog on NHS and private hearing aids.
+
+## How to book
+
+- Online: [Book an appointment](/appointments)
+- Phone: **01604 875111**
+- Visit: **9 Tudor Court, Wootton Hope Drive, Northampton, NN4 6FF**
+
+## Related pages
+
+- [Free hearing test Northampton](/free-hearing-test-northampton)
+- [Hearing care in Northampton](/hearing)
+- [Hearing aid repairs Northampton](/hearing-aid-repairs-northampton)
+- [Services and pricing overview](/services)
+
+A free consultation is the simplest way to get clarity. Book when it suits you — evenings and Saturday mornings may help if you work weekdays (check our current opening hours when you call).`,
+    "hearing-health",
+    "margaret",
+    "2026-07-20",
+    [
+      "free hearing test Northampton",
+      "hearing test Northampton",
+      "free hearing consultation Northampton",
+      "audiologist Northampton",
+      "hearing assessment Northampton",
+    ],
+    true
+  ),
+  createPost(
+    "myopia-short-sightedness-northampton",
+    "Myopia (Short-Sightedness) in Northampton: Signs, Eye Tests and Management",
+    "Understand myopia and short-sightedness in Northampton — symptoms, children’s eye care, glasses and contact options, and myopia management at Wootton Optician.",
+    `**Myopia** (short-sightedness) means distant objects look blurred while near tasks are often clearer. It is one of the most common reasons people book an **eye test in Northampton**. This guide covers signs, what we check, and how we support children and adults at Wootton Optician.
+
+## Common signs of short-sightedness
+
+- Squinting to see road signs, boards, or the TV
+- Sitting closer to screens
+- Headaches after distance work
+- Children struggling at school with board work
+
+Only a professional sight test confirms myopia and rules out other causes of blur.
+
+## Why regular eye tests matter
+
+Myopia often starts in childhood and can progress through the teenage years. Regular tests track prescription changes and eye health. Adults with myopia still need checks for conditions that become more common with age.
+
+Book via our [appointments page](/appointments) or call **01604 875111**.
+
+## Glasses, contact lenses and lifestyle
+
+Corrective options include single-vision distance glasses, contact lenses where suitable, and advice on visual habits (breaks from near work, outdoor time for children where practical). We fit and dispense at our Wootton Fields practice and can discuss varifocals later in life if near vision also changes (**presbyopia**).
+
+## Myopia management for children
+
+For some children, **myopia management** strategies aim to slow progression in addition to correcting vision. Suitability depends on age, prescription, and clinical findings. Learn more on our dedicated page: [Myopia management Northampton](/myopia-management-northampton).
+
+## Related eye conditions we assess
+
+During eye examinations we may also discuss astigmatism, long-sightedness, dry eye symptoms, and screening conversations around cataract or glaucoma risk where relevant — with referral when needed.
+
+## Local next steps
+
+1. Book an eye test (NHS if eligible, or private)
+2. Bring current glasses and any school or workplace concerns
+3. Ask about myopia management if your child is becoming more short-sighted year on year
+
+## Useful links
+
+- [Myopia management Northampton](/myopia-management-northampton)
+- [Eye care Northampton](/eye-care-northampton)
+- [NHS eye test eligibility](/blog/nhs-eye-test-northampton-eligibility)
+- [NHS eye test landing page](/nhs-eye-test-northampton)
+- [Optics / eye care hub](/optics)
+
+Clear vision starts with an accurate test. Visit **9 Tudor Court, Wootton Hope Drive, Northampton, NN4 6FF** — family-run care since 2003.`,
+    "eye-care",
+    "sarah",
+    "2026-07-18",
+    [
+      "myopia Northampton",
+      "short sightedness Northampton",
+      "myopia management Northampton",
+      "short sighted children Northampton",
+      "eye test Northampton myopia",
+    ],
+    true
+  ),
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
