@@ -1,5 +1,5 @@
 /**
- * POST /api/appointments — booking form handler for Wootton Optician & Hearing Care.
+ * POST /api/appointments — booking form handler for Wootton Opticians & Hearing Care.
  *
  * - Validates with Zod; emails Admin@ via Resend + customer confirmation
  * - Rate limit: 5 / IP / 10 minutes (in-memory)

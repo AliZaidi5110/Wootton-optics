@@ -61,7 +61,7 @@ export default function OpticsPage() {
                 Optical services overview
               </h3>
               <p className="text-navy/85 leading-relaxed mb-6">
-                Wootton Optician provides thorough eye examinations, expert frame
+                Wootton Opticians provides thorough eye examinations, expert frame
                 styling, and the latest lens technology. Whether you need a routine
                 eye test, new prescription glasses, or contact lenses, our Northampton
                 team delivers exceptional optical services.

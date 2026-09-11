@@ -49,7 +49,7 @@ export function Header() {
           <Link
             href="/"
             className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1 overflow-hidden"
-            aria-label="Wootton Optician and Hearing Care home"
+            aria-label="Wootton Opticians and Hearing Care home"
           >
             <BrandMark />
             <div className="min-w-0 overflow-hidden">
@@ -57,7 +57,7 @@ export function Header() {
                 Wootton
               </p>
               <p className="hidden min-[400px]:block text-[11px] sm:text-xs text-charcoal leading-tight whitespace-nowrap truncate mt-0.5 max-w-[11rem] min-[480px]:max-w-none sm:max-w-[14rem] md:max-w-none">
-                Optician &amp; Hearing Care
+                Opticians &amp; Hearing Care
               </p>
             </div>
           </Link>

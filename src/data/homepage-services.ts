@@ -1,11 +1,11 @@
 import type { DetailedService } from "@/types";
 
 export const opticsIntro = {
-  name: "Wootton Optician",
+  name: "Wootton Opticians",
   established: 2003,
-  headline: "Wootton Optician",
+  headline: "Wootton Opticians",
   description:
-    "Established in 2003, Wootton Optician provides NHS and private sight tests, specialist contact lenses, dry eye assessment, myopia management, glaucoma screening, and children's eye examinations — with the personalised care of an independent practice.",
+    "Established in 2003, Wootton Opticians provides NHS and private sight tests, specialist contact lenses, dry eye assessment, myopia management, glaucoma screening, and children's eye examinations — with the personalised care of an independent practice.",
 };
 
 export const hearingIntro = {

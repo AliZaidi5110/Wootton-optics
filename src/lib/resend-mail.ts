@@ -7,7 +7,7 @@ export const PRACTICE_EMAIL = SITE.email;
 
 // Verify woottonopticianshearingcare.co.uk in Resend before going live:
 // https://resend.com/domains
-export const FROM_ADDRESS = `Wootton Optician & Hearing Care <${PRACTICE_EMAIL}>`;
+export const FROM_ADDRESS = `Wootton Opticians & Hearing Care <${PRACTICE_EMAIL}>`;
 
 export function escapeHtml(value: string): string {
   return value

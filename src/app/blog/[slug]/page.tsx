@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props) {
     path: `/blog/${post.slug}`,
     image: IMAGES.clinic,
     keywords: keywordsFromTags(post.tags, [
+      "Wootton Opticians",
       "Wootton Optician",
       "Northampton",
       getCategoryLabel(post.category),

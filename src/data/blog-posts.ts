@@ -3,19 +3,19 @@ import type { BlogPost } from "@/types";
 const authors = {
   clinical: {
     name: "Wootton Clinical Team",
-    bio: "Qualified audiologists and dispensing opticians at Wootton Optician & Hearing Care, Northampton.",
+    bio: "Qualified audiologists and dispensing opticians at Wootton Opticians & Hearing Care, Northampton.",
   },
   margaret: {
     name: "Wootton Clinical Team",
-    bio: "Qualified audiologists and dispensing opticians at Wootton Optician & Hearing Care, Northampton.",
+    bio: "Qualified audiologists and dispensing opticians at Wootton Opticians & Hearing Care, Northampton.",
   },
   daniel: {
     name: "Wootton Clinical Team",
-    bio: "Qualified audiologists and dispensing opticians at Wootton Optician & Hearing Care, Northampton.",
+    bio: "Qualified audiologists and dispensing opticians at Wootton Opticians & Hearing Care, Northampton.",
   },
   sarah: {
     name: "Wootton Clinical Team",
-    bio: "Qualified audiologists and dispensing opticians at Wootton Optician & Hearing Care, Northampton.",
+    bio: "Qualified audiologists and dispensing opticians at Wootton Opticians & Hearing Care, Northampton.",
   },
 };
 
@@ -514,7 +514,7 @@ Wootton Opticians provides compassionate eye care for seniors in Northamptonshir
 A Mediterranean-style diet rich in vegetables, fish, whole grains, and healthy fats supports overall health including sensory function. Stay hydrated and limit processed foods.
 
 ## The Bigger Picture
-Nutrition complements but does not replace regular hearing and eye examinations. Book your check-ups at Wootton Optician & Hearing Care, Wootton Fields.`,
+Nutrition complements but does not replace regular hearing and eye examinations. Book your check-ups at Wootton Opticians & Hearing Care, Wootton Fields.`,
     "wellness",
     "margaret",
     "2025-03-30",
@@ -610,7 +610,7 @@ Eustachian tube inflammation causes fullness, popping, and temporary hearing cha
 ## When to Seek Help
 Symptoms persisting beyond allergy season, significant hearing changes, or eye pain require professional assessment. Our Wootton Fields team can distinguish allergy symptoms from other conditions requiring treatment.
 
-Visit Wootton Optician & Hearing Care for allergy-season eye and ear health support.`,
+Visit Wootton Opticians & Hearing Care for allergy-season eye and ear health support.`,
     "wellness",
     "sarah",
     "2025-04-05",
@@ -619,7 +619,7 @@ Visit Wootton Optician & Hearing Care for allergy-season eye and ear health supp
   createPost(
     "nhs-eye-test-northampton-eligibility",
     "NHS Eye Test Eligibility in Northampton: Who Qualifies and How to Book",
-    "Clear guide to NHS eye test eligibility in Northampton — who gets a free sight test, what to bring, and how to book at Wootton Optician in Wootton Fields.",
+    "Clear guide to NHS eye test eligibility in Northampton — who gets a free sight test, what to bring, and how to book at Wootton Opticians in Wootton Fields.",
     `If you are searching for an **NHS eye test in Northampton**, the first question is usually the same: am I eligible for a free sight test? This guide explains who qualifies under NHS England rules, what happens at your appointment, and how to book at our independent practice on Wootton Hope Drive.
 
 ## Who is eligible for an NHS eye test?
@@ -649,7 +649,7 @@ An **NHS eye test** covers the clinical sight test when you are eligible. A **pr
 
 ## What we check during your eye test
 
-At Wootton Optician we assess visual acuity, prescription needs, binocular vision, and signs of common eye conditions. Where appropriate we discuss cataract changes, glaucoma risk factors, and dry eye symptoms. If something needs hospital or specialist follow-up, we explain the next steps clearly — without sales pressure.
+At Wootton Opticians we assess visual acuity, prescription needs, binocular vision, and signs of common eye conditions. Where appropriate we discuss cataract changes, glaucoma risk factors, and dry eye symptoms. If something needs hospital or specialist follow-up, we explain the next steps clearly — without sales pressure.
 
 ## How to book an NHS eye test in Northampton
 
@@ -804,8 +804,8 @@ A free consultation is the simplest way to get clarity. Book when it suits you �
   createPost(
     "myopia-short-sightedness-northampton",
     "Myopia (Short-Sightedness) in Northampton: Signs, Eye Tests and Management",
-    "Understand myopia and short-sightedness in Northampton — symptoms, children’s eye care, glasses and contact options, and myopia management at Wootton Optician.",
-    `**Myopia** (short-sightedness) means distant objects look blurred while near tasks are often clearer. It is one of the most common reasons people book an **eye test in Northampton**. This guide covers signs, what we check, and how we support children and adults at Wootton Optician.
+    "Understand myopia and short-sightedness in Northampton — symptoms, children’s eye care, glasses and contact options, and myopia management at Wootton Opticians.",
+    `**Myopia** (short-sightedness) means distant objects look blurred while near tasks are often clearer. It is one of the most common reasons people book an **eye test in Northampton**. This guide covers signs, what we check, and how we support children and adults at Wootton Opticians.
 
 ## Common signs of short-sightedness
 

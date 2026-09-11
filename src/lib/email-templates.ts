@@ -188,7 +188,7 @@ function brandedEmailShell(options: {
           <tr>
             <td style="background-color:${BRAND.navyDeep};padding:16px 20px;border-bottom:3px solid ${BRAND.primary};">
               <p style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:18px;line-height:1.3;font-weight:700;color:${BRAND.white};">
-                Wootton Optician &amp; Hearing Care
+                Wootton Opticians &amp; Hearing Care
               </p>
               <p style="margin:4px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#9ad7e4;">
                 Northampton · Independent family practice
@@ -279,7 +279,7 @@ export function contactNotificationEmail(data: {
   });
 
   const text = [
-    "New website enquiry — Wootton Optician & Hearing Care",
+    "New website enquiry — Wootton Opticians & Hearing Care",
     "",
     `Full name: ${data.fullName}`,
     `Email: ${data.email}`,
@@ -314,7 +314,7 @@ export function contactConfirmationEmail(fullName: string): { html: string; text
     title: "We've received your message",
     introHtml: `
       <p style="margin:0 0 8px;">Dear ${escapeHtml(fullName)},</p>
-      <p style="margin:0 0 8px;">Thank you for contacting Wootton Optician &amp; Hearing Care. We've received your message and will be in touch shortly.</p>
+      <p style="margin:0 0 8px;">Thank you for contacting Wootton Opticians &amp; Hearing Care. We've received your message and will be in touch shortly.</p>
       <p style="margin:0;">If your enquiry is urgent, please call us on <a href="tel:${escapeHtml(tel)}" style="color:${BRAND.primary};font-weight:700;text-decoration:none;">${escapeHtml(phone)}</a>.</p>
     `,
     bodyHtml,
@@ -391,7 +391,7 @@ export function appointmentNotificationEmail(data: {
   });
 
   const textLines = [
-    "New appointment request — Wootton Optician & Hearing Care",
+    "New appointment request — Wootton Opticians & Hearing Care",
     "",
     `Full name: ${data.name}`,
     `Email: ${data.email}`,
@@ -484,7 +484,7 @@ export function newsletterSignupEmail(email: string): { html: string; text: stri
   });
 
   const text = [
-    "New newsletter signup — Wootton Optician & Hearing Care",
+    "New newsletter signup — Wootton Opticians & Hearing Care",
     "",
     `Email: ${email}`,
     "",

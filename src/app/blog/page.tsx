@@ -12,7 +12,7 @@ export const revalidate = 86400;
 export const metadata = generateSEO({
   title: "Eye & Hearing Advice Northampton | Blog | Wootton",
   description:
-    "Expert eye care and hearing health advice from Wootton Optician & Hearing Care in Northampton — eye tests, hearing aids, dry eyes, myopia and more.",
+    "Expert eye care and hearing health advice from Wootton Opticians & Hearing Care in Northampton — eye tests, hearing aids, dry eyes, myopia and more.",
   path: "/blog",
   image: IMAGES.clinic,
   keywords: pageKeywords("blog"),

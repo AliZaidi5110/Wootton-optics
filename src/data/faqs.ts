@@ -3,9 +3,9 @@ import type { FAQ } from "@/types";
 export const faqs: FAQ[] = [
   {
     category: "general",
-    question: "Where is Wootton Optician & Hearing Care located?",
+    question: "Where is Wootton Opticians & Hearing Care located?",
     answer:
-      "Wootton Optician & Hearing Care is at 9 Tudor Court, Wootton Hope Drive, Northampton, NN4 6FF. We serve patients across Northampton, Wootton Fields, Hardingstone, Collingtree, and wider Northamptonshire. Free parking is available nearby — call 01604 875111 for directions.",
+      "Wootton Opticians & Hearing Care is at 9 Tudor Court, Wootton Hope Drive, Northampton, NN4 6FF. We serve patients across Northampton, Wootton Fields, Hardingstone, Collingtree, and wider Northamptonshire. Free parking is available nearby — call 01604 875111 for directions.",
   },
   {
     category: "hearing",
@@ -29,7 +29,7 @@ export const faqs: FAQ[] = [
     category: "optics",
     question: "Do you offer NHS eye tests in Northampton?",
     answer:
-      "Yes. Wootton Optician provides NHS sight tests funded for eligible patients in Northampton. Eligibility typically includes children under 16, people over 60, those with diabetes or glaucoma risk, and patients on certain benefits. We also accept NHS optical vouchers toward glasses.",
+      "Yes. Wootton Opticians provides NHS sight tests funded for eligible patients in Northampton. Eligibility typically includes children under 16, people over 60, those with diabetes or glaucoma risk, and patients on certain benefits. We also accept NHS optical vouchers toward glasses.",
   },
   {
     category: "optics",
@@ -47,13 +47,13 @@ export const faqs: FAQ[] = [
     category: "optics",
     question: "Do you accept NHS vouchers for glasses?",
     answer:
-      "Yes, we accept NHS optical vouchers at Wootton Optician in Northampton. Bring your voucher to the practice and our team will help you choose frames covered by the voucher, with optional upgrades for lenses and frames if you prefer.",
+      "Yes, we accept NHS optical vouchers at Wootton Opticians in Northampton. Bring your voucher to the practice and our team will help you choose frames covered by the voucher, with optional upgrades for lenses and frames if you prefer.",
   },
   {
     category: "optics",
     question: "What is myopia management for children in Northampton?",
     answer:
-      "Myopia management slows the progression of short-sightedness in children using specialist contact lenses or spectacle lenses. At Wootton Optician we assess suitability, create a monitoring plan, and support long-term eye health for families across Northampton and Wootton Fields.",
+      "Myopia management slows the progression of short-sightedness in children using specialist contact lenses or spectacle lenses. At Wootton Opticians we assess suitability, create a monitoring plan, and support long-term eye health for families across Northampton and Wootton Fields.",
   },
   {
     category: "optics",

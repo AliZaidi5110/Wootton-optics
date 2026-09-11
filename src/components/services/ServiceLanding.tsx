@@ -68,7 +68,7 @@ export function ServiceLanding({
         backgroundImages={[
           {
             src: IMAGES.clinic,
-            alt: `${title} at Wootton Optician & Hearing Care clinic, Northampton`,
+            alt: `${title} at Wootton Opticians & Hearing Care clinic, Northampton`,
           },
         ]}
       />

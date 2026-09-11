@@ -1,6 +1,6 @@
-# Wootton Hearing & Optics
+# Wootton Opticians & Hearing Care
 
-Professional website for **Wootton Hearing Care Ltd** and **Wootton Optics** — a family-run hearing and optical services business in Ilford, Essex, UK.
+Professional website for **Wootton Opticians** and **Wootton Hearing Care Ltd** — an independent, family-run opticians and hearing care practice in Wootton, Northampton, UK.
 
 ## Tech Stack
 

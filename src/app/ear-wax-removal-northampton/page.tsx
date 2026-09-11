@@ -11,7 +11,7 @@ const path = "/ear-wax-removal-northampton";
 export const metadata = generateSEO({
   title: "Ear Wax Removal Northampton | From £35 | Wootton",
   description:
-    "Professional microsuction ear wax removal in Northampton from £35 per ear or £70 for both. No referral needed at Wootton Optician & Hearing Care.",
+    "Professional microsuction ear wax removal in Northampton from £35 per ear or £70 for both. No referral needed at Wootton Opticians & Hearing Care.",
   path,
   image: IMAGES.clinic,
   keywords: pageKeywords("ear-wax-removal-northampton"),
@@ -30,7 +30,7 @@ export default function EarWaxRemovalNorthamptonPage() {
         { label: "Ear Wax Removal" },
       ]}
       intro={[
-        `If you have blocked ears, muffled hearing, or wax affecting your hearing aids, professional ear wax removal in Northampton is available at Wootton Optician & Hearing Care without a GP referral.`,
+        `If you have blocked ears, muffled hearing, or wax affecting your hearing aids, professional ear wax removal in Northampton is available at Wootton Opticians & Hearing Care without a GP referral.`,
         `We use safe microsuction methods performed by trained clinicians. Appointments are typically quick, with clear pricing and no hidden fees — ideal if cotton buds or home remedies have not helped.`,
       ]}
       whoFor={[
@@ -59,7 +59,7 @@ export default function EarWaxRemovalNorthamptonPage() {
         "@type": "Service",
         name: "Ear Wax Removal Northampton",
         description:
-          "Professional microsuction ear wax removal at Wootton Optician & Hearing Care, Northampton.",
+          "Professional microsuction ear wax removal at Wootton Opticians & Hearing Care, Northampton.",
         url: `${SITE.url}${path}`,
         provider: { "@id": `${SITE.url}/#organization` },
         areaServed: { "@type": "City", name: "Northampton" },
@@ -81,7 +81,7 @@ export default function EarWaxRemovalNorthamptonPage() {
       faqItems={[
         {
           question: "How much does ear wax removal cost in Northampton?",
-          answer: `At Wootton Optician & Hearing Care, ear wax removal costs £${EAR_WAX_PRICING.oneEar} for one ear or £${EAR_WAX_PRICING.bothEars} for both ears. No GP referral is needed.`,
+          answer: `At Wootton Opticians & Hearing Care, ear wax removal costs £${EAR_WAX_PRICING.oneEar} for one ear or £${EAR_WAX_PRICING.bothEars} for both ears. No GP referral is needed.`,
         },
         {
           question: "Do I need a referral for ear wax removal?",

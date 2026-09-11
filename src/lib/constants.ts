@@ -1,7 +1,7 @@
 export const SITE = {
-  name: "Wootton Optician & Hearing Care",
+  name: "Wootton Opticians & Hearing Care",
   hearingName: "Wootton Hearing Care Ltd",
-  opticsName: "Wootton Optician",
+  opticsName: "Wootton Opticians",
   tagline: "Personalised care. Quality you deserve. Family you trust.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ||

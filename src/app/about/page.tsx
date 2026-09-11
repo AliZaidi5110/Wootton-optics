@@ -46,7 +46,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        title="About Wootton Optician & Hearing Care"
+        title="About Wootton Opticians & Hearing Care"
         subtitle="An independent, family-run practice dedicated to helping you hear and see the world more clearly."
         currentPath="/about"
         breadcrumbs={[
@@ -56,7 +56,7 @@ export default function AboutPage() {
         backgroundImages={[
           {
             src: IMAGES.clinic,
-            alt: "Wootton Optician & Hearing Care clinic in Northampton",
+            alt: "Wootton Opticians & Hearing Care clinic in Northampton",
           },
         ]}
       />
@@ -88,7 +88,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src={IMAGES.clinic}
-                  alt="Wootton Optician and Wootton Hearing Care clinic storefront in Northampton"
+                  alt="Wootton Opticians and Wootton Hearing Care clinic storefront in Northampton"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -96,7 +96,7 @@ export default function AboutPage() {
               </div>
               <div className="bg-navy-deep p-6 text-center">
                 <p className="font-heading text-xl font-bold text-white mb-1">
-                  Wootton Optician &amp; Hearing Care
+                  Wootton Opticians &amp; Hearing Care
                 </p>
                 <p className="text-white/80 text-sm mb-3">Independent family practice</p>
                 <p className="flex items-center justify-center gap-2 text-sm text-white/75">

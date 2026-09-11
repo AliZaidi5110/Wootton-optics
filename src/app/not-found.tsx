@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button";
 
 export const metadata = generateSEO({
   title: "Page Not Found",
-  description: "The page you are looking for could not be found. Visit Wootton Optician & Hearing Care in Northampton.",
+  description: "The page you are looking for could not be found. Visit Wootton Opticians & Hearing Care in Northampton.",
   path: "/404",
   noIndex: true,
 });

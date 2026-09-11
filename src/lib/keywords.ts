@@ -1,5 +1,5 @@
 /**
- * Sitewide SEO keyword map for Wootton Optician & Hearing Care (Northampton).
+ * Sitewide SEO keyword map for Wootton Opticians & Hearing Care (Northampton).
  *
  * Built from:
  * - Local service intent (eye tests, hearing, wax removal)
@@ -34,6 +34,7 @@ export const CORE_KEYWORDS = [
   "long sightedness Northampton",
   "astigmatism optician Northampton",
   "presbyopia Northampton",
+  "Wootton Opticians",
   "Wootton Optician",
   "Wootton Hearing Care",
   "optician Wootton Fields",
@@ -94,6 +95,7 @@ export const PAGE_KEYWORDS: Record<string, string[]> = {
   about: [
     "family optician Northampton",
     "independent optician Northampton",
+    "Wootton Opticians",
     "Wootton Optician",
     "Wootton Hearing Care",
     "optician Wootton Fields",
@@ -101,6 +103,7 @@ export const PAGE_KEYWORDS: Record<string, string[]> = {
   ],
   contact: [
     "contact optician Northampton",
+    "Wootton Opticians phone",
     "Wootton Optician phone",
     "hearing clinic Northampton",
     "book eye test Northampton",

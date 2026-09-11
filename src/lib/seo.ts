@@ -114,7 +114,7 @@ const CORE_SERVICES = [
   {
     name: "Private Sight Test",
     description:
-      "Extended private eye examinations with digital retinal imaging at Wootton Optician, Northampton.",
+      "Extended private eye examinations with digital retinal imaging at Wootton Opticians, Northampton.",
     url: `${SITE.url}/eye-care-northampton`,
     price: "55",
     priceCurrency: "GBP",
@@ -153,7 +153,7 @@ export function localBusinessSchema() {
     "@type": ["MedicalBusiness", "Optician", "LocalBusiness"],
     "@id": `${SITE.url}/#organization`,
     name: SITE.name,
-    alternateName: [SITE.hearingName, SITE.opticsName, "Wootton Opticians", "Wootton Hearing Care"],
+    alternateName: [SITE.hearingName, SITE.opticsName, "Wootton Optician", "Wootton Hearing Care"],
     url: SITE.url,
     logo: `${SITE.url}${DEFAULT_OG_IMAGE}`,
     image: `${SITE.url}${DEFAULT_OG_IMAGE}`,
