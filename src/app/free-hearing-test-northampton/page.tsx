@@ -34,18 +34,18 @@ export default function FreeHearingTestNorthamptonPage() {
         "Your visit includes audiometric assessment and clear recommendations with no sales pressure. You decide whether hearing aids or further care is right for you.",
       ]}
       whoFor={[
-        "Adults noticing hearing changes or difficulty in groups",
+        "Adults aged 19 and over noticing hearing changes or difficulty in groups",
         "People over 50 wanting peace of mind",
-        "Anyone struggling with TV volume or phone calls",
-        "Family members concerned about a loved one’s hearing",
+        "Anyone aged 19+ struggling with TV volume or phone calls",
+        "Family members concerned about an adult loved one’s hearing",
       ]}
       benefits={[
-        "Free initial consultation",
+        "Free initial consultation for adults aged 19+",
         "Full hearing assessment explained clearly",
         "Honest, independent advice",
         "No obligation to purchase",
       ]}
-      pricingNote="Pricing: Free initial consultation"
+      pricingNote="Pricing: Free initial consultation (Ages 19+ only — we do not test children under 19)"
       ctaHref="/appointments?service=hearing-test"
       ctaLabel="Book Free Hearing Test"
       relatedLinks={[
@@ -79,6 +79,11 @@ export default function FreeHearingTestNorthamptonPage() {
           question: "Is a hearing screening the same as a full hearing test?",
           answer:
             "A screening is a quick check. A full consultation includes comprehensive audiometry, lifestyle discussion, and detailed recommendations.",
+        },
+        {
+          question: "Do you offer hearing tests or screening for children under 19?",
+          answer:
+            "No. At Wootton Hearing Care, we do not provide hearing screening or tests for children under 19. Our hearing services are exclusively for adults aged 19 and over. If you are concerned about a child's hearing, please speak to your GP or local NHS paediatric audiology service.",
         },
       ]}
     />

@@ -74,6 +74,12 @@ export const faqs: FAQ[] = [
       "A hearing screening is a quick, free check to see whether further assessment is needed. A full hearing consultation at our Northampton clinic includes comprehensive audiometry, lifestyle discussion, and clear recommendations with no sales pressure.",
   },
   {
+    category: "hearing",
+    question: "Do you offer hearing tests or screening for children under 19?",
+    answer:
+      "No. At Wootton Hearing Care, we do not do hearing screening or tests for children under 19. Our hearing assessments and consultations are exclusively for adults aged 19 and over. If you have concerns about a child's hearing, please contact your GP or local NHS paediatric audiology service.",
+  },
+  {
     category: "general",
     question: "What are your opening hours?",
     answer:

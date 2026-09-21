@@ -61,7 +61,7 @@ export default function HearingPage() {
               </p>
               <div className="space-y-4">
                 {[
-                  "Free initial hearing consultation — no obligation",
+                  "Free initial hearing consultation for adults aged 19+ (we do not test children under 19)",
                   "All major hearing aid brands available",
                   "Custom programming and fitting",
                   "Rechargeable and Bluetooth-enabled options",
@@ -109,6 +109,8 @@ export default function HearingPage() {
           <p className="text-center text-white/90 max-w-2xl mx-auto mb-12">
             A comprehensive hearing assessment takes approximately 60 minutes and
             includes several tests to build a complete picture of your hearing health.
+            Please note that our hearing tests and screenings are for adults aged 19
+            and over (we do not test children under 19).
           </p>
           <div className="grid md:grid-cols-4 gap-6">
             {[

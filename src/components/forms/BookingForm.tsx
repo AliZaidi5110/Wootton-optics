@@ -312,9 +312,9 @@ export function BookingForm() {
             className={`${inputClass} ${showError("service") ? invalidClass : ""}`}
             disabled={isLoading}
           >
-            <option value="hearing-test">Hearing Test</option>
+            <option value="hearing-test">Hearing Test (Ages 19+)</option>
             <option value="ear-wax-removal">Ear Wax Removal</option>
-            <option value="hearing-aid">Hearing Aid Consultation</option>
+            <option value="hearing-aid">Hearing Aid Consultation (Ages 19+)</option>
             <option value="eye-test">Eye Test</option>
             <option value="optical">Optical Consultation</option>
           </select>
@@ -322,6 +322,12 @@ export function BookingForm() {
             <p className={errorTextClass} role="alert">
               {fieldErrors.service}
             </p>
+          )}
+          {(form.service === "hearing-test" || form.service === "hearing-aid") && (
+            <div className="mt-2.5 rounded-xl border border-sky/60 bg-sky/30 px-3.5 py-2.5 text-xs text-navy/85 leading-relaxed">
+              <strong className="text-primary font-semibold">Age requirement:</strong>{" "}
+              Hearing tests and consultations are available for adults aged 19 and over only. We do not do hearing screening or tests for children under 19. For children&apos;s hearing assessments, please consult your GP.
+            </div>
           )}
         </div>
       </div>

@@ -104,13 +104,14 @@ export const services: Service[] = [
   },
   {
     id: "free-hearing-screening",
-    title: "Free Hearing Screenings",
+    title: "Free Hearing Screenings (Ages 19+)",
     description:
-      "Quick, no-obligation hearing checks to identify whether a full assessment is needed.",
+      "Quick, no-obligation hearing checks for adults aged 19 and over to identify whether a full assessment is needed. (We do not test children under 19).",
     icon: "ear",
     href: "/free-hearing-test-northampton",
     features: [
       "Completely free",
+      "For adults aged 19 and over",
       "15–20 minute appointment",
       "Clear results on the day",
       "No obligation",
@@ -119,13 +120,13 @@ export const services: Service[] = [
   },
   {
     id: "free-hearing-consultation",
-    title: "Free Hearing Consultations",
+    title: "Free Hearing Consultations (Ages 19+)",
     description:
-      "Comprehensive audiometric assessment and honest advice from qualified audiologists.",
+      "Comprehensive audiometric assessment and honest advice from qualified audiologists for adults aged 19 and over. (We do not test children under 19).",
     icon: "ear",
     href: "/free-hearing-test-northampton",
     features: [
-      "Full hearing assessment",
+      "Full hearing assessment (19+)",
       "Lifestyle discussion",
       "Transparent recommendations",
       "No sales pressure",

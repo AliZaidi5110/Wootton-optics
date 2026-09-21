@@ -2,8 +2,8 @@ import { Ear, Stethoscope, Sparkles, Volume2, Wrench, Check } from "lucide-react
 import { Button } from "@/components/ui/Button";
 
 const features = [
-  { icon: Ear, label: "Free Hearing Screenings", color: "text-primary bg-sky" },
-  { icon: Stethoscope, label: "Free Consultations", color: "text-fresh bg-mint/40" },
+  { icon: Ear, label: "Free Screenings (Ages 19+)", color: "text-primary bg-sky" },
+  { icon: Stethoscope, label: "Free Consultations (19+)", color: "text-fresh bg-mint/40" },
   { icon: Sparkles, label: "Ear Wax Removal", color: "text-accent bg-coral/20" },
   { icon: Volume2, label: "Hearing Aid Supply", color: "text-gold bg-gold/15" },
   { icon: Wrench, label: "Maintenance & Repairs", color: "text-sunny bg-sunny/20" },
@@ -19,9 +19,10 @@ export function HearingCareSection() {
               Wootton Hearing — Sound Clarity
             </h2>
             <p className="text-muted text-lg mb-8 leading-relaxed">
-              Wootton Hearing Care provides free hearing screenings, free consultations, safe
-              ear wax removal, and expert supply, fitting, and maintenance of hearing aids —
-              with honest advice and no pressure.
+              Wootton Hearing Care provides free hearing screenings and consultations for adults
+              aged 19 and over, safe ear wax removal, and expert supply, fitting, and maintenance
+              of hearing aids — with honest advice and no pressure. (Please note: we do not test
+              children under 19).
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {features.map((f) => (
@@ -44,8 +45,8 @@ export function HearingCareSection() {
               </div>
               <ul className="space-y-3">
                 {[
-                  "Free hearing screenings",
-                  "Free hearing consultations",
+                  "Free hearing screenings (ages 19+)",
+                  "Free hearing consultations (ages 19+)",
                   "Ear wax removal",
                   "Hearing aid supply & maintenance",
                 ].map((item) => (

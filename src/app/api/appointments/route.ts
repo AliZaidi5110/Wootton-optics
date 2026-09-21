@@ -33,9 +33,9 @@ const APPOINTMENT_RATE_MAX = 5;
 const APPOINTMENT_RATE_WINDOW_MS = 10 * 60 * 1000;
 
 const SERVICE_LABELS: Record<AppointmentInput["service"], string> = {
-  "hearing-test": "Hearing Test",
+  "hearing-test": "Hearing Test (Ages 19+)",
   "ear-wax-removal": "Ear Wax Removal",
-  "hearing-aid": "Hearing Aid Consultation",
+  "hearing-aid": "Hearing Aid Consultation (Ages 19+)",
   "eye-test": "Eye Test",
   optical: "Optical Consultation",
 };

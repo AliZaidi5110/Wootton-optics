@@ -126,7 +126,7 @@ Watching mouths rather than making eye contact suggests compensatory behaviour f
 ## 10. It Has Been Over Two Years Since Your Last Test
 Even without symptoms, regular hearing checks after age 50 are recommended.
 
-Our free hearing consultations in Wootton Fields take just 60 minutes and could change your life. Book online or call 01604 875111 today.`,
+Our free hearing consultations in Wootton Fields take just 60 minutes and could change your life. Please note that hearing tests at Wootton Hearing Care are for adults aged 19 and over (we do not test children under 19). Book online or call 01604 875111 today.`,
     "hearing-health",
     "sarah",
     "2025-05-10",
@@ -220,17 +220,19 @@ Not responding to their name by 12 months, delayed speech development, speaking 
 ## Common Childhood Hearing Issues
 **Glue ear (otitis media with effusion):** Fluid buildup behind the eardrum, extremely common in young children. **Ear infections:** Recurrent infections can affect hearing temporarily or permanently. **Congenital hearing loss:** Present from birth, often genetic.
 
-## When to Test
-If you have concerns at any age, do not wait. Our Wootton Fields practice offers paediatric hearing assessments in a child-friendly environment.
+## When to Seek Help
+If you have concerns about your child's hearing, do not wait — speak with your GP, health visitor, or school nurse for a referral to an NHS paediatric audiology service.
+
+**Please note: At Wootton Hearing Care, we do not do hearing screening or tests for children under 19.** Our hearing assessments and consultations are exclusively for adults aged 19 and over.
 
 ## Protecting Young Ears
 Limit headphone volume to 60% maximum, ensure regular hearing breaks, use volume-limiting headphones, and protect ears at loud events with child-sized ear defenders.
 
-Contact Wootton Hearing Care for children's hearing assessments in Northamptonshire.`,
+For adult hearing assessments (ages 19+) in Northampton, contact Wootton Hearing Care. For children's hearing concerns, please consult your GP or NHS paediatric services.`,
     "hearing-health",
     "sarah",
     "2025-03-20",
-    ["children hearing Northampton", "paediatric audiology Wootton Fields", "glue ear Northamptonshire"]
+    ["children hearing health", "paediatric audiology guidance", "glue ear Northamptonshire"]
   ),
   createPost(
     "hearing-aids-vs-amplifiers",
@@ -752,13 +754,15 @@ Our free consultation includes a professional discussion of your hearing concern
 
 ## Who should book a hearing check?
 
-Consider booking if you:
+Consider booking if you are aged 19 or over and:
 
 - Ask people to repeat themselves often
 - Struggle with TV volume or group conversations
 - Notice ringing (tinnitus) or muffled sound
 - Have a family history of hearing loss
 - Recently had wax cleared but hearing still feels reduced
+
+*(Please note: Our hearing consultations and screenings are for adults aged 19 and over. We do not provide hearing screening or tests for children under 19; for children's hearing concerns, please speak to your GP for a paediatric audiology referral.)*
 
 Early assessment helps. Hearing changes are gradual, so friends and family often notice first.
 

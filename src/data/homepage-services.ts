@@ -145,13 +145,14 @@ export const opticsServices: DetailedService[] = [
 export const hearingServices: DetailedService[] = [
   {
     id: "free-hearing-screening",
-    title: "Free Hearing Screenings",
+    title: "Free Hearing Screenings (Ages 19+)",
     summary:
-      "A quick, no-obligation check of your hearing to identify whether a full assessment is recommended.",
+      "A quick, no-obligation check of your hearing to identify whether a full assessment is recommended. Please note: we do not test children under 19.",
     whoNeedsIt:
-      "Anyone who suspects their hearing has changed, struggles in background noise, or wants peace of mind — especially adults over 50.",
+      "Adults aged 19 and over who suspect their hearing has changed, struggle in background noise, or want peace of mind (especially adults over 50).",
     benefits: [
       "Completely free with no obligation",
+      "For adults aged 19 and over",
       "Results explained clearly on the day",
       "Takes approximately 15–20 minutes",
       "Referral to full consultation if needed",
@@ -161,13 +162,14 @@ export const hearingServices: DetailedService[] = [
   },
   {
     id: "free-hearing-consultation",
-    title: "Free Hearing Consultations",
+    title: "Free Hearing Consultations (Ages 19+)",
     summary:
-      "A comprehensive consultation including full audiometry, lifestyle discussion, and honest advice on the best hearing solutions for you.",
+      "A comprehensive consultation including full audiometry, lifestyle discussion, and honest advice on the best hearing solutions for adults aged 19 and over.",
     whoNeedsIt:
-      "Anyone with confirmed or suspected hearing loss who wants expert, independent advice before choosing hearing aids or other treatment.",
+      "Adults aged 19 and over with confirmed or suspected hearing loss who want expert, independent advice (hearing assessments are for ages 19+ only).",
     benefits: [
       "Full hearing assessment at no initial charge",
+      "For adults aged 19 and over",
       "Unhurried time with a qualified audiologist",
       "Transparent advice with no sales pressure",
       "Personalised recommendations based on your lifestyle",

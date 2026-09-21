@@ -28,7 +28,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 const pricingRows = [
   {
-    name: "Hearing Test",
+    name: "Hearing Test (Ages 19+)",
     duration: "60 mins",
     price: "Free consultation",
     href: "/free-hearing-test-northampton",
@@ -99,9 +99,13 @@ export default function ServicesPage() {
 
       <section className="py-20">
         <div className="container">
-          <h2 className="font-heading text-2xl font-bold text-navy mb-8 flex items-center gap-3">
+          <h2 className="font-heading text-2xl font-bold text-navy mb-3 flex items-center gap-3">
             <Ear className="w-7 h-7 text-primary" /> Hearing Care Services
           </h2>
+          <p className="text-sm text-navy/80 bg-sky/40 border border-sky/60 rounded-xl px-4 py-2.5 max-w-2xl mb-8">
+            <strong className="text-primary font-semibold">Age requirement:</strong>{" "}
+            Hearing screenings and tests are provided for adults aged 19 and over only. We do not do hearing screening or tests for children under 19.
+          </p>
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {hearingServices.map((service) => {
               const Icon = iconMap[service.icon] || Ear;

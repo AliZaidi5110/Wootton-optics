@@ -19,6 +19,7 @@ export const metadata = generateSEO({
 const expectations = [
   "Confirmation by email within 24 hours",
   "Reminder before your appointment",
+  "Hearing tests are for adults aged 19+ (we do not test children under 19)",
   "Allow up to 60 minutes for hearing assessments",
   "Bring current glasses or hearing aids if you have them",
   "Honest advice — no obligation to purchase",
