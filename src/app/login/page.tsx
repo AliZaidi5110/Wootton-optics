@@ -46,7 +46,8 @@ export default function LoginPage() {
           <form onSubmit={handleSubmit} className="space-y-5 bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-neutral-200 dark:border-neutral-700">
             <div>
               <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
-              <input id="email" type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className={inputClass} />
+              <input
+            suppressHydrationWarning id="email" type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className={inputClass} />
             </div>
             <div>
               <label htmlFor="password" className="block text-sm font-medium mb-2">Password</label>

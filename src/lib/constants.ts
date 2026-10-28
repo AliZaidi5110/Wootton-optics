@@ -1,3 +1,5 @@
+import { eyeCareServices } from "@/data/eye-care-services";
+
 export const SITE = {
   name: "Wootton Opticians & Hearing Care",
   hearingName: "Wootton Hearing Care Ltd",
@@ -61,11 +63,44 @@ export const EAR_WAX_PRICING = {
 
 export { CORE_KEYWORDS as KEYWORDS } from "./keywords";
 
-export const NAV_LINKS = [
+export type NavChild = {
+  href: string;
+  label: string;
+  description: string;
+  /** Extra paths that should highlight this entry as active */
+  matchPaths?: string[];
+};
+
+export type NavItem = {
+  href: string;
+  label: string;
+  children?: NavChild[];
+};
+
+export const NAV_LINKS: NavItem[] = [
   { href: "/", label: "Home" },
-  { href: "/optics", label: "Eye Care" },
-  { href: "/hearing", label: "Hearing Care" },
+  {
+    href: "/services",
+    label: "Services",
+    children: [
+      {
+        href: "/optics",
+        label: "Eye Care",
+        description: "Eye tests, glasses, contact lenses and specialist clinics",
+        matchPaths: ["/eye-care-northampton", ...eyeCareServices.map((s) => s.path)],
+      },
+      {
+        href: "/hearing",
+        label: "Hearing Care",
+        description: "Hearing tests, hearing aids and ear wax removal",
+        matchPaths: [
+          "/free-hearing-test-northampton",
+          "/ear-wax-removal-northampton",
+          "/hearing-aid-repairs-northampton",
+        ],
+      },
+    ],
+  },
   { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services" },
   { href: "/contact", label: "Contact" },
-] as const;
+];

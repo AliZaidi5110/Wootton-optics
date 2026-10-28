@@ -22,7 +22,7 @@ export const services: Service[] = [
     description:
       "Extended private sight tests with digital retinal imaging and detailed clinical time.",
     icon: "eye",
-    href: "/optics",
+    href: "/private-eye-test-northampton",
     features: [
       "Longer appointment time",
       "Digital retinal photography",
@@ -37,7 +37,7 @@ export const services: Service[] = [
     description:
       "Expert fitting for toric, multifocal, rigid, and specialty contact lenses.",
     icon: "contact",
-    href: "/optics",
+    href: "/contact-lenses-northampton",
     features: [
       "Complex prescriptions",
       "Trial lenses included",
@@ -79,7 +79,7 @@ export const services: Service[] = [
     description:
       "Early detection screening including pressure checks and optic nerve assessment.",
     icon: "eye",
-    href: "/optics",
+    href: "/glaucoma-screening-northampton",
     features: [
       "Intraocular pressure measurement",
       "Optic nerve assessment",
@@ -93,7 +93,7 @@ export const services: Service[] = [
     description:
       "Child-friendly examinations to support learning, development, and eye health.",
     icon: "eye",
-    href: "/optics",
+    href: "/childrens-eye-test-northampton",
     features: [
       "Age-appropriate testing",
       "Lazy eye and squint detection",

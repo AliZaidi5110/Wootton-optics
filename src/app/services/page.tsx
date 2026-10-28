@@ -43,7 +43,7 @@ const pricingRows = [
     name: "Eye Test (Private)",
     duration: "30 mins",
     price: "From £55",
-    href: "/optics",
+    href: "/private-eye-test-northampton",
   },
   {
     name: "Eye Test (NHS)",
@@ -55,13 +55,13 @@ const pricingRows = [
     name: "Contact Lens Fitting",
     duration: "45 mins",
     price: "",
-    href: "/optics",
+    href: "/contact-lenses-northampton",
   },
   {
     name: "Children's Eye Test (NHS)",
     duration: "30 mins",
     price: "Funded for eligible patients",
-    href: "/optics",
+    href: "/childrens-eye-test-northampton",
   },
 ];
 

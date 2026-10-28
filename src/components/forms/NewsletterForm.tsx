@@ -30,6 +30,7 @@ export function NewsletterForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-3">
       <input
+            suppressHydrationWarning
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}

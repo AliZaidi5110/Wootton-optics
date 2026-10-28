@@ -1,5 +1,6 @@
 import { PageHeader } from "@/components/shared/PageHeader";
 import { CTA } from "@/components/home/CTA";
+import { HearingServiceGrid } from "@/components/hearing/HearingServiceGrid";
 import { EarWaxRemovalSection } from "@/components/hearing/EarWaxRemovalSection";
 import { BookingForm } from "@/components/forms/BookingForm";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -98,6 +99,8 @@ export default function HearingPage() {
           </div>
         </div>
       </section>
+
+      <HearingServiceGrid />
 
       <EarWaxRemovalSection />
 

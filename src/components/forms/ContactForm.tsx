@@ -290,6 +290,7 @@ export function ContactForm() {
             <span className="sr-only">(required)</span>
           </label>
           <input
+            suppressHydrationWarning
             ref={emailRef}
             id={ids.email}
             name="email"

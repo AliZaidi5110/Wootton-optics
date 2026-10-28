@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { Menu, X, Phone, Ear, Glasses } from "lucide-react";
-import { NAV_LINKS, SITE } from "@/lib/constants";
+import { useEffect, useRef, useState } from "react";
+import { Menu, X, Phone, Ear, Glasses, ChevronDown } from "lucide-react";
+import { NAV_LINKS, SITE, type NavChild, type NavItem } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
@@ -13,10 +13,34 @@ function isNavActive(pathname: string, href: string): boolean {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
+function isChildActive(pathname: string, child: NavChild): boolean {
+  return (
+    isNavActive(pathname, child.href) ||
+    (child.matchPaths ?? []).some((path) => isNavActive(pathname, path))
+  );
+}
+
+function isItemActive(pathname: string, item: NavItem): boolean {
+  return (
+    isNavActive(pathname, item.href) ||
+    (item.children ?? []).some((child) => isChildActive(pathname, child))
+  );
+}
+
 function navLinkClass(active: boolean, mobile = false) {
   return cn(
     "font-medium transition-colors rounded-lg",
     mobile ? "px-4 py-3 text-base min-h-[48px] flex items-center" : "px-3 py-2 text-sm",
+    active
+      ? "bg-primary text-white font-semibold"
+      : "text-navy hover:text-primary hover:bg-teal-light/60"
+  );
+}
+
+/** Colour/shape for a nav item made of a link plus a chevron button (padding lives on the parts). */
+function splitLinkClass(active: boolean) {
+  return cn(
+    "font-medium text-sm transition-colors rounded-lg",
     active
       ? "bg-primary text-white font-semibold"
       : "text-navy hover:text-primary hover:bg-teal-light/60"
@@ -32,6 +56,162 @@ function BrandMark() {
       <div className="absolute left-[1.125rem] sm:left-5 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center ring-2 ring-cream">
         <Glasses className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
       </div>
+    </div>
+  );
+}
+
+function DesktopDropdown({ item, pathname }: { item: NavItem; pathname: string }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const active = isItemActive(pathname, item);
+
+  useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (e: PointerEvent) => {
+      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
+
+  return (
+    <div
+      ref={ref}
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <div className={cn("flex items-center", splitLinkClass(active))}>
+        <Link
+          href={item.href}
+          className="py-2 pl-3 pr-1 rounded-l-lg !text-inherit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          aria-current={isNavActive(pathname, item.href) ? "page" : undefined}
+          onClick={() => setOpen(false)}
+        >
+          {item.label}
+        </Link>
+        <button
+          type="button"
+          className="py-2 pl-1 pr-2 rounded-r-lg text-inherit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          aria-label={`${item.label} menu`}
+          aria-haspopup="menu"
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <ChevronDown
+            className={cn("w-4 h-4 transition-transform duration-200", open && "rotate-180")}
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+
+      {open && (
+        <div className="absolute left-0 top-full z-50 pt-2">
+          <ul
+            role="menu"
+            className="w-72 overflow-hidden rounded-xl border border-cream-dark bg-white p-2 shadow-xl"
+          >
+            {item.children?.map((child) => {
+              const childActive = isChildActive(pathname, child);
+              return (
+                <li key={child.href} role="none">
+                  <Link
+                    href={child.href}
+                    role="menuitem"
+                    aria-current={childActive ? "page" : undefined}
+                    onClick={() => setOpen(false)}
+                    className={cn(
+                      "block rounded-lg px-4 py-3 transition-colors",
+                      childActive ? "bg-primary text-white" : "text-navy hover:bg-teal-light/60"
+                    )}
+                  >
+                    <span className="block text-sm font-semibold">{child.label}</span>
+                    <span
+                      className={cn(
+                        "block text-xs leading-snug",
+                        childActive ? "text-white/90" : "text-charcoal"
+                      )}
+                    >
+                      {child.description}
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function MobileDropdown({
+  item,
+  pathname,
+  onNavigate,
+}: {
+  item: NavItem;
+  pathname: string;
+  onNavigate: () => void;
+}) {
+  const active = isItemActive(pathname, item);
+  const [open, setOpen] = useState(active);
+  const panelId = `mobile-sub-${item.label.toLowerCase().replace(/\s+/g, "-")}`;
+
+  return (
+    <div>
+      <div className={cn("flex items-stretch text-base", splitLinkClass(active))}>
+        <Link
+          href={item.href}
+          className="flex min-h-[48px] flex-1 items-center rounded-l-lg px-4 py-3 !text-inherit"
+          aria-current={isNavActive(pathname, item.href) ? "page" : undefined}
+          onClick={onNavigate}
+        >
+          {item.label}
+        </Link>
+        <button
+          type="button"
+          className="flex min-w-[48px] items-center justify-center rounded-r-lg text-inherit"
+          aria-label={`${open ? "Collapse" : "Expand"} ${item.label} menu`}
+          aria-expanded={open}
+          aria-controls={panelId}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <ChevronDown
+            className={cn("w-5 h-5 transition-transform duration-200", open && "rotate-180")}
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+      {open && (
+        <ul
+          id={panelId}
+          className="ml-4 mt-1 flex flex-col gap-1 border-l-2 border-primary/30 pl-3"
+        >
+          {item.children?.map((child) => {
+            const childActive = isChildActive(pathname, child);
+            return (
+              <li key={child.href}>
+                <Link
+                  href={child.href}
+                  className={navLinkClass(childActive, true)}
+                  aria-current={childActive ? "page" : undefined}
+                  onClick={onNavigate}
+                >
+                  {child.label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </div>
   );
 }
@@ -64,6 +244,9 @@ export function Header() {
 
           <nav className="hidden xl:flex items-center gap-1 shrink-0" aria-label="Main navigation">
             {NAV_LINKS.map((link) => {
+              if (link.children) {
+                return <DesktopDropdown key={link.href} item={link} pathname={pathname} />;
+              }
               const active = isNavActive(pathname, link.href);
               return (
                 <Link
@@ -119,6 +302,16 @@ export function Header() {
           >
             <div className="flex flex-col gap-1">
               {NAV_LINKS.map((link) => {
+                if (link.children) {
+                  return (
+                    <MobileDropdown
+                      key={link.href}
+                      item={link}
+                      pathname={pathname}
+                      onNavigate={() => setMobileOpen(false)}
+                    />
+                  );
+                }
                 const active = isNavActive(pathname, link.href);
                 return (
                   <Link

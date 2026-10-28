@@ -244,6 +244,7 @@ export function BookingForm() {
             <span className="sr-only">(required)</span>
           </label>
           <input
+            suppressHydrationWarning
             ref={refs.email}
             id="booking-email"
             type="email"
