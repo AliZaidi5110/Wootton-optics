@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.webmanifest",
   category: "health",
+  verification: {
+    google: "kzPKwDjTcjbRGh-l2f9ST1UPF0KrxtnE1rTp9t6k53g",
+  },
 };
 
 export default function RootLayout({
