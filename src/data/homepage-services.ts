@@ -206,6 +206,7 @@ export const hearingServices: DetailedService[] = [
       "Repairs, batteries, and accessories in clinic",
       "Ongoing aftercare and support",
     ],
+    pricing: "60 days money back guarantee except on custom made hearing aids",
     href: "/hearing-aid-repairs-northampton",
   },
 ];

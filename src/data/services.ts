@@ -161,6 +161,7 @@ export const services: Service[] = [
       "Rechargeable options",
       "Ongoing aftercare",
     ],
+    price: "60 days money back guarantee except on custom made hearing aids",
   },
   {
     id: "hearing-aid-maintenance",
