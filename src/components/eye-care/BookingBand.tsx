@@ -8,11 +8,14 @@ export function BookingBand({
   text,
   ctaLabel = "Book Online",
   ctaHref = "/appointments?service=eye-test",
+  secondary,
 }: {
   heading: string;
   text?: string;
   ctaLabel?: string;
   ctaHref?: string;
+  /** Optional second booking button (e.g. "Book Ear Wax Removal") */
+  secondary?: { label: string; href: string };
 }) {
   const telHref = `tel:${SITE.phone.replace(/\s/g, "")}`;
 
@@ -40,6 +43,16 @@ export function BookingBand({
             <CalendarCheck className="h-5 w-5" aria-hidden="true" />
             {ctaLabel}
           </Button>
+          {secondary && (
+            <Button
+              href={secondary.href}
+              variant="gold"
+              size="lg"
+              className="w-full sm:w-auto"
+            >
+              {secondary.label}
+            </Button>
+          )}
           <Button
             href={telHref}
             variant="outline"

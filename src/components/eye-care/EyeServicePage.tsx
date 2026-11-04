@@ -1,9 +1,9 @@
-import { CalendarCheck, Check, Clock, MapPin, Phone } from "lucide-react";
+import { CalendarCheck, Check, Clock, Info, MapPin, Phone } from "lucide-react";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Button } from "@/components/ui/Button";
 import { JsonLd } from "@/components/seo/JsonLd";
 import type { EyeCareService } from "@/data/eye-care-services";
-import { hubPath } from "@/data/eye-care-hub";
+import { CARE_FAMILIES } from "@/data/care-families";
 import { SITE } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 import { BookingBand } from "./BookingBand";
@@ -15,6 +15,8 @@ import { ServiceIcon } from "./ServiceIcon";
 
 export function EyeServicePage({ service }: { service: EyeCareService }) {
   const telHref = `tel:${SITE.phone.replace(/\s/g, "")}`;
+  const family = service.family ?? "eye";
+  const config = CARE_FAMILIES[family];
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -29,7 +31,7 @@ export function EyeServicePage({ service }: { service: EyeCareService }) {
         "@type": "Offer",
         price: service.priceFrom,
         priceCurrency: "GBP",
-        description: `From £${service.priceFrom}`,
+        description: service.offerDescription ?? `From £${service.priceFrom}`,
       },
     }),
   };
@@ -54,7 +56,7 @@ export function EyeServicePage({ service }: { service: EyeCareService }) {
         currentPath={service.path}
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Eye Care", href: hubPath },
+          { label: config.label, href: config.hubPath },
           { label: service.breadcrumb },
         ]}
         backgroundImages={[
@@ -76,7 +78,7 @@ export function EyeServicePage({ service }: { service: EyeCareService }) {
               <RichText text={service.intro} />
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Button href="/appointments?service=eye-test" size="lg" className="w-full sm:w-auto">
+              <Button href={config.appointmentHref} size="lg" className="w-full sm:w-auto">
                 <CalendarCheck className="h-5 w-5" aria-hidden="true" />
                 {service.ctaLabel}
               </Button>
@@ -85,6 +87,12 @@ export function EyeServicePage({ service }: { service: EyeCareService }) {
                 Call {SITE.phoneDisplay}
               </Button>
             </div>
+            {service.notice && (
+              <p className="mt-6 flex items-start gap-3 rounded-xl border border-gold/40 bg-gold/10 p-4 text-sm leading-relaxed text-navy">
+                <Info className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+                {service.notice}
+              </p>
+            )}
           </div>
 
           <aside
@@ -133,10 +141,11 @@ export function EyeServicePage({ service }: { service: EyeCareService }) {
       <BookingBand
         heading={service.bookHeading}
         text={service.bookText}
-        ctaLabel={service.bookCtaLabel}
+        ctaLabel={service.bookCtaLabel ?? (family === "hearing" ? service.ctaLabel : undefined)}
+        ctaHref={config.appointmentHref}
       />
 
-      <ExploreMore currentPath={service.path} />
+      <ExploreMore currentPath={service.path} family={family} />
     </>
   );
 }

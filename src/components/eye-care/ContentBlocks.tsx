@@ -50,6 +50,45 @@ function ListBody({ block }: { block: Extract<EyeCareBlock, { type: "list" }> })
   );
 }
 
+export function ContentTable({ columns, rows }: { columns: string[]; rows: string[][] }) {
+  return (
+    <div className="mt-10 overflow-x-auto rounded-2xl border border-cream-dark bg-white shadow-sm">
+      <table className="w-full min-w-[34rem] border-collapse text-left">
+        <thead>
+          <tr className="bg-navy-deep">
+            {columns.map((col, i) => (
+              <th
+                key={`${col}-${i}`}
+                scope="col"
+                className="px-5 py-4 font-heading text-lg font-bold !text-white"
+              >
+                {col || <span className="sr-only">Detail</span>}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-cream-dark">
+          {rows.map((row) => (
+            <tr key={row[0]} className="odd:bg-white even:bg-cream/60">
+              {row.map((cell, i) =>
+                i === 0 ? (
+                  <th key={i} scope="row" className="px-5 py-4 align-top font-semibold text-navy">
+                    <RichText text={cell} />
+                  </th>
+                ) : (
+                  <td key={i} className="px-5 py-4 align-top leading-relaxed text-navy/90">
+                    <RichText text={cell} />
+                  </td>
+                )
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 /** Renders a service page's content blocks as alternating, full-width sections. */
 export function ContentBlocks({
   blocks,
@@ -106,6 +145,22 @@ export function ContentBlocks({
                     </p>
                   )}
                 </div>
+              </div>
+            </section>
+          );
+        }
+
+        if (block.type === "table") {
+          return (
+            <section key={block.heading} className={`py-14 sm:py-16 ${bg}`}>
+              <div className="container max-w-5xl">
+                <SectionHeading title={block.heading} intro={block.intro} align="center" />
+                <ContentTable columns={block.columns} rows={block.rows} />
+                {block.outro && (
+                  <p className="mt-6 text-center leading-relaxed text-navy/85">
+                    <RichText text={block.outro} />
+                  </p>
+                )}
               </div>
             </section>
           );

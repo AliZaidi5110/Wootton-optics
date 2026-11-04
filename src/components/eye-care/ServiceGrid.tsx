@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { eyeCareServices } from "@/data/eye-care-services";
+import { eyeCareServices, type EyeCareService } from "@/data/eye-care-services";
 import { ServiceIcon } from "./ServiceIcon";
 
 /** The seven clinical eye care services shown on the hub (glasses keeps its own page, linked elsewhere). */
-const gridServices = eyeCareServices.filter((s) => s.slug !== "glasses-northampton");
+const eyeGridServices = eyeCareServices.filter((s) => s.slug !== "glasses-northampton");
 
-/** Grid of every eye care service: name + overview, each linking to its full page. */
-export function ServiceGrid() {
+/** Grid of services: name + overview, each linking to its full page. Defaults to the eye care services. */
+export function ServiceGrid({ services = eyeGridServices }: { services?: EyeCareService[] }) {
   return (
     <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {gridServices.map((service, i) => (
+      {services.map((service, i) => (
         <li key={service.path} className="flex">
           <Link
             href={service.path}

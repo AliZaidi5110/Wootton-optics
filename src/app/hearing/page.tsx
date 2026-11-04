@@ -1,243 +1,222 @@
+import Link from "next/link";
+import { ArrowRight, CalendarCheck, Check, Clock, Ear, Info, MapPin, Phone } from "lucide-react";
 import { PageHeader } from "@/components/shared/PageHeader";
-import { CTA } from "@/components/home/CTA";
-import { HearingServiceGrid } from "@/components/hearing/HearingServiceGrid";
-import { EarWaxRemovalSection } from "@/components/hearing/EarWaxRemovalSection";
-import { BookingForm } from "@/components/forms/BookingForm";
+import { Button } from "@/components/ui/Button";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { hearingAids } from "@/data/hearing-aids";
-import { faqs } from "@/data/faqs";
-import { generateSEO, faqSchema } from "@/lib/seo";
+import { BookingBand } from "@/components/eye-care/BookingBand";
+import { ContentTable } from "@/components/eye-care/ContentBlocks";
+import { ExploreMore } from "@/components/eye-care/ExploreMore";
+import { FaqAccordion } from "@/components/eye-care/FaqAccordion";
+import { FindUs } from "@/components/eye-care/FindUs";
+import { RichText, stripLinks } from "@/components/eye-care/RichText";
+import { SectionHeading } from "@/components/eye-care/SectionHeading";
+import { ServiceGrid } from "@/components/eye-care/ServiceGrid";
+import { hearingHub, hearingHubPath } from "@/data/hearing-care-hub";
+import { hearingCareServices } from "@/data/hearing-care-services";
+import { SITE } from "@/lib/constants";
+import { generateSEO } from "@/lib/seo";
 import { pageKeywords } from "@/lib/keywords";
 import { IMAGES } from "@/lib/images";
-import { Check, Ear, Volume2, Heart } from "lucide-react";
-import Link from "next/link";
 
 export const revalidate = 86400;
 
-const hearingFaqs = faqs.filter((f) => f.category === "hearing");
-
 export const metadata = generateSEO({
-  title: "Hearing Care Northampton | Tests & Aids | Wootton",
-  description:
-    "Hearing care in Northampton — free consultations, ear wax removal from £35, hearing aids and repairs at Wootton Hearing Care. Honest advice, no pressure.",
-  path: "/hearing",
+  title: hearingHub.metaTitle,
+  description: hearingHub.metaDescription,
+  path: hearingHubPath,
   image: IMAGES.clinic,
   keywords: pageKeywords("hearing"),
 });
 
 export default function HearingPage() {
+  const telHref = `tel:${SITE.phone.replace(/\s/g, "")}`;
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: hearingHub.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: stripLinks(faq.answer) },
+    })),
+  };
+
   return (
     <>
-      <JsonLd
-        data={faqSchema(hearingFaqs.map((f) => ({ question: f.question, answer: f.answer })))}
-      />
+      <JsonLd data={faqSchema} />
+
       <PageHeader
-        title="Hearing Care in Northampton"
-        subtitle="Free hearing consultations, ear wax removal, hearing aids and aftercare from Wootton Hearing Care at our Wootton Hope Drive clinic."
-        currentPath="/hearing"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Hearing Care" },
-        ]}
+        title={hearingHub.h1}
+        currentPath={hearingHubPath}
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Hearing Care" }]}
         backgroundImages={[
           {
             src: IMAGES.clinic,
-            alt: "Hearing care clinic at Wootton Opticians & Hearing Care, Northampton",
+            alt: "Wootton Hearing Care clinic in Northampton — hearing tests, ear wax removal and hearing aids",
           },
         ]}
       />
 
-      <section className="py-20 bg-cream">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <h2 className="font-heading text-3xl font-bold text-navy mb-6">
-                Why Choose Wootton Hearing?
-              </h2>
-              <p className="text-navy/85 leading-relaxed mb-8">
-                At Wootton Hearing Care Ltd, we believe everyone deserves to hear
-                life&apos;s precious moments clearly. Our Northampton clinic offers
-                comprehensive hearing assessments, the latest hearing aid
-                technology, and compassionate ongoing support.
-              </p>
-              <div className="space-y-4">
-                {[
-                  "Free initial hearing consultation for adults aged 19+ (we do not test children under 19)",
-                  "All major hearing aid brands available",
-                  "Custom programming and fitting",
-                  "Rechargeable and Bluetooth-enabled options",
-                  "Aftercare included with hearing aid purchase (terms may apply)",
-                  "Ear wax removal — £35 per ear, £70 for both ears",
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-fresh shrink-0 mt-0.5" />
-                    <span className="text-navy/90">{item}</span>
-                  </div>
-                ))}
-              </div>
+      {/* Introduction */}
+      <section className="bg-cream py-14 sm:py-20">
+        <div className="container grid items-start gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <p className="text-lg leading-relaxed text-navy/90 sm:text-xl">{hearingHub.intro}</p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <Button
+                href="/appointments?service=hearing-test"
+                size="lg"
+                className="w-full sm:w-auto"
+              >
+                <CalendarCheck className="h-5 w-5" aria-hidden="true" />
+                Book a Free Hearing Test
+              </Button>
+              <Button href={telHref} variant="outline" size="lg" className="w-full sm:w-auto">
+                <Phone className="h-5 w-5" aria-hidden="true" />
+                Call {SITE.phoneDisplay}
+              </Button>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
-              {[
-                { icon: Ear, title: "Hearing Tests", desc: "Comprehensive audiometry" },
-                { icon: Volume2, title: "Hearing Aids", desc: "All styles & brands" },
-                { icon: Heart, title: "Aftercare", desc: "Ongoing support" },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="flex items-center gap-4 bg-navy-deep rounded-xl p-5 border border-white/15 shadow-sm"
-                >
-                  <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                    <item.icon className="w-6 h-6 text-sky" />
-                  </div>
-                  <div>
-                    <p className="font-heading font-bold text-white">{item.title}</p>
-                    <p className="text-sm text-white/80">{item.desc}</p>
-                  </div>
-                </div>
+            <p className="mt-6 flex items-start gap-3 text-sm text-navy/80">
+              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+              {hearingHub.hours}
+            </p>
+            <p className="mt-4 flex items-start gap-3 rounded-xl border border-gold/40 bg-gold/10 p-4 text-sm leading-relaxed text-navy">
+              <Info className="mt-0.5 h-5 w-5 shrink-0 text-accent" aria-hidden="true" />
+              {hearingHub.notice}
+            </p>
+          </div>
+
+          <aside
+            aria-label="Why patients choose us"
+            className="rounded-2xl bg-navy-deep p-6 text-white shadow-xl lg:col-span-5"
+          >
+            <h2 className="font-heading text-xl font-bold !text-white">Why patients choose us</h2>
+            <ul className="mt-4 space-y-3">
+              {hearingHub.whyPatientsChooseUs.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-white/90">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/30 text-sky">
+                    <Check className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                  {item}
+                </li>
               ))}
-            </div>
-          </div>
+            </ul>
+          </aside>
         </div>
       </section>
 
-      <HearingServiceGrid />
+      {/* Local clinic */}
+      <section className="bg-white py-14 sm:py-16">
+        <div className="container max-w-4xl text-center">
+          <SectionHeading title={hearingHub.localHeading} align="center" />
+          <p className="mt-6 text-lg leading-relaxed text-navy/85">{hearingHub.localText}</p>
+        </div>
+      </section>
 
-      <EarWaxRemovalSection />
-
-      <section id="hearing-test" className="py-20 section-hearing">
+      {/* Services grid */}
+      <section id="services" className="scroll-mt-24 bg-sky py-16 sm:py-24">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-white text-center mb-4">
-            Your Hearing Test Explained
-          </h2>
-          <p className="text-center text-white/90 max-w-2xl mx-auto mb-12">
-            A comprehensive hearing assessment takes approximately 60 minutes and
-            includes several tests to build a complete picture of your hearing health.
-            Please note that our hearing tests and screenings are for adults aged 19
-            and over (we do not test children under 19).
-          </p>
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { step: "1", title: "Consultation", desc: "Discuss your hearing concerns and medical history" },
-              { step: "2", title: "Examination", desc: "Visual inspection of ear canals and eardrums" },
-              { step: "3", title: "Audiometry", desc: "Pure tone and speech testing in our soundproof booth" },
-              { step: "4", title: "Results", desc: "Clear explanation of your audiogram and recommendations" },
-            ].map((item) => (
-              <div
-                key={item.step}
-                className="on-light bg-white rounded-2xl p-6 text-center border border-white/20 shadow-sm"
-              >
-                <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mx-auto mb-4">
-                  {item.step}
-                </div>
-                <h3 className="font-heading font-bold text-navy mb-2">{item.title}</h3>
-                <p className="text-sm text-navy/85">{item.desc}</p>
-              </div>
-            ))}
+          <SectionHeading
+            eyebrow="Hearing care services"
+            title={hearingHub.servicesHeading}
+            align="center"
+          />
+          <div className="mt-12">
+            <ServiceGrid services={hearingCareServices} />
           </div>
         </div>
       </section>
 
-      <section id="hearing-aids" className="py-20 bg-white">
-        <div className="container">
-          <h2 className="font-heading text-3xl font-bold text-navy text-center mb-4">
-            Types of Hearing Aids
-          </h2>
-          <p className="text-center text-navy/85 max-w-2xl mx-auto mb-12">
-            We offer the full spectrum of modern hearing aid styles to suit every
-            degree of hearing loss and lifestyle preference.
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {hearingAids.map((aid) => (
-              <div
-                key={aid.id}
-                className="bg-cream rounded-2xl overflow-hidden border border-cream-dark hover:shadow-lg transition-shadow"
-              >
-                <div className="h-40 bg-gradient-to-br from-teal-light to-sky flex items-center justify-center">
-                  <Ear className="w-16 h-16 text-primary/30" />
-                </div>
-                <div className="p-6">
-                  <span className="text-xs font-bold text-navy/70 uppercase">{aid.type}</span>
-                  <h3 className="font-heading font-bold text-lg text-navy mt-1 mb-2">{aid.name}</h3>
-                  <p className="text-sm text-navy/85 mb-4">{aid.description}</p>
-                  <ul className="space-y-1 mb-4">
-                    {aid.features.slice(0, 3).map((f) => (
-                      <li key={f} className="text-xs text-navy/75 flex items-center gap-2">
-                        <Check className="w-3 h-3 text-fresh" /> {f}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
-            <h3 className="font-heading text-2xl font-bold text-navy mb-6">Product Comparison</h3>
-            <table className="w-full min-w-[560px] text-sm border-collapse">
-              <thead>
-                <tr className="bg-primary text-white">
-                  <th className="p-4 text-left rounded-tl-lg">Feature</th>
-                  {hearingAids.slice(0, 4).map((a) => (
-                    <th key={a.id} className="p-4 text-left">{a.type}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {["Bluetooth", "Rechargeable", "AI Noise Reduction", "Invisible"].map(
-                  (feature, i) => (
-                    <tr
-                      key={feature}
-                      className={i % 2 === 0 ? "bg-sky/50" : "bg-white"}
-                    >
-                      <td className="p-4 font-medium text-navy">{feature}</td>
-                      {hearingAids.slice(0, 4).map((a) => (
-                        <td key={a.id} className="p-4">
-                          {a.features.some((f) =>
-                            f.toLowerCase().includes(feature.toLowerCase().split(" ")[0])
-                          ) ? (
-                            <Check className="w-5 h-5 text-fresh" />
-                          ) : (
-                            <span className="text-navy/40">—</span>
-                          )}
-                        </td>
-                      ))}
-                    </tr>
-                  )
-                )}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section id="aftercare" className="py-20 section-hearing">
-        <div className="container max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold text-white text-center mb-8">
-            Book Your Hearing Assessment
-          </h2>
-          <div className="on-light bg-white rounded-2xl p-8 shadow-lg border border-white/20">
-            <BookingForm />
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-cream">
+      {/* Which service */}
+      <section className="bg-cream py-16 sm:py-20">
         <div className="container max-w-4xl">
-          <h2 className="font-heading text-2xl font-bold text-navy text-center mb-6">
-            Popular hearing services in Northampton
-          </h2>
-          <ul className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm">
-            {[
-              { href: "/free-hearing-test-northampton", label: "Free Hearing Test" },
-              { href: "/ear-wax-removal-northampton", label: "Ear Wax Removal" },
-              { href: "/hearing-aid-repairs-northampton", label: "Hearing Aid Repairs" },
-              { href: "/services", label: "All Services & Prices" },
-              { href: "/appointments?service=hearing-test", label: "Book a Hearing Appointment" },
-            ].map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className="text-primary font-medium hover:underline">
-                  {link.label}
+          <SectionHeading title={hearingHub.whichHeading} align="center" />
+          <ContentTable columns={hearingHub.whichColumns} rows={hearingHub.whichRows} />
+        </div>
+      </section>
+
+      {/* How to get started */}
+      <section className="bg-white py-16 sm:py-20">
+        <div className="container max-w-4xl">
+          <SectionHeading title={hearingHub.startedHeading} align="center" />
+          <ol className="mt-10 space-y-4">
+            {hearingHub.started.map((step, i) => (
+              <li
+                key={step}
+                className="flex items-start gap-4 rounded-xl border border-cream-dark bg-cream p-5"
+              >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary font-heading text-xl font-bold text-white">
+                  {i + 1}
+                </span>
+                <span className="pt-1.5 text-lg leading-relaxed text-navy/90">{step}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Why choose us */}
+      <section className="bg-cream py-16 sm:py-20">
+        <div className="container">
+          <SectionHeading title={hearingHub.whyChooseHeading} align="center" />
+          <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {hearingHub.whyChoose.map((item) => (
+              <li key={item.title} className="rounded-2xl border border-cream-dark bg-white p-6 shadow-sm">
+                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-primary text-white">
+                  <Check className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <h3 className="font-heading text-xl font-bold text-navy">{item.title}</h3>
+                <p className="mt-2 leading-relaxed text-navy/85">
+                  <RichText text={item.text} />
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Areas + eye care */}
+      <section className="bg-white py-16 sm:py-20">
+        <div className="container grid gap-8 lg:grid-cols-2">
+          <div className="rounded-2xl border border-cream-dark bg-cream p-8">
+            <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-teal-light text-primary">
+              <MapPin className="h-6 w-6" aria-hidden="true" />
+            </span>
+            <h2 className="font-heading text-2xl font-bold text-navy">{hearingHub.areasHeading}</h2>
+            <p className="mt-3 leading-relaxed text-navy/85">{hearingHub.areasText}</p>
+          </div>
+          <div className="rounded-2xl border border-cream-dark bg-cream p-8">
+            <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-teal-light text-primary">
+              <Ear className="h-6 w-6" aria-hidden="true" />
+            </span>
+            <h2 className="font-heading text-2xl font-bold text-navy">
+              {hearingHub.underOneRoofHeading}
+            </h2>
+            <p className="mt-3 leading-relaxed text-navy/85">
+              <RichText text={hearingHub.underOneRoofText} />
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <FindUs heading={hearingHub.findUsHeading} />
+
+      {/* Advice */}
+      <section className="bg-sky py-16">
+        <div className="container max-w-3xl">
+          <SectionHeading title={hearingHub.adviceHeading} align="center" />
+          <ul className="mt-8 space-y-3">
+            {hearingHub.advice.map((post) => (
+              <li key={post.href}>
+                <Link
+                  href={post.href}
+                  className="group flex min-h-[56px] items-center justify-between gap-4 rounded-xl bg-white px-5 py-4 font-semibold text-navy shadow-sm transition-all hover:text-primary hover:shadow-md"
+                >
+                  {post.label}
+                  <ArrowRight
+                    className="h-5 w-5 shrink-0 text-primary transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
                 </Link>
               </li>
             ))}
@@ -245,23 +224,17 @@ export default function HearingPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white" id="faq">
-        <div className="container max-w-3xl">
-          <h2 className="font-heading text-2xl sm:text-3xl font-bold text-navy mb-8 text-center">
-            Hearing care FAQs
-          </h2>
-          <div className="space-y-6">
-            {hearingFaqs.map((faq) => (
-              <div key={faq.question}>
-                <h3 className="font-heading font-bold text-navy mb-2">{faq.question}</h3>
-                <p className="text-navy/85 text-sm sm:text-base leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqAccordion heading={hearingHub.faqsHeading} faqs={hearingHub.faqs} />
 
-      <CTA />
+      <BookingBand
+        heading={hearingHub.bookHeading}
+        text={hearingHub.bookText}
+        ctaLabel="Book a Free Hearing Test"
+        ctaHref="/appointments?service=hearing-test"
+        secondary={{ label: "Book Ear Wax Removal", href: "/appointments?service=hearing-test" }}
+      />
+
+      <ExploreMore currentPath={hearingHubPath} family="hearing" />
     </>
   );
 }
