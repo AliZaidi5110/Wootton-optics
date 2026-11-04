@@ -95,6 +95,7 @@ export const NAV_LINKS: NavItem[] = [
         description: "Hearing tests, hearing aids and ear wax removal",
         matchPaths: [
           "/free-hearing-test-northampton",
+          "/hearing-aids-northampton",
           "/ear-wax-removal-northampton",
           "/hearing-aid-repairs-northampton",
         ],

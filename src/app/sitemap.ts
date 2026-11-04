@@ -15,6 +15,7 @@ const routes: {
   { path: "/free-hearing-test-northampton", changeFrequency: "monthly", priority: 0.92 },
   { path: "/nhs-eye-test-northampton", changeFrequency: "monthly", priority: 0.92 },
   { path: "/myopia-management-northampton", changeFrequency: "monthly", priority: 0.88 },
+  { path: "/hearing-aids-northampton", changeFrequency: "monthly", priority: 0.9 },
   { path: "/hearing-aid-repairs-northampton", changeFrequency: "monthly", priority: 0.88 },
   { path: "/dry-eye-assessment-northampton", changeFrequency: "monthly", priority: 0.88 },
   { path: "/private-eye-test-northampton", changeFrequency: "monthly", priority: 0.88 },

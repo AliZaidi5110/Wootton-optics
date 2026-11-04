@@ -2,12 +2,16 @@ import {
   Baby,
   Contact,
   Droplets,
+  Ear,
   Eye,
   Focus,
   Gauge,
   Glasses,
   ScanEye,
   ShieldCheck,
+  Sparkles,
+  Volume2,
+  Wrench,
   type LucideProps,
 } from "lucide-react";
 import type { EyeCareIcon } from "@/data/eye-care-services";
@@ -22,6 +26,10 @@ const ICONS: Record<EyeCareIcon, React.ComponentType<LucideProps>> = {
   gauge: Gauge,
   glasses: Glasses,
   eye: Eye,
+  ear: Ear,
+  sparkles: Sparkles,
+  volume: Volume2,
+  wrench: Wrench,
 };
 
 export function ServiceIcon({ name, ...props }: { name: EyeCareIcon } & LucideProps) {

@@ -135,6 +135,13 @@ export const PAGE_KEYWORDS: Record<string, string[]> = {
     "optician Northampton NHS",
     "NHS optical voucher Northampton",
   ],
+  "hearing-aids-northampton": [
+    "hearing aids Northampton",
+    "rechargeable hearing aids Northampton",
+    "Bluetooth hearing aids Northampton",
+    "audiologist Northampton",
+    "hearing aid fitting Northampton",
+  ],
   "private-eye-test-northampton": [
     "private eye test Northampton",
     "private sight test Northampton",

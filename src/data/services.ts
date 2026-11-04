@@ -154,7 +154,7 @@ export const services: Service[] = [
     description:
       "Digital hearing aids from leading brands with custom programming and expert fitting.",
     icon: "volume",
-    href: "/hearing",
+    href: "/hearing-aids-northampton",
     features: [
       "All major brands",
       "Custom programming",

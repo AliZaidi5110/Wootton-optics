@@ -19,6 +19,14 @@ export type EyeCareBlock =
       heading: string;
       intro?: string;
       cards: { title: string; text: string }[];
+    }
+  | {
+      type: "table";
+      heading: string;
+      intro?: string;
+      columns: string[];
+      rows: string[][];
+      outro?: string;
     };
 
 export type EyeCareFaq = { question: string; answer: string };
@@ -32,9 +40,15 @@ export type EyeCareIcon =
   | "focus"
   | "gauge"
   | "glasses"
-  | "eye";
+  | "eye"
+  | "ear"
+  | "sparkles"
+  | "volume"
+  | "wrench";
 
 export type EyeCareService = {
+  /** Which service family the page belongs to (defaults to eye care) */
+  family?: "eye" | "hearing";
   slug: string;
   path: string;
   /** Name shown on the hub grid and in "Explore more" lists (matches the document) */
@@ -49,6 +63,8 @@ export type EyeCareService = {
   h1: string;
   intro: string;
   ctaLabel: string;
+  /** Callout shown under the intro buttons (e.g. age restrictions) */
+  notice?: string;
   /** Short highlight chips under the hero copy */
   highlights?: string[];
   blocks: EyeCareBlock[];
@@ -61,6 +77,8 @@ export type EyeCareService = {
   /** Anchors the service in schema.org */
   schemaDescription: string;
   priceFrom?: string;
+  /** Description for the schema.org offer (defaults to "From £<priceFrom>") */
+  offerDescription?: string;
 };
 
 export const eyeCareServices: EyeCareService[] = [
