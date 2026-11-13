@@ -9,6 +9,8 @@ interface PageHeaderProps {
   breadcrumbs?: { label: string; href?: string }[];
   backgroundImages?: HeroSlideImage[];
   currentPath?: string;
+  /** Set false when the page emits its own BreadcrumbList structured data */
+  breadcrumbSchema?: boolean;
 }
 
 export function PageHeader({
@@ -17,6 +19,7 @@ export function PageHeader({
   breadcrumbs,
   backgroundImages,
   currentPath = "",
+  breadcrumbSchema: emitBreadcrumbSchema = true,
 }: PageHeaderProps) {
   const hasSlider = Boolean(backgroundImages?.length);
 
@@ -31,7 +34,7 @@ export function PageHeader({
         hasSlider ? "page-hero-header" : "gradient-sky"
       }`}
     >
-      {breadcrumbItems && breadcrumbItems.length > 0 && (
+      {emitBreadcrumbSchema && breadcrumbItems && breadcrumbItems.length > 0 && (
         <JsonLd data={breadcrumbSchema(breadcrumbItems)} />
       )}
       {hasSlider && <HeroImageSlider images={backgroundImages!} />}

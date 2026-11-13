@@ -21,6 +21,7 @@ import { RichText, stripLinks } from "@/components/eye-care/RichText";
 import { SectionHeading } from "@/components/eye-care/SectionHeading";
 import { ServiceGrid } from "@/components/eye-care/ServiceGrid";
 import { hub, hubPath } from "@/data/eye-care-hub";
+import { opticsPageSchema } from "@/data/optics-schema";
 import { SITE } from "@/lib/constants";
 import { generateSEO } from "@/lib/seo";
 import { pageKeywords } from "@/lib/keywords";
@@ -56,6 +57,7 @@ export default function OpticsPage() {
       <PageHeader
         title={hub.h1}
         currentPath={hubPath}
+        breadcrumbSchema={false}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Eye Care" }]}
         backgroundImages={[
           {
@@ -116,7 +118,7 @@ export default function OpticsPage() {
           </div>
           <div className="lg:col-span-7">
             <h3 className="mb-4 font-heading text-xl font-bold text-navy">
-              What you can book with us:
+              What you can book with us
             </h3>
             <ul className="grid gap-3 sm:grid-cols-2">
               {hub.bookList.map((item) => (
@@ -180,7 +182,9 @@ export default function OpticsPage() {
           </div>
           <div className="mt-6 rounded-2xl border-l-4 border-primary bg-white p-6 shadow-sm">
             <h3 className="font-heading text-xl font-bold text-navy">{hub.howOften.label}</h3>
-            <p className="mt-2 leading-relaxed text-navy/85">{hub.howOften.text}</p>
+            <p className="mt-2 leading-relaxed text-navy/85">
+              <RichText text={hub.howOften.text} />
+            </p>
           </div>
         </div>
       </section>
@@ -306,7 +310,7 @@ export default function OpticsPage() {
         </div>
       </section>
 
-      <FindUs heading={hub.findUsHeading} />
+      <FindUs heading={hub.findUsHeading} hoursHeader />
 
       {/* Advice */}
       <section className="bg-sky py-16">
@@ -340,6 +344,8 @@ export default function OpticsPage() {
       />
 
       <ExploreMore currentPath={hubPath} />
+
+      <JsonLd data={opticsPageSchema()} />
     </>
   );
 }

@@ -22,9 +22,9 @@ export const moreFromLinks = [
 /* ───────────────────────────── HUB (/optics) ───────────────────────────── */
 
 export const hub = {
-  metaTitle: "Opticians Northampton | Eye Tests & Glasses | Wootton",
+  metaTitle: "Opticians Northampton | Independent Eye Tests & Glasses",
   metaDescription:
-    "Independent opticians in Wootton, Northampton since 2003. NHS & private eye tests, designer glasses, contact lenses and eye clinics. Book online today.",
+    "Independent family-run opticians in Wootton, Northampton since 2003. NHS and private eye tests from £55, designer glasses, contact lenses and eye clinics.",
   h1: "Opticians in Northampton: Eye Tests, Glasses & Eye Care at Wootton",
   intro:
     "[Wootton Opticians](/) is an independent, family-run optician at 9 Tudor Court, Wootton Hope Drive, Northampton NN4 6FF. Since 2003 we have given families in Wootton, Wootton Fields, Hardingstone, Collingtree and across south Northampton NHS and private eye tests, designer glasses, contact lenses and specialist eye clinics, with no sales pressure.",
@@ -66,7 +66,7 @@ export const hub = {
   },
   howOften: {
     label: "How often should I have an eye test?",
-    text: "Most adults should have an eye test every two years. Have one every year if you are over 40, have diabetes, or have a family history of glaucoma. Children are often tested every year.",
+    text: "Most adults should have an eye test every two years. Have one every year if you are over 40, have diabetes, or have a family history of glaucoma. Children are often tested every year. Read more in our guide, [Why Regular Eye Tests Matter](/blog/eye-test-northampton-importance).",
   },
   brandsHeading: "Designer glasses in Northampton: brands we stock",
   brandsText:
@@ -197,7 +197,7 @@ export const hub = {
     {
       question: "What lens options are available?",
       answer:
-        "We offer single vision, bifocal, varifocal, occupational and sports lenses, with anti-reflective, blue light filtering and photochromic options. Our dispensing opticians match lenses to your prescription and daily routine.",
+        "We offer single vision, bifocal, varifocal, occupational and sports lenses, with anti-reflective, blue light filtering and photochromic options. Our dispensing opticians match lenses to your prescription and daily routine. See our [glasses and designer frames page](/glasses-northampton), and read [varifocal lenses explained](/blog/varifocal-lenses-guide) and [blue light glasses: do they really work?](/blog/blue-light-glasses-truth).",
     },
     {
       question: "Do you accept NHS vouchers for glasses?",
@@ -207,7 +207,7 @@ export const hub = {
     {
       question: "Do you test children's eyes?",
       answer:
-        "Yes. We offer gentle, age-appropriate eye tests for children, and NHS testing is available for eligible children. [Children's eye tests](/childrens-eye-test-northampton)",
+        "Yes. We offer gentle, age-appropriate eye tests for children, and NHS testing is available for eligible children. See our [children's eye tests page](/childrens-eye-test-northampton).",
     },
     {
       question: "Do you offer dry eye treatment or myopia management?",
