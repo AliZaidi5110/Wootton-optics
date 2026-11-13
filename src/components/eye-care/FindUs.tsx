@@ -14,7 +14,14 @@ const hours = [
 ];
 
 /** Address, contact details and opening hours. */
-export function FindUs({ heading }: { heading: string }) {
+export function FindUs({
+  heading,
+  hoursHeader = false,
+}: {
+  heading: string;
+  /** Show a "Day / Hours" header row above the opening hours */
+  hoursHeader?: boolean;
+}) {
   const telHref = `tel:${SITE.phone.replace(/\s/g, "")}`;
 
   return (
@@ -54,6 +61,12 @@ export function FindUs({ heading }: { heading: string }) {
               <Clock className="h-5 w-5 text-primary" aria-hidden="true" />
               Opening hours
             </h3>
+            {hoursHeader && (
+              <div className="flex justify-between gap-4 border-b-2 border-navy/20 pb-2 text-sm font-bold uppercase tracking-wider text-primary">
+                <span>Day</span>
+                <span>Hours</span>
+              </div>
+            )}
             <dl className="divide-y divide-cream-dark">
               {hours.map(([day, time]) => (
                 <div key={day} className="flex justify-between gap-4 py-2.5">
