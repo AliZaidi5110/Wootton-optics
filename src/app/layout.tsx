@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { NavigationProvider } from "@/components/providers/NavigationProvider";
 import { PageTransition } from "@/components/layout/PageTransition";
 import { CookieConsent } from "@/components/shared/CookieConsent";
@@ -53,16 +52,14 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        <ThemeProvider>
-          <NavigationProvider>
-            <Header />
-            <main id="main-content" className="flex-1 pt-[60px] sm:pt-[68px] xl:pt-[72px]" tabIndex={-1}>
-              <PageTransition>{children}</PageTransition>
-            </main>
-            <Footer />
-            <CookieConsent />
-          </NavigationProvider>
-        </ThemeProvider>
+        <NavigationProvider>
+          <Header />
+          <main id="main-content" className="flex-1 pt-[60px] sm:pt-[68px] xl:pt-[72px]" tabIndex={-1}>
+            <PageTransition>{children}</PageTransition>
+          </main>
+          <Footer />
+          <CookieConsent />
+        </NavigationProvider>
         <Analytics />
       </body>
     </html>
