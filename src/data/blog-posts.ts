@@ -1,4 +1,5 @@
 import type { BlogPost } from "@/types";
+import { earWaxArticle } from "@/data/ear-wax-article";
 
 const authors = {
   clinical: {
@@ -49,6 +50,18 @@ function createPost(
 }
 
 export const blogPosts: BlogPost[] = [
+  /* Has its own page at app/blog/<slug>/page.tsx; this entry lists it on /blog and in the sitemap. */
+  createPost(
+    earWaxArticle.slug,
+    earWaxArticle.title,
+    earWaxArticle.metaDescription,
+    earWaxArticle.intro.join(" "),
+    "hearing-health",
+    "clinical",
+    earWaxArticle.datePublished,
+    earWaxArticle.keywords,
+    true
+  ),
   createPost(
     "hearing-aids-northampton-complete-guide",
     "Hearing Aids in Northampton: The Complete 2025 Guide",

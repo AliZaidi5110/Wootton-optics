@@ -10,13 +10,17 @@ import { keywordsFromTags } from "@/lib/keywords";
 import { formatDate, getCategoryLabel } from "@/lib/utils";
 import { IMAGES } from "@/lib/images";
 import { SITE } from "@/lib/constants";
+import { earWaxArticle } from "@/data/ear-wax-article";
 
 export const revalidate = 86400;
 
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  // Articles with a dedicated page are served by their own route
+  return blogPosts
+    .filter((post) => post.slug !== earWaxArticle.slug)
+    .map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: Props) {
