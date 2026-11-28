@@ -4,17 +4,11 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
-  content: string;
   category: BlogCategory;
-  author: string;
-  authorBio: string;
   datePublished: string;
   dateModified: string;
   readTime: number;
-  image: string;
-  imageAlt: string;
-  tags: string[];
-  featured?: boolean;
+  image: { src: string; alt: string };
 }
 
 export interface Service {

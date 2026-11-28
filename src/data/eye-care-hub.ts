@@ -66,7 +66,7 @@ export const hub = {
   },
   howOften: {
     label: "How often should I have an eye test?",
-    text: "Most adults should have an eye test every two years. Have one every year if you are over 40, have diabetes, or have a family history of glaucoma. Children are often tested every year. Read more in our guide, [Why Regular Eye Tests Matter](/blog/eye-test-northampton-importance).",
+    text: "Most adults should have an eye test every two years. Have one every year if you are over 40, have diabetes, or have a family history of glaucoma. Children are often tested every year.",
   },
   brandsHeading: "Designer glasses in Northampton: brands we stock",
   brandsText:
@@ -162,14 +162,6 @@ export const hub = {
   findUsHeading: "Find us: opticians at Wootton Hope Drive, Northampton NN4",
   adviceHeading: "Advice from our team",
   advice: [
-    {
-      href: "/blog/eye-test-northampton-importance",
-      label: "Why Regular Eye Tests Matter: A Northampton Optician's Guide",
-    },
-    {
-      href: "/blog/nhs-eye-test-northampton-eligibility",
-      label: "NHS Eye Test Eligibility in Northampton: Who Qualifies and How to Book",
-    },
     { href: "/blog", label: "View all articles" },
   ],
   faqsHeading: "Eye care FAQs",
@@ -197,7 +189,7 @@ export const hub = {
     {
       question: "What lens options are available?",
       answer:
-        "We offer single vision, bifocal, varifocal, occupational and sports lenses, with anti-reflective, blue light filtering and photochromic options. Our dispensing opticians match lenses to your prescription and daily routine. See our [glasses and designer frames page](/glasses-northampton), and read [varifocal lenses explained](/blog/varifocal-lenses-guide) and [blue light glasses: do they really work?](/blog/blue-light-glasses-truth).",
+        "We offer single vision, bifocal, varifocal, occupational and sports lenses, with anti-reflective, blue light filtering and photochromic options. Our dispensing opticians match lenses to your prescription and daily routine. See our [glasses and designer frames page](/glasses-northampton).",
     },
     {
       question: "Do you accept NHS vouchers for glasses?",
@@ -241,7 +233,7 @@ export const eyeCarePage = {
     "Your eye health: the front and back of the eye, including checks that can spot early signs of conditions such as glaucoma.",
   ],
   includesOutro:
-    "Your optometrist then explains your results in plain English and recommends what you need. Read more in our guide: [Why Regular Eye Tests Matter](/blog/eye-test-northampton-importance).",
+    "Your optometrist then explains your results in plain English and recommends what you need.",
   ageHeading: "Eye care for every age",
   ages: [
     {

@@ -19,7 +19,7 @@ export default function AdminPage() {
         <div className="container max-w-4xl">
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { title: "Blog Posts", count: "22", action: "Manage articles in src/data/blog-posts.ts or connect Contentful CMS" },
+              { title: "Blog Posts", count: "2", action: "Manage articles in src/data/blog-posts.ts or connect Contentful CMS" },
               { title: "Appointments", count: "—", action: "View via MongoDB or connect to admin API" },
               { title: "Contact Messages", count: "—", action: "View via MongoDB Contact collection" },
               { title: "Newsletter", count: "—", action: "Connect Mailchimp/Brevo integration" },

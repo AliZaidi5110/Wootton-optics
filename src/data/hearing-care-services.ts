@@ -375,13 +375,6 @@ export const hearingCareServices: EyeCareService[] = [
           "Wax build-up can affect how well hearing aids work. If your ears feel blocked, our [ear wax removal](/ear-wax-removal-northampton) service costs £35 per ear or £70 for both ears.",
         ],
       },
-      {
-        type: "text",
-        heading: "Read our hearing aid guide",
-        paragraphs: [
-          "[Hearing Aids in Northampton: The Complete 2025 Guide](/blog/hearing-aids-northampton-complete-guide)",
-        ],
-      },
     ],
     faqsHeading: "Hearing aid FAQs",
     faqs: [
