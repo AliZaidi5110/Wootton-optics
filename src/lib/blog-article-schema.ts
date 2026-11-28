@@ -1,8 +1,19 @@
-import { earWaxArticle as article } from "@/data/ear-wax-article";
 import { SITE } from "@/lib/constants";
 
-/** JSON-LD graph supplied in the article document (BlogPosting, BreadcrumbList, FAQPage). */
-export function earWaxArticleSchema() {
+type SchemaArticle = {
+  path: string;
+  title: string;
+  metaDescription: string;
+  breadcrumb: string;
+  author: string;
+  datePublished: string;
+  dateModified: string;
+  keywords: string[];
+  faqs: { question: string; answer: string }[];
+};
+
+/** JSON-LD graph as supplied in the article documents (BlogPosting, BreadcrumbList, FAQPage). */
+export function blogArticleSchema(article: SchemaArticle) {
   const base = SITE.url;
   const url = `${base}${article.path}`;
   const organisation = { "@type": "Organization", name: article.author, url: `${base}/` };
@@ -18,7 +29,7 @@ export function earWaxArticleSchema() {
         description: article.metaDescription,
         image: `${base}/wootton-clinic.jpg`,
         datePublished: article.datePublished,
-        dateModified: article.datePublished,
+        dateModified: article.dateModified,
         inLanguage: "en-GB",
         keywords: article.keywords.join(", "),
         about: { "@type": "MedicalProcedure", name: "Ear wax removal (microsuction)" },

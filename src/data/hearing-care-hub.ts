@@ -90,10 +90,6 @@ export const hearingHub = {
   findUsHeading: "Find us: hearing clinic at Wootton Hope Drive, Northampton NN4",
   adviceHeading: "Advice from our team",
   advice: [
-    {
-      href: "/blog/hearing-aids-northampton-complete-guide",
-      label: "Hearing Aids in Northampton: The Complete 2025 Guide",
-    },
     { href: "/blog", label: "View all articles" },
   ],
   faqsHeading: "Hearing care FAQs",

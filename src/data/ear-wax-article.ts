@@ -16,6 +16,7 @@ export const earWaxArticle = {
   breadcrumb: "Ear Wax Removal in Northampton: Microsuction vs Irrigation",
   author: "Wootton Opticians & Hearing Care",
   datePublished: "2026-11-24",
+  dateModified: "2026-11-24",
   keywords: [
     "ear wax removal northampton",
     "microsuction ear wax removal",
@@ -154,7 +155,7 @@ export const earWaxArticle = {
 
   hearingAids: {
     heading: "Wearing hearing aids? Wax can be the problem",
-    text: "Wax is a very common reason hearing aids sound weak, whistle or stop working. After your ears are cleared, many people find their hearing aids work better. If your device is still not working properly, our team can help with [hearing aid cleaning, servicing and repairs](/hearing-aid-repairs-northampton). You can also read our [complete hearing aids guide for Northampton](/blog/hearing-aids-northampton-complete-guide).",
+    text: "Wax is a very common reason hearing aids sound weak, whistle or stop working. After your ears are cleared, many people find their hearing aids work better. If your device is still not working properly, our team can help with [hearing aid cleaning, servicing and repairs](/hearing-aid-repairs-northampton). You can also read our [complete hearing aids guide for Northampton](/hearing-aids-northampton).",
     image: {
       src: "/hearing-3.avif",
       alt: "A man wearing a hearing aid talking with a hearing care professional",

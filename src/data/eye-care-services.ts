@@ -123,7 +123,7 @@ export const eyeCareServices: EyeCareService[] = [
           "receive certain benefits or qualify for help under the NHS Low Income Scheme",
         ],
         outro:
-          "Not sure if you qualify? Call us on 01604 875111 and we will check for you. You can also read our guide: [NHS Eye Test Eligibility in Northampton](/blog/nhs-eye-test-northampton-eligibility).",
+          "Not sure if you qualify? Call us on 01604 875111 and we will check for you.",
       },
       {
         type: "list",

@@ -1,23 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { getBlogImage } from "@/lib/blog-images";
 import { formatDate, getCategoryLabel } from "@/lib/utils";
 import type { BlogPost } from "@/types";
 
 /** Blog list card with a photo. The title link is stretched so the whole card is clickable. */
 export function PostCard({ post }: { post: BlogPost }) {
-  const image = getBlogImage(post);
-
   return (
     <article className="group relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-cream-dark bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2">
       <div className="relative aspect-[16/10] overflow-hidden bg-sky">
         <Image
-          src={image.src}
-          alt={image.alt}
+          src={post.image.src}
+          alt={post.image.alt}
           fill
           sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw"
-          className={`object-cover transition-transform duration-500 group-hover:scale-105 ${image.position ?? ""}`}
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <span className="absolute left-4 top-4 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white shadow">
           {getCategoryLabel(post.category)}
